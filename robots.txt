@@ -1,0 +1,8 @@
+# robots.txt for https://chetankumarsarraf.com.np
+# Er. Chetan Kumar Sarraf - Civil Engineer & Spatial Designer
+
+User-agent: *
+Allow: /
+
+# Sitemap reference for Google Search Console
+Sitemap: https://chetankumarsarraf.com.np/sitemap.xml
