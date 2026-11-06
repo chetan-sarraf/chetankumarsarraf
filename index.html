@@ -511,14 +511,31 @@
     body.cks-app-mode .cks-feature-section {
       display: none;
     }
-    body.cks-app-mode .cks-feature-section.cks-view-open {
-      display: block;
+    /* When a feature section is opened in focus mode */
+    body.cks-app-mode.feature-view-active .cks-feature-section.cks-view-open {
+      display: block !important;
       padding-top: 7.4rem;
       min-height: calc(100vh - 200px);
       animation: fadeIn 0.35s ease;
     }
+    /* First-Page Stream: Hero, Client Handover (#reel), Journal (#articles), Reviews (#reviews), FAQs (#faqs), Contact Desk (#contact), and Footer */
+    body.cks-app-mode:not(.feature-view-active) #home,
+    body.cks-app-mode:not(.feature-view-active) #reel,
+    body.cks-app-mode:not(.feature-view-active) #articles,
+    body.cks-app-mode:not(.feature-view-active) #reviews,
+    body.cks-app-mode:not(.feature-view-active) #faqs,
+    body.cks-app-mode:not(.feature-view-active) #contact,
     body.cks-app-mode:not(.feature-view-active) #siteFooter {
-      display: none;
+      display: block !important;
+    }
+    body.cks-app-mode:not(.feature-view-active) #reel {
+      padding-top: 4.5rem;
+    }
+    body.cks-app-mode:not(.feature-view-active) #articles,
+    body.cks-app-mode:not(.feature-view-active) #reviews,
+    body.cks-app-mode:not(.feature-view-active) #faqs,
+    body.cks-app-mode:not(.feature-view-active) #contact {
+      padding-top: 4.5rem;
     }
 
     /* Sticky Feature App Return Bar */
@@ -1728,6 +1745,17 @@
     @keyframes cadCompassSpin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
     @keyframes cadCompassCounterSpin { from { transform: rotate(360deg); } to { transform: rotate(0deg); } }
     @keyframes cadArcTrace { 0% { stroke-dashoffset: 1200; } 50% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: -1200; } }
+    @keyframes cadStructurePulse { 0%, 100% { opacity: 0.18; } 50% { opacity: 0.38; } }
+    @keyframes cadBeamTrace { 0% { stroke-dashoffset: 900; } 50% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: -900; } }
+    @keyframes cadFloatSubtle { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+
+    .cad-structure-beam { stroke: var(--text-main); stroke-width: 1.4px; fill: none; opacity: 0.22; }
+    .cad-structure-column { stroke: var(--text-main); stroke-width: 2px; fill: none; opacity: 0.28; }
+    .cad-structure-seismic { stroke: var(--text-muted); stroke-width: 1px; stroke-dasharray: 6 4; fill: none; opacity: 0.25; }
+    .cad-structure-slab { fill: rgba(255, 255, 255, 0.02); stroke: var(--text-muted); stroke-width: 1px; }
+    .cad-structure-anim { animation: cadStructurePulse 9s ease-in-out infinite; }
+    .cad-structure-float { animation: cadFloatSubtle 14s ease-in-out infinite; }
+    .cad-structure-trace { stroke-dasharray: 800; animation: cadBeamTrace 22s ease-in-out infinite; }
 
     /* CAD Drafting Linework Toggle Button in Footer & Status Bars */
     .cad-drafting-pill-btn {
@@ -1748,6 +1776,18 @@
   <!-- ================= ARCHITECTURAL & CIVIL ENGINEERING DRAFTING VECTOR BACKGROUND & ANIMATION LAYER ================= -->
   <div id="cadDraftingBgLayer" aria-hidden="true">
     <svg class="cad-bg-svg" width="100%" height="100%" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="isoDotGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+          <circle cx="20" cy="20" r="0.8" fill="var(--text-muted)" opacity="0.12" />
+        </pattern>
+        <marker id="bgCadArrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+          <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="var(--text-main)" opacity="0.35" />
+        </marker>
+      </defs>
+
+      <!-- Isometric Micro-Dot Construction Matrix -->
+      <rect width="100%" height="100%" fill="url(#isoDotGrid)" />
+
       <!-- Center Technical Compass Reticle & Radial Rays -->
       <g class="cad-compass-spin">
         <circle cx="960" cy="540" r="160" class="cad-bg-arc" stroke-width="1.2" />
@@ -1781,6 +1821,119 @@
         <path d="M 960,60 A 480,480 0 0,1 1440,540" class="cad-bg-trace" stroke-width="2.5" />
         <path d="M 480,540 A 480,480 0 0,1 960,1020" class="cad-bg-trace-2" stroke-width="2" />
         <path d="M 640,540 A 320,320 0 0,1 960,220" class="cad-bg-trace" stroke-width="1.8" />
+      </g>
+
+      <!-- ================= BACKGROUND CIVIL ENGINEERING BUILDING & STRUCTURAL WIREFRAME ================= -->
+      <!-- Placed subtly across the viewport with floating architectural animation -->
+      <g class="cad-structure-float" transform="translate(1080, 180) scale(0.68)">
+        <!-- Structural Identification & Datums -->
+        <g opacity="0.32">
+          <text x="320" y="80" class="cad-bg-text" font-weight="700">NBC 205:2024 SEISMIC RESISTANT DUCTILE SKELETON</text>
+          <text x="320" y="98" class="cad-bg-text">3-STOREY REINFORCED CONCRETE &amp; STEEL FRAME · M20 / Fe500</text>
+        </g>
+
+        <!-- Foundation Footings & Plinth Tie Beams (NBC 205) -->
+        <g opacity="0.25">
+          <!-- Footing 1 -->
+          <polygon points="420,820 500,774 580,820 500,866" class="cad-structure-slab" />
+          <!-- Footing 2 -->
+          <polygon points="740,820 820,774 900,820 820,866" class="cad-structure-slab" />
+          <!-- Footing 3 -->
+          <polygon points="1060,820 1140,774 1220,820 1140,866" class="cad-structure-slab" />
+          <!-- Plinth Tie Beams -->
+          <line x1="500" y1="820" x2="1140" y2="820" class="cad-structure-beam" stroke-width="1.8" />
+          <text x="500" y="880" class="cad-bg-text">F1: 1500x1500MM</text>
+          <text x="820" y="880" class="cad-bg-text">F2: 1800x1800MM</text>
+          <text x="1140" y="880" class="cad-bg-text">F3: 1500x1500MM</text>
+        </g>
+
+        <!-- Multi-Storey Reinforced Columns (Storey 1, 2, 3) -->
+        <g class="cad-structure-anim">
+          <!-- Col A1 -->
+          <line x1="500" y1="820" x2="500" y2="200" class="cad-structure-column" />
+          <!-- Col B1 (Major Center Load Axis) -->
+          <line x1="820" y1="820" x2="820" y2="200" class="cad-structure-column" stroke-width="2.6" />
+          <!-- Col C1 -->
+          <line x1="1140" y1="820" x2="1140" y2="200" class="cad-structure-column" />
+          <!-- Rear Columns (Axonometric Depth) -->
+          <line x1="320" y1="715" x2="320" y2="105" class="cad-structure-column" stroke-dasharray="6 4" opacity="0.18" />
+          <line x1="640" y1="715" x2="640" y2="105" class="cad-structure-column" opacity="0.22" />
+          <line x1="960" y1="715" x2="960" y2="105" class="cad-structure-column" stroke-dasharray="6 4" opacity="0.18" />
+        </g>
+
+        <!-- Storey 1 Slab (+3.600m Level) -->
+        <g transform="translate(0, 400)">
+          <polygon points="500,200 820,200 1140,200 960,105 640,105 320,105" class="cad-structure-slab" />
+          <line x1="500" y1="200" x2="1140" y2="200" class="cad-structure-beam" />
+          <line x1="1140" y1="200" x2="960" y2="105" class="cad-structure-beam" />
+          <line x1="960" y1="105" x2="320" y2="105" class="cad-structure-beam" />
+          <line x1="320" y1="105" x2="500" y2="200" class="cad-structure-beam" />
+          <line x1="820" y1="200" x2="640" y2="105" class="cad-structure-beam" stroke-dasharray="4 3" />
+          <text x="210" y="155" class="cad-bg-text">FIRST FLOOR +3.600M</text>
+        </g>
+
+        <!-- Storey 2 Slab (+7.200m Level) with Cantilever Balcony Projection -->
+        <g transform="translate(0, 200)">
+          <!-- Cantilever projection overhang -->
+          <polygon points="460,225 820,225 1200,225 960,105 640,105 320,105" class="cad-structure-slab" fill="rgba(255,255,255,0.04)" />
+          <line x1="460" y1="225" x2="1200" y2="225" class="cad-structure-beam cad-structure-trace" stroke-width="2.2" />
+          <line x1="1200" y1="225" x2="960" y2="105" class="cad-structure-beam" />
+          <line x1="460" y1="225" x2="320" y2="105" class="cad-structure-beam" />
+          <!-- Cantilever Witness Line & Dimension -->
+          <line x1="1140" y1="200" x2="1200" y2="225" class="cad-structure-dimension" />
+          <text x="1215" y="228" class="cad-bg-text" font-weight="700">CANTILEVER PROJECTION 1200MM</text>
+          <text x="210" y="155" class="cad-bg-text">SECOND FLOOR +7.200M</text>
+        </g>
+
+        <!-- Roof Parapet (+10.800m Level) & Steel Pergola Rafters -->
+        <g transform="translate(0, 0)">
+          <polygon points="500,200 820,200 1140,200 960,105 640,105 320,105" class="cad-structure-slab" />
+          <line x1="500" y1="200" x2="1140" y2="200" class="cad-structure-beam" />
+          <line x1="1140" y1="200" x2="960" y2="105" class="cad-structure-beam" />
+          <line x1="960" y1="105" x2="320" y2="105" class="cad-structure-beam" />
+          <line x1="320" y1="105" x2="500" y2="200" class="cad-structure-beam" />
+
+          <!-- Architectural Pergola Rafters -->
+          <line x1="540" y1="190" x2="400" y2="115" class="cad-structure-dimension" />
+          <line x1="620" y1="190" x2="480" y2="115" class="cad-structure-dimension" />
+          <line x1="700" y1="190" x2="560" y2="115" class="cad-structure-dimension" />
+          <line x1="780" y1="190" x2="640" y2="115" class="cad-structure-dimension" />
+          <line x1="860" y1="190" x2="720" y2="115" class="cad-structure-dimension" />
+          <line x1="940" y1="190" x2="800" y2="115" class="cad-structure-dimension" />
+          <line x1="1020" y1="190" x2="880" y2="115" class="cad-structure-dimension" />
+
+          <!-- Freehand Architectural Sketch Facade Curve -->
+          <path d="M 500,200 Q 720,140 820,200" stroke="var(--text-main)" stroke-width="1.8" fill="none" opacity="0.32" stroke-linecap="round" />
+          <text x="710" y="170" class="cad-bg-text">FAÇADE RADIUS R=4000MM</text>
+          <text x="210" y="155" class="cad-bg-text">ROOF PARAPET +10.800M</text>
+        </g>
+
+        <!-- Seismic Diagonal Bracing (NBC 205) -->
+        <g class="cad-structure-anim" opacity="0.3">
+          <line x1="500" y1="800" x2="820" y2="600" class="cad-structure-seismic" />
+          <line x1="820" y1="800" x2="500" y2="600" class="cad-structure-seismic" />
+          <line x1="820" y1="600" x2="1140" y2="400" class="cad-structure-seismic" />
+          <line x1="1140" y1="600" x2="820" y2="400" class="cad-structure-seismic" />
+          <!-- Shear Vector Arrows -->
+          <line x1="450" y1="500" x2="500" y2="500" stroke="var(--text-main)" stroke-width="1.5" marker-end="url(#bgCadArrow)" />
+          <text x="360" y="504" class="cad-bg-text">EQ BASE SHEAR Vb</text>
+        </g>
+      </g>
+
+      <!-- ================= ARCHITECTURAL ELEVATION & SKETCH ARCS (LEFT FOREGROUND) ================= -->
+      <g transform="translate(60, 480) scale(0.65)" opacity="0.35">
+        <!-- Isometric Section Frame -->
+        <rect x="0" y="0" width="380" height="240" fill="none" stroke="var(--text-muted)" stroke-width="1" stroke-dasharray="8 4" />
+        <line x1="0" y1="120" x2="380" y2="120" stroke="var(--text-muted)" stroke-width="0.8" stroke-dasharray="4 2" />
+        <line x1="190" y1="0" x2="190" y2="240" stroke="var(--text-muted)" stroke-width="0.8" stroke-dasharray="4 2" />
+        
+        <!-- Freehand Architectural Arcs -->
+        <path d="M 40,200 Q 190,40 340,200" stroke="var(--text-main)" stroke-width="1.8" fill="none" class="cad-bg-trace" />
+        <circle cx="190" cy="120" r="80" class="cad-bg-arc" stroke-width="1" stroke-dasharray="6 3" />
+        <circle cx="190" cy="120" r="4" fill="var(--text-main)" />
+        
+        <text x="190" y="225" class="cad-bg-text" text-anchor="middle">SPATIAL HARMONY &amp; VASTU AXIS</text>
+        <text x="20" y="30" class="cad-bg-text">SEC 01-A · BIRGUNJ RESIDENCE</text>
       </g>
 
       <!-- Upper Right Golden Ratio Arc & Fibonacci Notation -->
@@ -1975,7 +2128,8 @@
           </div>
         </div>
       </div>
-    </div>
+
+          </div>
   </header>
 
   <!-- ================= DESIGN ETHOS / PHILOSOPHY ================= -->
@@ -3022,19 +3176,6 @@
   </section>
 
   <!-- ================= ARTICLES / DESIGN JOURNAL (STRICTLY FROM SHEET) ================= -->
-  <section class="section cks-feature-section" id="articles">
-    <div class="container">
-      <div style="max-width: 720px;">
-        <div class="badge-pill"><span class="dot"></span> 06. Design Journal</div>
-        <h2 class="section-title">Design Journal &amp; <em>Articles</em></h2>
-        <p style="color: var(--text-muted); font-size: 1rem;">Technical articles and practical guides on Terai construction, moisture-resistant joinery, and interior standards — synced live from Google Sheets.</p>
-      </div>
-
-      <div class="articles-grid" id="articlesGrid"></div>
-    </div>
-  </section>
-
-  <!-- ================= CLIENT POSTS & LIVE SITE REEL (ALL 12 SHEET COLUMNS CONNECTED) ================= -->
   <section class="section cks-feature-section" id="reel">
     <div class="container" style="margin-bottom: 2.2rem;">
       <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1rem;">
@@ -3052,6 +3193,18 @@
 
     <div class="container">
       <div class="portfolio-grid" id="postsArchiveGrid"></div>
+    </div>
+  </section>
+
+  <section class="section cks-feature-section" id="articles">
+    <div class="container">
+      <div style="max-width: 720px;">
+        <div class="badge-pill"><span class="dot"></span> 06. Design Journal</div>
+        <h2 class="section-title">Design Journal &amp; <em>Articles</em></h2>
+        <p style="color: var(--text-muted); font-size: 1rem;">Technical articles and practical guides on Terai construction, moisture-resistant joinery, and interior standards — synced live from Google Sheets.</p>
+      </div>
+
+      <div class="articles-grid" id="articlesGrid"></div>
     </div>
   </section>
 
@@ -3244,32 +3397,137 @@
   <!-- ================= CONTACT ================= -->
   <section class="section cks-feature-section" id="contact">
     <div class="container">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3.5rem; background: var(--bg-card); padding: clamp(2rem, 5vw, 4rem); border-radius: 28px; border: 1px solid var(--border-subtle); box-shadow: var(--shadow-sm);">
-        <div>
-          <div class="badge-pill"><span class="dot"></span> 12. Consultation Desk</div>
-          <h2 class="section-title" style="text-align: left;">Begin Your Spatial <em>Story</em></h2>
-          <p style="color: var(--text-muted); margin: 1rem 0 1.8rem;">Consult directly with Er. Chetan Kumar Sarraf for site surveys, AutoCAD blueprints, Google Chat workspace discussions, or turnkey execution.</p>
-          <div style="font-family: 'Plus Jakarta Sans', monospace; font-size: 0.88rem; line-height: 2.3;">
-            <div><i class="fa-solid fa-phone text-main"></i> <a id="contactPhoneLink" href="tel:+9779766188838" style="color:inherit; text-decoration:none;">+977 9766188838</a></div>
-            <div><i class="fa-brands fa-whatsapp text-emerald-500"></i> <a id="contactWaLink" href="https://wa.me/9779766188838" target="_blank" style="color:inherit; text-decoration:none;">+977 9766188838</a></div>
-            <div><i class="fa-solid fa-envelope text-main"></i> <a id="contactEmailLink" href="mailto:master.er.cks@outlook.com" style="color:inherit; text-decoration:none;">master.er.cks@outlook.com</a></div>
-            <div><i class="fa-solid fa-location-dot text-main"></i> <span id="contactAddrTxt">Birgunj, Parsa, Nepal</span></div>
-            <div><i class="fa-solid fa-compass text-main"></i> <a id="contactCoordsLink" href="https://www.google.com/maps/place/27%C2%B000'36.8%22N+84%C2%B053'34.9%22E/@27.010213,84.893026,17z" target="_blank" style="color:inherit; text-decoration:none;">27° 0' 36.7668" N 84° 53' 34.8936" E</a></div>
-          </div>
+      <div style="max-width: 720px; margin-bottom: 2.2rem;">
+        <div class="badge-pill"><span class="dot"></span> 12. DIRECT CONSULTATION DESK</div>
+        <h2 class="section-title">Start Your Spatial Project in <em>Birgunj &amp; Nepal</em></h2>
+        <p style="color: var(--text-muted); font-size: 1.02rem; margin-top: 0.6rem; font-weight: 300;">
+          Engage directly with Er. Chetan Kumar Sarraf for 2D AutoCAD planning, 3D realistic rendering, spatial BOQ valuation &amp; structural civil consultation across Birgunj, Parsa &amp; Nepal.
+        </p>
+      </div>
 
-          <div style="display:flex; gap:0.7rem; flex-wrap:wrap; margin-top:1.5rem;">
-            <button type="button" onclick="toggleGChat(true)" class="btn-pill btn-light">
-              <i class="fa-brands fa-google" style="color:inherit;"></i> Open Google Chat Desk
-            </button>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; background: var(--bg-card); padding: clamp(1.8rem, 4vw, 3rem); border-radius: 28px; border: 1px solid var(--border-subtle); box-shadow: var(--shadow-sm);">
+        <!-- Left Column: Studio Credentials & Direct Channels -->
+        <div style="display: flex; flex-direction: column; justify-content: space-between; gap: 2rem;">
+          <div>
+            <div style="font-family: 'Plus Jakarta Sans', serif; font-size: 1.6rem; font-weight: 700; margin-bottom: 0.6rem;">Contact Desk</div>
+            <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; font-weight: 300;">
+              Whether you are constructing a contemporary duplex, renovating an executive corporate office, or drafting municipal site plans complying with Birgunj bylaws, our studio delivers structural integrity combined with spatial luxury.
+            </p>
+
+            <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem;">
+              <a id="contactWaLink" href="https://wa.me/9779766188838" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 1rem; text-decoration: none; color: inherit; padding: 0.8rem 1.1rem; border-radius: 16px; background: var(--bg-elevated); border: 1px solid var(--border-subtle);">
+                <div style="width: 38px; height: 38px; border-radius: 50%; background: var(--bg-card); display: flex; align-items: center; justify-content: center; color: var(--text-main); font-size: 1.1rem;">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div>
+                  <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; color: var(--text-muted);">Direct WhatsApp &amp; Mobile</div>
+                  <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 0.95rem;">+977 9766188838</div>
+                </div>
+              </a>
+
+              <a id="contactEmailLink" href="mailto:master.er.cks@outlook.com" style="display: flex; align-items: center; gap: 1rem; text-decoration: none; color: inherit; padding: 0.8rem 1.1rem; border-radius: 16px; background: var(--bg-elevated); border: 1px solid var(--border-subtle);">
+                <div style="width: 38px; height: 38px; border-radius: 50%; background: var(--bg-card); display: flex; align-items: center; justify-content: center; color: var(--text-main); font-size: 1.1rem;">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div>
+                  <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; color: var(--text-muted);">Studio Email Desk</div>
+                  <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 0.95rem;">master.er.cks@outlook.com</div>
+                </div>
+              </a>
+
+              <a id="contactPhoneLink" href="tel:+9779766188838" style="display: flex; align-items: center; gap: 1rem; text-decoration: none; color: inherit; padding: 0.8rem 1.1rem; border-radius: 16px; background: var(--bg-elevated); border: 1px solid var(--border-subtle);">
+                <div style="width: 38px; height: 38px; border-radius: 50%; background: var(--bg-card); display: flex; align-items: center; justify-content: center; color: var(--text-main); font-size: 1.1rem;">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div>
+                  <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; color: var(--text-muted);">Direct Phone</div>
+                  <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 0.95rem;">+977 9766188838</div>
+                </div>
+              </a>
+
+              <div style="display: flex; align-items: center; gap: 1rem; padding: 0.8rem 1.1rem; border-radius: 16px; background: var(--bg-elevated); border: 1px solid var(--border-subtle);">
+                <div style="width: 38px; height: 38px; border-radius: 50%; background: var(--bg-card); display: flex; align-items: center; justify-content: center; color: var(--text-main); font-size: 1.1rem;">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                  <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; color: var(--text-muted);">Location &amp; Coverage</div>
+                  <div id="contactAddrTxt" style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 0.95rem;">Birgunj, Parsa, Nepal</div>
+                </div>
+              </div>
+
+              <a id="contactCoordsLink" href="https://www.google.com/maps/place/27%C2%B000'36.8%22N+84%C2%B053'34.9%22E/@27.010213,84.893026,17z" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 1rem; text-decoration: none; color: inherit; padding: 0.8rem 1.1rem; border-radius: 16px; background: var(--bg-elevated); border: 1px solid var(--border-subtle);">
+                <div style="width: 38px; height: 38px; border-radius: 50%; background: var(--bg-card); display: flex; align-items: center; justify-content: center; color: var(--text-main); font-size: 1.1rem;">
+                  <i class="fa-solid fa-compass"></i>
+                </div>
+                <div>
+                  <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; color: var(--text-muted);">Coordinates</div>
+                  <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.78rem;">27° 0' 36.7668" N · 84° 53' 34.8936" E</div>
+                </div>
+              </a>
+            </div>
+
+            <div style="display:flex; gap:0.7rem; flex-wrap:wrap; margin-top:1.5rem;">
+              <button type="button" onclick="toggleGChat(true)" class="btn-pill btn-light">
+                <i class="fa-brands fa-google" style="color:inherit;"></i> Open Google Chat Desk
+              </button>
+            </div>
           </div>
         </div>
 
-        <form onsubmit="submitInquiry(event)" style="display: flex; flex-direction: column; gap: 1rem;">
-          <input type="text" id="inqName" placeholder="Your Full Name" required style="padding: 0.85rem 1.1rem; border-radius: 12px; background: var(--bg-elevated); border: 1px solid var(--border-subtle); color: var(--text-main);" />
-          <input type="tel" id="inqPhone" placeholder="WhatsApp / Phone (+977)" required style="padding: 0.85rem 1.1rem; border-radius: 12px; background: var(--bg-elevated); border: 1px solid var(--border-subtle); color: var(--text-main);" />
-          <textarea id="inqMsg" rows="4" placeholder="Describe your room dimensions or architectural scope..." required style="padding: 0.85rem 1.1rem; border-radius: 12px; background: var(--bg-elevated); border: 1px solid var(--border-subtle); color: var(--text-main);"></textarea>
-          <button type="submit" class="btn-pill btn-dark" style="justify-content: center;">Send Inquiry &amp; Open WhatsApp <i class="fa-solid fa-paper-plane"></i></button>
-        </form>
+        <!-- Right Column: Consultation Form -->
+        <div>
+          <form id="heroContactForm" onsubmit="submitHeroContact(event)" style="display: flex; flex-direction: column; gap: 1.1rem;">
+            <div>
+              <label for="heroContactName" style="display: block; font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.4rem; font-weight: 600;">
+                Your Full Name <span style="color: var(--text-main); font-weight: 700;">*</span>
+              </label>
+              <input type="text" id="heroContactName" placeholder="e.g. Aalok Tulshyan" required style="width: 100%; padding: 0.85rem 1.1rem; border-radius: 14px; background: var(--bg-elevated); border: 1px solid var(--border-subtle); color: var(--text-main); font-family: inherit; font-size: 0.95rem; outline: none; transition: border-color 0.2s ease;" />
+              <input type="hidden" id="inqName" />
+            </div>
+
+            <div>
+              <label for="heroContactPhone" style="display: block; font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.4rem; font-weight: 600;">
+                WhatsApp / Phone Number <span style="color: var(--text-main); font-weight: 700;">*</span>
+              </label>
+              <input type="tel" id="heroContactPhone" placeholder="e.g. 98XXXXXXXX" required style="width: 100%; padding: 0.85rem 1.1rem; border-radius: 14px; background: var(--bg-elevated); border: 1px solid var(--border-subtle); color: var(--text-main); font-family: inherit; font-size: 0.95rem; outline: none; transition: border-color 0.2s ease;" />
+              <input type="hidden" id="inqPhone" />
+            </div>
+
+            <div>
+              <label for="heroContactScope" style="display: block; font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.4rem; font-weight: 600;">
+                Project Category / Scope <span style="color: var(--text-main); font-weight: 700;">*</span>
+              </label>
+              <select id="heroContactScope" style="width: 100%; padding: 0.85rem 1.1rem; border-radius: 14px; background: var(--bg-elevated); border: 1px solid var(--border-subtle); color: var(--text-main); font-family: inherit; font-size: 0.95rem; outline: none; cursor: pointer;">
+                <option value="Residential Interior Architecture">Residential Interior Architecture (Apartment / Duplex)</option>
+                <option value="Commercial &amp; Executive Office">Commercial &amp; Executive Corporate Office</option>
+                <option value="Full Turnkey Execution &amp; Supervision">Full Turnkey Execution &amp; Site Supervision</option>
+                <option value="Structural Civil Engineering &amp; NBC 205">Structural Civil Engineering (NBC 205:2024 Rigor)</option>
+                <option value="Spatial BOQ &amp; Valuation">Spatial BOQ Valuation &amp; Material Analysis</option>
+                <option value="2D AutoCAD &amp; 3D Photorealism">2D AutoCAD &amp; 3D Photorealism Rendering</option>
+                <option value="Vastu &amp; Spatial Alignment">Vastu Shastra Spatial Alignment</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="heroContactMsg" style="display: block; font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.4rem; font-weight: 600;">
+                Floor / Room Area &amp; Requirements
+              </label>
+              <textarea id="heroContactMsg" rows="3" placeholder="Describe your room dimensions (e.g. 14x16 master suite), floor area, budget target, or preferred design style..." style="width: 100%; padding: 0.85rem 1.1rem; border-radius: 14px; background: var(--bg-elevated); border: 1px solid var(--border-subtle); color: var(--text-main); font-family: inherit; font-size: 0.95rem; outline: none; resize: vertical;"></textarea>
+              <input type="hidden" id="inqMsg" />
+            </div>
+
+            <div id="heroContactFeedback" style="display: none; padding: 0.75rem 1rem; border-radius: 12px; font-size: 0.85rem; font-family: 'JetBrains Mono', monospace;"></div>
+
+            <div style="display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 0.5rem;">
+              <button type="submit" class="btn-pill btn-dark" style="flex: 1 1 180px; justify-content: center; padding: 0.8rem 1.4rem;">
+                <i class="fa-brands fa-whatsapp"></i> Inquire via WhatsApp
+              </button>
+              <button type="button" onclick="submitHeroContactDirect(event)" class="btn-pill btn-light" style="flex: 1 1 180px; justify-content: center; padding: 0.8rem 1.4rem;">
+                <i class="fa-solid fa-paper-plane"></i> Submit to Studio Desk
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </section>
@@ -4391,6 +4649,70 @@
       } catch(e) {}
     }
 
+
+    // Interactive Architectural & Structural Sketch View Mode Switcher
+    function submitHeroContact(e) {
+      if (e && e.preventDefault) e.preventDefault();
+      const n = document.getElementById('heroContactName')?.value || 'Prospective Client';
+      const p = document.getElementById('heroContactPhone')?.value || '';
+      const s = document.getElementById('heroContactScope')?.value || 'Interior Design';
+      const m = document.getElementById('heroContactMsg')?.value || 'Standard consultation requested';
+
+      const text = encodeURIComponent(`*New Studio Inquiry from Website*\n*Name:* ${n}\n*Phone:* ${p}\n*Scope:* ${s}\n*Project Details:* ${m}\n*Date:* ${new Date().toLocaleDateString()}`);
+      window.open(`https://wa.me/${state.whatsappDigits}?text=${text}`, '_blank');
+
+      const fb = document.getElementById('heroContactFeedback');
+      if (fb) {
+        fb.style.display = 'block';
+        fb.style.background = 'rgba(255,255,255,0.08)';
+        fb.style.color = 'var(--text-main)';
+        fb.innerHTML = '<i class="fa-solid fa-check"></i> Opening WhatsApp conversation with Er. Chetan Kumar Sarraf...';
+      }
+    }
+
+    function submitHeroContactDirect(e) {
+      if (e && e.preventDefault) e.preventDefault();
+      const nameEl = document.getElementById('heroContactName');
+      const phoneEl = document.getElementById('heroContactPhone');
+      if (!nameEl?.value.trim() || !phoneEl?.value.trim()) {
+        const fb = document.getElementById('heroContactFeedback');
+        if (fb) {
+          fb.style.display = 'block';
+          fb.style.background = 'rgba(255,255,255,0.08)';
+          fb.style.color = 'var(--text-main)';
+          fb.textContent = 'Please enter both your name and phone number.';
+        }
+        return;
+      }
+
+      const n = nameEl.value.trim();
+      const p = phoneEl.value.trim();
+      const s = document.getElementById('heroContactScope')?.value || 'General Consultation';
+      const m = document.getElementById('heroContactMsg')?.value || '';
+
+      const fb = document.getElementById('heroContactFeedback');
+      if (fb) {
+        fb.style.display = 'block';
+        fb.style.background = 'rgba(255,255,255,0.1)';
+        fb.style.color = 'var(--text-main)';
+        fb.innerHTML = `<i class="fa-solid fa-circle-check"></i> Thank you ${escapeHtml(n)}! Your inquiry has been registered. Er. Chetan will reach out at ${escapeHtml(p)} shortly.`;
+      }
+
+      // Also trigger webhook if configured in sheet
+      if (state.reviewWebhookUrl) {
+        try {
+          fetch(state.reviewWebhookUrl, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ type: 'hero_inquiry', name: n, phone: p, scope: s, message: m, timestamp: new Date().toISOString() })
+          }).catch(() => {});
+        } catch(err) {}
+      }
+
+      const form = document.getElementById('heroContactForm');
+      if (form) form.reset();
+    }
+
     // Expose global manual sync & custom sheet switcher
     window.syncLiveSheet = async function(userTriggered = false) {
       updateSheetConnectionUI('syncing');
@@ -5357,6 +5679,10 @@
     }
 
     function activateAppSection(sectionId, title) {
+      if (sectionId === 'home') {
+        goCoverHome();
+        return;
+      }
       const target = document.getElementById(sectionId);
       if (!target) return;
 
