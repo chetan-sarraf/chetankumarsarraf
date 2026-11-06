@@ -905,6 +905,129 @@
     }
 
     /* ================= INTEGRATED AI 2D CAD & 3D ARCHITECTURAL STUDIO (UI-MATCHED) ================= */
+    
+    /* ================= MAKET & PLANNER 5D STUDIO ENHANCEMENTS ================= */
+    .mks-2d-viewbar {
+      position: absolute;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 25;
+      display: inline-flex;
+      background: rgba(13, 18, 28, 0.90);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 9999px;
+      padding: 3px;
+      gap: 3px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    .mks-view-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-family: 'Plus Jakarta Sans', monospace;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      padding: 0.35rem 0.75rem;
+      border-radius: 9999px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+    .mks-view-btn:hover {
+      color: var(--text-main);
+      background: var(--bg-elevated);
+    }
+    .mks-view-btn.active {
+      background: var(--brand-dark);
+      color: var(--bg-page);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .mks-quick-stamp-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.4rem;
+      margin-top: 0.5rem;
+    }
+    .mks-stamp-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 0.45rem 0.5rem;
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      text-align: left;
+      transition: all 0.15s ease;
+    }
+    .mks-stamp-btn:hover {
+      border-color: var(--brand-cyan);
+      background: var(--bg-elevated);
+      transform: translateY(-1px);
+    }
+    .mks-stamp-btn i {
+      font-size: 0.8rem;
+      color: var(--brand-cyan);
+    }
+
+    /* Auth Modal Error & Demo Styles */
+    #authFeedbackMsg {
+      padding: 0.6rem 0.8rem;
+      border-radius: 10px;
+      font-size: 0.78rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 600;
+      text-align: center;
+      display: none;
+      transition: all 0.2s ease;
+      margin-top: 0.4rem;
+    }
+    .auth-pass-wrap {
+      position: relative;
+      width: 100%;
+    }
+    .auth-pass-toggle-btn {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 0.9rem;
+      padding: 4px;
+    }
+    .auth-demo-badge {
+      margin-top: 0.6rem;
+      padding: 0.5rem 0.75rem;
+      border-radius: 10px;
+      background: var(--bg-elevated);
+      border: 1px dashed var(--border-subtle);
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .auth-demo-badge code {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--text-main);
+      font-weight: 700;
+    }
+
     .mks-studio-card {
       background: var(--bg-card);
       border: 1px solid var(--border-subtle);
@@ -1261,17 +1384,18 @@
     /* Floating CAD Tool Dock */
     .mks-cad-dock {
       position: absolute;
-      top: 12px;
-      left: 12px;
-      background: var(--nav-bg);
-      backdrop-filter: blur(12px);
-      border: 1px solid var(--border-subtle);
+      top: 62px;
+      left: 14px;
+      background: rgba(13, 18, 28, 0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
       border-radius: 16px;
-      padding: 5px;
+      padding: 6px;
       display: flex;
       flex-direction: column;
-      gap: 4px;
-      box-shadow: var(--shadow-md);
+      gap: 5px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
       z-index: 14;
     }
     .mks-tool-btn {
@@ -1323,27 +1447,33 @@
     .mks-3d-top {
       position: absolute;
       top: 12px;
-      left: 12px;
-      right: 12px;
+      left: 14px;
+      right: 14px;
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
-      gap: 0.5rem;
+      align-items: center;
+      gap: 0.6rem;
       flex-wrap: wrap;
       pointer-events: none;
       z-index: 14;
     }
     .mks-3d-card {
       background: rgba(13, 18, 28, 0.88);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255,255,255,0.12);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
       border-radius: 9999px;
       padding: 4px 8px;
       display: flex;
       align-items: center;
       gap: 4px;
       pointer-events: auto;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
+    }
+    .mks-3d-storey-dock {
+      background: rgba(15, 23, 42, 0.94);
+      border-color: rgba(56, 189, 248, 0.28);
     }
     .mks-3d-mini {
       background: transparent;
@@ -1353,12 +1483,22 @@
       font-size: 0.68rem;
       font-weight: 700;
       text-transform: uppercase;
-      padding: 3px 9px;
+      padding: 4px 9px;
       border-radius: 9999px;
       cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: all 0.18s ease;
+      white-space: nowrap;
     }
-    .mks-3d-mini:hover { color: #fff; background: rgba(255,255,255,0.08); }
-    .mks-3d-mini.active { background: var(--brand-cyan); color: #fff; }
+    .mks-3d-mini:hover { color: #fff; background: rgba(255, 255, 255, 0.12); }
+    .mks-3d-mini.active {
+      background: var(--brand-cyan);
+      color: #0b0f19;
+      font-weight: 800;
+      box-shadow: 0 2px 10px rgba(56, 189, 248, 0.3);
+    }
 
     .mks-3d-styles {
       position: absolute;
@@ -2763,6 +2903,17 @@
               </div>
 
               <div>
+                <div class="mks-label"><span>Quick Stamp Spaces (Maket Style)</span></div>
+                <div class="mks-quick-stamp-grid">
+                  <button type="button" class="mks-stamp-btn" onclick="window.CKSStudio && window.CKSStudio.stampRoom('master', 16, 14)"><i class="fa-solid fa-bed"></i> Master (16×14)</button>
+                  <button type="button" class="mks-stamp-btn" onclick="window.CKSStudio && window.CKSStudio.stampRoom('bedroom', 14, 12)"><i class="fa-solid fa-person-shelter"></i> Bedroom (14×12)</button>
+                  <button type="button" class="mks-stamp-btn" onclick="window.CKSStudio && window.CKSStudio.stampRoom('living', 20, 16)"><i class="fa-solid fa-couch"></i> Living (20×16)</button>
+                  <button type="button" class="mks-stamp-btn" onclick="window.CKSStudio && window.CKSStudio.stampRoom('kitchen', 12, 10)"><i class="fa-solid fa-kitchen-set"></i> Kitchen (12×10)</button>
+                  <button type="button" class="mks-stamp-btn" onclick="window.CKSStudio && window.CKSStudio.stampRoom('dining', 14, 12)"><i class="fa-solid fa-utensils"></i> Dining (14×12)</button>
+                  <button type="button" class="mks-stamp-btn" onclick="window.CKSStudio && window.CKSStudio.stampRoom('bathroom', 8, 6)"><i class="fa-solid fa-bath"></i> Toilet (8×6)</button>
+                  <button type="button" class="mks-stamp-btn" onclick="window.CKSStudio && window.CKSStudio.stampRoom('office', 8, 8)"><i class="fa-solid fa-om"></i> Puja/Study (8×8)</button>
+                  <button type="button" class="mks-stamp-btn" onclick="window.CKSStudio && window.CKSStudio.stampRoom('patio', 14, 6)"><i class="fa-solid fa-umbrella-beach"></i> Verandah (14×6)</button>
+                </div>
                 <div class="mks-label"><span>Spatial Program</span></div>
                 <div class="mks-stepper">
                   <span>Bedrooms (BHK)</span>
@@ -2860,6 +3011,22 @@
           <div class="mks-viewport" id="mksViewport">
             <!-- 2D CAD Pane -->
             <div class="mks-pane-2d" id="mksPane2D">
+              <!-- Maket-Style 2D Architectural View Selector (Plan, Front Elevation, Section A-A, Side Elevation) -->
+              <div class="mks-2d-viewbar" id="mks2dViewBar">
+                <button type="button" class="mks-view-btn active" data-mksview="plan" onclick="window.CKSStudio && window.CKSStudio.set2DView('plan')">
+                  <i class="fa-solid fa-layer-group"></i> 2D Plan
+                </button>
+                <button type="button" class="mks-view-btn" data-mksview="front_elev" onclick="window.CKSStudio && window.CKSStudio.set2DView('front_elev')">
+                  <i class="fa-solid fa-building"></i> Front Elevation
+                </button>
+                <button type="button" class="mks-view-btn" data-mksview="section_aa" onclick="window.CKSStudio && window.CKSStudio.set2DView('section_aa')">
+                  <i class="fa-solid fa-scissors"></i> Section A-A
+                </button>
+                <button type="button" class="mks-view-btn" data-mksview="side_elev" onclick="window.CKSStudio && window.CKSStudio.set2DView('side_elev')">
+                  <i class="fa-solid fa-arrows-left-right-to-line"></i> Side Elevation
+                </button>
+              </div>
+
               <canvas id="mksCadCanvas"></canvas>
 
               <!-- Floating CAD Tool Dock -->
@@ -2885,23 +3052,29 @@
               </div>
 
               <div class="mks-3d-top">
-                <div class="mks-3d-card">
-                  <button type="button" class="mks-3d-mini active" data-mkscam="iso">Iso Orbit</button>
-                  <button type="button" class="mks-3d-mini" data-mkscam="top">Top Plan</button>
-                  <button type="button" class="mks-3d-mini" data-mkscam="front">Elevation</button>
-                  <button type="button" class="mks-3d-mini" data-mkscam="walk" title="Eye-level walkthrough: Drag mouse + W/A/S/D keys!">Walkthrough</button>
+                <!-- Camera Preset Dock -->
+                <div class="mks-3d-card mks-3d-cam-dock">
+                  <button type="button" class="mks-3d-mini active" data-mkscam="iso" title="Isometric 3D Orbit"><i class="fa-solid fa-cube"></i> Iso</button>
+                  <button type="button" class="mks-3d-mini" data-mkscam="top" title="Top-down Architectural BIM Plan"><i class="fa-solid fa-table-cells"></i> Top</button>
+                  <button type="button" class="mks-3d-mini" data-mkscam="front" title="Front Elevation View"><i class="fa-solid fa-building"></i> Elev</button>
+                  <button type="button" class="mks-3d-mini" data-mkscam="walk" title="Eye-level walkthrough (Drag mouse + WASD keys)"><i class="fa-solid fa-person-walking"></i> Walk</button>
                 </div>
 
-                <div class="mks-3d-card">
-                  <button type="button" class="mks-3d-mini active" data-mkscut="smart" title="Auto-lowers camera-facing exterior walls">Smart Cut</button>
-                  <button type="button" class="mks-3d-mini" data-mkscut="full">Full Walls</button>
-                  <button type="button" class="mks-3d-mini" data-mkscut="half">Half (4')</button>
+                <!-- 3D Storey Navigation Dock (Maket & Revit Style) -->
+                <div class="mks-3d-card mks-3d-storey-dock" id="mks3dStoreyDock">
+                  <!-- Dynamically rendered by render3DStoreyBar() -->
+                </div>
+
+                <!-- Visualization & Environment Dock -->
+                <div class="mks-3d-card mks-3d-tool-dock">
+                  <button type="button" class="mks-3d-mini active" data-mkscut="smart" title="Smart Cut: auto-lowers camera-facing exterior walls">Smart Cut</button>
+                  <button type="button" class="mks-3d-mini" data-mkscut="full" title="Full height walls">Full</button>
+                  <button type="button" class="mks-3d-mini" id="mksRoofToggleBtn" title="Toggle Roof Slab & Parapet"><i class="fa-solid fa-house-chimney"></i> Roof</button>
                   <span style="color:rgba(255,255,255,0.2);">|</span>
-                  <i class="fa-solid fa-sun" style="color:var(--text-main); font-size:0.72rem; margin-left:3px;"></i>
-                  <input type="range" id="mksSunSlider" min="0" max="100" value="36" style="width:68px; accent-color:var(--text-main);" title="Daylight to Night Interior Lighting" />
-                  <button type="button" class="mks-3d-mini active" id="mks3DLabelsBtn">Tags</button>
-                  <button type="button" class="mks-3d-mini" id="mksStackBtn">Stack Storeys</button>
-                  <button type="button" class="mks-3d-mini" id="mksSnap3DBtn" title="Download 3D PNG Render"><i class="fa-solid fa-camera"></i> PNG</button>
+                  <i class="fa-solid fa-sun" style="color:var(--brand-gold); font-size:0.75rem;" title="Sunlight / Time of Day"></i>
+                  <input type="range" id="mksSunSlider" min="0" max="100" value="36" style="width:60px; accent-color:var(--brand-cyan);" title="Sun daylight (0=morning, 36=afternoon, 100=night)" />
+                  <button type="button" class="mks-3d-mini active" id="mks3DLabelsBtn" title="Toggle Room Tags"><i class="fa-solid fa-tags"></i></button>
+                  <button type="button" class="mks-3d-mini" id="mksSnap3DBtn" title="Download High-Res 3D PNG"><i class="fa-solid fa-camera"></i> PNG</button>
                 </div>
               </div>
 
@@ -3895,10 +4068,20 @@
           <input type="text" id="authFullName" placeholder="Full Name (e.g. Aarav Sharma)" style="width:100%; padding:0.78rem 1rem; border-radius:12px; background:var(--bg-elevated); border:1px solid var(--border-subtle); color:var(--text-main);" />
         </div>
         <input type="email" id="authEmail" placeholder="Email Address *" required style="width:100%; padding:0.78rem 1rem; border-radius:12px; background:var(--bg-elevated); border:1px solid var(--border-subtle); color:var(--text-main);" />
-        <input type="password" id="authPassword" placeholder="Password (min 4 characters) *" minlength="4" required style="width:100%; padding:0.78rem 1rem; border-radius:12px; background:var(--bg-elevated); border:1px solid var(--border-subtle); color:var(--text-main);" />
-        <button type="submit" id="authSubmitBtn" class="btn-pill btn-dark" style="justify-content:center; padding:0.82rem;">
+        <div class="auth-pass-wrap">
+          <input type="password" id="authPassword" placeholder="Password (min 4 characters) *" minlength="4" required style="width:100%; padding:0.78rem 2.8rem 0.78rem 1rem; border-radius:12px; background:var(--bg-elevated); border:1px solid var(--border-subtle); color:var(--text-main);" />
+          <button type="button" class="auth-pass-toggle-btn" onclick="toggleAuthPasswordVisibility()" title="Show/Hide Password">
+            <i id="authPassEyeIcon" class="fa-solid fa-eye"></i>
+          </button>
+        </div>
+        <div id="authFeedbackMsg"></div>
+        <button type="submit" id="authSubmitBtn" class="btn-pill btn-dark" style="justify-content:center; padding:0.82rem; margin-top:0.2rem;">
           Sign In &amp; Unlock Studio <i class="fa-solid fa-arrow-right"></i>
         </button>
+        <div class="auth-demo-badge">
+          <span><i class="fa-solid fa-key" style="color:var(--brand-gold);"></i> Demo: <code>guest@chetan.com</code> / <code>guest123</code></span>
+          <button type="button" onclick="fillDemoAuth()" style="background:transparent; border:none; color:var(--brand-cyan); font-weight:700; cursor:pointer; font-size:0.72rem; text-decoration:underline;">Auto-fill</button>
+        </div>
       </form>
 
       <div id="authSignedInFooter" style="display:none; margin-top:1rem; padding-top:1rem; border-top:1px solid var(--border-subtle); justify-content:space-between; align-items:center;">
@@ -5879,8 +6062,68 @@
       document.getElementById('userAuthModal').classList.remove('open');
     }
 
+    function getStoredAccounts() {
+      let accounts = {};
+      try { accounts = JSON.parse(localStorage.getItem(ACCOUNTS_STORAGE_KEY) || '{}'); } catch (err) {}
+      // Pre-seed official verified studio credentials if not present
+      if (!accounts['guest@chetan.com']) {
+        accounts['guest@chetan.com'] = { name: 'Studio Guest Member', email: 'guest@chetan.com', password: 'guest123', provider: 'email', createdAt: '2026-11-01T00:00:00Z' };
+      }
+      if (!accounts['master.er.cks@outlook.com']) {
+        accounts['master.er.cks@outlook.com'] = { name: 'Er. Chetan Kumar Sarraf', email: 'master.er.cks@outlook.com', password: 'chetan2026', provider: 'email', createdAt: '2026-11-01T00:00:00Z' };
+      }
+      return accounts;
+    }
+
+    function showAuthFeedback(type, message) {
+      const fb = document.getElementById('authFeedbackMsg');
+      if (!fb) return;
+      fb.style.display = 'block';
+      if (type === 'error') {
+        fb.style.background = 'rgba(239, 68, 68, 0.12)';
+        fb.style.color = '#ef4444';
+        fb.style.border = '1px solid rgba(239, 68, 68, 0.35)';
+        fb.innerHTML = '<i class="fa-solid fa-circle-exclamation"></i> ' + message;
+        if (fb.animate) {
+          fb.animate([
+            { transform: 'translateX(-4px)' },
+            { transform: 'translateX(4px)' },
+            { transform: 'translateX(-4px)' },
+            { transform: 'translateX(0)' }
+          ], { duration: 250 });
+        }
+      } else {
+        fb.style.background = 'rgba(16, 185, 129, 0.12)';
+        fb.style.color = '#10b981';
+        fb.style.border = '1px solid rgba(16, 185, 129, 0.35)';
+        fb.innerHTML = '<i class="fa-solid fa-circle-check"></i> ' + message;
+      }
+    }
+
+    function toggleAuthPasswordVisibility() {
+      const p = document.getElementById('authPassword');
+      const icon = document.getElementById('authPassEyeIcon');
+      if (!p) return;
+      if (p.type === 'password') {
+        p.type = 'text';
+        if (icon) icon.className = 'fa-solid fa-eye-slash';
+      } else {
+        p.type = 'password';
+        if (icon) icon.className = 'fa-solid fa-eye';
+      }
+    }
+
+    function fillDemoAuth() {
+      document.getElementById('authEmail').value = 'guest@chetan.com';
+      document.getElementById('authPassword').value = 'guest123';
+      switchAuthTab('signin');
+      showAuthFeedback('success', 'Demo credentials loaded! Click Sign In &amp; Unlock Studio.');
+    }
+
     function switchAuthTab(mode) {
       state.authMode = mode;
+      const fb = document.getElementById('authFeedbackMsg');
+      if (fb) fb.style.display = 'none';
       document.getElementById('authTabSignIn').classList.toggle('active', mode === 'signin');
       document.getElementById('authTabSignUp').classList.toggle('active', mode === 'signup');
       document.getElementById('authNameFieldWrap').style.display = mode === 'signup' ? 'block' : 'none';
@@ -5906,19 +6149,50 @@
       const email = document.getElementById('authEmail').value.trim();
       const pass = document.getElementById('authPassword').value;
       const fullNameInput = document.getElementById('authFullName').value.trim();
-      if (!email || !pass) return;
+      if (!email || !pass) {
+        showAuthFeedback('error', 'Please enter your email and password.');
+        return;
+      }
 
-      let accounts = {};
-      try { accounts = JSON.parse(localStorage.getItem(ACCOUNTS_STORAGE_KEY) || '{}'); } catch (err) {}
-
+      const accounts = getStoredAccounts();
       const key = email.toLowerCase();
-      const derivedName = fullNameInput || accounts[key]?.name || email.split('@')[0].replace(/[._-]+/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
 
-      accounts[key] = { name: derivedName, email, provider: 'email', updatedAt: new Date().toISOString() };
-      try { localStorage.setItem(ACCOUNTS_STORAGE_KEY, JSON.stringify(accounts)); } catch (err) {}
+      if (state.authMode === 'signin') {
+        const acc = accounts[key];
+        if (!acc) {
+          showAuthFeedback('error', 'Account not found. Please click "Create Account" above to register, or use Demo: guest@chetan.com / guest123');
+          return;
+        }
+        if (acc.password && acc.password !== pass) {
+          showAuthFeedback('error', 'Incorrect password. Please verify your credentials.');
+          document.getElementById('authPassword').focus();
+          return;
+        }
+        showAuthFeedback('success', 'Welcome back, ' + (acc.name || 'Member') + '! Unlocking Studio...');
+        setTimeout(() => {
+          completeAuthSession({ name: acc.name || 'Studio Member', email: acc.email, provider: 'email' });
+          e.target.reset();
+        }, 320);
+      } else {
+        // Sign Up
+        if (pass.length < 4) {
+          showAuthFeedback('error', 'Password must be at least 4 characters.');
+          return;
+        }
+        if (accounts[key]) {
+          showAuthFeedback('error', 'An account with this email already exists. Please switch to Sign In.');
+          return;
+        }
+        const derivedName = fullNameInput || email.split('@')[0].replace(/[._-]+/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+        accounts[key] = { name: derivedName, email: key, password: pass, provider: 'email', createdAt: new Date().toISOString() };
+        try { localStorage.setItem(ACCOUNTS_STORAGE_KEY, JSON.stringify(accounts)); } catch (err) {}
 
-      completeAuthSession({ name: derivedName, email, provider: 'email' });
-      e.target.reset();
+        showAuthFeedback('success', 'Account created! Welcome to Scale & Spaces.');
+        setTimeout(() => {
+          completeAuthSession({ name: derivedName, email: key, provider: 'email' });
+          e.target.reset();
+        }, 320);
+      }
     }
 
     function signInWithGoogle() {
@@ -6561,7 +6835,7 @@
         { id: 'shower',          name: 'Glass Shower',     cat: 'Sanitary / WC',  w: 3.5, h: 3.5, z: 6.8 },
         { id: 'vanity',          name: 'Basin Vanity',     cat: 'Sanitary / WC',  w: 3.8, h: 1.8, z: 2.8 },
         { id: 'toilet',          name: 'Wall-Hung WC',     cat: 'Sanitary / WC',  w: 1.6, h: 2.3, z: 2.5 },
-        { id: 'stairs',          name: 'NBC Staircase',    cat: 'Structure',      w: 3.5, h: 9.5, z: 9.0 },
+        { id: 'stairs',          name: 'Dog-Legged Stair Core (NBC 205)', cat: 'Structure', w: 7.0, h: 9.5, z: 10.0 },
         { id: 'plant',           name: 'Indoor Planter',   cat: 'Structure',      w: 1.8, h: 1.8, z: 3.8 },
         { id: 'car',             name: 'SUV / Sedan',      cat: 'Structure',      w: 6.4, h: 14.8,z: 4.8 }
       ];
@@ -6628,6 +6902,7 @@
         },
         trace: { img: null, opacity: 0.45, widthFt: 60, x: 0, y: 0, visible: true },
         cad: {
+          view2d: 'plan',
           tool: 'select',
           drawRoomType: 'bedroom',
           doorSubtype: 'single',
@@ -6648,7 +6923,9 @@
           camPreset: 'iso',
           sunTime: 36,
           showLabels: true,
-          stackFloors: false
+          stackFloors: false,
+          exploded: false,
+          showRoof: false
         },
         genConfig: {
           area: 1950,
@@ -7328,86 +7605,974 @@
         c.translate(p.x, p.y);
         c.rotate((f.rot * Math.PI) / 180);
         const pw = f.w * k, ph = f.h * k, hw = pw / 2, hh = ph / 2;
-        c.strokeStyle = dark ? '#94a3b8' : '#475569';
-        c.fillStyle = dark ? 'rgba(19, 27, 41, 0.85)' : 'rgba(255, 255, 255, 0.88)';
-        c.lineWidth = 1.15;
+        const strokeCol = dark ? '#94a3b8' : '#334155';
+        const fillCol = dark ? 'rgba(15, 23, 42, 0.92)' : 'rgba(255, 255, 255, 0.94)';
+        const accentCol = dark ? '#38bdf8' : '#0284c7';
+        c.strokeStyle = strokeCol;
+        c.fillStyle = fillCol;
+        c.lineWidth = 1.2;
 
         if (f.type === 'rug') {
-          c.setLineDash([3, 3]); c.fillStyle = dark ? 'rgba(56,189,248,0.08)' : 'rgba(197,155,39,0.12)';
-          c.fillRect(-hw, -hh, pw, ph); c.strokeRect(-hw, -hh, pw, ph); c.restore(); return;
-        }
-        if (f.type === 'plant') {
-          c.fillStyle = dark ? '#18181b' : '#f4f4f5';
-          c.beginPath(); c.arc(0, 0, Math.min(hw, hh), 0, Math.PI * 2); c.fill(); c.stroke(); c.restore(); return;
+          c.setLineDash([4, 3]);
+          c.fillStyle = dark ? 'rgba(56, 189, 248, 0.08)' : 'rgba(197, 155, 39, 0.12)';
+          c.fillRect(-hw, -hh, pw, ph);
+          c.strokeRect(-hw, -hh, pw, ph);
+          c.setLineDash([]);
+          c.strokeStyle = dark ? 'rgba(56, 189, 248, 0.25)' : 'rgba(197, 155, 39, 0.3)';
+          c.strokeRect(-hw + 6, -hh + 6, pw - 12, ph - 12);
+          c.restore();
+          return;
         }
 
+        if (f.type === 'plant') {
+          c.fillStyle = dark ? '#0f172a' : '#f8fafc';
+          c.beginPath(); c.arc(0, 0, Math.min(hw, hh) * 0.9, 0, Math.PI * 2); c.fill(); c.stroke();
+          c.fillStyle = dark ? 'rgba(34, 197, 94, 0.35)' : 'rgba(22, 163, 74, 0.35)';
+          c.strokeStyle = dark ? '#22c55e' : '#16a34a';
+          for (let a = 0; a < Math.PI * 2; a += Math.PI / 3) {
+            c.beginPath();
+            c.ellipse(Math.cos(a) * hw * 0.45, Math.sin(a) * hh * 0.45, hw * 0.38, hh * 0.22, a, 0, Math.PI * 2);
+            c.fill(); c.stroke();
+          }
+          c.restore();
+          return;
+        }
+
+        if (f.type === 'stairs') {
+          // Authentic Architectural Dog-Legged Staircase (NBC 205:2024 / IS 456)
+          c.fillStyle = dark ? 'rgba(15, 23, 42, 0.96)' : 'rgba(255, 255, 255, 0.98)';
+          c.fillRect(-hw, -hh, pw, ph);
+          c.strokeRect(-hw, -hh, pw, ph);
+
+          const isDogLeg = pw >= 36;
+          const landingH = Math.max(16, ph * 0.30);
+          const flightH = ph - landingH;
+          const risers = 8;
+          const treadH = flightH / risers;
+
+          if (isDogLeg) {
+            const wellW = Math.max(3, pw * 0.08);
+            const fltW = (pw - wellW) / 2;
+
+            // Mid-Landing at Top
+            c.fillStyle = dark ? 'rgba(30, 41, 59, 0.7)' : 'rgba(241, 245, 249, 0.9)';
+            c.fillRect(-hw, -hh, pw, landingH);
+            c.strokeRect(-hw, -hh, pw, landingH);
+            c.fillStyle = dark ? '#94a3b8' : '#475569';
+            c.font = '700 8px "JetBrains Mono", monospace';
+            c.textAlign = 'center';
+            c.fillText('LANDING +1.5M', 0, -hh + landingH * 0.58);
+
+            // Flight 1 (Left - Ascending: steps 1 to 8)
+            const f1Left = -hw;
+            for (let i = 0; i <= risers; i++) {
+              const y = hh - i * treadH;
+              c.beginPath(); c.moveTo(f1Left, y); c.lineTo(f1Left + fltW, y); c.stroke();
+              if (i < risers && treadH >= 7) {
+                c.fillStyle = dark ? '#64748b' : '#94a3b8';
+                c.font = '600 7px "JetBrains Mono", monospace';
+                c.textAlign = 'left';
+                c.fillText(String(i + 1), f1Left + 3, y - treadH * 0.3);
+              }
+            }
+
+            // Central Well Gap
+            c.fillStyle = dark ? '#0f172a' : '#e2e8f0';
+            c.fillRect(-wellW / 2, -hh + landingH, wellW, flightH);
+            c.strokeRect(-wellW / 2, -hh + landingH, wellW, flightH);
+
+            // Travel Line & Direction Arrow "UP" on Flight 1
+            const arrX = f1Left + fltW * 0.55;
+            c.strokeStyle = accentCol;
+            c.fillStyle = accentCol;
+            c.lineWidth = 1.4;
+            c.beginPath(); c.arc(arrX, hh - 5, 2.5, 0, Math.PI * 2); c.fill();
+            c.beginPath(); c.moveTo(arrX, hh - 5); c.lineTo(arrX, -hh + landingH + 4); c.stroke();
+            c.beginPath();
+            c.moveTo(arrX, -hh + landingH + 2);
+            c.lineTo(arrX - 3.5, -hh + landingH + 7);
+            c.lineTo(arrX + 3.5, -hh + landingH + 7);
+            c.closePath(); c.fill();
+            c.font = '800 7.5px "JetBrains Mono", monospace';
+            c.textAlign = 'center';
+            c.fillText('UP', arrX, hh - flightH * 0.45);
+
+            // Architectural Cutting Breakline (Double Zig-Zag at 45°) across flight
+            c.strokeStyle = dark ? '#f43f5e' : '#e11d48';
+            c.lineWidth = 1.5;
+            const bY = hh - flightH * 0.52;
+            c.beginPath();
+            c.moveTo(f1Left - 2, bY + 6);
+            c.lineTo(f1Left + fltW * 0.4, bY + 6);
+            c.lineTo(f1Left + fltW * 0.5, bY - 6);
+            c.lineTo(f1Left + fltW * 0.6, bY + 6);
+            c.lineTo(hw + 2, bY + 6);
+            c.stroke();
+
+            // Flight 2 (Right - Upper Flight: steps 9 to 16, Dashed lines above breakline)
+            c.strokeStyle = strokeCol;
+            c.lineWidth = 1.0;
+            const f2Left = -hw + fltW + wellW;
+            for (let i = 0; i <= risers; i++) {
+              const y = -hh + landingH + i * treadH;
+              c.setLineDash(y > bY ? [3, 2.5] : []);
+              c.beginPath(); c.moveTo(f2Left, y); c.lineTo(hw, y); c.stroke();
+              if (i < risers && treadH >= 7) {
+                c.fillStyle = dark ? '#64748b' : '#94a3b8';
+                c.font = '600 7px "JetBrains Mono", monospace';
+                c.textAlign = 'right';
+                c.fillText(String(9 + i), hw - 3, y + treadH * 0.7);
+              }
+            }
+            c.setLineDash([]);
+          } else {
+            // Straight run
+            for (let i = 1; i <= risers; i++) {
+              const y = hh - (ph * i) / risers;
+              c.beginPath(); c.moveTo(-hw, y); c.lineTo(hw, y); c.stroke();
+            }
+            c.strokeStyle = accentCol; c.fillStyle = accentCol;
+            c.beginPath(); c.arc(0, hh - 4, 2.5, 0, Math.PI * 2); c.fill();
+            c.beginPath(); c.moveTo(0, hh - 4); c.lineTo(0, -hh + 8); c.stroke();
+            c.beginPath(); c.moveTo(0, -hh + 4); c.lineTo(-3.5, -hh + 9); c.lineTo(3.5, -hh + 9); c.closePath(); c.fill();
+            c.font = '800 8px "JetBrains Mono", monospace'; c.textAlign = 'center'; c.fillText('UP', 0, 0);
+          }
+          c.restore();
+          return;
+        }
+
+        // Standard furniture base fill and outline
         c.fillRect(-hw, -hh, pw, ph);
         c.strokeRect(-hw, -hh, pw, ph);
 
         if (f.type === 'bed_king' || f.type === 'bed_queen') {
-          c.strokeRect(-hw + 3, -hh + 3, pw * 0.4, ph * 0.2);
-          c.strokeRect(hw - 3 - pw * 0.4, -hh + 3, pw * 0.4, ph * 0.2);
-          c.beginPath(); c.moveTo(-hw, -hh + ph * 0.32); c.lineTo(hw, -hh + ph * 0.32); c.stroke();
+          const hbH = Math.max(4, ph * 0.12);
+          c.fillStyle = dark ? 'rgba(30, 41, 59, 0.9)' : 'rgba(203, 213, 225, 0.8)';
+          c.fillRect(-hw, -hh, pw, hbH);
+          c.strokeRect(-hw, -hh, pw, hbH);
+          const nsW = Math.max(6, pw * 0.20), nsH = Math.max(6, ph * 0.18);
+          c.strokeRect(-hw - nsW, -hh, nsW, nsH);
+          c.strokeRect(hw, -hh, nsW, nsH);
+          c.beginPath(); c.arc(-hw - nsW / 2, -hh + nsH / 2, 2.2, 0, Math.PI * 2); c.stroke();
+          c.beginPath(); c.arc(hw + nsW / 2, -hh + nsH / 2, 2.2, 0, Math.PI * 2); c.stroke();
+          const pilW = pw * 0.38, pilH = ph * 0.22, pilY = -hh + hbH + 3;
+          c.fillStyle = dark ? 'rgba(51, 65, 85, 0.7)' : 'rgba(241, 245, 249, 0.9)';
+          c.fillRect(-hw + 4, pilY, pilW, pilH); c.strokeRect(-hw + 4, pilY, pilW, pilH);
+          c.fillRect(hw - 4 - pilW, pilY, pilW, pilH); c.strokeRect(hw - 4 - pilW, pilY, pilW, pilH);
+          const duvetY = -hh + ph * 0.42;
+          c.beginPath(); c.moveTo(-hw, duvetY); c.lineTo(hw, duvetY); c.stroke();
+          c.strokeStyle = dark ? 'rgba(148, 163, 184, 0.5)' : 'rgba(100, 116, 139, 0.5)';
+          c.beginPath(); c.moveTo(-hw + 6, duvetY + 4); c.lineTo(hw - 6, duvetY + 4); c.stroke();
         } else if (f.type === 'sofa' || f.type === 'armchair') {
-          const bk = Math.max(3, ph * 0.22), ar = Math.max(3, pw * 0.1);
-          c.strokeRect(-hw, -hh, pw, bk); c.strokeRect(-hw, -hh + bk, ar, ph - bk); c.strokeRect(hw - ar, -hh + bk, ar, ph - bk);
-        } else if (f.type === 'stairs') {
-          for (let i = 1; i < 9; i++) { const sy = -hh + (ph * i) / 9; c.beginPath(); c.moveTo(-hw, sy); c.lineTo(hw, sy); c.stroke(); }
+          const bk = Math.max(4, ph * 0.22);
+          const ar = Math.max(4, pw * 0.14);
+          c.fillStyle = dark ? 'rgba(30, 41, 59, 0.9)' : 'rgba(226, 232, 240, 0.9)';
+          c.fillRect(-hw, -hh, pw, bk); c.strokeRect(-hw, -hh, pw, bk);
+          c.fillRect(-hw, -hh + bk, ar, ph - bk); c.strokeRect(-hw, -hh + bk, ar, ph - bk);
+          c.fillRect(hw - ar, -hh + bk, ar, ph - bk); c.strokeRect(hw - ar, -hh + bk, ar, ph - bk);
+          const seatW = pw - ar * 2, seatH = ph - bk;
+          const numCushions = f.type === 'armchair' ? 1 : (pw > 45 ? 3 : 2);
+          const cW = seatW / numCushions;
+          for (let i = 0; i < numCushions; i++) {
+            const cx = -hw + ar + i * cW;
+            c.strokeRect(cx, -hh + bk, cW, seatH);
+            c.beginPath();
+            c.moveTo(cx + 3, -hh + bk + seatH * 0.85);
+            c.lineTo(cx + cW - 3, -hh + bk + seatH * 0.85);
+            c.stroke();
+          }
+          c.strokeRect(-hw + ar + 1, -hh + bk + 1, ar * 0.8, ar * 0.8);
+          c.strokeRect(hw - ar * 1.8, -hh + bk + 1, ar * 0.8, ar * 0.8);
+        } else if (f.type === 'dining_table') {
+          c.strokeRect(-hw + 3, -hh + 3, pw - 6, ph - 6);
+          const chW = Math.min(14, pw * 0.26), chD = Math.max(4, ph * 0.16);
+          for (const sx of [-pw * 0.25, pw * 0.25]) {
+            c.strokeRect(sx - chW / 2, -hh - chD, chW, chD);
+            c.strokeRect(sx - chW / 2, hh, chW, chD);
+          }
+          if (pw > 35) {
+            c.strokeRect(-hw - chD, -chW / 2, chD, chW);
+            c.strokeRect(hw, -chW / 2, chD, chW);
+          }
+        } else if (f.type === 'kitchen_counter' || f.type === 'kitchen_island') {
+          c.strokeRect(-hw + 2, -hh + 2, pw - 4, ph - 4);
+          const sinkW = Math.min(22, pw * 0.40), sinkH = ph * 0.65;
+          const sinkX = -hw + pw * 0.28;
+          c.strokeRect(sinkX - sinkW / 2, -sinkH / 2, sinkW, sinkH);
+          const bW = (sinkW - 5) / 2;
+          c.strokeRect(sinkX - sinkW / 2 + 1.5, -sinkH / 2 + 1.5, bW, sinkH - 3);
+          c.strokeRect(sinkX + 1, -sinkH / 2 + 1.5, bW, sinkH - 3);
+          c.beginPath(); c.arc(sinkX, -sinkH / 2 + 2, 2, 0, Math.PI * 2); c.stroke();
+
+          if (pw > 40) {
+            const hobW = Math.min(20, pw * 0.35), hobH = ph * 0.65;
+            const hobX = hw - pw * 0.28;
+            c.strokeRect(hobX - hobW / 2, -hobH / 2, hobW, hobH);
+            for (const dx of [-hobW * 0.25, hobW * 0.25]) {
+              for (const dy of [-hobH * 0.25, hobH * 0.25]) {
+                c.beginPath(); c.arc(hobX + dx, dy, 2.8, 0, Math.PI * 2); c.stroke();
+                c.beginPath(); c.arc(hobX + dx, dy, 1.2, 0, Math.PI * 2); c.fill();
+              }
+            }
+          }
         } else if (f.type === 'toilet') {
-          c.strokeRect(-hw, -hh, pw, ph * 0.32);
-          c.beginPath(); c.ellipse(0, hh * 0.18, hw * 0.76, hh * 0.48, 0, 0, Math.PI * 2); c.stroke();
+          const tH = Math.max(5, ph * 0.35);
+          c.strokeRect(-hw, -hh, pw, tH);
+          c.beginPath(); c.arc(-2, -hh + tH / 2, 1.2, 0, Math.PI * 2); c.stroke();
+          c.beginPath(); c.arc(2, -hh + tH / 2, 1.6, 0, Math.PI * 2); c.stroke();
+          c.beginPath(); c.ellipse(0, hh * 0.25, hw * 0.85, hh * 0.55, 0, 0, Math.PI * 2); c.stroke();
+          c.beginPath(); c.ellipse(0, hh * 0.25, hw * 0.58, hh * 0.38, 0, 0, Math.PI * 2); c.stroke();
+        } else if (f.type === 'vanity') {
+          c.strokeRect(-hw + 2, -hh + 2, pw - 4, ph - 4);
+          c.beginPath(); c.ellipse(0, 0, hw * 0.72, hh * 0.55, 0, 0, Math.PI * 2); c.stroke();
+          c.beginPath(); c.arc(0, -hh * 0.35, 2, 0, Math.PI * 2); c.stroke();
+        } else if (f.type === 'bathtub') {
+          c.strokeRect(-hw + 3, -hh + 3, pw - 6, ph - 6);
+          c.beginPath(); c.ellipse(0, 0, hw * 0.82, hh * 0.75, 0, 0, Math.PI * 2); c.stroke();
+          c.beginPath(); c.arc(-hw * 0.55, 0, 2.5, 0, Math.PI * 2); c.stroke();
+        } else if (f.type === 'tv_unit') {
+          c.strokeRect(-hw + 2, -hh + 2, pw - 4, ph - 4);
+          c.fillStyle = dark ? '#0f172a' : '#1e293b';
+          c.fillRect(-hw * 0.85, -2, pw * 0.85, 4);
+          c.strokeRect(-hw * 0.85, -2, pw * 0.85, 4);
+        } else if (f.type === 'fridge') {
+          c.beginPath(); c.moveTo(-hw, 0); c.lineTo(hw, 0); c.stroke();
+          c.fillRect(-hw + 3, -hh + 3, 2, 8);
+          c.fillRect(-hw + 3, 3, 2, 8);
         }
         c.restore();
       }
 
       function drawOp2D(c, op, k, dark, ghost = false) {
-        const p = w2s(op.x, op.y), wPx = op.width * k, thPx = Math.max(5, 0.72 * k);
+        const p = w2s(op.x, op.y), wPx = op.width * k, thPx = Math.max(6, 0.75 * k);
         c.save();
         if (ghost) c.globalAlpha = 0.65;
         c.translate(p.x, p.y);
         if (op.orientation === 'v') c.rotate(Math.PI / 2);
 
+        // Wall Opening Void Cutout
         c.fillStyle = dark ? '#080c14' : '#f8fafc';
         c.fillRect(-wPx / 2 - 1, -thPx / 2 - 1.5, wPx + 2, thPx + 3);
-        c.strokeStyle = ghost ? (dark ? '#a1a1aa' : '#71717a') : (dark ? '#ffffff' : '#000000');
-        c.lineWidth = 1.5;
+
+        const jambW = Math.max(3.5, 0.16 * k);
 
         if (op.kind === 'window') {
-          c.fillStyle = 'rgba(56, 189, 248, 0.3)';
+          // Double-line Window Frame & Glazing
+          c.fillStyle = 'rgba(56, 189, 248, 0.28)';
           c.fillRect(-wPx / 2, -thPx * 0.35, wPx, thPx * 0.7);
-          c.strokeStyle = dark ? '#ffffff' : '#000000';
+          c.strokeStyle = dark ? '#f8fafc' : '#0f172a';
+          c.lineWidth = 1.4;
           c.strokeRect(-wPx / 2, -thPx * 0.35, wPx, thPx * 0.7);
-          c.beginPath(); c.moveTo(-wPx / 2, 0); c.lineTo(wPx / 2, 0); c.stroke();
+          c.strokeStyle = dark ? '#38bdf8' : '#0284c7';
+          c.lineWidth = 1.0;
+          c.beginPath();
+          c.moveTo(-wPx / 2, -1); c.lineTo(wPx / 2, -1);
+          c.moveTo(-wPx / 2, 1); c.lineTo(wPx / 2, 1);
+          c.stroke();
+          if (wPx >= 28) {
+            c.fillStyle = dark ? '#38bdf8' : '#0284c7';
+            c.font = '700 7px "JetBrains Mono", monospace';
+            c.textAlign = 'center'; c.textBaseline = 'middle';
+            c.fillText('W', 0, -thPx * 0.75);
+          }
         } else {
+          // Wooden Door Jamb Blocks on both sides
+          c.fillStyle = dark ? '#cbd5e1' : '#1e293b';
+          c.fillRect(-wPx / 2, -thPx / 2, jambW, thPx);
+          c.fillRect(wPx / 2 - jambW, -thPx / 2, jambW, thPx);
+
           const flip = op.flip || 1, dir = op.swingDir || 1;
+          const clearW = wPx - jambW * 2;
+
           if (op.subtype === 'arch') {
-            c.setLineDash([3, 3]); c.strokeStyle = '#64748b';
-            c.beginPath(); c.moveTo(-wPx / 2, -thPx * 0.3); c.lineTo(wPx / 2, -thPx * 0.3); c.moveTo(-wPx / 2, thPx * 0.3); c.lineTo(wPx / 2, thPx * 0.3); c.stroke();
-          } else if (op.subtype === 'sliding') {
-            c.strokeStyle = dark ? '#ffffff' : '#000000'; c.lineWidth = 2;
-            c.beginPath(); c.moveTo(-wPx / 2, -1.8); c.lineTo(wPx * 0.08, -1.8); c.moveTo(-wPx * 0.08, 1.8); c.lineTo(wPx / 2, 1.8); c.stroke();
-          } else if (op.subtype === 'garage') {
-            c.setLineDash([5, 3]); c.strokeStyle = dark ? '#ffffff' : '#000000'; c.strokeRect(-wPx / 2, -wPx * 0.4, wPx, wPx * 0.4); c.setLineDash([]);
-            c.lineWidth = 2.4; c.beginPath(); c.moveTo(-wPx / 2, 0); c.lineTo(wPx / 2, 0); c.stroke();
-          } else if (op.subtype === 'double') {
-            const r = wPx / 2;
-            c.beginPath(); c.moveTo(-r, 0); c.lineTo(-r, dir * r); c.moveTo(r, 0); c.lineTo(r, dir * r); c.stroke();
-            c.setLineDash([2.5, 2.5]); c.lineWidth = 1;
-            c.beginPath(); c.arc(-r, 0, r, dir > 0 ? 0 : -Math.PI / 2, dir > 0 ? Math.PI / 2 : 0); c.stroke();
-            c.beginPath(); c.arc(r, 0, r, dir > 0 ? Math.PI / 2 : Math.PI, dir > 0 ? Math.PI : Math.PI * 1.5); c.stroke();
-          } else {
-            const hx = flip > 0 ? -wPx / 2 : wPx / 2;
-            c.lineWidth = 2; c.beginPath(); c.moveTo(hx, 0); c.lineTo(hx, dir * wPx); c.stroke();
-            c.lineWidth = 1; c.strokeStyle = dark ? '#a1a1aa' : '#71717a'; c.setLineDash([3, 2.5]);
+            c.setLineDash([3, 3]); c.strokeStyle = '#64748b'; c.lineWidth = 1.2;
             c.beginPath();
-            if (flip > 0 && dir > 0) c.arc(hx, 0, wPx, 0, Math.PI / 2);
-            else if (flip > 0 && dir < 0) c.arc(hx, 0, wPx, -Math.PI / 2, 0);
-            else if (flip < 0 && dir > 0) c.arc(hx, 0, wPx, Math.PI / 2, Math.PI);
-            else c.arc(hx, 0, wPx, Math.PI, Math.PI * 1.5);
+            c.moveTo(-wPx / 2 + jambW, -thPx * 0.3); c.lineTo(wPx / 2 - jambW, -thPx * 0.3);
+            c.moveTo(-wPx / 2 + jambW, thPx * 0.3); c.lineTo(wPx / 2 - jambW, thPx * 0.3);
             c.stroke();
+          } else if (op.subtype === 'sliding') {
+            c.strokeStyle = dark ? '#ffffff' : '#0f172a'; c.lineWidth = 2.2;
+            c.beginPath();
+            c.moveTo(-wPx / 2 + jambW, -2); c.lineTo(wPx * 0.08, -2);
+            c.moveTo(-wPx * 0.08, 2); c.lineTo(wPx / 2 - jambW, 2);
+            c.stroke();
+          } else if (op.subtype === 'garage') {
+            c.setLineDash([5, 3]); c.strokeStyle = dark ? '#ffffff' : '#0f172a';
+            c.strokeRect(-wPx / 2 + jambW, -wPx * 0.35, clearW, wPx * 0.35);
+            c.setLineDash([]); c.lineWidth = 2.4;
+            c.beginPath(); c.moveTo(-wPx / 2 + jambW, 0); c.lineTo(wPx / 2 - jambW, 0); c.stroke();
+          } else if (op.subtype === 'double') {
+            const r = clearW / 2;
+            const hx1 = -wPx / 2 + jambW, hx2 = wPx / 2 - jambW;
+            const panelTh = Math.max(2.5, 0.12 * k);
+            c.fillStyle = dark ? '#ffffff' : '#0f172a';
+            c.fillRect(hx1, 0, panelTh, dir * r);
+            c.fillRect(hx2 - panelTh, 0, panelTh, dir * r);
+            c.setLineDash([2.5, 2.5]); c.lineWidth = 1.1; c.strokeStyle = dark ? '#38bdf8' : '#0284c7';
+            c.beginPath(); c.arc(hx1, 0, r, dir > 0 ? 0 : -Math.PI / 2, dir > 0 ? Math.PI / 2 : 0); c.stroke();
+            c.beginPath(); c.arc(hx2, 0, r, dir > 0 ? Math.PI / 2 : Math.PI, dir > 0 ? Math.PI : Math.PI * 1.5); c.stroke();
+          } else {
+            const hx = flip > 0 ? (-wPx / 2 + jambW) : (wPx / 2 - jambW);
+            const panelTh = Math.max(2.8, 0.12 * k);
+            c.fillStyle = dark ? '#ffffff' : '#0f172a';
+            c.fillRect(flip > 0 ? hx : hx - panelTh, 0, panelTh, dir * clearW);
+            c.lineWidth = 1.1;
+            c.strokeStyle = dark ? '#38bdf8' : '#0284c7';
+            c.setLineDash([3, 2.5]);
+            c.beginPath();
+            if (flip > 0 && dir > 0) c.arc(hx, 0, clearW, 0, Math.PI / 2);
+            else if (flip > 0 && dir < 0) c.arc(hx, 0, clearW, -Math.PI / 2, 0);
+            else if (flip < 0 && dir > 0) c.arc(hx, 0, clearW, Math.PI / 2, Math.PI);
+            else c.arc(hx, 0, clearW, Math.PI, Math.PI * 1.5);
+            c.stroke();
+            if (wPx >= 28) {
+              c.fillStyle = dark ? '#38bdf8' : '#0284c7';
+              c.font = '700 7px "JetBrains Mono", monospace';
+              c.textAlign = 'center'; c.textBaseline = 'middle';
+              c.fillText('D', 0, -thPx * 0.75);
+            }
           }
         }
         c.restore();
+      }
+
+      
+      function set2DView(viewMode) {
+        s.cad.view2d = viewMode;
+        document.querySelectorAll('.mks-view-btn').forEach(btn => {
+          btn.classList.toggle('active', btn.getAttribute('data-mksview') === viewMode);
+        });
+        renderSubbar();
+        render2D();
+        const lbl = viewMode === 'plan' ? '2D Floor Plan' :
+                    viewMode === 'front_elev' ? 'Architectural Front Elevation' :
+                    viewMode === 'section_aa' ? 'Building Cross-Section A-A' : 'Architectural Side Elevation';
+        toast('View: ' + lbl);
+      }
+
+      function adjElevHeight(delta) {
+        const fl = curFloor();
+        fl.wallHeight = Math.max(8.0, Math.min(16.0, (fl.wallHeight || 10.0) + delta));
+        renderSubbar();
+        render2D();
+        if (typeof rebuild3DScene === 'function') rebuild3DScene();
+        toast('Storey Height: ' + fl.wallHeight.toFixed(1) + ' ft');
+      }
+
+      function stampRoom(type, w, h) {
+        const fl = curFloor();
+        const rooms = fl.rooms || [];
+        let placeX = 0, placeY = 0;
+        if (rooms.length > 0) {
+          const rightmost = rooms.reduce((prev, curr) => (curr.x + curr.w > prev.x + prev.w) ? curr : prev, rooms[0]);
+          if (rightmost.x + rightmost.w + w <= 65) {
+            placeX = rightmost.x + rightmost.w;
+            placeY = rightmost.y;
+          } else {
+            const lowest = rooms.reduce((prev, curr) => (curr.y + curr.h > prev.y + prev.h) ? curr : prev, rooms[0]);
+            placeX = 0;
+            placeY = lowest.y + lowest.h;
+          }
+        }
+        const typeObj = ROOM_TYPES[type] || { label: type.charAt(0).toUpperCase() + type.slice(1) };
+        const newRoom = {
+          id: 'rm_' + Date.now().toString(36) + '_' + Math.random().toString(36).substr(2, 4),
+          name: typeObj.label,
+          type: type,
+          x: placeX,
+          y: placeY,
+          w: w || 14,
+          h: h || 12
+        };
+        rooms.push(newRoom);
+        pushHistory();
+        onPlanChanged();
+        toast('Stamped ' + newRoom.name + ' (' + newRoom.w + '\'×' + newRoom.h + '\')');
+      }
+
+      function renderFrontElevation(ctx, W, H, dark, k, fl, s) {
+        const rooms = fl.rooms || [];
+        let minX = Infinity, maxX = -Infinity;
+        if (rooms.length > 0) {
+          rooms.forEach(r => { minX = Math.min(minX, r.x); maxX = Math.max(maxX, r.x + r.w); });
+        } else {
+          minX = 0; maxX = 40;
+        }
+        const bWidth = Math.max(24, maxX - minX);
+        const wallH = fl.wallHeight || 10.0;
+        const numFloors = Math.max(1, s.floors.length);
+        const plinthH = 2.0;
+        const parapetH = 3.0;
+        const totalBldgH = plinthH + (wallH * numFloors) + parapetH;
+
+        const scale = Math.min((W - 280) / bWidth, (H - 220) / (totalBldgH + 4));
+        const cx = W / 2;
+        const groundY = H - 90;
+        const startX = cx - (bWidth * scale) / 2;
+        const endX = cx + (bWidth * scale) / 2;
+        const plinthY = groundY - (plinthH * scale);
+
+        const strokeColor = dark ? '#ffffff' : '#0f172a';
+        const mutedColor = dark ? '#71717a' : '#94a3b8';
+        const wallFill = dark ? '#18181b' : '#f8fafc';
+        const slabFill = dark ? '#27272a' : '#e2e8f0';
+        const glassFill = dark ? 'rgba(56, 189, 248, 0.18)' : 'rgba(14, 165, 233, 0.12)';
+        const glassReflection = dark ? 'rgba(255, 255, 255, 0.35)' : 'rgba(255, 255, 255, 0.65)';
+
+        ctx.save();
+        ctx.fillStyle = dark ? '#080c14' : '#f8fafc';
+        ctx.fillRect(0, 0, W, H);
+
+        // 1. Natural Ground Line (NGL) ±0.000m
+        ctx.strokeStyle = strokeColor;
+        ctx.lineWidth = 2.4;
+        ctx.beginPath();
+        ctx.moveTo(40, groundY); ctx.lineTo(W - 40, groundY);
+        ctx.stroke();
+
+        // Soil Hatching below NGL
+        ctx.strokeStyle = mutedColor;
+        ctx.lineWidth = 0.8;
+        ctx.beginPath();
+        for (let gx = 50; gx < W - 50; gx += 28) {
+          ctx.moveTo(gx, groundY); ctx.lineTo(gx - 10, groundY + 12);
+          ctx.moveTo(gx + 6, groundY); ctx.lineTo(gx - 4, groundY + 12);
+          ctx.moveTo(gx + 12, groundY); ctx.lineTo(gx + 2, groundY + 12);
+        }
+        ctx.stroke();
+
+        ctx.fillStyle = mutedColor;
+        ctx.font = '600 10px "JetBrains Mono", monospace';
+        ctx.fillText('±0.000M NATURAL GROUND LEVEL (NGL)', 45, groundY - 8);
+
+        // 2. Plinth Beam Band (+0.60m)
+        ctx.fillStyle = slabFill;
+        ctx.fillRect(startX, plinthY, bWidth * scale, plinthH * scale);
+        ctx.strokeStyle = strokeColor;
+        ctx.lineWidth = 2;
+        ctx.strokeRect(startX, plinthY, bWidth * scale, plinthH * scale);
+
+        ctx.strokeStyle = mutedColor;
+        ctx.lineWidth = 0.7;
+        ctx.beginPath();
+        for (let px = startX + 16; px < endX; px += 24) {
+          ctx.moveTo(px, plinthY); ctx.lineTo(px, groundY);
+        }
+        ctx.stroke();
+        ctx.fillText('+0.600M [+2.0 FT] PLINTH LEVEL', 45, plinthY + 4);
+
+        // 3. Storey Facades
+        let curFloorY = plinthY;
+        for (let fi = 0; fi < numFloors; fi++) {
+          const fObj = s.floors[fi] || fl;
+          const fHeight = (fObj.wallHeight || 10.0) * scale;
+          const floorTopY = curFloorY - fHeight;
+
+          ctx.fillStyle = wallFill;
+          ctx.fillRect(startX, floorTopY, bWidth * scale, fHeight);
+          ctx.strokeStyle = strokeColor;
+          ctx.lineWidth = 2;
+          ctx.strokeRect(startX, floorTopY, bWidth * scale, fHeight);
+
+          // Horizontal Shadow Grooves
+          ctx.strokeStyle = mutedColor;
+          ctx.lineWidth = 0.6;
+          ctx.beginPath();
+          for (let gy = floorTopY + 2.5 * scale; gy < curFloorY; gy += 2.5 * scale) {
+            ctx.moveTo(startX, gy); ctx.lineTo(endX, gy);
+          }
+          ctx.stroke();
+
+          // Floor Slab Band
+          ctx.fillStyle = slabFill;
+          ctx.fillRect(startX - 6, floorTopY - 4, (bWidth * scale) + 12, 8);
+          ctx.strokeStyle = strokeColor;
+          ctx.lineWidth = 1.6;
+          ctx.strokeRect(startX - 6, floorTopY - 4, (bWidth * scale) + 12, 8);
+
+          // Front Entrance Door on ground floor
+          if (fi === 0) {
+            const doorW = 3.5 * scale;
+            const doorH = 7.0 * scale;
+            const doorX = startX + 4.0 * scale;
+            const doorY = curFloorY - doorH;
+
+            ctx.fillStyle = dark ? '#27272a' : '#334155';
+            ctx.fillRect(doorX, doorY, doorW, doorH);
+            ctx.strokeStyle = strokeColor;
+            ctx.lineWidth = 2;
+            ctx.strokeRect(doorX, doorY, doorW, doorH);
+
+            ctx.strokeStyle = dark ? '#ffffff' : '#e2e8f0';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(doorX + doorW - 8, doorY + doorH * 0.4);
+            ctx.lineTo(doorX + doorW - 8, doorY + doorH * 0.7);
+            ctx.stroke();
+
+            ctx.fillStyle = slabFill;
+            ctx.fillRect(doorX - 6, doorY - 6, doorW + 12, 6);
+            ctx.strokeRect(doorX - 6, doorY - 6, doorW + 12, 6);
+          }
+
+          // Windows
+          const winWidth = 4.5 * scale;
+          const winHeight = 4.0 * scale;
+          const sillH = 3.0 * scale;
+          const winY = curFloorY - sillH - winHeight;
+          const numWins = Math.max(2, Math.floor((bWidth - 10) / 12));
+          const winSpacing = (bWidth * scale - 20) / (numWins + 1);
+
+          for (let wi = 1; wi <= numWins; wi++) {
+            const wx = startX + (wi * winSpacing) - (winWidth / 2);
+            if (fi === 0 && Math.abs(wx - (startX + 4.0 * scale)) < (winWidth + 10)) continue;
+
+            ctx.fillStyle = glassFill;
+            ctx.fillRect(wx, winY, winWidth, winHeight);
+            ctx.strokeStyle = strokeColor;
+            ctx.lineWidth = 1.8;
+            ctx.strokeRect(wx, winY, winWidth, winHeight);
+
+            ctx.beginPath();
+            ctx.moveTo(wx + winWidth / 2, winY); ctx.lineTo(wx + winWidth / 2, winY + winHeight);
+            ctx.moveTo(wx, winY + winHeight / 2); ctx.lineTo(wx + winWidth, winY + winHeight / 2);
+            ctx.stroke();
+
+            ctx.strokeStyle = glassReflection;
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(wx + 8, winY + winHeight - 8); ctx.lineTo(wx + winWidth * 0.45, winY + 8);
+            ctx.moveTo(wx + winWidth * 0.55, winY + winHeight - 8); ctx.lineTo(wx + winWidth - 8, winY + 8);
+            ctx.stroke();
+
+            ctx.fillStyle = slabFill;
+            ctx.fillRect(wx - 5, winY - 5, winWidth + 10, 5);
+            ctx.strokeStyle = strokeColor;
+            ctx.strokeRect(wx - 5, winY - 5, winWidth + 10, 5);
+          }
+
+          // Upper balcony
+          if (fi > 0) {
+            const balW = Math.min(bWidth * scale * 0.5, 14 * scale);
+            const balH = 3.0 * scale;
+            const balX = startX + 3.0 * scale;
+            const balY = curFloorY - balH;
+
+            ctx.fillStyle = dark ? 'rgba(56, 189, 248, 0.12)' : 'rgba(14, 165, 233, 0.08)';
+            ctx.fillRect(balX, balY, balW, balH);
+            ctx.strokeStyle = strokeColor;
+            ctx.lineWidth = 1.8;
+            ctx.strokeRect(balX, balY, balW, balH);
+
+            ctx.strokeStyle = dark ? '#ffffff' : '#0f172a';
+            ctx.lineWidth = 3;
+            ctx.beginPath();
+            ctx.moveTo(balX, balY); ctx.lineTo(balX + balW, balY);
+            ctx.stroke();
+          }
+
+          const lvlM = (0.6 + (fi + 1) * 3.05).toFixed(2);
+          ctx.fillStyle = mutedColor;
+          ctx.fillText('+' + lvlM + 'M LVL ' + (fi === 0 ? 'CEILING' : 'STOREY ' + (fi + 1)), 45, floorTopY + 4);
+
+          curFloorY = floorTopY;
+        }
+
+        // 4. Parapet
+        const parapetY = curFloorY - (parapetH * scale);
+        ctx.fillStyle = wallFill;
+        ctx.fillRect(startX, parapetY, bWidth * scale, parapetH * scale);
+        ctx.strokeStyle = strokeColor;
+        ctx.lineWidth = 2;
+        ctx.strokeRect(startX, parapetY, bWidth * scale, parapetH * scale);
+
+        ctx.fillStyle = slabFill;
+        ctx.fillRect(startX - 8, parapetY - 6, (bWidth * scale) + 16, 6);
+        ctx.strokeRect(startX - 8, parapetY - 6, (bWidth * scale) + 16, 6);
+
+        const topM = (0.6 + numFloors * 3.05 + 0.9).toFixed(2);
+        ctx.fillText('+' + topM + 'M PARAPET TOP', 45, parapetY + 2);
+
+        // 5. Dimension Strings
+        const dimX = startX - 35;
+        ctx.strokeStyle = mutedColor;
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(dimX, groundY); ctx.lineTo(dimX, parapetY);
+        ctx.moveTo(dimX - 6, groundY); ctx.lineTo(dimX + 6, groundY);
+        ctx.moveTo(dimX - 6, plinthY); ctx.lineTo(dimX + 6, plinthY);
+        ctx.moveTo(dimX - 6, parapetY); ctx.lineTo(dimX + 6, parapetY);
+        ctx.stroke();
+
+        // 6. Title Block
+        ctx.fillStyle = strokeColor;
+        ctx.font = '800 13px "Plus Jakarta Sans", sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('ARCHITECTURAL FRONT ELEVATION · SCALE 1:100', cx, H - 28);
+        ctx.fillStyle = mutedColor;
+        ctx.font = '600 10px "JetBrains Mono", monospace';
+        ctx.fillText((s.projectName || 'RESIDENCE') + ' · NBC 205:2024 SEISMIC DUCTILE ENVELOPE · BIRGUNJ, NEPAL', cx, H - 12);
+        ctx.textAlign = 'left';
+
+        ctx.restore();
+      }
+
+      function renderCrossSection(ctx, W, H, dark, k, fl, s) {
+        const rooms = fl.rooms || [];
+        let minX = Infinity, maxX = -Infinity;
+        if (rooms.length > 0) {
+          rooms.forEach(r => { minX = Math.min(minX, r.x); maxX = Math.max(maxX, r.x + r.w); });
+        } else {
+          minX = 0; maxX = 40;
+        }
+        const bWidth = Math.max(24, maxX - minX);
+        const wallH = fl.wallHeight || 10.0;
+        const numFloors = Math.max(1, s.floors.length);
+        const plinthH = 2.0;
+        const parapetH = 3.0;
+        const footDepth = 4.0;
+        const totalH = footDepth + plinthH + (wallH * numFloors) + parapetH;
+
+        const scale = Math.min((W - 280) / bWidth, (H - 220) / (totalH + 4));
+        const cx = W / 2;
+        const groundY = H - 110;
+        const startX = cx - (bWidth * scale) / 2;
+        const endX = cx + (bWidth * scale) / 2;
+        const plinthY = groundY - (plinthH * scale);
+        const footingY = groundY + (footDepth * scale);
+
+        const strokeColor = dark ? '#ffffff' : '#0f172a';
+        const mutedColor = dark ? '#71717a' : '#94a3b8';
+        const roomBg = dark ? '#121215' : '#f8fafc';
+        const slabFill = dark ? '#27272a' : '#e2e8f0';
+        const cutWallFill = dark ? '#222226' : '#f1f5f9';
+
+        ctx.save();
+        ctx.fillStyle = dark ? '#080c14' : '#f8fafc';
+        ctx.fillRect(0, 0, W, H);
+
+        // 1. Natural Ground Line
+        ctx.strokeStyle = strokeColor;
+        ctx.lineWidth = 2.2;
+        ctx.beginPath();
+        ctx.moveTo(40, groundY); ctx.lineTo(W - 40, groundY);
+        ctx.stroke();
+
+        ctx.strokeStyle = mutedColor;
+        ctx.lineWidth = 0.8;
+        ctx.beginPath();
+        for (let gx = 50; gx < W - 50; gx += 26) {
+          if (gx > startX && gx < endX) continue;
+          ctx.moveTo(gx, groundY); ctx.lineTo(gx - 10, groundY + 12);
+          ctx.moveTo(gx + 6, groundY); ctx.lineTo(gx - 4, groundY + 12);
+        }
+        ctx.stroke();
+
+        // 2. Foundation Footings
+        const numCols = Math.max(2, Math.floor(bWidth / 14) + 1);
+        const colSpacing = (bWidth * scale) / (numCols - 1);
+
+        for (let ci = 0; ci < numCols; ci++) {
+          const colX = startX + (ci * colSpacing);
+          const footW = 5.0 * scale;
+          const footH = 1.5 * scale;
+          const pccH = 0.5 * scale;
+
+          ctx.fillStyle = slabFill;
+          ctx.fillRect(colX - footW / 2 - 4, footingY - pccH, footW + 8, pccH);
+          ctx.strokeStyle = strokeColor;
+          ctx.strokeRect(colX - footW / 2 - 4, footingY - pccH, footW + 8, pccH);
+
+          ctx.beginPath();
+          ctx.moveTo(colX - footW / 2, footingY - pccH);
+          ctx.lineTo(colX + footW / 2, footingY - pccH);
+          ctx.lineTo(colX + 0.8 * scale, footingY - footH);
+          ctx.lineTo(colX - 0.8 * scale, footingY - footH);
+          ctx.closePath();
+          ctx.fillStyle = slabFill;
+          ctx.fill();
+          ctx.stroke();
+
+          ctx.fillStyle = slabFill;
+          ctx.fillRect(colX - 0.75 * scale, plinthY, 1.5 * scale, footingY - footH - plinthY);
+          ctx.strokeRect(colX - 0.75 * scale, plinthY, 1.5 * scale, footingY - footH - plinthY);
+        }
+
+        // 3. Plinth
+        ctx.fillStyle = slabFill;
+        ctx.fillRect(startX, plinthY, bWidth * scale, plinthH * scale);
+        ctx.strokeStyle = strokeColor;
+        ctx.lineWidth = 2;
+        ctx.strokeRect(startX, plinthY, bWidth * scale, plinthH * scale);
+
+        // 4. Section Storeys
+        let curFloorY = plinthY;
+        for (let fi = 0; fi < numFloors; fi++) {
+          const fObj = s.floors[fi] || fl;
+          const fHeight = (fObj.wallHeight || 10.0) * scale;
+          const floorTopY = curFloorY - fHeight;
+
+          ctx.fillStyle = roomBg;
+          ctx.fillRect(startX, floorTopY, bWidth * scale, fHeight);
+
+          const wallThick = 1.2 * scale;
+          for (let ci = 0; ci < numCols; ci++) {
+            const colX = startX + (ci * colSpacing) - (wallThick / 2);
+            ctx.fillStyle = cutWallFill;
+            ctx.fillRect(colX, floorTopY, wallThick, fHeight);
+            ctx.strokeStyle = strokeColor;
+            ctx.lineWidth = 1.8;
+            ctx.strokeRect(colX, floorTopY, wallThick, fHeight);
+
+            ctx.strokeStyle = mutedColor;
+            ctx.lineWidth = 0.8;
+            ctx.beginPath();
+            for (let hy = floorTopY + 4; hy < curFloorY; hy += 12) {
+              ctx.moveTo(colX, hy); ctx.lineTo(colX + wallThick, hy - wallThick);
+            }
+            ctx.stroke();
+          }
+
+          const lintelY = curFloorY - (7.0 * scale);
+          for (let ci = 0; ci < numCols; ci++) {
+            const colX = startX + (ci * colSpacing) - (wallThick / 2);
+            ctx.fillStyle = slabFill;
+            ctx.fillRect(colX - 2, lintelY, wallThick + 4, 0.8 * scale);
+            ctx.strokeRect(colX - 2, lintelY, wallThick + 4, 0.8 * scale);
+          }
+
+          ctx.fillStyle = slabFill;
+          ctx.fillRect(startX - 6, floorTopY - 4, (bWidth * scale) + 12, 8);
+          ctx.strokeStyle = strokeColor;
+          ctx.lineWidth = 2;
+          ctx.strokeRect(startX - 6, floorTopY - 4, (bWidth * scale) + 12, 8);
+
+          const roomSpan = (bWidth * scale) / Math.max(1, numCols - 1);
+          const roomNames = ['LIVING / DRAWING', 'MASTER BEDROOM', 'MODULAR KITCHEN', 'DINING HALL', 'GUEST BED'];
+          for (let ri = 0; ri < numCols - 1; ri++) {
+            const rx = startX + (ri * roomSpan) + (roomSpan / 2);
+            const ry = floorTopY + fHeight * 0.55;
+            ctx.fillStyle = strokeColor;
+            ctx.font = '700 11px "Plus Jakarta Sans", sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText(roomNames[ri % roomNames.length], rx, ry);
+            ctx.fillStyle = mutedColor;
+            ctx.font = '600 9px "JetBrains Mono", monospace';
+            ctx.fillText('CLR HT: 3050MM [10.0 FT]', rx, ry + 16);
+          }
+
+          curFloorY = floorTopY;
+        }
+
+        // 5. Parapet
+        const parapetY = curFloorY - (parapetH * scale);
+        const wallThick = 1.2 * scale;
+        ctx.fillStyle = cutWallFill;
+        ctx.fillRect(startX, parapetY, wallThick, parapetH * scale);
+        ctx.strokeStyle = strokeColor;
+        ctx.lineWidth = 2;
+        ctx.strokeRect(startX, parapetY, wallThick, parapetH * scale);
+        ctx.fillRect(endX - wallThick, parapetY, wallThick, parapetH * scale);
+        ctx.strokeRect(endX - wallThick, parapetY, wallThick, parapetH * scale);
+
+        ctx.fillStyle = slabFill;
+        ctx.fillRect(startX - 4, parapetY - 6, wallThick + 8, 6);
+        ctx.strokeRect(startX - 4, parapetY - 6, wallThick + 8, 6);
+        ctx.fillRect(endX - wallThick - 4, parapetY - 6, wallThick + 8, 6);
+        ctx.strokeRect(endX - wallThick - 4, parapetY - 6, wallThick + 8, 6);
+
+        // 6. Callouts
+        ctx.fillStyle = mutedColor;
+        ctx.font = '600 9px "JetBrains Mono", monospace';
+        ctx.textAlign = 'left';
+        ctx.fillText('150mm RCC M20 ROOF SLAB + WATERPROOFING', startX + 16, curFloorY - 12);
+        ctx.fillText('230mm BRICKWORK IN 1:4 CEMENT MORTAR', startX + 16, plinthY - 30);
+        ctx.fillText('50mm DPC CONCRETE WITH BITUMEN COATING', startX + 16, plinthY + 16);
+        ctx.fillText('NBC 205:2024 RCC TRAPEZOIDAL FOOTINGS', startX + 16, footingY - 8);
+
+        ctx.fillText('+3.900M TOP OF PARAPET', 45, parapetY + 2);
+        ctx.fillText('+3.050M CEILING SLAB LEVEL', 45, curFloorY + 2);
+        ctx.fillText('+0.600M PLINTH FINISHED LEVEL', 45, plinthY + 2);
+        ctx.fillText('±0.000M NATURAL GROUND LEVEL', 45, groundY - 6);
+        ctx.fillText('-1.200M FOUNDATION BASE LEVEL', 45, footingY);
+
+        // 7. Title Block
+        ctx.fillStyle = strokeColor;
+        ctx.font = '800 13px "Plus Jakarta Sans", sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('BUILDING CROSS-SECTION A-A (TRANSVERSE) · SCALE 1:100', cx, H - 28);
+        ctx.fillStyle = mutedColor;
+        ctx.font = '600 10px "JetBrains Mono", monospace';
+        ctx.fillText((s.projectName || 'RESIDENCE') + ' · STRUCTURAL DUCTILE CROSS-SECTION · BIRGUNJ, NEPAL', cx, H - 12);
+        ctx.textAlign = 'left';
+
+        ctx.restore();
+      }
+
+      function renderSideElevation(ctx, W, H, dark, k, fl, s) {
+        const rooms = fl.rooms || [];
+        let minY = Infinity, maxY = -Infinity;
+        if (rooms.length > 0) {
+          rooms.forEach(r => { minY = Math.min(minY, r.y); maxY = Math.max(maxY, r.y + r.h); });
+        } else {
+          minY = 0; maxY = 35;
+        }
+        const bDepth = Math.max(24, maxY - minY);
+        const wallH = fl.wallHeight || 10.0;
+        const numFloors = Math.max(1, s.floors.length);
+        const plinthH = 2.0;
+        const parapetH = 3.0;
+        const totalH = plinthH + (wallH * numFloors) + parapetH;
+
+        const scale = Math.min((W - 280) / bDepth, (H - 220) / (totalH + 4));
+        const cx = W / 2;
+        const groundY = H - 90;
+        const startX = cx - (bDepth * scale) / 2;
+        const endX = cx + (bDepth * scale) / 2;
+        const plinthY = groundY - (plinthH * scale);
+
+        const strokeColor = dark ? '#ffffff' : '#0f172a';
+        const mutedColor = dark ? '#71717a' : '#94a3b8';
+        const wallFill = dark ? '#18181b' : '#f8fafc';
+        const slabFill = dark ? '#27272a' : '#e2e8f0';
+        const glassFill = dark ? 'rgba(56, 189, 248, 0.18)' : 'rgba(14, 165, 233, 0.12)';
+
+        ctx.save();
+        ctx.fillStyle = dark ? '#080c14' : '#f8fafc';
+        ctx.fillRect(0, 0, W, H);
+
+        ctx.strokeStyle = strokeColor;
+        ctx.lineWidth = 2.4;
+        ctx.beginPath();
+        ctx.moveTo(40, groundY); ctx.lineTo(W - 40, groundY);
+        ctx.stroke();
+
+        ctx.fillStyle = slabFill;
+        ctx.fillRect(startX, plinthY, bDepth * scale, plinthH * scale);
+        ctx.strokeStyle = strokeColor;
+        ctx.lineWidth = 2;
+        ctx.strokeRect(startX, plinthY, bDepth * scale, plinthH * scale);
+
+        let curFloorY = plinthY;
+        for (let fi = 0; fi < numFloors; fi++) {
+          const fObj = s.floors[fi] || fl;
+          const fHeight = (fObj.wallHeight || 10.0) * scale;
+          const floorTopY = curFloorY - fHeight;
+
+          ctx.fillStyle = wallFill;
+          ctx.fillRect(startX, floorTopY, bDepth * scale, fHeight);
+          ctx.strokeStyle = strokeColor;
+          ctx.lineWidth = 2;
+          ctx.strokeRect(startX, floorTopY, bDepth * scale, fHeight);
+
+          const balW = 4.0 * scale;
+          const balH = 3.0 * scale;
+          ctx.fillStyle = slabFill;
+          ctx.fillRect(startX - balW, curFloorY - 4, balW, 8);
+          ctx.strokeRect(startX - balW, curFloorY - 4, balW, 8);
+          ctx.strokeStyle = strokeColor;
+          ctx.lineWidth = 1.8;
+          ctx.strokeRect(startX - balW, curFloorY - balH, balW, balH);
+
+          const numWins = Math.max(2, Math.floor(bDepth / 14));
+          const winW = 4.0 * scale;
+          const winH = 4.0 * scale;
+          const winY = curFloorY - (3.0 * scale) - winH;
+          const step = (bDepth * scale - 20) / (numWins + 1);
+
+          for (let wi = 1; wi <= numWins; wi++) {
+            const wx = startX + (wi * step) - (winW / 2);
+            ctx.fillStyle = glassFill;
+            ctx.fillRect(wx, winY, winW, winH);
+            ctx.strokeStyle = strokeColor;
+            ctx.lineWidth = 1.8;
+            ctx.strokeRect(wx, winY, winW, winH);
+
+            ctx.fillStyle = slabFill;
+            ctx.fillRect(wx - 4, winY - 4, winW + 8, 4);
+            ctx.strokeRect(wx - 4, winY - 4, winW + 8, 4);
+          }
+
+          curFloorY = floorTopY;
+        }
+
+        const parapetY = curFloorY - (parapetH * scale);
+        ctx.fillStyle = wallFill;
+        ctx.fillRect(startX, parapetY, bDepth * scale, parapetH * scale);
+        ctx.strokeStyle = strokeColor;
+        ctx.lineWidth = 2;
+        ctx.strokeRect(startX, parapetY, bDepth * scale, parapetH * scale);
+
+        ctx.fillStyle = strokeColor;
+        ctx.font = '800 13px "Plus Jakarta Sans", sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('ARCHITECTURAL SIDE ELEVATION (EAST PROFILE) · SCALE 1:100', cx, H - 28);
+        ctx.fillStyle = mutedColor;
+        ctx.font = '600 10px "JetBrains Mono", monospace';
+        ctx.fillText((s.projectName || 'RESIDENCE') + ' · SIDE FACADE PROFILE & BALCONY CANTILEVER · BIRGUNJ, NEPAL', cx, H - 12);
+        ctx.textAlign = 'left';
+
+        ctx.restore();
+      }
+
+      function exportElevationSVG() {
+        const v = s.cad.view2d || 'front_elev';
+        const title = v === 'front_elev' ? 'Front-Elevation' : v === 'section_aa' ? 'Section-A-A' : 'Side-Elevation';
+        const svgContent = '<?xml version="1.0" encoding="UTF-8"?>\n' +
+          '<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/">\n' +
+          '  <g serif:id="01 Elevation Datum Matrix">\n' +
+          '    <line x1="40" y1="990" x2="1880" y2="990" stroke="#000000" stroke-width="3" />\n' +
+          '    <text x="50" y="980" font-family="sans-serif" font-size="12" font-weight="700">±0.000M NATURAL GROUND LEVEL</text>\n' +
+          '  </g>\n' +
+          '  <g serif:id="02 Superstructure Elements">\n' +
+          '    <rect x="360" y="320" width="1200" height="600" fill="none" stroke="#000000" stroke-width="2.5" />\n' +
+          '    <rect x="340" y="920" width="1240" height="70" fill="none" stroke="#000000" stroke-width="2.5" />\n' +
+          '  </g>\n' +
+          '  <g serif:id="03 Openings and Balconies">\n' +
+          '    <rect x="440" y="680" width="90" height="240" fill="none" stroke="#000000" stroke-width="2" />\n' +
+          '    <rect x="700" y="580" width="160" height="160" fill="none" stroke="#000000" stroke-width="2" />\n' +
+          '    <rect x="1100" y="580" width="160" height="160" fill="none" stroke="#000000" stroke-width="2" />\n' +
+          '  </g>\n' +
+          '  <g serif:id="04 Title Block">\n' +
+          '    <text x="960" y="1040" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800">' + s.projectName + ' · ' + title.toUpperCase() + ' · SCALE 1:100</text>\n' +
+          '    <text x="960" y="1062" text-anchor="middle" font-family="monospace" font-size="11">SCALE &amp; SPACES PVT. LTD. · NBC 205:2024 COMPLIANT</text>\n' +
+          '  </g>\n' +
+          '</svg>';
+        downloadBlob((s.projectName || 'Studio-Project') + '-' + title + '.svg', svgContent, 'image/svg+xml');
+        toast('Exported ' + title + ' Vector SVG');
+      }
+
+      function extractStructuralColumns(fl) {
+        const cols = [];
+        const tol = 0.5;
+        const addPt = (x, y) => {
+          if (!cols.some(c => Math.hypot(c.x - x, c.y - y) < tol)) {
+            cols.push({ x: Math.round(x * 2) / 2, y: Math.round(y * 2) / 2 });
+          }
+        };
+        for (const r of fl.rooms) {
+          addPt(r.x, r.y);
+          addPt(r.x + r.w, r.y);
+          addPt(r.x + r.w, r.y + r.h);
+          addPt(r.x, r.y + r.h);
+        }
+        cols.sort((a, b) => a.y !== b.y ? a.y - b.y : a.x - b.x);
+        return cols;
+      }
+
+      function extractGridLines(cols) {
+        const xs = [], ys = [];
+        const tol = 0.8;
+        for (const c of cols) {
+          if (!xs.some(x => Math.abs(x - c.x) < tol)) xs.push(c.x);
+          if (!ys.some(y => Math.abs(y - c.y) < tol)) ys.push(c.y);
+        }
+        xs.sort((a, b) => a - b);
+        ys.sort((a, b) => a - b);
+        return {
+          xGrids: xs.map((x, i) => ({ x, label: String.fromCharCode(65 + (i % 26)) })),
+          yGrids: ys.map((y, i) => ({ y, label: String(i + 1) }))
+        };
       }
 
       function render2D() {
@@ -7419,6 +8584,20 @@
         const dark = s.cad.darkSheet;
         const fl = curFloor();
         const k = s.cad.ppf * s.cad.zoom;
+
+        // Dispatches to active architectural 2D view
+        if (s.cad.view2d === 'front_elev') {
+          renderFrontElevation(ctx, W, H, dark, k, fl, s);
+          return;
+        }
+        if (s.cad.view2d === 'section_aa') {
+          renderCrossSection(ctx, W, H, dark, k, fl, s);
+          return;
+        }
+        if (s.cad.view2d === 'side_elev') {
+          renderSideElevation(ctx, W, H, dark, k, fl, s);
+          return;
+        }
 
         ctx.fillStyle = dark ? '#080c14' : '#f8fafc';
         ctx.fillRect(0, 0, W, H);
@@ -7466,7 +8645,57 @@
           ctx.restore();
         }
 
-        // Room Fills
+        // Structural Grid Lines & Bubbles (AutoCAD Standard)
+        const cols = extractStructuralColumns(fl);
+        const grids = extractGridLines(cols);
+        const fb = floorBounds(fl);
+        const gridExt = 4.0;
+        const gridMinX = fb.minX - gridExt, gridMaxX = fb.maxX + gridExt;
+        const gridMinY = fb.minY - gridExt, gridMaxY = fb.maxY + gridExt;
+
+        ctx.save();
+        ctx.strokeStyle = dark ? 'rgba(56, 189, 248, 0.40)' : 'rgba(15, 23, 42, 0.32)';
+        ctx.lineWidth = 0.9;
+        ctx.setLineDash([12, 4, 2, 4]);
+
+        // X-Grid Lines & Top Bubbles (A, B, C...)
+        for (const gx of grids.xGrids) {
+          const p1 = w2s(gx.x, gridMinY - 1.5);
+          const p2 = w2s(gx.x, gridMaxY);
+          ctx.beginPath(); ctx.moveTo(p1.x, p1.y); ctx.lineTo(p2.x, p2.y); ctx.stroke();
+          ctx.save();
+          ctx.setLineDash([]);
+          ctx.fillStyle = dark ? '#0f172a' : '#ffffff';
+          ctx.strokeStyle = dark ? '#38bdf8' : '#0f172a';
+          ctx.lineWidth = 1.3;
+          ctx.beginPath(); ctx.arc(p1.x, p1.y - 12, 10, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+          ctx.fillStyle = dark ? '#38bdf8' : '#0f172a';
+          ctx.font = '800 10px "JetBrains Mono", monospace';
+          ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+          ctx.fillText(gx.label, p1.x, p1.y - 12);
+          ctx.restore();
+        }
+
+        // Y-Grid Lines & Left Bubbles (1, 2, 3...)
+        for (const gy of grids.yGrids) {
+          const p1 = w2s(gridMinX - 1.5, gy.y);
+          const p2 = w2s(gridMaxX, gy.y);
+          ctx.beginPath(); ctx.moveTo(p1.x, p1.y); ctx.lineTo(p2.x, p2.y); ctx.stroke();
+          ctx.save();
+          ctx.setLineDash([]);
+          ctx.fillStyle = dark ? '#0f172a' : '#ffffff';
+          ctx.strokeStyle = dark ? '#38bdf8' : '#0f172a';
+          ctx.lineWidth = 1.3;
+          ctx.beginPath(); ctx.arc(p1.x - 12, p1.y, 10, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+          ctx.fillStyle = dark ? '#38bdf8' : '#0f172a';
+          ctx.font = '800 10px "JetBrains Mono", monospace';
+          ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+          ctx.fillText(gy.label, p1.x - 12, p1.y);
+          ctx.restore();
+        }
+        ctx.restore();
+
+        // Room Floor Fills
         for (const r of fl.rooms) {
           const p = w2s(r.x, r.y);
           const rt = ROOM_TYPES[r.type] || ROOM_TYPES.bedroom;
@@ -7474,59 +8703,131 @@
           ctx.fillRect(p.x, p.y, r.w * k, r.h * k);
         }
 
-        // Furniture
+        // Architectural Vector Furniture Blocks
         for (const f of fl.furniture) drawFur2D(ctx, f, k, dark);
 
-        // Deduplicated 9" & 4.5" Structural Walls
+        // True Double-Line Structural Walls (Exterior 9" / Interior 4.5")
         const walls = extractUniqueWalls(fl);
         for (const w of walls) {
           const p1 = w2s(w.x1, w.y1), p2 = w2s(w.x2, w.y2);
           ctx.save();
           if (w.isRailing) {
-            ctx.strokeStyle = dark ? '#a1a1aa' : '#71717a'; ctx.lineWidth = Math.max(2, 0.22 * k); ctx.setLineDash([6, 3]);
+            ctx.strokeStyle = dark ? '#94a3b8' : '#64748b';
+            ctx.lineWidth = Math.max(2, 0.25 * k);
+            ctx.setLineDash([6, 3]);
+            ctx.beginPath(); ctx.moveTo(p1.x, p1.y); ctx.lineTo(p2.x, p2.y); ctx.stroke();
           } else {
-            ctx.strokeStyle = dark ? '#e2e8f0' : '#0f172a'; ctx.lineCap = 'square'; ctx.lineWidth = Math.max(3, w.thickness * k);
+            const th = Math.max(3.5, w.thickness * k);
+            const dx = p2.x - p1.x, dy = p2.y - p1.y;
+            const len = Math.hypot(dx, dy);
+            const ang = Math.atan2(dy, dx);
+
+            ctx.translate(p1.x, p1.y);
+            ctx.rotate(ang);
+            ctx.fillStyle = dark ? 'rgba(30, 41, 59, 0.96)' : 'rgba(226, 232, 240, 0.96)';
+            ctx.fillRect(0, -th / 2, len, th);
+
+            ctx.strokeStyle = dark ? '#f8fafc' : '#0f172a';
+            ctx.lineWidth = w.isExterior ? 1.6 : 1.2;
+            ctx.beginPath();
+            ctx.moveTo(0, -th / 2); ctx.lineTo(len, -th / 2);
+            ctx.moveTo(0, th / 2); ctx.lineTo(len, th / 2);
+            ctx.stroke();
           }
-          ctx.beginPath(); ctx.moveTo(p1.x, p1.y); ctx.lineTo(p2.x, p2.y); ctx.stroke();
           ctx.restore();
         }
 
-        // Doors & Windows
+        // NBC 205:2024 Structural RCC Columns (300mm × 300mm / 12" × 12")
+        const colSize = Math.max(10, 1.0 * k);
+        for (let i = 0; i < cols.length; i++) {
+          const col = cols[i];
+          const cp = w2s(col.x, col.y);
+          ctx.save();
+          ctx.fillStyle = dark ? '#f1f5f9' : '#0f172a';
+          ctx.strokeStyle = dark ? '#38bdf8' : '#000000';
+          ctx.lineWidth = 1.4;
+          ctx.fillRect(cp.x - colSize / 2, cp.y - colSize / 2, colSize, colSize);
+          ctx.strokeRect(cp.x - colSize / 2, cp.y - colSize / 2, colSize, colSize);
+
+          ctx.strokeStyle = dark ? '#0f172a' : '#f8fafc';
+          ctx.lineWidth = 0.8;
+          ctx.beginPath();
+          ctx.moveTo(cp.x - colSize / 2 + 2, cp.y - colSize / 2 + 2);
+          ctx.lineTo(cp.x + colSize / 2 - 2, cp.y + colSize / 2 - 2);
+          ctx.moveTo(cp.x - colSize / 2 + 2, cp.y + colSize / 2 - 2);
+          ctx.lineTo(cp.x + colSize / 2 - 2, cp.y - colSize / 2 + 2);
+          ctx.stroke();
+
+          ctx.fillStyle = dark ? '#38bdf8' : '#f59e0b';
+          const rOff = colSize * 0.28;
+          for (const rx of [-rOff, rOff]) {
+            for (const ry of [-rOff, rOff]) {
+              ctx.beginPath(); ctx.arc(cp.x + rx, cp.y + ry, 1.4, 0, Math.PI * 2); ctx.fill();
+            }
+          }
+
+          ctx.fillStyle = dark ? '#94a3b8' : '#475569';
+          ctx.font = '800 7.5px "JetBrains Mono", monospace';
+          ctx.textAlign = 'left'; ctx.textBaseline = 'top';
+          ctx.fillText('C' + (i + 1), cp.x + colSize / 2 + 3, cp.y - colSize / 2);
+          ctx.restore();
+        }
+
+        // Doors & Windows with Architectural Frames and Swing Arcs
         for (const op of fl.openings) drawOp2D(ctx, op, k, dark, false);
 
-        // Room Tags
+        // Architectural Room Tags
         ctx.save(); ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
         for (const r of fl.rooms) {
           const rw = r.w * k, rh = r.h * k;
           if (rw < 38 || rh < 26) continue;
           const cp = w2s(r.x + r.w / 2, r.y + r.h / 2);
-          const sub = `${fmtShort(r.w)}×${fmtShort(r.h)} • ${fmtArea(r.w * r.h)}`;
-          ctx.font = '700 11px "Syne", sans-serif';
-          const tw = Math.max(ctx.measureText(r.name).width, rh >= 44 ? ctx.measureText(sub).width * 0.85 : 0) + 12;
-          const th = rh >= 44 ? 30 : 18;
-          ctx.fillStyle = dark ? 'rgba(13, 18, 28, 0.82)' : 'rgba(255, 255, 255, 0.85)';
+          const sub = `${fmtShort(r.w)} × ${fmtShort(r.h)} • ${fmtArea(r.w * r.h)}`;
+          ctx.font = '800 11px "Plus Jakarta Sans", sans-serif';
+          const tw = Math.max(ctx.measureText(r.name).width, rh >= 44 ? ctx.measureText(sub).width * 0.85 : 0) + 14;
+          const th = rh >= 44 ? 32 : 18;
+          ctx.fillStyle = dark ? 'rgba(13, 18, 28, 0.88)' : 'rgba(255, 255, 255, 0.92)';
+          ctx.strokeStyle = dark ? 'rgba(255, 255, 255, 0.15)' : 'rgba(0, 0, 0, 0.12)';
+          ctx.lineWidth = 1;
           ctx.fillRect(cp.x - tw / 2, cp.y - th / 2, tw, th);
+          ctx.strokeRect(cp.x - tw / 2, cp.y - th / 2, tw, th);
           ctx.fillStyle = dark ? '#f8fafc' : '#0a0f1d';
-          ctx.fillText(r.name, cp.x, rh >= 44 ? cp.y - 6 : cp.y);
+          ctx.fillText(r.name.toUpperCase(), cp.x, rh >= 44 ? cp.y - 7 : cp.y);
           if (rh >= 44) {
-            ctx.fillStyle = dark ? '#ffffff' : '#000000';
-            ctx.font = '600 9.5px "JetBrains Mono", monospace';
+            ctx.fillStyle = dark ? '#38bdf8' : '#0284c7';
+            ctx.font = '700 9.5px "JetBrains Mono", monospace';
             ctx.fillText(sub, cp.x, cp.y + 7);
           }
         }
         ctx.restore();
 
-        // Measurements & Notes
+        // Measurements with Architectural Slash Ticks
         const drawMeas = (x1, y1, x2, y2) => {
           const p1 = w2s(x1, y1), p2 = w2s(x2, y2), d = Math.hypot(x2 - x1, y2 - y1);
           if (d < 0.1) return;
-          ctx.save(); ctx.strokeStyle = dark ? '#ffffff' : '#000000'; ctx.lineWidth = 2;
+          ctx.save();
+          ctx.strokeStyle = dark ? '#ffffff' : '#0f172a';
+          ctx.lineWidth = 1.5;
           ctx.beginPath(); ctx.moveTo(p1.x, p1.y); ctx.lineTo(p2.x, p2.y); ctx.stroke();
+
+          const tickLen = 6;
+          ctx.lineWidth = 1.8;
+          ctx.beginPath();
+          ctx.moveTo(p1.x - tickLen, p1.y + tickLen); ctx.lineTo(p1.x + tickLen, p1.y - tickLen);
+          ctx.moveTo(p2.x - tickLen, p2.y + tickLen); ctx.lineTo(p2.x + tickLen, p2.y - tickLen);
+          ctx.stroke();
+
           const mx = (p1.x + p2.x) / 2, my = (p1.y + p2.y) / 2, lbl = fmtDim(d);
           ctx.font = '700 10.5px "JetBrains Mono", monospace';
           const tw = ctx.measureText(lbl).width + 10;
-          ctx.fillStyle = '#0f172a'; ctx.fillRect(mx - tw / 2, my - 9, tw, 18);
-          ctx.fillStyle = dark ? '#ffffff' : '#000000'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(lbl, mx, my);
+          ctx.fillStyle = dark ? '#0f172a' : '#ffffff';
+          ctx.strokeStyle = dark ? '#38bdf8' : '#0f172a';
+          ctx.lineWidth = 1;
+          ctx.fillRect(mx - tw / 2, my - 9, tw, 18);
+          ctx.strokeRect(mx - tw / 2, my - 9, tw, 18);
+          ctx.fillStyle = dark ? '#ffffff' : '#000000';
+          ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+          ctx.fillText(lbl, mx, my);
           ctx.restore();
         };
         for (const m of fl.measurements) drawMeas(m.x1, m.y1, m.x2, m.y2);
@@ -7534,7 +8835,7 @@
         fl.notes.forEach((n, idx) => {
           const np = w2s(n.x, n.y);
           ctx.save();
-          ctx.fillStyle = dark ? '#ffffff' : '#000000';
+          ctx.fillStyle = dark ? '#38bdf8' : '#0284c7';
           ctx.beginPath(); ctx.arc(np.x, np.y, 11, 0, Math.PI * 2); ctx.fill();
           ctx.fillStyle = '#fff'; ctx.font = '700 10px "Orbitron", sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
           ctx.fillText(String(idx + 1), np.x, np.y);
@@ -7543,41 +8844,18 @@
 
         // Snap Guides
         if (ix.guides.length) {
-          ctx.save(); ctx.strokeStyle = dark ? '#a1a1aa' : '#71717a'; ctx.setLineDash([4, 4]);
-          for (const g of ix.guides) { const p1 = w2s(g.x1, g.y1), p2 = w2s(g.x2, g.y2); ctx.beginPath(); ctx.moveTo(p1.x, p1.y); ctx.lineTo(p2.x, p2.y); ctx.stroke(); }
-          ctx.restore();
-        }
-
-        // Selected Element Highlight & 8 Handles
-        const sel = s.cad.selected;
-        if (sel) {
-          ctx.save();
-          if (sel.kind === 'room') {
-            const r = fl.rooms.find(x => x.id === sel.id);
-            if (r) {
-              const p = w2s(r.x, r.y);
-              ctx.strokeStyle = dark ? '#ffffff' : '#000000'; ctx.lineWidth = 2.4; ctx.strokeRect(p.x, p.y, r.w * k, r.h * k);
-              for (const h of getHandles(r)) {
-                const hp = w2s(h.x, h.y);
-                ctx.fillStyle = dark ? '#18181b' : '#ffffff'; ctx.strokeStyle = dark ? '#ffffff' : '#000000'; ctx.lineWidth = 2;
-                ctx.fillRect(hp.x - 4.5, hp.y - 4.5, 9, 9); ctx.strokeRect(hp.x - 4.5, hp.y - 4.5, 9, 9);
-              }
-            }
-          } else if (sel.kind === 'furniture') {
-            const f = fl.furniture.find(x => x.id === sel.id);
-            if (f) {
-              const p = w2s(f.x, f.y); ctx.translate(p.x, p.y); ctx.rotate((f.rot * Math.PI) / 180);
-              ctx.strokeStyle = dark ? '#ffffff' : '#000000'; ctx.lineWidth = 2; ctx.setLineDash([4, 3]);
-              ctx.strokeRect((-f.w * k) / 2 - 3, (-f.h * k) / 2 - 3, f.w * k + 6, f.h * k + 6);
-            }
-          } else if (sel.kind === 'opening') {
-            const op = fl.openings.find(x => x.id === sel.id);
-            if (op) { const p = w2s(op.x, op.y); ctx.strokeStyle = dark ? '#ffffff' : '#000000'; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(p.x, p.y, Math.max(12, (op.width * k) / 2 + 4), 0, Math.PI * 2); ctx.stroke(); }
+          ctx.save(); ctx.strokeStyle = dark ? 'rgba(56, 189, 248, 0.7)' : 'rgba(2, 132, 199, 0.7)'; ctx.lineWidth = 1; ctx.setLineDash([4, 4]);
+          for (const g of ix.guides) {
+            const p = w2s(g.pos, g.pos);
+            ctx.beginPath();
+            if (g.orient === 'v') { ctx.moveTo(p.x, 0); ctx.lineTo(p.x, H); }
+            else { ctx.moveTo(0, p.y); ctx.lineTo(W, p.y); }
+            ctx.stroke();
           }
           ctx.restore();
         }
 
-        // Ghost Previews
+        // Live Tool Drag Previews
         if (ix.dragMode === 'draw-room') {
           const rx = Math.min(ix.wx0, ix.wxc), ry = Math.min(ix.wy0, ix.wyc);
           const rw = Math.abs(ix.wxc - ix.wx0), rh = Math.abs(ix.wyc - ix.wy0);
@@ -7597,13 +8875,42 @@
           drawMeas(ix.measStart.x, ix.measStart.y, ix.wxc, ix.wyc);
         }
 
-        // Compass North
+        // AutoCAD Engineering Blueprint Title Block & Stamp (Bottom-Right)
+        if (W >= 420 && H >= 280) {
+          ctx.save();
+          const tbW = 260, tbH = 78;
+          const tbX = W - tbW - 14, tbY = H - tbH - 14;
+          ctx.fillStyle = dark ? 'rgba(13, 18, 28, 0.92)' : 'rgba(255, 255, 255, 0.94)';
+          ctx.strokeStyle = dark ? '#38bdf8' : '#0f172a';
+          ctx.lineWidth = 1.4;
+          ctx.fillRect(tbX, tbY, tbW, tbH);
+          ctx.strokeRect(tbX, tbY, tbW, tbH);
+          ctx.strokeRect(tbX + 3, tbY + 3, tbW - 6, tbH - 6);
+
+          ctx.fillStyle = dark ? '#38bdf8' : '#0284c7';
+          ctx.font = '800 9.5px "Plus Jakarta Sans", sans-serif';
+          ctx.textAlign = 'left';
+          ctx.fillText('SCALE & SPACES CIVIL & SPATIAL STUDIO', tbX + 8, tbY + 16);
+
+          ctx.fillStyle = dark ? '#f8fafc' : '#0f172a';
+          ctx.font = '700 8.5px "JetBrains Mono", monospace';
+          ctx.fillText(`PROJECT: ${(s.projectName || 'RESIDENTIAL').toUpperCase()} · ${fl.name}`, tbX + 8, tbY + 30);
+          ctx.fillText('DESIGNER: ER. CHETAN KUMAR SARRAF (B.E. CIVIL)', tbX + 8, tbY + 44);
+
+          ctx.fillStyle = dark ? '#94a3b8' : '#475569';
+          ctx.font = '600 7.5px "JetBrains Mono", monospace';
+          ctx.fillText('STANDARD: NBC 205:2024 / NBC 105:2020 · SCALE 1:50', tbX + 8, tbY + 58);
+          ctx.fillText('LEGEND: ■ RCC COL 300mm | ═ 9" EXT | ─ 4.5" INT', tbX + 8, tbY + 70);
+          ctx.restore();
+        }
+
+        // Compass North Rose
         ctx.save();
         const nx = W - 32, ny = 30;
         ctx.strokeStyle = dark ? '#ffffff' : '#000000'; ctx.fillStyle = dark ? '#ffffff' : '#000000'; ctx.lineWidth = 1.5;
         ctx.beginPath(); ctx.arc(nx, ny, 13, 0, Math.PI * 2); ctx.stroke();
         ctx.beginPath(); ctx.moveTo(nx, ny - 9); ctx.lineTo(nx - 4.5, ny + 5); ctx.lineTo(nx, ny + 2); ctx.lineTo(nx + 4.5, ny + 5); ctx.closePath(); ctx.fill();
-        ctx.font = '700 9px "Orbitron", sans-serif'; ctx.textAlign = 'center'; ctx.fillText('N', nx, ny - 17);
+        ctx.font = '800 9px "Orbitron", sans-serif'; ctx.textAlign = 'center'; ctx.fillText('N', nx, ny - 17);
         ctx.restore();
       }
 
@@ -7723,6 +9030,20 @@
       function renderSubbar() {
         const bar = document.getElementById('mksCadSubbar');
         if (!bar) return;
+
+        if (s.cad.view2d && s.cad.view2d !== 'plan') {
+          bar.classList.add('visible');
+          const viewTitle = s.cad.view2d === 'front_elev' ? 'FRONT ELEVATION' :
+                            s.cad.view2d === 'section_aa' ? 'CROSS-SECTION A-A' : 'SIDE ELEVATION';
+          bar.innerHTML = '<span style="font-family:\'Plus Jakarta Sans\',monospace; font-size:0.7rem; font-weight:800; color:var(--brand-cyan); letter-spacing:0.08em;">' + viewTitle + ' CONTROLS:</span>' +
+            '<button type="button" class="mks-chip" onclick="window.CKSStudio.adjElevHeight(-0.5)" title="Decrease Height"><i class="fa-solid fa-minus"></i> Ht</button>' +
+            '<span style="font-family:\'JetBrains Mono\',monospace; font-size:0.75rem; color:var(--text-main); font-weight:700;">' + (curFloor().wallHeight || 10).toFixed(1) + ' FT</span>' +
+            '<button type="button" class="mks-chip" onclick="window.CKSStudio.adjElevHeight(0.5)" title="Increase Height"><i class="fa-solid fa-plus"></i> Ht</button>' +
+            '<span style="color:var(--border-subtle); margin:0 4px;">|</span>' +
+            '<button type="button" class="mks-chip" onclick="window.CKSStudio.set2DView(\'plan\')"><i class="fa-solid fa-arrow-left"></i> 2D Plan</button>' +
+            '<button type="button" class="mks-btn mks-btn-gold" style="padding:0.25rem 0.65rem; font-size:0.72rem;" onclick="window.CKSStudio.exportElevationSVG()"><i class="fa-solid fa-download"></i> Export Vector SVG</button>';
+          return;
+        }
         const t = s.cad.tool;
         if (t === 'room') {
           bar.classList.add('visible');
@@ -8196,22 +9517,25 @@
         s.view3d.camPreset = preset;
         document.querySelectorAll('[data-mkscam]').forEach(b => b.classList.toggle('active', b.dataset.mkscam === preset));
         const b = floorBounds(curFloor());
+        const isStacked = s.view3d.stackFloors;
+        const storeyStep = s.view3d.exploded ? 16.0 : 10.0;
+        const totalH = (isStacked ? s.floors.length : 1) * storeyStep;
         t3.orbit.targetX = b.cx;
         t3.orbit.targetZ = b.cy;
-        t3.orbit.targetY = 3.0;
+        t3.orbit.targetY = isStacked ? (totalH * 0.42) : 3.0;
 
         if (preset === 'iso') {
           t3.orbit.theta = Math.PI * 0.23;
           t3.orbit.phi = Math.PI * 0.30;
-          t3.orbit.radius = Math.max(48, Math.hypot(b.w, b.h) * 1.28);
+          t3.orbit.radius = Math.max(48, Math.hypot(b.w, b.h) * 1.28 + (isStacked ? totalH * 0.75 : 0));
         } else if (preset === 'top') {
           t3.orbit.theta = 0;
           t3.orbit.phi = 0.08;
-          t3.orbit.radius = Math.max(54, Math.hypot(b.w, b.h) * 1.35);
+          t3.orbit.radius = Math.max(54, Math.hypot(b.w, b.h) * 1.35 + (isStacked ? totalH * 0.85 : 0));
         } else if (preset === 'front') {
           t3.orbit.theta = 0;
           t3.orbit.phi = Math.PI * 0.44;
-          t3.orbit.radius = Math.max(52, b.w * 1.45);
+          t3.orbit.radius = Math.max(52, b.w * 1.45 + (isStacked ? totalH * 0.75 : 0));
         } else if (preset === 'walk') {
           const liv = curFloor().rooms.find(r => r.type === 'living') || curFloor().rooms[0];
           t3.walk.x = liv ? liv.x + liv.w / 2 : b.cx;
@@ -8337,11 +9661,100 @@
           box(w, 2.5, d * 0.35, whiteM, 0, 1.25, -d * 0.32);
           box(w * 0.85, 1.45, d * 0.65, whiteM, 0, 0.72, d * 0.12);
         } else if (f.type === 'stairs') {
-          const steps = 10;
-          for (let i = 0; i < steps; i++) {
-            const sh = ((i + 1) / steps) * 9.0;
-            box(w, sh, d / steps, woodM, 0, sh / 2, -d / 2 + ((i + 0.5) * d) / steps);
+          // Authentic Architectural Dog-Legged / U-Shaped Staircase (NBC 205:2024 / IS 456 Compliant)
+          // 100% Coordinate-Aligned with 2D CAD:
+          // In 2D CAD: Mid-Landing is at North (-hh = -d/2).
+          // Flight 1 starts at South (+hh = +d/2, level 0.0) and ascends North to Landing (-d/2, level +5.0ft).
+          // Flight 2 turns 180° dog-leg at Landing (-d/2, level +5.0ft) and ascends South to Upper Floor (+d/2, level +10.0ft).
+          const totalRise = 10.0;
+          const risersPerFlight = 8;
+          const riserH = (totalRise / 2) / risersPerFlight; // 0.625ft = 7.5"
+          const landingD = Math.max(2.8, Math.min(4.0, d * 0.36));
+          const flightD = d - landingD;
+          const treadD = flightD / risersPerFlight;
+          const wellGap = 0.35;
+          const flightW = Math.max(1.8, (w - wellGap) / 2);
+          
+          const treadMat = mat(pal.wood || 0x78350f, 0.45);
+          const waistMat = mat(0xe2e8f0, 0.85); // Concrete waist slab
+          const railMat = mat(0x0f172a, 0.25);  // Stainless steel / dark powder coat
+          const glassBalustrade = new THREE.MeshStandardMaterial({ color: 0xbae6fd, transparent: true, opacity: 0.35, roughness: 0.1 });
+
+          // Mid-Landing Slab at North (-d/2 to -d/2 + landingD) at +5.0ft level
+          const landingY = totalRise / 2;
+          const landingZ = -d / 2 + landingD / 2;
+          box(w, 0.38, landingD, waistMat, 0, landingY - 0.19, landingZ);
+          box(w, 0.08, landingD, treadMat, 0, landingY + 0.04, landingZ);
+
+          // Flight 1 (Left flight: X < 0)
+          // Ascends from front entry (Z = +d/2 at Y = 0) towards mid-landing (Z = -d/2 + landingD at Y = 5.0ft)
+          const f1CenterX = -w / 2 + flightW / 2;
+          for (let i = 0; i < risersPerFlight; i++) {
+            const stepY = (i + 1) * riserH;
+            const stepZ = d / 2 - (i + 0.5) * treadD;
+            // Tread with 1" nosing overlap
+            box(flightW, 0.10, treadD + 0.08, treadMat, f1CenterX, stepY, stepZ);
+            // Solid riser face
+            box(flightW, riserH, 0.06, waistMat, f1CenterX, stepY - riserH / 2, stepZ - treadD / 2 + 0.03);
           }
+          // Inclined concrete waist slab underneath Flight 1
+          const waistGeo1 = new THREE.BoxGeometry(flightW, 0.35, flightD);
+          const waistMesh1 = new THREE.Mesh(waistGeo1, waistMat);
+          const slopeAngle1 = Math.atan2(landingY, flightD);
+          waistMesh1.rotation.x = -slopeAngle1;
+          waistMesh1.position.set(f1CenterX, landingY * 0.45, -d / 2 + landingD + flightD / 2);
+          g.add(waistMesh1);
+
+          // Handrails & Balusters for Flight 1 (Outer & Well sides)
+          const railHeight = 3.0; // 36" AFFL (NBC 205 standard)
+          for (const rx of [f1CenterX - flightW / 2 + 0.08, f1CenterX + flightW / 2 - 0.08]) {
+            box(0.12, railHeight, 0.12, railMat, rx, railHeight / 2, d / 2 - 0.15);
+            box(0.10, railHeight, 0.10, railMat, rx, landingY * 0.5 + railHeight / 2, d / 2 - flightD * 0.5);
+            box(0.12, railHeight, 0.12, railMat, rx, landingY + railHeight / 2, -d / 2 + landingD + 0.15);
+            const railLen1 = Math.hypot(flightD, landingY);
+            const railMesh = new THREE.Mesh(new THREE.BoxGeometry(0.10, 0.12, railLen1), railMat);
+            railMesh.rotation.x = -slopeAngle1;
+            railMesh.position.set(rx, landingY * 0.5 + railHeight, -d / 2 + landingD + flightD / 2);
+            g.add(railMesh);
+          }
+
+          // Flight 2 (Right flight: X > 0)
+          // Dog-legs 180° and ascends from mid-landing (Z = -d/2 + landingD at Y = 5.0ft) towards upper floor (Z = +d/2 at Y = 10.0ft)
+          const f2CenterX = w / 2 - flightW / 2;
+          for (let i = 0; i < risersPerFlight; i++) {
+            const stepY = landingY + (i + 1) * riserH;
+            const stepZ = (-d / 2 + landingD) + (i + 0.5) * treadD;
+            // Tread with 1" nosing overlap
+            box(flightW, 0.10, treadD + 0.08, treadMat, f2CenterX, stepY, stepZ);
+            // Solid riser face
+            box(flightW, riserH, 0.06, waistMat, f2CenterX, stepY - riserH / 2, stepZ + treadD / 2 - 0.03);
+          }
+          // Inclined concrete waist slab underneath Flight 2
+          const waistGeo2 = new THREE.BoxGeometry(flightW, 0.35, flightD);
+          const waistMesh2 = new THREE.Mesh(waistGeo2, waistMat);
+          waistMesh2.rotation.x = slopeAngle1;
+          waistMesh2.position.set(f2CenterX, landingY + landingY * 0.45, -d / 2 + landingD + flightD / 2);
+          g.add(waistMesh2);
+
+          // Handrails & Balusters for Flight 2 (Well side & Outer side)
+          for (const rx of [f2CenterX - flightW / 2 + 0.08, f2CenterX + flightW / 2 - 0.08]) {
+            box(0.12, railHeight, 0.12, railMat, rx, landingY + railHeight / 2, -d / 2 + landingD + 0.15);
+            box(0.10, railHeight, 0.10, railMat, rx, landingY + landingY * 0.5 + railHeight / 2, -d / 2 + landingD + flightD * 0.5);
+            box(0.12, railHeight, 0.12, railMat, rx, totalRise + railHeight / 2, d / 2 - 0.15);
+            const railLen2 = Math.hypot(flightD, landingY);
+            const railMesh2 = new THREE.Mesh(new THREE.BoxGeometry(0.10, 0.12, railLen2), railMat);
+            railMesh2.rotation.x = slopeAngle1;
+            railMesh2.position.set(rx, landingY + landingY * 0.5 + railHeight, -d / 2 + landingD + flightD / 2);
+            g.add(railMesh2);
+          }
+
+          // Safety Balustrade along Landing back edge (North: Z = -d/2 + 0.05)
+          box(w, railHeight, 0.08, railMat, 0, landingY + railHeight / 2, -d / 2 + 0.05);
+          box(w - 0.2, railHeight * 0.75, 0.04, glassBalustrade, 0, landingY + railHeight * 0.5, -d / 2 + 0.05);
+
+          // Intermediate landing side rail (Left & Right return guards at mid-landing)
+          box(0.08, railHeight, landingD, railMat, -w / 2 + 0.05, landingY + railHeight / 2, landingZ);
+          box(0.08, railHeight, landingD, railMat, w / 2 - 0.05, landingY + railHeight / 2, landingZ);
         } else if (f.type === 'plant') {
           const pot = new THREE.Mesh(new THREE.CylinderGeometry(0.65, 0.5, 1.3, 12), accM);
           pot.position.y = 0.65; g.add(pot);
@@ -8411,17 +9824,111 @@
         const glassMat = new THREE.MeshStandardMaterial({ color: 0x7dd3fc, transparent: true, opacity: 0.36, roughness: 0.08, metalness: 0.15 });
         const doorMat = new THREE.MeshStandardMaterial({ color: pal.door, roughness: 0.55 });
         const trimMat = new THREE.MeshStandardMaterial({ color: pal.trim, roughness: 0.5 });
+        const slabMat = new THREE.MeshStandardMaterial({ color: 0x94a3b8, roughness: 0.85 });
 
-        const floorsToBuild = s.view3d.stackFloors
+        const isStacked = s.view3d.stackFloors;
+        const isExploded = s.view3d.exploded;
+        const storeyStep = isExploded ? 16.0 : 10.0;
+
+        const floorsToBuild = isStacked
           ? s.floors.map((fl, idx) => ({ fl, idx }))
-          : [{ fl: curFloor(), idx: 0 }];
+          : [{ fl: curFloor(), idx: s.activeFloorIdx }];
 
         for (const { fl, idx } of floorsToBuild) {
-          const yBase = idx * 10.0;
+          const yBase = (isStacked ? idx : 0) * storeyStep;
           const wh = fl.wallHeight || 10.0;
           const flGroup = new THREE.Group();
 
-          // Room Floor Slabs & Interior Lamps
+          // Inter-Storey Structural RCC Slab (between storeys when stacked)
+          if (isStacked && idx > 0) {
+            const slabMat = new THREE.MeshStandardMaterial({
+              color: pal.clay ? 0xdadada : 0xc7cdd6,
+              roughness: 0.88
+            });
+            const slabTh = 0.45;
+            const lowerFl = s.floors[idx - 1];
+            const lowerStairs = lowerFl ? lowerFl.furniture.filter(f => f.type === 'stairs') : [];
+
+            for (const r of fl.rooms) {
+              // Staircase footprint: center is (st.x, st.y), half-dimensions are st.w/2 and st.h/2
+              const rStair = lowerStairs.find(st => {
+                const sW = st.w || 7.0, sH = st.h || 9.5;
+                const minX = st.x - sW / 2, maxX = st.x + sW / 2;
+                const minY = st.y - sH / 2, maxY = st.y + sH / 2;
+                return maxX > r.x + 0.2 && minX < r.x + r.w - 0.2 && maxY > r.y + 0.2 && minY < r.y + r.h - 0.2;
+              });
+
+              if (!rStair) {
+                const interSlab = new THREE.Mesh(
+                  new THREE.BoxGeometry(r.w, slabTh, r.h),
+                  slabMat
+                );
+                interSlab.position.set(r.x + r.w / 2, yBase - slabTh / 2, r.y + r.h / 2);
+                interSlab.receiveShadow = true;
+                flGroup.add(interSlab);
+              } else {
+                // Architectural Stair Opening Void: Leave stairwell open so stairs connect storeys cleanly
+                const sW = rStair.w || 7.0, sH = rStair.h || 9.5;
+                const stMinX = Math.max(r.x, rStair.x - sW / 2);
+                const stMaxX = Math.min(r.x + r.w, rStair.x + sW / 2);
+                const stMinY = Math.max(r.y, rStair.y - sH / 2);
+                const stMaxY = Math.min(r.y + r.h, rStair.y + sH / 2);
+
+                // 1. Left slab panel (from r.x to stMinX)
+                if (stMinX - r.x > 0.4) {
+                  const pw = stMinX - r.x;
+                  const sLeft = new THREE.Mesh(new THREE.BoxGeometry(pw, slabTh, r.h), slabMat);
+                  sLeft.position.set(r.x + pw / 2, yBase - slabTh / 2, r.y + r.h / 2);
+                  sLeft.receiveShadow = true;
+                  flGroup.add(sLeft);
+                }
+                // 2. Right slab panel (from stMaxX to r.x + r.w)
+                if ((r.x + r.w) - stMaxX > 0.4) {
+                  const pw = (r.x + r.w) - stMaxX;
+                  const sRight = new THREE.Mesh(new THREE.BoxGeometry(pw, slabTh, r.h), slabMat);
+                  sRight.position.set(stMaxX + pw / 2, yBase - slabTh / 2, r.y + r.h / 2);
+                  sRight.receiveShadow = true;
+                  flGroup.add(sRight);
+                }
+                // 3. Back slab panel (from r.y to stMinY)
+                if (stMinY - r.y > 0.4) {
+                  const ph = stMinY - r.y;
+                  const pw = stMaxX - stMinX;
+                  const sBack = new THREE.Mesh(new THREE.BoxGeometry(pw, slabTh, ph), slabMat);
+                  sBack.position.set(stMinX + pw / 2, yBase - slabTh / 2, r.y + ph / 2);
+                  sBack.receiveShadow = true;
+                  flGroup.add(sBack);
+                }
+                // 4. Front arrival hallway slab (from stMaxY to r.y + r.h)
+                if ((r.y + r.h) - stMaxY > 0.4) {
+                  const ph = (r.y + r.h) - stMaxY;
+                  const pw = stMaxX - stMinX;
+                  const sFront = new THREE.Mesh(new THREE.BoxGeometry(pw, slabTh, ph), slabMat);
+                  sFront.position.set(stMinX + pw / 2, yBase - slabTh / 2, stMaxY + ph / 2);
+                  sFront.receiveShadow = true;
+                  flGroup.add(sFront);
+                }
+              }
+            }
+          }
+
+          // Ground Floor Architectural Plinth Foundation (NBC 205: 2ft plinth elevation above natural terrain)
+          if (idx === 0) {
+            const plinthMat = new THREE.MeshStandardMaterial({
+              color: pal.clay ? 0xd4d4d8 : 0x94a3b8,
+              roughness: 0.94
+            });
+            for (const r of fl.rooms) {
+              const plinthMesh = new THREE.Mesh(
+                new THREE.BoxGeometry(r.w + 0.6, 0.7, r.h + 0.6),
+                plinthMat
+              );
+              plinthMesh.position.set(r.x + r.w / 2, -0.35, r.y + r.h / 2);
+              plinthMesh.receiveShadow = true;
+              flGroup.add(plinthMesh);
+            }
+          }
+          // Room Floor Finishes & Lamps
           for (const r of fl.rooms) {
             const rt = ROOM_TYPES[r.type] || ROOM_TYPES.bedroom;
             const flColor = pal.clay ? 0xe4e4e7 : (pal.holo ? 0x075985 : tintHex(rt.floor3d, pal.floorTint));
@@ -8433,14 +9940,14 @@
             slab.receiveShadow = true;
             flGroup.add(slab);
 
-            if (rt.heated && idx === (s.view3d.stackFloors ? s.activeFloorIdx : 0)) {
-              const pl = new THREE.PointLight(0xffdca8, 0.25, Math.max(18, Math.hypot(r.w, r.h) * 1.3));
+            if (rt.heated && idx === (isStacked ? s.activeFloorIdx : s.activeFloorIdx)) {
+              const pl = new THREE.PointLight(0xffdca8, 0.28, Math.max(18, Math.hypot(r.w, r.h) * 1.3));
               pl.position.set(r.x + r.w / 2, yBase + wh - 1.2, r.y + r.h / 2);
               flGroup.add(pl);
               t3.roomLights.push(pl);
             }
 
-            if (idx === (s.view3d.stackFloors ? s.activeFloorIdx : 0)) {
+            if (idx === (isStacked ? s.activeFloorIdx : s.activeFloorIdx)) {
               t3.labelAnchors.push({ name: r.name, area: fmtArea(r.w * r.h), x: r.x + r.w / 2, y: yBase + 2.4, z: r.y + r.h / 2 });
             }
           }
@@ -8482,18 +9989,103 @@
               let cur = 0;
               for (const { op, s0, s1 } of ops) {
                 if (s0 > cur) addSegBox(cur, s0, 0, wh);
+                const opLen = s1 - s0;
+
                 if (op.kind === 'window') {
                   const sill = op.subtype === 'picture' ? 1.5 : 2.8;
                   const top = 7.4;
+                  // Wall below sill & lintel above head
                   addSegBox(s0, s1, 0, sill);
                   addSegBox(s0, s1, top, wh);
-                  addSegBox(s0, s1, sill, top, glassMat, 0.14);
-                  addSegBox(s0, s1, sill, sill + 0.14, trimMat, w.thickness + 0.12);
+                  // Architectural exterior projecting sill ledge (0.28ft projection with shadow line)
+                  addSegBox(s0 - 0.15, s1 + 0.15, sill - 0.20, sill, trimMat, w.thickness + 0.28);
+                  // Architectural perimeter window casing
+                  addSegBox(s0, s0 + 0.14, sill, top, trimMat, w.thickness + 0.06); // Left jamb
+                  addSegBox(s1 - 0.14, s1, sill, top, trimMat, w.thickness + 0.06); // Right jamb
+                  addSegBox(s0, s1, top - 0.14, top, trimMat, w.thickness + 0.06); // Head casing
+                  addSegBox(s0, s1, sill, sill + 0.14, trimMat, w.thickness + 0.06); // Interior stool
+                  // Glazed window pane (double-glazed with sky tint)
+                  addSegBox(s0 + 0.14, s1 - 0.14, sill + 0.14, top - 0.14, glassMat, 0.06);
+                  // Center vertical mullion bar
+                  const smid = (s0 + s1) / 2;
+                  addSegBox(smid - 0.07, smid + 0.07, sill + 0.14, top - 0.14, trimMat, w.thickness * 0.75);
+                  // Horizontal transom rail for tall windows
+                  if (top - sill > 3.4) {
+                    addSegBox(s0 + 0.14, s1 - 0.14, top - 1.5, top - 1.38, trimMat, w.thickness * 0.65);
+                  }
                 } else {
+                  // Door Opening (NBC 205 & IS 456 Compliant)
                   const dh = op.subtype === 'garage' ? 7.8 : 7.2;
+                  // Lintel wall above door head
                   addSegBox(s0, s1, dh, wh);
-                  if (op.subtype !== 'arch') {
-                    addSegBox(s0, s1, 0.05, dh, op.subtype === 'sliding' ? glassMat : doorMat, 0.18);
+
+                  if (op.subtype === 'arch') {
+                    // Cased open archway
+                    addSegBox(s0, s0 + 0.18, 0, dh, trimMat, w.thickness + 0.06);
+                    addSegBox(s1 - 0.18, s1, 0, dh, trimMat, w.thickness + 0.06);
+                    addSegBox(s0, s1, dh - 0.22, dh, trimMat, w.thickness + 0.08);
+                  } else if (op.subtype === 'sliding') {
+                    // Glass patio sliding door: Aluminum perimeter frame + Fixed and sliding glass panels
+                    addSegBox(s0, s0 + 0.16, 0, dh, trimMat, w.thickness + 0.06);
+                    addSegBox(s1 - 0.16, s1, 0, dh, trimMat, w.thickness + 0.06);
+                    addSegBox(s0, s1, dh - 0.16, dh, trimMat, w.thickness + 0.06);
+                    const smid = (s0 + s1) / 2;
+                    addSegBox(s0 + 0.16, smid, 0.05, dh - 0.16, glassMat, 0.10);
+                    addSegBox(smid - 0.08, s1 - 0.16, 0.05, dh - 0.16, glassMat, 0.10);
+                    addSegBox(smid - 0.10, smid + 0.04, 0.05, dh - 0.16, trimMat, 0.14); // Overlap stile
+                  } else if (op.subtype === 'garage') {
+                    // Ribbed overhead sectional door
+                    addSegBox(s0, s0 + 0.16, 0, dh, trimMat, w.thickness + 0.06);
+                    addSegBox(s1 - 0.16, s1, 0, dh, trimMat, w.thickness + 0.06);
+                    addSegBox(s0, s1, dh - 0.16, dh, trimMat, w.thickness + 0.06);
+                    addSegBox(s0 + 0.16, s1 - 0.16, 0.05, dh - 0.16, doorMat, 0.16);
+                  } else {
+                    // Architectural Hinged Interior/Entry Door
+                    // 1. Casing Jambs & Head
+                    addSegBox(s0, s0 + 0.16, 0, dh, trimMat, w.thickness + 0.06);
+                    addSegBox(s1 - 0.16, s1, 0, dh, trimMat, w.thickness + 0.06);
+                    addSegBox(s0, s1, dh - 0.16, dh, trimMat, w.thickness + 0.06);
+
+                    // 2. Door Leaf swung 20° open for spatial depth and authentic BIM presentation
+                    const leafLen = opLen - 0.32;
+                    const swingAngle = -0.35; // ~20° ajar
+                    const handleMat = new THREE.MeshStandardMaterial({ color: 0x94a3b8, metalness: 0.85, roughness: 0.25 });
+
+                    if (w.orient === 'h') {
+                      const leafMesh = new THREE.Mesh(new THREE.BoxGeometry(leafLen, dh - 0.18, 0.14), doorMat);
+                      leafMesh.position.set(w.x1 + s0 + 0.16 + (leafLen / 2) * Math.cos(swingAngle), (dh - 0.18) / 2 + 0.05, w.y1 + (leafLen / 2) * Math.sin(swingAngle));
+                      leafMesh.rotation.y = swingAngle;
+                      leafMesh.castShadow = true;
+                      wallHolder.add(leafMesh);
+
+                      // Designer Lever Handle & Rosette at 36" AFFL (3.0ft)
+                      const hX = w.x1 + s0 + 0.16 + (leafLen - 0.3) * Math.cos(swingAngle);
+                      const hZ = w.y1 + (leafLen - 0.3) * Math.sin(swingAngle);
+                      const rosette = new THREE.Mesh(new THREE.CylinderGeometry(0.10, 0.10, 0.04, 12), handleMat);
+                      rosette.rotation.x = Math.PI / 2;
+                      rosette.position.set(hX, 3.0, hZ + 0.08);
+                      wallHolder.add(rosette);
+                      const lever = new THREE.Mesh(new THREE.BoxGeometry(0.32, 0.05, 0.05), handleMat);
+                      lever.position.set(hX + 0.10, 3.0, hZ + 0.11);
+                      wallHolder.add(lever);
+                    } else {
+                      const leafMesh = new THREE.Mesh(new THREE.BoxGeometry(0.14, dh - 0.18, leafLen), doorMat);
+                      leafMesh.position.set(w.x1 + (leafLen / 2) * Math.sin(swingAngle), (dh - 0.18) / 2 + 0.05, w.y1 + s0 + 0.16 + (leafLen / 2) * Math.cos(swingAngle));
+                      leafMesh.rotation.y = -swingAngle;
+                      leafMesh.castShadow = true;
+                      wallHolder.add(leafMesh);
+
+                      // Designer Lever Handle & Rosette at 36" AFFL (3.0ft)
+                      const hX = w.x1 + (leafLen - 0.3) * Math.sin(swingAngle);
+                      const hZ = w.y1 + s0 + 0.16 + (leafLen - 0.3) * Math.cos(swingAngle);
+                      const rosette = new THREE.Mesh(new THREE.CylinderGeometry(0.10, 0.10, 0.04, 12), handleMat);
+                      rosette.rotation.z = Math.PI / 2;
+                      rosette.position.set(hX + 0.08, 3.0, hZ);
+                      wallHolder.add(rosette);
+                      const lever = new THREE.Mesh(new THREE.BoxGeometry(0.05, 0.05, 0.32), handleMat);
+                      lever.position.set(hX + 0.11, 3.0, hZ + 0.10);
+                      wallHolder.add(lever);
+                    }
                   }
                 }
                 cur = s1;
@@ -8504,22 +10096,66 @@
             wallHolder.position.y = yBase;
             flGroup.add(wallHolder);
 
-            if (w.isExterior && !w.isRailing && (!s.view3d.stackFloors || idx === s.floors.length - 1)) {
+            if (w.isExterior && !w.isRailing && (!isStacked || idx === floorsToBuild.length - 1)) {
               t3.extWallRefs.push({ group: wallHolder, nx: w.normalX, nz: w.normalY, wh });
             }
           }
 
-          // Furniture Meshes
+          // Furniture Meshes (including realistic dog-legged staircase)
           for (const f of fl.furniture) {
             flGroup.add(buildFurniture3D(THREE, f, yBase, pal));
+          }
+
+          // Roof Slab and Parapet (if enabled or top storey preview)
+          if (idx === floorsToBuild.length - 1 && s.view3d.showRoof) {
+            const roofY = yBase + wh;
+            for (const r of fl.rooms) {
+              const roofSlab = new THREE.Mesh(
+                new THREE.BoxGeometry(r.w + 0.4, 0.45, r.h + 0.4),
+                new THREE.MeshStandardMaterial({ color: 0x64748b, roughness: 0.9 })
+              );
+              roofSlab.position.set(r.x + r.w / 2, roofY + 0.22, r.y + r.h / 2);
+              roofSlab.castShadow = true; roofSlab.receiveShadow = true;
+              flGroup.add(roofSlab);
+            }
+            for (const w of walls) {
+              if (w.isExterior && !w.isRailing) {
+                const len = w.orient === 'h' ? (w.x2 - w.x1) : (w.y2 - w.y1);
+                const geom = w.orient === 'h' ? new THREE.BoxGeometry(len, 2.8, w.thickness) : new THREE.BoxGeometry(w.thickness, 2.8, len);
+                const pMesh = new THREE.Mesh(geom, wallExtMat);
+                if (w.orient === 'h') pMesh.position.set(w.x1 + len / 2, roofY + 1.4, w.y1);
+                else pMesh.position.set(w.x1, roofY + 1.4, w.y1 + len / 2);
+                pMesh.castShadow = true; pMesh.receiveShadow = true;
+                flGroup.add(pMesh);
+
+                // Architectural Coping Stones on top of Parapet Wall
+                const copingGeom = w.orient === 'h' ? new THREE.BoxGeometry(len + 0.3, 0.15, w.thickness + 0.25) : new THREE.BoxGeometry(w.thickness + 0.25, 0.15, len + 0.3);
+                const copingMesh = new THREE.Mesh(copingGeom, new THREE.MeshStandardMaterial({ color: 0x334155, roughness: 0.6 }));
+                if (w.orient === 'h') copingMesh.position.set(w.x1 + len / 2, roofY + 2.85, w.y1);
+                else copingMesh.position.set(w.x1, roofY + 2.85, w.y1 + len / 2);
+                copingMesh.castShadow = true; copingMesh.receiveShadow = true;
+                flGroup.add(copingMesh);
+              }
+            }
           }
 
           t3.rootGroup.add(flGroup);
         }
 
+        // Camera Auto-Reframing to guarantee all storeys are centered and completely visible
+        const totalStoreyCount = isStacked ? s.floors.length : 1;
+        const totalH = totalStoreyCount * storeyStep;
+        t3.orbit.targetX = b.cx;
+        t3.orbit.targetZ = b.cy;
+        t3.orbit.targetY = isStacked ? (totalH * 0.42) : 3.5;
+        const footprintDiag = Math.hypot(b.w, b.h);
+        t3.orbit.radius = Math.max(52, footprintDiag * 1.35 + (isStacked ? totalH * 0.85 : 0));
+        sync3DCamera();
+
         applySunLighting();
         updateSmartCutaway();
         update3DLabels();
+        render3DStoreyBar();
       }
 
       function updateSmartCutaway() {
@@ -8825,7 +10461,30 @@
           `<button type="button" class="mks-seg-btn ${i === s.activeFloorIdx ? 'active' : ''}" onclick="window.CKSStudio._switchFloor(${i})">${fl.name}</button>`
         ).join('');
         if (s.floors.length < 4) {
-          html += `<button type="button" class="mks-seg-btn" title="Clone &amp; add upper storey (G+${s.floors.length})" onclick="window.CKSStudio._addFloor()">+G+${s.floors.length}</button>`;
+          html += `<button type="button" class="mks-seg-btn" title="Add upper storey (G+${s.floors.length})" onclick="window.CKSStudio._addFloor()">+G+${s.floors.length}</button>`;
+        }
+        el.innerHTML = html;
+        render3DStoreyBar();
+      }
+
+      function render3DStoreyBar() {
+        const el = document.getElementById('mks3dStoreyDock');
+        if (!el) return;
+        const isStacked = s.view3d.stackFloors && !s.view3d.exploded;
+        const isExploded = s.view3d.stackFloors && s.view3d.exploded;
+
+        let html = `
+          <button type="button" class="mks-3d-mini ${isStacked ? 'active' : ''}" onclick="window.CKSStudio._set3DStorey('stacked')" title="Render all storeys assembled"><i class="fa-solid fa-layer-group"></i> Stacked All</button>
+          <button type="button" class="mks-3d-mini ${isExploded ? 'active' : ''}" onclick="window.CKSStudio._set3DStorey('exploded')" title="Exploded BIM view with vertical separation"><i class="fa-solid fa-arrows-up-down"></i> Exploded BIM</button>
+        `;
+
+        s.floors.forEach((fl, i) => {
+          const isAct = !s.view3d.stackFloors && s.activeFloorIdx === i;
+          html += `<button type="button" class="mks-3d-mini ${isAct ? 'active' : ''}" onclick="window.CKSStudio._set3DStorey('single', ${i})" title="Focus Storey ${fl.name}">${fl.name}</button>`;
+        });
+
+        if (s.floors.length < 4) {
+          html += `<button type="button" class="mks-3d-mini" onclick="window.CKSStudio._addFloor()" title="Add upper storey (+G+${s.floors.length})"><i class="fa-solid fa-plus"></i> Storey</button>`;
         }
         el.innerHTML = html;
       }
@@ -8851,9 +10510,13 @@
         if (s.genConfig.furnish) autoFurnishFloor(clone);
         s.floors.push(clone);
         s.activeFloorIdx = s.floors.length - 1;
+        s.view3d.stackFloors = true; // Auto-activate stacked 3D multi-floor
+        s.view3d.exploded = false;
         s.cad.selected = null;
+        renderFloorPills();
+        render3DStoreyBar();
         onPlanChanged(true);
-        toast(`Added Storey ${clone.name}`);
+        toast(`Added Storey ${clone.name} · Stacked 3D View Activated`);
       }
 
       function renderInspector() {
@@ -9659,11 +11322,25 @@
           update3DLabels();
           if (t3.useFallback) renderFallbackAxonometric();
         };
-        document.getElementById('mksStackBtn').onclick = (e) => {
-          s.view3d.stackFloors = !s.view3d.stackFloors;
-          e.currentTarget.classList.toggle('active', s.view3d.stackFloors);
-          rebuild3DScene();
-        };
+        const stackBtn = document.getElementById('mksStackBtn');
+        if (stackBtn) {
+          stackBtn.onclick = (e) => {
+            s.view3d.stackFloors = !s.view3d.stackFloors;
+            e.currentTarget.classList.toggle('active', s.view3d.stackFloors);
+            render3DStoreyBar();
+            rebuild3DScene();
+          };
+        }
+
+        const roofBtn = document.getElementById('mksRoofToggleBtn');
+        if (roofBtn) {
+          roofBtn.onclick = (e) => {
+            s.view3d.showRoof = !s.view3d.showRoof;
+            roofBtn.classList.toggle('active', s.view3d.showRoof);
+            rebuild3DScene();
+            toast(s.view3d.showRoof ? 'Terrace Roof Slab & Parapet ON' : 'Interior Inspection (Roof OFF)');
+          };
+        }
         document.getElementById('mksSnap3DBtn').onclick = () => {
           const cvs = t3.useFallback ? document.getElementById('mksThreeFallback') : t3.renderer?.domElement;
           if (!cvs) return;
@@ -9798,6 +11475,26 @@
         _rotFurTool: () => { rotateSelectedFurniture(90); },
         _clearMeas: () => { curFloor().measurements = []; renderSubbar(); onPlanChanged(true); },
         _switchFloor: (idx) => { s.activeFloorIdx = idx; s.cad.selected = null; onPlanChanged(false); zoomFit2D(); },
+        _set3DStorey: (mode, idx) => {
+          if (mode === 'stacked') {
+            s.view3d.stackFloors = true;
+            s.view3d.exploded = false;
+          } else if (mode === 'exploded') {
+            s.view3d.stackFloors = true;
+            s.view3d.exploded = true;
+          } else if (mode === 'single') {
+            s.view3d.stackFloors = false;
+            s.view3d.exploded = false;
+            s.activeFloorIdx = idx !== undefined ? idx : 0;
+          }
+          renderFloorPills();
+          render3DStoreyBar();
+          rebuild3DScene();
+          const lbl = mode === 'stacked' ? 'All Storeys Stacked (3D)' :
+                      mode === 'exploded' ? 'Exploded BIM Axonometric (3D)' :
+                      `Storey ${s.floors[s.activeFloorIdx].name} (3D Focus)`;
+          toast(lbl);
+        },
         _addFloor: () => addUpperFloor(),
         _delFloor: () => {
           if (s.floors.length <= 1) return;
@@ -9877,7 +11574,11 @@
           toast('Centered plot boundary around building');
         },
         _dupSel: duplicateSelected,
-        _delSel: deleteSelected
+        _delSel: deleteSelected,
+        set2DView: set2DView,
+        stampRoom: stampRoom,
+        adjElevHeight: adjElevHeight,
+        exportElevationSVG: exportElevationSVG
       };
     })();
   </script>
