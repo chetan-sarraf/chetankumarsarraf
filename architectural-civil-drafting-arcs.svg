@@ -1,0 +1,896 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+  <!--
+    SCALE & SPACES ARCHITECTURAL & CIVIL ENGINEERING VECTOR DRAFTING ASSET
+    Designer: Er. Chetan Kumar Sarraf (Civil Engineer & Spatial Designer)
+    Tool Compatibility: Affinity Designer v1/v2/v3 (Serif / Canva), AutoCAD DXF/SVG, Adobe Illustrator
+    Color Palette: Strictly Monochrome (Black, White, Neutral Greys)
+    Rigor Standards: NBC 205:2024 Mandatory Rule of Thumb Structural Compliance
+  -->
+  <defs>
+    <style type="text/css">
+      .cad-major-line { stroke: #27272a; stroke-width: 1px; fill: none; }
+      .cad-minor-line { stroke: #3f3f46; stroke-width: 0.6px; stroke-dasharray: 4 4; fill: none; opacity: 0.6; }
+      .cad-centerline { stroke: #52525b; stroke-width: 0.8px; stroke-dasharray: 16 4 3 4; fill: none; }
+      .cad-compass-arc { stroke: #71717a; stroke-width: 1.2px; fill: none; }
+      .cad-witness-line { stroke: #a1a1aa; stroke-width: 0.75px; fill: none; }
+      .cad-dimension-slash { stroke: #e4e4e7; stroke-width: 1.5px; stroke-linecap: square; }
+      .cad-text-annotation { font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; font-size: 11px; font-weight: 600; fill: #a1a1aa; letter-spacing: 0.08em; text-transform: uppercase; }
+      .cad-text-bold { font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; font-size: 13px; font-weight: 800; fill: #ffffff; letter-spacing: 0.12em; text-transform: uppercase; }
+      .cad-crosshair { stroke: #ffffff; stroke-width: 1px; fill: none; }
+    </style>
+
+    <!-- Marker Arrowheads & Architectural 45-degree Slashes -->
+    <marker id="cadSlash" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <line x1="1" y1="9" x2="9" y2="1" stroke="#a1a1aa" stroke-width="1.8" stroke-linecap="square" />
+    </marker>
+    <marker id="cadDot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4">
+      <circle cx="5" cy="5" r="3.5" fill="#a1a1aa" />
+    </marker>
+  </defs>
+
+  <!-- LAYER 1: BACKGROUND BASE & DRAFTING GRID (AFFINITY GROUP) -->
+  <g id="Layer_01_Drafting_Grid" serif:id="01 Drafting Grid">
+    <rect x="0" y="0" width="1920" height="1080" fill="#09090b" />
+    
+    <!-- 100px Major Grid Lines -->
+    <g id="Grid_Major_Lines" opacity="0.25">
+      <line x1="0" y1="0" x2="0" y2="1080" class="cad-major-line" />
+      <line x1="100" y1="0" x2="100" y2="1080" class="cad-major-line" />
+      <line x1="200" y1="0" x2="200" y2="1080" class="cad-major-line" />
+      <line x1="300" y1="0" x2="300" y2="1080" class="cad-major-line" />
+      <line x1="400" y1="0" x2="400" y2="1080" class="cad-major-line" />
+      <line x1="500" y1="0" x2="500" y2="1080" class="cad-major-line" />
+      <line x1="600" y1="0" x2="600" y2="1080" class="cad-major-line" />
+      <line x1="700" y1="0" x2="700" y2="1080" class="cad-major-line" />
+      <line x1="800" y1="0" x2="800" y2="1080" class="cad-major-line" />
+      <line x1="900" y1="0" x2="900" y2="1080" class="cad-major-line" />
+      <line x1="1000" y1="0" x2="1000" y2="1080" class="cad-major-line" />
+      <line x1="1100" y1="0" x2="1100" y2="1080" class="cad-major-line" />
+      <line x1="1200" y1="0" x2="1200" y2="1080" class="cad-major-line" />
+      <line x1="1300" y1="0" x2="1300" y2="1080" class="cad-major-line" />
+      <line x1="1400" y1="0" x2="1400" y2="1080" class="cad-major-line" />
+      <line x1="1500" y1="0" x2="1500" y2="1080" class="cad-major-line" />
+      <line x1="1600" y1="0" x2="1600" y2="1080" class="cad-major-line" />
+      <line x1="1700" y1="0" x2="1700" y2="1080" class="cad-major-line" />
+      <line x1="1800" y1="0" x2="1800" y2="1080" class="cad-major-line" />
+      <line x1="1900" y1="0" x2="1900" y2="1080" class="cad-major-line" />
+      <line x1="0" y1="0" x2="1920" y2="0" class="cad-major-line" />
+      <line x1="0" y1="100" x2="1920" y2="100" class="cad-major-line" />
+      <line x1="0" y1="200" x2="1920" y2="200" class="cad-major-line" />
+      <line x1="0" y1="300" x2="1920" y2="300" class="cad-major-line" />
+      <line x1="0" y1="400" x2="1920" y2="400" class="cad-major-line" />
+      <line x1="0" y1="500" x2="1920" y2="500" class="cad-major-line" />
+      <line x1="0" y1="600" x2="1920" y2="600" class="cad-major-line" />
+      <line x1="0" y1="700" x2="1920" y2="700" class="cad-major-line" />
+      <line x1="0" y1="800" x2="1920" y2="800" class="cad-major-line" />
+      <line x1="0" y1="900" x2="1920" y2="900" class="cad-major-line" />
+      <line x1="0" y1="1000" x2="1920" y2="1000" class="cad-major-line" />
+      <line x1="0" y1="1100" x2="1920" y2="1100" class="cad-major-line" />
+    </g>
+
+    <!-- 20px Minor Grid Ticks & Grid Crossings -->
+    <g id="Grid_Minor_Ticks" opacity="0.35">
+      
+        <line x1="94" y1="100" x2="106" y2="100" stroke="#52525b" stroke-width="0.75" />
+        <line x1="100" y1="94" x2="100" y2="106" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="94" y1="200" x2="106" y2="200" stroke="#52525b" stroke-width="0.75" />
+        <line x1="100" y1="194" x2="100" y2="206" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="94" y1="300" x2="106" y2="300" stroke="#52525b" stroke-width="0.75" />
+        <line x1="100" y1="294" x2="100" y2="306" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="94" y1="400" x2="106" y2="400" stroke="#52525b" stroke-width="0.75" />
+        <line x1="100" y1="394" x2="100" y2="406" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="94" y1="500" x2="106" y2="500" stroke="#52525b" stroke-width="0.75" />
+        <line x1="100" y1="494" x2="100" y2="506" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="94" y1="600" x2="106" y2="600" stroke="#52525b" stroke-width="0.75" />
+        <line x1="100" y1="594" x2="100" y2="606" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="94" y1="700" x2="106" y2="700" stroke="#52525b" stroke-width="0.75" />
+        <line x1="100" y1="694" x2="100" y2="706" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="94" y1="800" x2="106" y2="800" stroke="#52525b" stroke-width="0.75" />
+        <line x1="100" y1="794" x2="100" y2="806" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="94" y1="900" x2="106" y2="900" stroke="#52525b" stroke-width="0.75" />
+        <line x1="100" y1="894" x2="100" y2="906" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="94" y1="1000" x2="106" y2="1000" stroke="#52525b" stroke-width="0.75" />
+        <line x1="100" y1="994" x2="100" y2="1006" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="194" y1="100" x2="206" y2="100" stroke="#52525b" stroke-width="0.75" />
+        <line x1="200" y1="94" x2="200" y2="106" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="194" y1="200" x2="206" y2="200" stroke="#52525b" stroke-width="0.75" />
+        <line x1="200" y1="194" x2="200" y2="206" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="194" y1="300" x2="206" y2="300" stroke="#52525b" stroke-width="0.75" />
+        <line x1="200" y1="294" x2="200" y2="306" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="194" y1="400" x2="206" y2="400" stroke="#52525b" stroke-width="0.75" />
+        <line x1="200" y1="394" x2="200" y2="406" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="194" y1="500" x2="206" y2="500" stroke="#52525b" stroke-width="0.75" />
+        <line x1="200" y1="494" x2="200" y2="506" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="194" y1="600" x2="206" y2="600" stroke="#52525b" stroke-width="0.75" />
+        <line x1="200" y1="594" x2="200" y2="606" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="194" y1="700" x2="206" y2="700" stroke="#52525b" stroke-width="0.75" />
+        <line x1="200" y1="694" x2="200" y2="706" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="194" y1="800" x2="206" y2="800" stroke="#52525b" stroke-width="0.75" />
+        <line x1="200" y1="794" x2="200" y2="806" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="194" y1="900" x2="206" y2="900" stroke="#52525b" stroke-width="0.75" />
+        <line x1="200" y1="894" x2="200" y2="906" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="194" y1="1000" x2="206" y2="1000" stroke="#52525b" stroke-width="0.75" />
+        <line x1="200" y1="994" x2="200" y2="1006" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="294" y1="100" x2="306" y2="100" stroke="#52525b" stroke-width="0.75" />
+        <line x1="300" y1="94" x2="300" y2="106" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="294" y1="200" x2="306" y2="200" stroke="#52525b" stroke-width="0.75" />
+        <line x1="300" y1="194" x2="300" y2="206" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="294" y1="300" x2="306" y2="300" stroke="#52525b" stroke-width="0.75" />
+        <line x1="300" y1="294" x2="300" y2="306" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="294" y1="400" x2="306" y2="400" stroke="#52525b" stroke-width="0.75" />
+        <line x1="300" y1="394" x2="300" y2="406" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="294" y1="500" x2="306" y2="500" stroke="#52525b" stroke-width="0.75" />
+        <line x1="300" y1="494" x2="300" y2="506" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="294" y1="600" x2="306" y2="600" stroke="#52525b" stroke-width="0.75" />
+        <line x1="300" y1="594" x2="300" y2="606" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="294" y1="700" x2="306" y2="700" stroke="#52525b" stroke-width="0.75" />
+        <line x1="300" y1="694" x2="300" y2="706" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="294" y1="800" x2="306" y2="800" stroke="#52525b" stroke-width="0.75" />
+        <line x1="300" y1="794" x2="300" y2="806" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="294" y1="900" x2="306" y2="900" stroke="#52525b" stroke-width="0.75" />
+        <line x1="300" y1="894" x2="300" y2="906" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="294" y1="1000" x2="306" y2="1000" stroke="#52525b" stroke-width="0.75" />
+        <line x1="300" y1="994" x2="300" y2="1006" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="394" y1="100" x2="406" y2="100" stroke="#52525b" stroke-width="0.75" />
+        <line x1="400" y1="94" x2="400" y2="106" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="394" y1="200" x2="406" y2="200" stroke="#52525b" stroke-width="0.75" />
+        <line x1="400" y1="194" x2="400" y2="206" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="394" y1="300" x2="406" y2="300" stroke="#52525b" stroke-width="0.75" />
+        <line x1="400" y1="294" x2="400" y2="306" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="394" y1="400" x2="406" y2="400" stroke="#52525b" stroke-width="0.75" />
+        <line x1="400" y1="394" x2="400" y2="406" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="394" y1="500" x2="406" y2="500" stroke="#52525b" stroke-width="0.75" />
+        <line x1="400" y1="494" x2="400" y2="506" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="394" y1="600" x2="406" y2="600" stroke="#52525b" stroke-width="0.75" />
+        <line x1="400" y1="594" x2="400" y2="606" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="394" y1="700" x2="406" y2="700" stroke="#52525b" stroke-width="0.75" />
+        <line x1="400" y1="694" x2="400" y2="706" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="394" y1="800" x2="406" y2="800" stroke="#52525b" stroke-width="0.75" />
+        <line x1="400" y1="794" x2="400" y2="806" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="394" y1="900" x2="406" y2="900" stroke="#52525b" stroke-width="0.75" />
+        <line x1="400" y1="894" x2="400" y2="906" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="394" y1="1000" x2="406" y2="1000" stroke="#52525b" stroke-width="0.75" />
+        <line x1="400" y1="994" x2="400" y2="1006" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="494" y1="100" x2="506" y2="100" stroke="#52525b" stroke-width="0.75" />
+        <line x1="500" y1="94" x2="500" y2="106" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="494" y1="200" x2="506" y2="200" stroke="#52525b" stroke-width="0.75" />
+        <line x1="500" y1="194" x2="500" y2="206" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="494" y1="300" x2="506" y2="300" stroke="#52525b" stroke-width="0.75" />
+        <line x1="500" y1="294" x2="500" y2="306" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="494" y1="400" x2="506" y2="400" stroke="#52525b" stroke-width="0.75" />
+        <line x1="500" y1="394" x2="500" y2="406" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="494" y1="500" x2="506" y2="500" stroke="#52525b" stroke-width="0.75" />
+        <line x1="500" y1="494" x2="500" y2="506" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="494" y1="600" x2="506" y2="600" stroke="#52525b" stroke-width="0.75" />
+        <line x1="500" y1="594" x2="500" y2="606" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="494" y1="700" x2="506" y2="700" stroke="#52525b" stroke-width="0.75" />
+        <line x1="500" y1="694" x2="500" y2="706" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="494" y1="800" x2="506" y2="800" stroke="#52525b" stroke-width="0.75" />
+        <line x1="500" y1="794" x2="500" y2="806" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="494" y1="900" x2="506" y2="900" stroke="#52525b" stroke-width="0.75" />
+        <line x1="500" y1="894" x2="500" y2="906" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="494" y1="1000" x2="506" y2="1000" stroke="#52525b" stroke-width="0.75" />
+        <line x1="500" y1="994" x2="500" y2="1006" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="594" y1="100" x2="606" y2="100" stroke="#52525b" stroke-width="0.75" />
+        <line x1="600" y1="94" x2="600" y2="106" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="594" y1="200" x2="606" y2="200" stroke="#52525b" stroke-width="0.75" />
+        <line x1="600" y1="194" x2="600" y2="206" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="594" y1="300" x2="606" y2="300" stroke="#52525b" stroke-width="0.75" />
+        <line x1="600" y1="294" x2="600" y2="306" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="594" y1="400" x2="606" y2="400" stroke="#52525b" stroke-width="0.75" />
+        <line x1="600" y1="394" x2="600" y2="406" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="594" y1="500" x2="606" y2="500" stroke="#52525b" stroke-width="0.75" />
+        <line x1="600" y1="494" x2="600" y2="506" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="594" y1="600" x2="606" y2="600" stroke="#52525b" stroke-width="0.75" />
+        <line x1="600" y1="594" x2="600" y2="606" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="594" y1="700" x2="606" y2="700" stroke="#52525b" stroke-width="0.75" />
+        <line x1="600" y1="694" x2="600" y2="706" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="594" y1="800" x2="606" y2="800" stroke="#52525b" stroke-width="0.75" />
+        <line x1="600" y1="794" x2="600" y2="806" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="594" y1="900" x2="606" y2="900" stroke="#52525b" stroke-width="0.75" />
+        <line x1="600" y1="894" x2="600" y2="906" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="594" y1="1000" x2="606" y2="1000" stroke="#52525b" stroke-width="0.75" />
+        <line x1="600" y1="994" x2="600" y2="1006" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="694" y1="100" x2="706" y2="100" stroke="#52525b" stroke-width="0.75" />
+        <line x1="700" y1="94" x2="700" y2="106" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="694" y1="200" x2="706" y2="200" stroke="#52525b" stroke-width="0.75" />
+        <line x1="700" y1="194" x2="700" y2="206" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="694" y1="300" x2="706" y2="300" stroke="#52525b" stroke-width="0.75" />
+        <line x1="700" y1="294" x2="700" y2="306" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="694" y1="400" x2="706" y2="400" stroke="#52525b" stroke-width="0.75" />
+        <line x1="700" y1="394" x2="700" y2="406" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="694" y1="500" x2="706" y2="500" stroke="#52525b" stroke-width="0.75" />
+        <line x1="700" y1="494" x2="700" y2="506" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="694" y1="600" x2="706" y2="600" stroke="#52525b" stroke-width="0.75" />
+        <line x1="700" y1="594" x2="700" y2="606" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="694" y1="700" x2="706" y2="700" stroke="#52525b" stroke-width="0.75" />
+        <line x1="700" y1="694" x2="700" y2="706" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="694" y1="800" x2="706" y2="800" stroke="#52525b" stroke-width="0.75" />
+        <line x1="700" y1="794" x2="700" y2="806" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="694" y1="900" x2="706" y2="900" stroke="#52525b" stroke-width="0.75" />
+        <line x1="700" y1="894" x2="700" y2="906" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="694" y1="1000" x2="706" y2="1000" stroke="#52525b" stroke-width="0.75" />
+        <line x1="700" y1="994" x2="700" y2="1006" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="794" y1="100" x2="806" y2="100" stroke="#52525b" stroke-width="0.75" />
+        <line x1="800" y1="94" x2="800" y2="106" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="794" y1="200" x2="806" y2="200" stroke="#52525b" stroke-width="0.75" />
+        <line x1="800" y1="194" x2="800" y2="206" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="794" y1="300" x2="806" y2="300" stroke="#52525b" stroke-width="0.75" />
+        <line x1="800" y1="294" x2="800" y2="306" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="794" y1="400" x2="806" y2="400" stroke="#52525b" stroke-width="0.75" />
+        <line x1="800" y1="394" x2="800" y2="406" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="794" y1="500" x2="806" y2="500" stroke="#52525b" stroke-width="0.75" />
+        <line x1="800" y1="494" x2="800" y2="506" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="794" y1="600" x2="806" y2="600" stroke="#52525b" stroke-width="0.75" />
+        <line x1="800" y1="594" x2="800" y2="606" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="794" y1="700" x2="806" y2="700" stroke="#52525b" stroke-width="0.75" />
+        <line x1="800" y1="694" x2="800" y2="706" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="794" y1="800" x2="806" y2="800" stroke="#52525b" stroke-width="0.75" />
+        <line x1="800" y1="794" x2="800" y2="806" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="794" y1="900" x2="806" y2="900" stroke="#52525b" stroke-width="0.75" />
+        <line x1="800" y1="894" x2="800" y2="906" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="794" y1="1000" x2="806" y2="1000" stroke="#52525b" stroke-width="0.75" />
+        <line x1="800" y1="994" x2="800" y2="1006" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="894" y1="100" x2="906" y2="100" stroke="#52525b" stroke-width="0.75" />
+        <line x1="900" y1="94" x2="900" y2="106" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="894" y1="200" x2="906" y2="200" stroke="#52525b" stroke-width="0.75" />
+        <line x1="900" y1="194" x2="900" y2="206" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="894" y1="300" x2="906" y2="300" stroke="#52525b" stroke-width="0.75" />
+        <line x1="900" y1="294" x2="900" y2="306" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="894" y1="400" x2="906" y2="400" stroke="#52525b" stroke-width="0.75" />
+        <line x1="900" y1="394" x2="900" y2="406" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="894" y1="500" x2="906" y2="500" stroke="#52525b" stroke-width="0.75" />
+        <line x1="900" y1="494" x2="900" y2="506" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="894" y1="600" x2="906" y2="600" stroke="#52525b" stroke-width="0.75" />
+        <line x1="900" y1="594" x2="900" y2="606" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="894" y1="700" x2="906" y2="700" stroke="#52525b" stroke-width="0.75" />
+        <line x1="900" y1="694" x2="900" y2="706" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="894" y1="800" x2="906" y2="800" stroke="#52525b" stroke-width="0.75" />
+        <line x1="900" y1="794" x2="900" y2="806" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="894" y1="900" x2="906" y2="900" stroke="#52525b" stroke-width="0.75" />
+        <line x1="900" y1="894" x2="900" y2="906" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="894" y1="1000" x2="906" y2="1000" stroke="#52525b" stroke-width="0.75" />
+        <line x1="900" y1="994" x2="900" y2="1006" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="994" y1="100" x2="1006" y2="100" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1000" y1="94" x2="1000" y2="106" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="994" y1="200" x2="1006" y2="200" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1000" y1="194" x2="1000" y2="206" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="994" y1="300" x2="1006" y2="300" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1000" y1="294" x2="1000" y2="306" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="994" y1="400" x2="1006" y2="400" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1000" y1="394" x2="1000" y2="406" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="994" y1="500" x2="1006" y2="500" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1000" y1="494" x2="1000" y2="506" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="994" y1="600" x2="1006" y2="600" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1000" y1="594" x2="1000" y2="606" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="994" y1="700" x2="1006" y2="700" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1000" y1="694" x2="1000" y2="706" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="994" y1="800" x2="1006" y2="800" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1000" y1="794" x2="1000" y2="806" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="994" y1="900" x2="1006" y2="900" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1000" y1="894" x2="1000" y2="906" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="994" y1="1000" x2="1006" y2="1000" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1000" y1="994" x2="1000" y2="1006" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1094" y1="100" x2="1106" y2="100" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1100" y1="94" x2="1100" y2="106" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1094" y1="200" x2="1106" y2="200" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1100" y1="194" x2="1100" y2="206" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1094" y1="300" x2="1106" y2="300" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1100" y1="294" x2="1100" y2="306" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1094" y1="400" x2="1106" y2="400" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1100" y1="394" x2="1100" y2="406" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1094" y1="500" x2="1106" y2="500" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1100" y1="494" x2="1100" y2="506" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1094" y1="600" x2="1106" y2="600" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1100" y1="594" x2="1100" y2="606" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1094" y1="700" x2="1106" y2="700" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1100" y1="694" x2="1100" y2="706" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1094" y1="800" x2="1106" y2="800" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1100" y1="794" x2="1100" y2="806" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1094" y1="900" x2="1106" y2="900" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1100" y1="894" x2="1100" y2="906" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1094" y1="1000" x2="1106" y2="1000" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1100" y1="994" x2="1100" y2="1006" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1194" y1="100" x2="1206" y2="100" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1200" y1="94" x2="1200" y2="106" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1194" y1="200" x2="1206" y2="200" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1200" y1="194" x2="1200" y2="206" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1194" y1="300" x2="1206" y2="300" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1200" y1="294" x2="1200" y2="306" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1194" y1="400" x2="1206" y2="400" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1200" y1="394" x2="1200" y2="406" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1194" y1="500" x2="1206" y2="500" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1200" y1="494" x2="1200" y2="506" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1194" y1="600" x2="1206" y2="600" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1200" y1="594" x2="1200" y2="606" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1194" y1="700" x2="1206" y2="700" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1200" y1="694" x2="1200" y2="706" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1194" y1="800" x2="1206" y2="800" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1200" y1="794" x2="1200" y2="806" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1194" y1="900" x2="1206" y2="900" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1200" y1="894" x2="1200" y2="906" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1194" y1="1000" x2="1206" y2="1000" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1200" y1="994" x2="1200" y2="1006" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1294" y1="100" x2="1306" y2="100" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1300" y1="94" x2="1300" y2="106" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1294" y1="200" x2="1306" y2="200" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1300" y1="194" x2="1300" y2="206" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1294" y1="300" x2="1306" y2="300" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1300" y1="294" x2="1300" y2="306" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1294" y1="400" x2="1306" y2="400" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1300" y1="394" x2="1300" y2="406" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1294" y1="500" x2="1306" y2="500" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1300" y1="494" x2="1300" y2="506" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1294" y1="600" x2="1306" y2="600" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1300" y1="594" x2="1300" y2="606" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1294" y1="700" x2="1306" y2="700" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1300" y1="694" x2="1300" y2="706" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1294" y1="800" x2="1306" y2="800" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1300" y1="794" x2="1300" y2="806" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1294" y1="900" x2="1306" y2="900" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1300" y1="894" x2="1300" y2="906" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1294" y1="1000" x2="1306" y2="1000" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1300" y1="994" x2="1300" y2="1006" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1394" y1="100" x2="1406" y2="100" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1400" y1="94" x2="1400" y2="106" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1394" y1="200" x2="1406" y2="200" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1400" y1="194" x2="1400" y2="206" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1394" y1="300" x2="1406" y2="300" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1400" y1="294" x2="1400" y2="306" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1394" y1="400" x2="1406" y2="400" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1400" y1="394" x2="1400" y2="406" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1394" y1="500" x2="1406" y2="500" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1400" y1="494" x2="1400" y2="506" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1394" y1="600" x2="1406" y2="600" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1400" y1="594" x2="1400" y2="606" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1394" y1="700" x2="1406" y2="700" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1400" y1="694" x2="1400" y2="706" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1394" y1="800" x2="1406" y2="800" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1400" y1="794" x2="1400" y2="806" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1394" y1="900" x2="1406" y2="900" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1400" y1="894" x2="1400" y2="906" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1394" y1="1000" x2="1406" y2="1000" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1400" y1="994" x2="1400" y2="1006" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1494" y1="100" x2="1506" y2="100" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1500" y1="94" x2="1500" y2="106" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1494" y1="200" x2="1506" y2="200" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1500" y1="194" x2="1500" y2="206" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1494" y1="300" x2="1506" y2="300" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1500" y1="294" x2="1500" y2="306" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1494" y1="400" x2="1506" y2="400" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1500" y1="394" x2="1500" y2="406" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1494" y1="500" x2="1506" y2="500" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1500" y1="494" x2="1500" y2="506" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1494" y1="600" x2="1506" y2="600" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1500" y1="594" x2="1500" y2="606" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1494" y1="700" x2="1506" y2="700" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1500" y1="694" x2="1500" y2="706" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1494" y1="800" x2="1506" y2="800" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1500" y1="794" x2="1500" y2="806" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1494" y1="900" x2="1506" y2="900" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1500" y1="894" x2="1500" y2="906" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1494" y1="1000" x2="1506" y2="1000" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1500" y1="994" x2="1500" y2="1006" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1594" y1="100" x2="1606" y2="100" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1600" y1="94" x2="1600" y2="106" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1594" y1="200" x2="1606" y2="200" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1600" y1="194" x2="1600" y2="206" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1594" y1="300" x2="1606" y2="300" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1600" y1="294" x2="1600" y2="306" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1594" y1="400" x2="1606" y2="400" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1600" y1="394" x2="1600" y2="406" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1594" y1="500" x2="1606" y2="500" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1600" y1="494" x2="1600" y2="506" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1594" y1="600" x2="1606" y2="600" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1600" y1="594" x2="1600" y2="606" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1594" y1="700" x2="1606" y2="700" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1600" y1="694" x2="1600" y2="706" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1594" y1="800" x2="1606" y2="800" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1600" y1="794" x2="1600" y2="806" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1594" y1="900" x2="1606" y2="900" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1600" y1="894" x2="1600" y2="906" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1594" y1="1000" x2="1606" y2="1000" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1600" y1="994" x2="1600" y2="1006" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1694" y1="100" x2="1706" y2="100" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1700" y1="94" x2="1700" y2="106" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1694" y1="200" x2="1706" y2="200" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1700" y1="194" x2="1700" y2="206" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1694" y1="300" x2="1706" y2="300" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1700" y1="294" x2="1700" y2="306" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1694" y1="400" x2="1706" y2="400" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1700" y1="394" x2="1700" y2="406" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1694" y1="500" x2="1706" y2="500" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1700" y1="494" x2="1700" y2="506" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1694" y1="600" x2="1706" y2="600" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1700" y1="594" x2="1700" y2="606" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1694" y1="700" x2="1706" y2="700" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1700" y1="694" x2="1700" y2="706" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1694" y1="800" x2="1706" y2="800" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1700" y1="794" x2="1700" y2="806" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1694" y1="900" x2="1706" y2="900" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1700" y1="894" x2="1700" y2="906" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1694" y1="1000" x2="1706" y2="1000" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1700" y1="994" x2="1700" y2="1006" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1794" y1="100" x2="1806" y2="100" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1800" y1="94" x2="1800" y2="106" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1794" y1="200" x2="1806" y2="200" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1800" y1="194" x2="1800" y2="206" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1794" y1="300" x2="1806" y2="300" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1800" y1="294" x2="1800" y2="306" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1794" y1="400" x2="1806" y2="400" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1800" y1="394" x2="1800" y2="406" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1794" y1="500" x2="1806" y2="500" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1800" y1="494" x2="1800" y2="506" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1794" y1="600" x2="1806" y2="600" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1800" y1="594" x2="1800" y2="606" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1794" y1="700" x2="1806" y2="700" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1800" y1="694" x2="1800" y2="706" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1794" y1="800" x2="1806" y2="800" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1800" y1="794" x2="1800" y2="806" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1794" y1="900" x2="1806" y2="900" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1800" y1="894" x2="1800" y2="906" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1794" y1="1000" x2="1806" y2="1000" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1800" y1="994" x2="1800" y2="1006" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1894" y1="100" x2="1906" y2="100" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1900" y1="94" x2="1900" y2="106" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1894" y1="200" x2="1906" y2="200" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1900" y1="194" x2="1900" y2="206" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1894" y1="300" x2="1906" y2="300" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1900" y1="294" x2="1900" y2="306" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1894" y1="400" x2="1906" y2="400" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1900" y1="394" x2="1900" y2="406" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1894" y1="500" x2="1906" y2="500" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1900" y1="494" x2="1900" y2="506" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1894" y1="600" x2="1906" y2="600" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1900" y1="594" x2="1900" y2="606" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1894" y1="700" x2="1906" y2="700" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1900" y1="694" x2="1900" y2="706" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1894" y1="800" x2="1906" y2="800" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1900" y1="794" x2="1900" y2="806" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1894" y1="900" x2="1906" y2="900" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1900" y1="894" x2="1900" y2="906" stroke="#52525b" stroke-width="0.75" />
+      
+        <line x1="1894" y1="1000" x2="1906" y2="1000" stroke="#52525b" stroke-width="0.75" />
+        <line x1="1900" y1="994" x2="1900" y2="1006" stroke="#52525b" stroke-width="0.75" />
+      
+    </g>
+  </g>
+
+  <!-- LAYER 2: CIVIL STRUCTURAL COLUMN AXES & BUBBLE LABELS -->
+  <g id="Layer_02_Structural_Column_Grid" serif:id="02 Structural Column Grid">
+    <!-- Centerlines with dash-dot stroke -->
+    <line x1="200" y1="60" x2="200" y2="1020" class="cad-centerline" />
+    <line x1="500" y1="60" x2="500" y2="1020" class="cad-centerline" />
+    <line x1="960" y1="60" x2="960" y2="1020" class="cad-centerline" stroke-width="1.2" stroke="#71717a" />
+    <line x1="1420" y1="60" x2="1420" y2="1020" class="cad-centerline" />
+    <line x1="1720" y1="60" x2="1720" y2="1020" class="cad-centerline" />
+
+    <line x1="140" y1="180" x2="1780" y2="180" class="cad-centerline" />
+    <line x1="140" y1="540" x2="1780" y2="540" class="cad-centerline" stroke-width="1.2" stroke="#71717a" />
+    <line x1="140" y1="900" x2="1780" y2="900" class="cad-centerline" />
+
+    <!-- Column Grid Head Bubbles (Top Axis A, B, C, D, E) -->
+    <g id="Column_Bubbles_Top">
+      <circle cx="200" cy="50" r="22" fill="#18181b" stroke="#71717a" stroke-width="1.5" />
+      <text x="200" y="55" class="cad-text-bold" text-anchor="middle">A</text>
+
+      <circle cx="500" cy="50" r="22" fill="#18181b" stroke="#71717a" stroke-width="1.5" />
+      <text x="500" y="55" class="cad-text-bold" text-anchor="middle">B</text>
+
+      <circle cx="960" cy="50" r="22" fill="#18181b" stroke="#ffffff" stroke-width="2" />
+      <text x="960" y="55" class="cad-text-bold" text-anchor="middle">C</text>
+
+      <circle cx="1420" cy="50" r="22" fill="#18181b" stroke="#71717a" stroke-width="1.5" />
+      <text x="1420" y="55" class="cad-text-bold" text-anchor="middle">D</text>
+
+      <circle cx="1720" cy="50" r="22" fill="#18181b" stroke="#71717a" stroke-width="1.5" />
+      <text x="1720" y="55" class="cad-text-bold" text-anchor="middle">E</text>
+    </g>
+
+    <!-- Column Grid Side Bubbles (Left Axis 01, 02, 03) -->
+    <g id="Column_Bubbles_Left">
+      <circle cx="130" cy="180" r="22" fill="#18181b" stroke="#71717a" stroke-width="1.5" />
+      <text x="130" y="185" class="cad-text-bold" text-anchor="middle">01</text>
+
+      <circle cx="130" cy="540" r="22" fill="#18181b" stroke="#ffffff" stroke-width="2" />
+      <text x="130" y="545" class="cad-text-bold" text-anchor="middle">02</text>
+
+      <circle cx="130" cy="900" r="22" fill="#18181b" stroke="#71717a" stroke-width="1.5" />
+      <text x="130" y="905" class="cad-text-bold" text-anchor="middle">03</text>
+    </g>
+  </g>
+
+  <!-- LAYER 3: DRAFTING COMPASS ARCS & ROTATING DEGREE CALIPERS -->
+  <g id="Layer_03_Compass_Drafting_Arcs" serif:id="03 Compass Drafting Arcs">
+    <!-- Primary Compass Center at (960, 540) -->
+    <g id="Primary_Compass_Group" transform="translate(960, 540)">
+      <!-- Concentric Drafting Radii -->
+      <circle cx="0" cy="0" r="90" class="cad-compass-arc" stroke-dasharray="6 4" opacity="0.5" />
+      <circle cx="0" cy="0" r="180" class="cad-compass-arc" stroke-width="1.4" opacity="0.75" />
+      <circle cx="0" cy="0" r="270" class="cad-minor-line" />
+      <circle cx="0" cy="0" r="360" class="cad-compass-arc" stroke-width="1.8" opacity="0.9" />
+      <circle cx="0" cy="0" r="450" class="cad-minor-line" />
+      <circle cx="0" cy="0" r="540" class="cad-compass-arc" stroke-dasharray="14 6 2 6" opacity="0.6" />
+
+      <!-- Center Crosshair & Alignment Ring -->
+      <line x1="-30" y1="0" x2="30" y2="0" class="cad-crosshair" />
+      <line x1="0" y1="-30" x2="0" y2="30" class="cad-crosshair" />
+      <circle cx="0" cy="0" r="6" stroke="#ffffff" stroke-width="1.5" fill="none" />
+      <circle cx="0" cy="0" r="2" fill="#ffffff" />
+
+      <!-- Major Angle Rays (0°, 30°, 45°, 60°, 90°, 120°, 135°, 150°, 180°, etc.) -->
+      
+        <line x1="170.0" y1="0.0" x2="370.0" y2="0.0" stroke="#3f3f46" stroke-width="0.8" opacity="0.6" />
+        <line x1="350.0" y1="0.0" x2="370.0" y2="0.0" stroke="#e4e4e7" stroke-width="1.5" />
+        <text x="395.0" y="4.0" class="cad-text-annotation" text-anchor="middle" font-size="9px">0°</text>
+        
+        <line x1="147.2" y1="85.0" x2="320.4" y2="185.0" stroke="#3f3f46" stroke-width="0.8" opacity="0.6" />
+        <line x1="303.1" y1="175.0" x2="320.4" y2="185.0" stroke="#e4e4e7" stroke-width="1.5" />
+        <text x="342.1" y="201.5" class="cad-text-annotation" text-anchor="middle" font-size="9px">30°</text>
+        
+        <line x1="120.2" y1="120.2" x2="261.6" y2="261.6" stroke="#3f3f46" stroke-width="0.8" opacity="0.6" />
+        <line x1="247.5" y1="247.5" x2="261.6" y2="261.6" stroke="#e4e4e7" stroke-width="1.5" />
+        <text x="279.3" y="283.3" class="cad-text-annotation" text-anchor="middle" font-size="9px">45°</text>
+        
+        <line x1="85.0" y1="147.2" x2="185.0" y2="320.4" stroke="#3f3f46" stroke-width="0.8" opacity="0.6" />
+        <line x1="175.0" y1="303.1" x2="185.0" y2="320.4" stroke="#e4e4e7" stroke-width="1.5" />
+        <text x="197.5" y="346.1" class="cad-text-annotation" text-anchor="middle" font-size="9px">60°</text>
+        
+        <line x1="0.0" y1="170.0" x2="0.0" y2="370.0" stroke="#3f3f46" stroke-width="0.8" opacity="0.6" />
+        <line x1="0.0" y1="350.0" x2="0.0" y2="370.0" stroke="#e4e4e7" stroke-width="1.5" />
+        <text x="0.0" y="399.0" class="cad-text-annotation" text-anchor="middle" font-size="9px">90°</text>
+        
+        <line x1="-85.0" y1="147.2" x2="-185.0" y2="320.4" stroke="#3f3f46" stroke-width="0.8" opacity="0.6" />
+        <line x1="-175.0" y1="303.1" x2="-185.0" y2="320.4" stroke="#e4e4e7" stroke-width="1.5" />
+        <text x="-197.5" y="346.1" class="cad-text-annotation" text-anchor="middle" font-size="9px">120°</text>
+        
+        <line x1="-120.2" y1="120.2" x2="-261.6" y2="261.6" stroke="#3f3f46" stroke-width="0.8" opacity="0.6" />
+        <line x1="-247.5" y1="247.5" x2="-261.6" y2="261.6" stroke="#e4e4e7" stroke-width="1.5" />
+        <text x="-279.3" y="283.3" class="cad-text-annotation" text-anchor="middle" font-size="9px">135°</text>
+        
+        <line x1="-147.2" y1="85.0" x2="-320.4" y2="185.0" stroke="#3f3f46" stroke-width="0.8" opacity="0.6" />
+        <line x1="-303.1" y1="175.0" x2="-320.4" y2="185.0" stroke="#e4e4e7" stroke-width="1.5" />
+        <text x="-342.1" y="201.5" class="cad-text-annotation" text-anchor="middle" font-size="9px">150°</text>
+        
+        <line x1="-170.0" y1="0.0" x2="-370.0" y2="0.0" stroke="#3f3f46" stroke-width="0.8" opacity="0.6" />
+        <line x1="-350.0" y1="0.0" x2="-370.0" y2="0.0" stroke="#e4e4e7" stroke-width="1.5" />
+        <text x="-395.0" y="4.0" class="cad-text-annotation" text-anchor="middle" font-size="9px">180°</text>
+        
+        <line x1="-147.2" y1="-85.0" x2="-320.4" y2="-185.0" stroke="#3f3f46" stroke-width="0.8" opacity="0.6" />
+        <line x1="-303.1" y1="-175.0" x2="-320.4" y2="-185.0" stroke="#e4e4e7" stroke-width="1.5" />
+        <text x="-342.1" y="-193.5" class="cad-text-annotation" text-anchor="middle" font-size="9px">210°</text>
+        
+        <line x1="-120.2" y1="-120.2" x2="-261.6" y2="-261.6" stroke="#3f3f46" stroke-width="0.8" opacity="0.6" />
+        <line x1="-247.5" y1="-247.5" x2="-261.6" y2="-261.6" stroke="#e4e4e7" stroke-width="1.5" />
+        <text x="-279.3" y="-275.3" class="cad-text-annotation" text-anchor="middle" font-size="9px">225°</text>
+        
+        <line x1="-85.0" y1="-147.2" x2="-185.0" y2="-320.4" stroke="#3f3f46" stroke-width="0.8" opacity="0.6" />
+        <line x1="-175.0" y1="-303.1" x2="-185.0" y2="-320.4" stroke="#e4e4e7" stroke-width="1.5" />
+        <text x="-197.5" y="-338.1" class="cad-text-annotation" text-anchor="middle" font-size="9px">240°</text>
+        
+        <line x1="-0.0" y1="-170.0" x2="-0.0" y2="-370.0" stroke="#3f3f46" stroke-width="0.8" opacity="0.6" />
+        <line x1="-0.0" y1="-350.0" x2="-0.0" y2="-370.0" stroke="#e4e4e7" stroke-width="1.5" />
+        <text x="-0.0" y="-391.0" class="cad-text-annotation" text-anchor="middle" font-size="9px">270°</text>
+        
+        <line x1="85.0" y1="-147.2" x2="185.0" y2="-320.4" stroke="#3f3f46" stroke-width="0.8" opacity="0.6" />
+        <line x1="175.0" y1="-303.1" x2="185.0" y2="-320.4" stroke="#e4e4e7" stroke-width="1.5" />
+        <text x="197.5" y="-338.1" class="cad-text-annotation" text-anchor="middle" font-size="9px">300°</text>
+        
+        <line x1="120.2" y1="-120.2" x2="261.6" y2="-261.6" stroke="#3f3f46" stroke-width="0.8" opacity="0.6" />
+        <line x1="247.5" y1="-247.5" x2="261.6" y2="-261.6" stroke="#e4e4e7" stroke-width="1.5" />
+        <text x="279.3" y="-275.3" class="cad-text-annotation" text-anchor="middle" font-size="9px">315°</text>
+        
+        <line x1="147.2" y1="-85.0" x2="320.4" y2="-185.0" stroke="#3f3f46" stroke-width="0.8" opacity="0.6" />
+        <line x1="303.1" y1="-175.0" x2="320.4" y2="-185.0" stroke="#e4e4e7" stroke-width="1.5" />
+        <text x="342.1" y="-193.5" class="cad-text-annotation" text-anchor="middle" font-size="9px">330°</text>
+        
+
+      <!-- Dynamic Quarter Sweeps & Tangent Curves -->
+      <path d="M 0,-360 A 360,360 0 0,1 360,0" stroke="#ffffff" stroke-width="2.5" fill="none" opacity="0.85" />
+      <path d="M 0,-180 A 180,180 0 0,1 180,0" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.9" />
+      <path d="M -360,0 A 360,360 0 0,1 0,360" stroke="#71717a" stroke-width="1.8" stroke-dasharray="10 5" fill="none" />
+      
+      <!-- Architectural Dimension Arc Callout -->
+      <path d="M 212,-212 A 300,300 0 0,0 300,0" stroke="#a1a1aa" stroke-width="1.2" marker-start="url(#cadSlash)" marker-end="url(#cadSlash)" fill="none" />
+      <text x="280" y="-120" class="cad-text-annotation" fill="#ffffff">ARC R=3000mm · 45°</text>
+    </g>
+
+    <!-- Secondary Drafting Compass Arc (Top Right Corner at 1620, 200) -->
+    <g id="Secondary_Compass_Corner" transform="translate(1620, 200)">
+      <circle cx="0" cy="0" r="140" class="cad-compass-arc" stroke-dasharray="8 4" opacity="0.6" />
+      <circle cx="0" cy="0" r="240" class="cad-compass-arc" stroke-width="1.5" opacity="0.8" />
+      <path d="M -240,0 A 240,240 0 0,1 0,-240" stroke="#ffffff" stroke-width="2" fill="none" />
+      <line x1="-250" y1="0" x2="250" y2="0" class="cad-centerline" />
+      <line x1="0" y1="-250" x2="0" y2="250" class="cad-centerline" />
+      <circle cx="0" cy="0" r="5" fill="#ffffff" />
+      <text x="-160" y="-100" class="cad-text-annotation">RADIAL TANGENT 90°</text>
+    </g>
+  </g>
+
+  <!-- LAYER 4: GOLDEN RATIO ARCHITECTURAL FLOW (FIBONACCI SPIRAL) -->
+  <g id="Layer_04_Golden_Ratio_Flow" serif:id="04 Golden Ratio Flow" transform="translate(350, 420)">
+    <!-- Fibonacci Golden Rectangles (Scale factor 0.8) -->
+    <!-- 340x210, 210x210, 130x130, 80x80, 50x50, 30x30, 20x20 -->
+    <rect x="0" y="0" width="340" height="210" class="cad-witness-line" opacity="0.4" />
+    <rect x="0" y="0" width="210" height="210" class="cad-witness-line" opacity="0.5" />
+    <rect x="210" y="0" width="130" height="130" class="cad-witness-line" opacity="0.6" />
+    <rect x="260" y="130" width="80" height="80" class="cad-witness-line" opacity="0.7" />
+
+    <!-- True Vector Golden Ratio Spiral Curve -->
+    <path d="M 0,210 A 210,210 0 0,1 210,0 A 130,130 0 0,1 340,130 A 80,80 0 0,1 260,210 A 50,50 0 0,1 210,160 A 30,30 0 0,1 240,130" stroke="#ffffff" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.95" />
+    <text x="10" y="240" class="cad-text-bold" font-size="11px">GOLDEN RATIO SPATIAL PROPORTION φ = 1.618</text>
+    <text x="10" y="258" class="cad-text-annotation" font-size="9px">SCALE &amp; SPACES ARCHITECTURAL HARMONY · NBC 205:2024</text>
+  </g>
+
+  <!-- LAYER 5: CIVIL ENGINEERING DIMENSION STRINGS & WITNESS LINES -->
+  <g id="Layer_05_Dimension_Strings" serif:id="05 Dimension Strings">
+    <!-- Top Horizontal Continuous Dimension Line -->
+    <line x1="200" y1="120" x2="1720" y2="120" stroke="#a1a1aa" stroke-width="1.2" />
+    <!-- Witness Extension Lines & 45° Slashes -->
+    <line x1="200" y1="80" x2="200" y2="135" class="cad-witness-line" />
+    <line x1="193" y1="127" x2="207" y2="113" class="cad-dimension-slash" />
+
+    <line x1="500" y1="80" x2="500" y2="135" class="cad-witness-line" />
+    <line x1="493" y1="127" x2="507" y2="113" class="cad-dimension-slash" />
+    <text x="350" y="112" class="cad-text-annotation" text-anchor="middle">3000 mm [9'-10"]</text>
+
+    <line x1="960" y1="80" x2="960" y2="135" class="cad-witness-line" />
+    <line x1="953" y1="127" x2="967" y2="113" class="cad-dimension-slash" />
+    <text x="730" y="112" class="cad-text-annotation" text-anchor="middle">4600 mm [15'-1"]</text>
+
+    <line x1="1420" y1="80" x2="1420" y2="135" class="cad-witness-line" />
+    <line x1="1413" y1="127" x2="1427" y2="113" class="cad-dimension-slash" />
+    <text x="1190" y="112" class="cad-text-annotation" text-anchor="middle">4600 mm [15'-1"]</text>
+
+    <line x1="1720" y1="80" x2="1720" y2="135" class="cad-witness-line" />
+    <line x1="1713" y1="127" x2="1727" y2="113" class="cad-dimension-slash" />
+    <text x="1570" y="112" class="cad-text-annotation" text-anchor="middle">3000 mm [9'-10"]</text>
+
+    <!-- Overall Dimension String -->
+    <line x1="200" y1="148" x2="1720" y2="148" stroke="#ffffff" stroke-width="1.5" />
+    <line x1="192" y1="156" x2="208" y2="140" stroke="#ffffff" stroke-width="2" />
+    <line x1="1712" y1="156" x2="1728" y2="140" stroke="#ffffff" stroke-width="2" />
+    <text x="960" y="142" class="cad-text-bold" text-anchor="middle">TOTAL CLEAR SPAN = 15200 mm [49'-10"]</text>
+
+    <!-- Left Vertical Dimension String -->
+    <line x1="80" y1="180" x2="80" y2="900" stroke="#a1a1aa" stroke-width="1.2" />
+    <line x1="73" y1="187" x2="87" y2="173" class="cad-dimension-slash" />
+    <line x1="73" y1="547" x2="87" y2="533" class="cad-dimension-slash" />
+    <line x1="73" y1="907" x2="87" y2="893" class="cad-dimension-slash" />
+    <text x="68" y="360" class="cad-text-annotation" text-anchor="middle" transform="rotate(-90 68 360)">3600 mm [11'-10"]</text>
+    <text x="68" y="720" class="cad-text-annotation" text-anchor="middle" transform="rotate(-90 68 720)">3600 mm [11'-10"]</text>
+  </g>
+
+  <!-- LAYER 6: TECHNICAL TITLE BLOCK & SURVEY DATA (BOTTOM RIGHT) -->
+  <g id="Layer_06_Architectural_Title_Block" serif:id="06 Title Block" transform="translate(1380, 910)">
+    <rect x="0" y="0" width="500" height="130" fill="#121215" stroke="#3f3f46" stroke-width="1.5" rx="6" />
+    <line x1="0" y1="36" x2="500" y2="36" stroke="#27272a" stroke-width="1" />
+    <line x1="0" y1="78" x2="500" y2="78" stroke="#27272a" stroke-width="1" />
+    <line x1="260" y1="36" x2="260" y2="130" stroke="#27272a" stroke-width="1" />
+
+    <text x="16" y="24" class="cad-text-bold" font-size="12px">SCALE &amp; SPACES PRIVATE LIMITED</text>
+    <text x="480" y="24" class="cad-text-annotation" text-anchor="end" fill="#ffffff">NBC 205:2024</text>
+
+    <text x="16" y="54" class="cad-text-annotation" font-size="9px">PRINCIPAL DESIGNER &amp; CIVIL ENGINEER</text>
+    <text x="16" y="70" class="cad-text-bold" font-size="12px">ER. CHETAN KUMAR SARRAF</text>
+
+    <text x="276" y="54" class="cad-text-annotation" font-size="9px">LOCATION &amp; COORDINATES</text>
+    <text x="276" y="70" class="cad-text-bold" font-size="11px">BIRGUNJ, PARSA, NEPAL</text>
+
+    <text x="16" y="96" class="cad-text-annotation" font-size="9px">CAD SPECIFICATION</text>
+    <text x="16" y="114" class="cad-text-annotation" fill="#ffffff">AUTOCAD &amp; 3D SPATIAL RIGOR</text>
+
+    <text x="276" y="96" class="cad-text-annotation" font-size="9px">SURVEY DATUM</text>
+    <text x="276" y="114" class="cad-text-annotation" fill="#ffffff">27° 00' 36" N · 84° 53' 34" E</text>
+  </g>
+
+  <!-- LAYER 7: CORNER REGISTRATION CROSSHAIRS & DRAFTING TARGETS -->
+  <g id="Layer_07_Registration_Targets" serif:id="07 Registration Targets">
+    <!-- Top-Left -->
+    <circle cx="40" cy="40" r="16" stroke="#ffffff" stroke-width="1" fill="none" opacity="0.8" />
+    <line x1="16" y1="40" x2="64" y2="40" stroke="#ffffff" stroke-width="1" />
+    <line x1="40" y1="16" x2="40" y2="64" stroke="#ffffff" stroke-width="1" />
+    <text x="74" y="44" class="cad-text-annotation" font-size="9px">ORIGIN [0.00, 0.00]</text>
+
+    <!-- Top-Right -->
+    <circle cx="1880" cy="40" r="16" stroke="#ffffff" stroke-width="1" fill="none" opacity="0.8" />
+    <line x1="1856" y1="40" x2="1904" y2="40" stroke="#ffffff" stroke-width="1" />
+    <line x1="1880" y1="16" x2="1880" y2="64" stroke="#ffffff" stroke-width="1" />
+
+    <!-- Bottom-Left -->
+    <circle cx="40" cy="1040" r="16" stroke="#ffffff" stroke-width="1" fill="none" opacity="0.8" />
+    <line x1="16" y1="1040" x2="64" y2="1040" stroke="#ffffff" stroke-width="1" />
+    <line x1="40" y1="1016" x2="40" y2="1064" stroke="#ffffff" stroke-width="1" />
+    <text x="74" y="1044" class="cad-text-annotation" font-size="9px">ELEVATION BASELINE ±0.000m</text>
+  </g>
+</svg>
