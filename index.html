@@ -3549,7 +3549,7 @@
         </div>
       </div>
       <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: #64748b; flex-wrap: wrap; gap: 1rem;">
-        <div>© 2026 Er. Chetan Kumar Sarraf · Scale and Spaces Pvt. Ltd. All Rights Reserved.</div>
+        <div>© 2026 Er. Chetan Kumar Sarraf. All Rights Reserved.</div>
         
         <div style="display:flex; gap:1rem; align-items:center; flex-wrap:wrap;">
           <button type="button" onclick="toggleCadDraftingLinework()" class="cad-drafting-pill-btn" title="Toggle Architectural CAD Drafting Linework">
@@ -3714,6 +3714,7 @@
   <!-- ================= NATIVE LOGIC ENGINE (100% GOOGLE SHEET CONNECTED & UPGRADABLE) ================= -->
   <script>
     const DEFAULT_SHEET_ID = "1cQ724gHkaWJCNc5n6b6-qtCgNw6y41YB8ZgQDgTgGO4";
+    const DEFAULT_REVIEW_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycby1xacxsW9pRkaU1L4thsxcdf54NNLRrlBA4NOZyZFkS41jfGwVolEYn4vl4aMzzlg9og/exec";
     const MASTER_SHEET_ID = DEFAULT_SHEET_ID; // Backward-compatibility alias
 
     function getActiveSheetId() {
@@ -3751,7 +3752,7 @@
       studioCoords: '27° 0\' 36.7668" N 84° 53\' 34.8936" E',
       googleChatUrl: '',
       googleClientId: '',
-      reviewWebhookUrl: '',
+      reviewWebhookUrl: DEFAULT_REVIEW_WEBHOOK_URL,
       resumeUrl: 'https://drive.google.com/file/d/1GYduTB03A4mX0UdiN3vgtmNJGHo9QwPb/view?usp=drive_link',
       authMode: 'signin',
       currentUser: null,
@@ -3827,7 +3828,7 @@
 
     function isHeaderRow(row) {
       if (!row || !row[0]) return false;
-      return /^(title|item|item\s*name|material|material\s*item|name|question|member|caption|post|post\s*title|project|project\s*title|heading|s\.?n\.?|reviewer|visitor|visitor\s*name)$/i.test(String(row[0]).trim());
+      return /^\(?\s*(title|item|item\s*name|material|material\s*item|name|question|member|caption|post|post\s*title|project|project\s*title|heading|s\.?n\.?|reviewer|visitor|visitor\s*name)\s*\)?$/i.test(String(row[0]).trim());
     }
 
     // Map legacy/custom Sheet anchor links (#boq-toolkit, #hub, etc.) or external URLs
@@ -5769,29 +5770,115 @@
       }
     ];
 
+    // ================= COOKIE & PERSISTENT STORAGE UTILITIES =================
+    function setCksCookie(name, val, days = 365) {
+      try {
+        const expires = new Date(Date.now() + days * 864e5).toUTCString();
+        const safeVal = typeof val === 'string' ? val : JSON.stringify(val);
+        document.cookie = `${encodeURIComponent(name)}=${encodeURIComponent(safeVal)}; expires=${expires}; path=/; SameSite=Lax`;
+      } catch(e) {}
+    }
+
+    function getCksCookie(name) {
+      try {
+        const match = document.cookie.match(new RegExp('(^|;\\s*)' + encodeURIComponent(name) + '=([^;]*)'));
+        return match ? decodeURIComponent(match[2]) : null;
+      } catch(e) { return null; }
+    }
+
+    const GCHAT_STORAGE_KEY = 'cks_gchat_history_v1';
+    let gchatMemory = [];
+
+    function saveGChatHistory(messages) {
+      try {
+        const slice = (messages || []).slice(-30);
+        const str = JSON.stringify(slice);
+        localStorage.setItem(GCHAT_STORAGE_KEY, str);
+        setCksCookie(GCHAT_STORAGE_KEY, str, 365);
+      } catch(e) {}
+    }
+
+    function loadGChatHistory() {
+      try {
+        const raw = localStorage.getItem(GCHAT_STORAGE_KEY) || getCksCookie(GCHAT_STORAGE_KEY);
+        if (raw) {
+          const arr = JSON.parse(raw);
+          if (Array.isArray(arr) && arr.length) return arr;
+        }
+      } catch(e) {}
+      return [];
+    }
+
     function initReviewsData(sheetRows) {
       const parsedSheet = [];
       if (Array.isArray(sheetRows) && sheetRows.length) {
-        const rows = isHeaderRow(sheetRows[0]) ? sheetRows.slice(1) : sheetRows;
-        rows.forEach(r => {
-          if (r[0] && String(r[0]).trim()) {
-            parsedSheet.push({
-              name: String(r[0]).trim(),
-              rating: Math.min(5, Math.max(1, parseInt(r[1], 10) || 5)),
-              city: String(r[2] || 'Nepal').trim(),
-              projectType: String(r[3] || 'Interior & Civil Studio').trim(),
-              comment: String(r[4] || '').trim(),
-              date: formatSheetDate(r[5] || '2026'),
-              isoDate: '2026-10-01',
-              verified: true
-            });
-          }
+        // Detect if Google Sheets returned Articles tab by mistake when Reviews tab is not present
+        const isArticleSheet = sheetRows.some(r => {
+          const s = (r || []).join(' ').toLowerCase();
+          return s.includes('modular kitchen') || s.includes('carpenter kitchen') || s.includes('kitchen planning') || s.includes('discover the true cost');
         });
+
+        if (!isArticleSheet) {
+          const rows = isHeaderRow(sheetRows[0]) ? sheetRows.slice(1) : sheetRows;
+          rows.forEach(r => {
+            if (r[0] && String(r[0]).trim()) {
+              const nameStr = String(r[0]).trim();
+              const commStr = String(r[4] || '').trim();
+              const lowName = nameStr.toLowerCase();
+              const lowComm = commStr.toLowerCase();
+
+              // Exclude header rows or placeholder review rows
+              if (/^\(?\s*(name|title|client|author|reviewer|visitor|rating|city|date|review\s*comment)\s*\)?$/i.test(nameStr)) return;
+              if (/^\(?\s*(review\s*comment|comment|feedback|message|summary)\s*\)?$/i.test(commStr)) return;
+              if (nameStr.includes('(Verification Test)') || commStr.includes('Automated webhook sync test')) return;
+              if (lowName.includes('modular kitchen') || lowName.includes('carpenter kitchen') || lowComm.includes('discover the true cost')) return;
+
+              const ratingNum = parseInt(r[1], 10);
+              if (isNaN(ratingNum) || ratingNum < 1 || ratingNum > 5) return;
+
+              parsedSheet.push({
+                name: nameStr,
+                rating: ratingNum,
+                city: String(r[2] || 'Birgunj, Nepal').trim(),
+                projectType: String(r[3] || 'Interior & Civil Studio').trim(),
+                comment: commStr,
+                date: formatSheetDate(r[5] || '2026'),
+                isoDate: '2026-10-01',
+                verified: true
+              });
+            }
+          });
+        }
       }
 
+      // Read from both LocalStorage AND Cookies for maximum persistence across sessions
       let localRevs = [];
-      try { localRevs = JSON.parse(localStorage.getItem(REVIEWS_STORAGE_KEY) || '[]'); } catch (e) {}
+      try {
+        const rawLocal = localStorage.getItem(REVIEWS_STORAGE_KEY);
+        const rawCookie = getCksCookie(REVIEWS_STORAGE_KEY);
+        const raw = rawCookie || rawLocal || '[]';
+        localRevs = JSON.parse(raw);
+      } catch (e) {}
 
+      // Purge any accidental MK, dummy, test, or header entries from local storage & cookies
+      localRevs = (Array.isArray(localRevs) ? localRevs : []).filter(r => {
+        if (!r || !r.name) return false;
+        const n = String(r.name).toLowerCase();
+        const c = String(r.comment || '').toLowerCase();
+        if (/^\(?\s*(name|title|client|author|reviewer|visitor|review\s*comment)\s*\)?$/i.test(r.name)) return false;
+        if (/^\(?\s*(review\s*comment|comment|feedback|message)\s*\)?$/i.test(r.comment || '')) return false;
+        if (r.name.includes('(Verification Test)') || c.includes('automated webhook sync test')) return false;
+        if (n.includes('modular kitchen') || n.includes('carpenter kitchen') || c.includes('discover the true cost')) return false;
+        return true;
+      });
+
+      // Synchronize back to both LocalStorage and Cookies
+      try {
+        localStorage.setItem(REVIEWS_STORAGE_KEY, JSON.stringify(localRevs));
+        setCksCookie(REVIEWS_STORAGE_KEY, JSON.stringify(localRevs), 365);
+      } catch(e) {}
+
+      // Verified Curated Reviews (Aalok Tulshyan, Rajesh Agrawal, Sneha Kedia) are verified real clients
       state.reviews = [...localRevs, ...parsedSheet, ...CURATED_CLIENT_REVIEWS];
       renderReviewsUI();
     }
@@ -5867,7 +5954,7 @@
       e.preventDefault();
       const rating = Math.min(5, Math.max(1, parseInt(document.getElementById('revRatingVal').value, 10) || 5));
       const name = document.getElementById('revVisitorName').value.trim();
-      const city = document.getElementById('revVisitorCity').value.trim() || 'Nepal';
+      const city = document.getElementById('revVisitorCity').value.trim() || 'Birgunj, Nepal';
       const projectType = document.getElementById('revProjectType').value;
       const comment = document.getElementById('revComment').value.trim();
       if (!name || !comment) return;
@@ -5884,23 +5971,44 @@
         verified: false
       };
 
+      // Store in BOTH LocalStorage and Cookies for cross-session longevity
       let localRevs = [];
-      try { localRevs = JSON.parse(localStorage.getItem(REVIEWS_STORAGE_KEY) || '[]'); } catch (err) {}
+      try {
+        const rawLocal = localStorage.getItem(REVIEWS_STORAGE_KEY);
+        const rawCookie = getCksCookie(REVIEWS_STORAGE_KEY);
+        localRevs = JSON.parse(rawCookie || rawLocal || '[]');
+      } catch (err) {}
+      if (!Array.isArray(localRevs)) localRevs = [];
       localRevs.unshift(entry);
-      try { localStorage.setItem(REVIEWS_STORAGE_KEY, JSON.stringify(localRevs)); } catch (err) {}
+
+      try {
+        localStorage.setItem(REVIEWS_STORAGE_KEY, JSON.stringify(localRevs));
+        setCksCookie(REVIEWS_STORAGE_KEY, JSON.stringify(localRevs), 365);
+      } catch (err) {}
 
       state.reviews.unshift(entry);
       renderReviewsUI();
       updateSeoStructuredData();
 
-      // Optional live Google Sheet Apps Script Webhook POST (if Review_Webhook_URL is added to Sheet)
+      // Mirror review directly into Google Chat desk session & save to cookies
+      appendGChatBubble('bot', `<strong>★ New Visitor Review Logged</strong><br/>` +
+        `<strong>${escapeHtml(name)}</strong> (${rating}★ · ${escapeHtml(city)}):<br/>` +
+        `<em>"${escapeHtml(comment)}"</em><br/>` +
+        `<div style="margin-top:0.45rem; display:flex; gap:0.4rem; flex-wrap:wrap;">` +
+        `<a href="https://wa.me/${state.whatsappDigits}?text=${encodeURIComponent(`*New Review for Er. Chetan Kumar Sarraf*\n*Name:* ${name}\n*Rating:* ${rating}/5 ★\n*City:* ${city}\n*Review:* ${comment}`)}" target="_blank" class="btn-pill btn-dark" style="font-size:0.65rem; padding:0.25rem 0.65rem;"><i class="fa-brands fa-whatsapp"></i> Send to Studio WhatsApp</a>` +
+        `</div>`
+      );
+
+      // Live Google Sheet Apps Script Webhook POST (Auto-writes to 'Reviews' tab)
       if (state.reviewWebhookUrl) {
-        fetch(state.reviewWebhookUrl, {
-          method: 'POST',
-          mode: 'no-cors',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(entry)
-        }).catch(() => {});
+        try {
+          fetch(state.reviewWebhookUrl, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+            body: JSON.stringify(entry)
+          }).catch(err => console.warn('Review webhook sync notice:', err));
+        } catch(e) {}
       }
 
       document.getElementById('revComment').value = '';
@@ -5908,8 +6016,27 @@
       const toastEl = document.getElementById('revSubmitToast');
       if (toastEl) {
         toastEl.style.display = 'block';
-        toastEl.textContent = '✓ Thank you! Your review has been published to the live Studio feed.';
-        setTimeout(() => { toastEl.style.display = 'none'; }, 4500);
+        toastEl.style.background = 'var(--bg-card)';
+        toastEl.style.border = '1px solid var(--border-subtle)';
+        toastEl.style.padding = '1rem 1.2rem';
+        toastEl.style.borderRadius = '16px';
+        toastEl.style.marginTop = '1rem';
+        toastEl.innerHTML = `
+          <div style="display:flex; align-items:center; gap:0.6rem; color:var(--text-main); font-weight:700; margin-bottom:0.35rem;">
+            <i class="fa-solid fa-circle-check" style="color:var(--text-main);"></i> Review Published Successfully!
+          </div>
+          <div style="font-size:0.84rem; color:var(--text-muted); line-height:1.5;">
+            Saved in your browser cookies &amp; Studio Desk feed. You can also forward it directly to Er. Chetan:
+          </div>
+          <div style="margin-top:0.65rem; display:flex; gap:0.6rem; flex-wrap:wrap;">
+            <a href="https://wa.me/${state.whatsappDigits}?text=${encodeURIComponent(`*Client Review for Er. Chetan Kumar Sarraf*\n*Name:* ${name}\n*Rating:* ${rating}/5 ★\n*City:* ${city}\n*Review:* ${comment}`)}" target="_blank" rel="noopener" class="btn-pill btn-dark" style="font-size:0.75rem; padding:0.4rem 0.9rem; text-decoration:none;">
+              <i class="fa-brands fa-whatsapp"></i> Forward to Studio WhatsApp ↗
+            </a>
+            <button type="button" onclick="toggleGChat(true)" class="btn-pill btn-light" style="font-size:0.75rem; padding:0.4rem 0.9rem;">
+              <i class="fa-brands fa-google"></i> View in Google Chat
+            </button>
+          </div>
+        `;
       }
     }
 
@@ -5921,11 +6048,16 @@
       panel.classList.toggle('open', next);
       if (next && !panel.dataset.booted) {
         panel.dataset.booted = '1';
-        appendGChatBubble('bot', `Namaste! Welcome to <strong>Er. Chetan Kumar Sarraf's Studio Desk</strong>.<br/>Ask me about live Terai material rates, BOQ fees, 360° VR tours, or project consultations.`);
+        const savedHistory = loadGChatHistory();
+        if (savedHistory.length) {
+          savedHistory.forEach(item => appendGChatBubble(item.role, item.html, true));
+        } else {
+          appendGChatBubble('bot', `Namaste! Welcome to <strong>Er. Chetan Kumar Sarraf's Studio Desk</strong>.<br/>Ask me about live Terai material rates, BOQ fees, 360° VR tours, or project consultations.`);
+        }
       }
     }
 
-    function appendGChatBubble(role, html) {
+    function appendGChatBubble(role, html, skipSave = false) {
       const box = document.getElementById('gchatMessages');
       if (!box) return;
       const div = document.createElement('div');
@@ -5936,6 +6068,11 @@
       div.innerHTML = html;
       box.appendChild(div);
       box.scrollTop = box.scrollHeight;
+
+      if (!skipSave) {
+        gchatMemory.push({ role, html, time: Date.now() });
+        saveGChatHistory(gchatMemory);
+      }
     }
 
     function buildGChatAnswer(qRaw) {
