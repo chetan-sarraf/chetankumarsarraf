@@ -1757,6 +1757,54 @@
     .cad-structure-float { animation: cadFloatSubtle 14s ease-in-out infinite; }
     .cad-structure-trace { stroke-dasharray: 800; animation: cadBeamTrace 22s ease-in-out infinite; }
 
+    /* Architectural Masterpieces & Funky Linework Styles */
+    .cad-masterpiece-group {
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      will-change: transform, opacity;
+    }
+    .cad-masterpiece-bold { stroke: var(--text-main); stroke-width: 2.2px; fill: none; stroke-linecap: round; opacity: 0.35; }
+    .cad-masterpiece-mid { stroke: var(--text-main); stroke-width: 1.4px; fill: none; opacity: 0.25; }
+    .cad-masterpiece-thin { stroke: var(--text-muted); stroke-width: 0.9px; fill: none; opacity: 0.2; }
+    .cad-masterpiece-dash { stroke: var(--text-muted); stroke-width: 1px; stroke-dasharray: 6 4; fill: none; opacity: 0.25; }
+    .cad-masterpiece-dot { stroke: var(--text-muted); stroke-width: 0.8px; stroke-dasharray: 2 3; fill: none; opacity: 0.18; }
+    .cad-masterpiece-slab { fill: rgba(255, 255, 255, 0.02); stroke: var(--text-muted); stroke-width: 1px; opacity: 0.22; }
+    .cad-masterpiece-glow { fill: var(--text-main); opacity: 0.8; }
+    .cad-masterpiece-text { font-family: 'JetBrains Mono', 'Plus Jakarta Sans', monospace; font-size: 9px; fill: var(--text-muted); letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; opacity: 0.45; }
+    .cad-masterpiece-label { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px; fill: var(--text-main); letter-spacing: 0.14em; text-transform: uppercase; font-weight: 800; opacity: 0.55; }
+
+    /* Funky Dynamic Architectural Animations */
+    @keyframes cadMasterpieceFloat {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-8px) rotate(0.4deg); }
+    }
+    @keyframes cadDamperHarmonic {
+      0% { transform: rotate(-5deg); }
+      50% { transform: rotate(5deg); }
+      100% { transform: rotate(-5deg); }
+    }
+    @keyframes cadSpireBeacon {
+      0%, 100% { opacity: 0.35; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.6); }
+    }
+    @keyframes cadSpiralPulse {
+      0%, 100% { stroke-dashoffset: 0; opacity: 0.22; }
+      50% { stroke-dashoffset: 120; opacity: 0.45; }
+    }
+    @keyframes cadPinnacleGlow {
+      0%, 100% { filter: drop-shadow(0 0 1px rgba(255,255,255,0.2)); }
+      50% { filter: drop-shadow(0 0 8px rgba(255,255,255,0.7)); }
+    }
+
+    .cad-burj-anim { animation: cadMasterpieceFloat 18s ease-in-out infinite; }
+    .cad-beacon-pulse { transform-origin: center; animation: cadSpireBeacon 3.5s ease-in-out infinite; }
+    .cad-damper-anim { transform-origin: 0px -40px; animation: cadDamperHarmonic 7s ease-in-out infinite; }
+    .cad-eiffel-anim { animation: cadMasterpieceFloat 22s ease-in-out infinite 2s; }
+    .cad-opera-anim { animation: cadMasterpieceFloat 16s ease-in-out infinite 4s; }
+    .cad-nyatapola-anim { animation: cadMasterpieceFloat 20s ease-in-out infinite 1s; }
+    .cad-spiral-anim { stroke-dasharray: 600; animation: cadSpiralPulse 14s ease-in-out infinite; }
+    .cad-gajur-glow { animation: cadPinnacleGlow 4s ease-in-out infinite; }
+
+
     /* CAD Drafting Linework Toggle Button in Footer & Status Bars */
     .cad-drafting-pill-btn {
       display: inline-flex; align-items: center; gap: 0.45rem;
@@ -1775,192 +1823,422 @@
 
   <!-- ================= ARCHITECTURAL & CIVIL ENGINEERING DRAFTING VECTOR BACKGROUND & ANIMATION LAYER ================= -->
   <div id="cadDraftingBgLayer" aria-hidden="true">
-    <svg class="cad-bg-svg" width="100%" height="100%" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <pattern id="isoDotGrid" width="40" height="40" patternUnits="userSpaceOnUse">
-          <circle cx="20" cy="20" r="0.8" fill="var(--text-muted)" opacity="0.12" />
-        </pattern>
-        <marker id="bgCadArrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
-          <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="var(--text-main)" opacity="0.35" />
-        </marker>
-      </defs>
+    <svg class="cad-bg-svg" width="100%" height="100%" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;background:transparent;">
+  <!--
+    ========================================================================================
+    SCALE & SPACES ARCHITECTURAL MASTERPIECE VECTOR SUITE & FUNKY CAD BACKGROUND ANIMATIONS
+    Engineered for: Er. Chetan Kumar Sarraf (Civil Engineer & Spatial Designer, Nepal)
+    Compatibility: Serif Affinity Designer v1 / v2 / v3 + Modern Web UI Backgrounds
+    Masterpieces:
+      1. Burj Khalifa (Dubai - 828m) - Aerodynamic Spiral Setbacks & Pulsing Apex Spire
+      2. Taipei 101 (Taipei - 508m) - 8 Pagoda Modules & 660-Tonne Tuned Mass Damper Pendulum
+      3. Eiffel Tower (Paris - 300m) - Wrought Iron Diagonal Lattice & Parabolic Wind Arch
+      4. Nepali Nyatapola Pagoda (Bhaktapur - 1702 AD) - 5-Tier Timber Joinery & Ductile Ring Beams
+      5. Sydney Opera House (Jørn Utzon - 1973) - Interlocking Precast Spherical Shell Vaults
+      6. Funky Mechanical Compass Reticle, Fibonacci Golden Ratio Spiral (φ=1.618) & Datum Matrix
+    ========================================================================================
+  -->
+  <defs>
+    <style type="text/css">
+      :root {
+        --aff-stroke-bold: #ffffff;
+        --aff-stroke-mid: #d4d4d8;
+        --aff-stroke-thin: #71717a;
+        --aff-stroke-dash: #a1a1aa;
+        --aff-slab-fill: rgba(255, 255, 255, 0.03);
+        --aff-text: #a1a1aa;
+        --aff-label: #ffffff;
+      }
+      @media (prefers-color-scheme: light) {
+        :root {
+          --aff-stroke-bold: #18181b;
+          --aff-stroke-mid: #3f3f46;
+          --aff-stroke-thin: #71717a;
+          --aff-stroke-dash: #52525b;
+          --aff-slab-fill: rgba(0, 0, 0, 0.02);
+          --aff-text: #52525b;
+          --aff-label: #09090b;
+        }
+      }
 
-      <!-- Isometric Micro-Dot Construction Matrix -->
-      <rect width="100%" height="100%" fill="url(#isoDotGrid)" />
+      /* Masterpiece Linework Styles */
+      .cad-mono-bold { stroke: var(--text-main); stroke-width: 2.2px; fill: none; stroke-linecap: round; opacity: 0.38; }
+      .cad-mono-mid { stroke: var(--text-main); stroke-width: 1.4px; fill: none; opacity: 0.28; }
+      .cad-mono-thin { stroke: var(--text-muted); stroke-width: 0.9px; fill: none; opacity: 0.22; }
+      .cad-mono-dash { stroke: var(--text-muted); stroke-width: 1px; stroke-dasharray: 6 4; fill: none; opacity: 0.26; }
+      .cad-mono-dot { stroke: var(--text-muted); stroke-width: 0.8px; stroke-dasharray: 2 3; fill: none; opacity: 0.18; }
+      .cad-slab-fill { fill: rgba(255, 255, 255, 0.02); stroke: var(--text-muted); stroke-width: 1px; opacity: 0.25; }
+      .cad-mono-text { font-family: 'JetBrains Mono', 'Plus Jakarta Sans', monospace, sans-serif; font-size: 9px; fill: var(--text-muted); letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; opacity: 0.48; }
+      .cad-mono-label { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px; fill: var(--text-main); letter-spacing: 0.14em; text-transform: uppercase; font-weight: 800; opacity: 0.65; }
 
-      <!-- Center Technical Compass Reticle & Radial Rays -->
-      <g class="cad-compass-spin">
-        <circle cx="960" cy="540" r="160" class="cad-bg-arc" stroke-width="1.2" />
-        <circle cx="960" cy="540" r="320" class="cad-bg-arc" stroke-width="1" stroke-dasharray="6 4" />
-        <circle cx="960" cy="540" r="480" class="cad-bg-arc" stroke-width="1.5" />
-        <circle cx="960" cy="540" r="640" class="cad-bg-centerline" />
-        
-        <line x1="960" y1="60" x2="960" y2="1020" class="cad-bg-centerline" />
-        <line x1="480" y1="540" x2="1440" y2="540" class="cad-bg-centerline" />
-        <line x1="620" y1="200" x2="1300" y2="880" class="cad-bg-centerline" />
-        <line x1="1300" y1="200" x2="620" y2="880" class="cad-bg-centerline" />
+      /* FUNKY EMBEDDED CAD ANIMATIONS */
+      @keyframes cadCompassSpin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+      @keyframes cadCompassCounter { from { transform: rotate(360deg); } to { transform: rotate(0deg); } }
+      @keyframes cadBurjFloat { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+      @keyframes cadSpireBeacon { 0%, 100% { opacity: 0.35; transform: scale(1); } 50% { opacity: 1; transform: scale(1.6); } }
+      @keyframes cadDamperHarmonic { 0% { transform: rotate(-7deg); } 50% { transform: rotate(7deg); } 100% { transform: rotate(-7deg); } }
+      @keyframes cadEiffelFloat { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-8px); } }
+      @keyframes cadNyatapolaFloat { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-7px); } }
+      @keyframes cadGajurPulse { 0%, 100% { opacity: 0.45; filter: drop-shadow(0 0 1px #fff); } 50% { opacity: 1; filter: drop-shadow(0 0 9px #fff); } }
+      @keyframes cadShellTrace { 0% { stroke-dashoffset: 800; } 50% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: -800; } }
+      @keyframes cadGoldenTrace { 0% { stroke-dashoffset: 1200; } 50% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: -1200; } }
 
-        <text x="960" y="52" class="cad-bg-text" text-anchor="middle">000° AZIMUTH NORTH</text>
-        <text x="1455" y="544" class="cad-bg-text">090° EAST</text>
-        <text x="960" y="1038" class="cad-bg-text" text-anchor="middle">180° SOUTH</text>
-        <text x="465" y="544" class="cad-bg-text" text-anchor="end">270° WEST</text>
-      </g>
+      .cad-burj-anim { animation: cadBurjFloat 18s ease-in-out infinite; }
+      .cad-beacon-pulse { transform-origin: 0px 0px; animation: cadSpireBeacon 3.2s ease-in-out infinite; }
+      .cad-damper-anim { transform-origin: 0px 250px; animation: cadDamperHarmonic 6.5s ease-in-out infinite; }
+      .cad-eiffel-anim { animation: cadEiffelFloat 22s ease-in-out infinite 2s; }
+      .cad-nyatapola-anim { animation: cadNyatapolaFloat 20s ease-in-out infinite 1s; }
+      .cad-gajur-anim { transform-origin: 0px -18px; animation: cadGajurPulse 3.8s ease-in-out infinite; }
+      .cad-shell-trace { stroke-dasharray: 800; animation: cadShellTrace 18s ease-in-out infinite; }
+      .cad-golden-trace { stroke-dasharray: 1200; animation: cadGoldenTrace 15s ease-in-out infinite; }
+      .cad-compass-spin { transform-origin: 960px 540px; animation: cadCompassSpin 160s linear infinite; }
+      .cad-compass-counter { transform-origin: 960px 540px; animation: cadCompassCounter 120s linear infinite; }
+    </style>
 
-      <!-- Counter-rotating Drafting Caliper Ring -->
-      <g class="cad-compass-counter">
-        <circle cx="960" cy="540" r="240" class="cad-bg-arc" stroke-dasharray="8 6 2 6" stroke-width="1" />
-        <circle cx="960" cy="540" r="400" class="cad-bg-arc" stroke-dasharray="16 8" stroke-width="0.75" />
-        <line x1="960" y1="290" x2="960" y2="310" class="cad-bg-arc" stroke-width="1.8" />
-        <line x1="960" y1="770" x2="960" y2="790" class="cad-bg-arc" stroke-width="1.8" />
-        <line x1="710" y1="540" x2="730" y2="540" class="cad-bg-arc" stroke-width="1.8" />
-        <line x1="1190" y1="540" x2="1210" y2="540" class="cad-bg-arc" stroke-width="1.8" />
-      </g>
+    <pattern id="affIsoDotGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="0.75" fill="var(--text-muted)" opacity="0.12" />
+    </pattern>
+  </defs>
 
-      <!-- Live Self-Tracing Architectural Drafting Arcs -->
-      <g>
-        <path d="M 960,60 A 480,480 0 0,1 1440,540" class="cad-bg-trace" stroke-width="2.5" />
-        <path d="M 480,540 A 480,480 0 0,1 960,1020" class="cad-bg-trace-2" stroke-width="2" />
-        <path d="M 640,540 A 320,320 0 0,1 960,220" class="cad-bg-trace" stroke-width="1.8" />
-      </g>
+  <!-- ================= LAYER 01: ISOMETRIC GRID & GLOBAL DATUM MATRIX ================= -->
+  <g id="Layer_01_Global_Datum_Matrix" serif:id="01 Global Datum Matrix">
+    <rect width="100%" height="100%" fill="url(#affIsoDotGrid)" />
 
-      <!-- ================= BACKGROUND CIVIL ENGINEERING BUILDING & STRUCTURAL WIREFRAME ================= -->
-      <!-- Placed subtly across the viewport with floating architectural animation -->
-      <g class="cad-structure-float" transform="translate(1080, 180) scale(0.68)">
-        <!-- Structural Identification & Datums -->
-        <g opacity="0.32">
-          <text x="320" y="80" class="cad-bg-text" font-weight="700">NBC 205:2024 SEISMIC RESISTANT DUCTILE SKELETON</text>
-          <text x="320" y="98" class="cad-bg-text">3-STOREY REINFORCED CONCRETE &amp; STEEL FRAME · M20 / Fe500</text>
-        </g>
+    <!-- Horizontal Altitude Levels (Meters Above Plinth Datum) -->
+    <line x1="80" y1="980" x2="1840" y2="980" class="cad-mono-bold" stroke-width="1.8" />
+    <text x="90" y="970" class="cad-mono-label">±0.000M GLOBAL PLINTH DATUM</text>
 
-        <!-- Foundation Footings & Plinth Tie Beams (NBC 205) -->
-        <g opacity="0.25">
-          <!-- Footing 1 -->
-          <polygon points="420,820 500,774 580,820 500,866" class="cad-structure-slab" />
-          <!-- Footing 2 -->
-          <polygon points="740,820 820,774 900,820 820,866" class="cad-structure-slab" />
-          <!-- Footing 3 -->
-          <polygon points="1060,820 1140,774 1220,820 1140,866" class="cad-structure-slab" />
-          <!-- Plinth Tie Beams -->
-          <line x1="500" y1="820" x2="1140" y2="820" class="cad-structure-beam" stroke-width="1.8" />
-          <text x="500" y="880" class="cad-bg-text">F1: 1500x1500MM</text>
-          <text x="820" y="880" class="cad-bg-text">F2: 1800x1800MM</text>
-          <text x="1140" y="880" class="cad-bg-text">F3: 1500x1500MM</text>
-        </g>
+    <line x1="80" y1="740" x2="1840" y2="740" class="cad-mono-dash" />
+    <text x="90" y="730" class="cad-mono-text">+100.000M LEVEL</text>
 
-        <!-- Multi-Storey Reinforced Columns (Storey 1, 2, 3) -->
-        <g class="cad-structure-anim">
-          <!-- Col A1 -->
-          <line x1="500" y1="820" x2="500" y2="200" class="cad-structure-column" />
-          <!-- Col B1 (Major Center Load Axis) -->
-          <line x1="820" y1="820" x2="820" y2="200" class="cad-structure-column" stroke-width="2.6" />
-          <!-- Col C1 -->
-          <line x1="1140" y1="820" x2="1140" y2="200" class="cad-structure-column" />
-          <!-- Rear Columns (Axonometric Depth) -->
-          <line x1="320" y1="715" x2="320" y2="105" class="cad-structure-column" stroke-dasharray="6 4" opacity="0.18" />
-          <line x1="640" y1="715" x2="640" y2="105" class="cad-structure-column" opacity="0.22" />
-          <line x1="960" y1="715" x2="960" y2="105" class="cad-structure-column" stroke-dasharray="6 4" opacity="0.18" />
-        </g>
+    <line x1="80" y1="520" x2="1840" y2="520" class="cad-mono-dash" />
+    <text x="90" y="510" class="cad-mono-text">+300.000M LEVEL · EIFFEL TOWER APEX</text>
 
-        <!-- Storey 1 Slab (+3.600m Level) -->
-        <g transform="translate(0, 400)">
-          <polygon points="500,200 820,200 1140,200 960,105 640,105 320,105" class="cad-structure-slab" />
-          <line x1="500" y1="200" x2="1140" y2="200" class="cad-structure-beam" />
-          <line x1="1140" y1="200" x2="960" y2="105" class="cad-structure-beam" />
-          <line x1="960" y1="105" x2="320" y2="105" class="cad-structure-beam" />
-          <line x1="320" y1="105" x2="500" y2="200" class="cad-structure-beam" />
-          <line x1="820" y1="200" x2="640" y2="105" class="cad-structure-beam" stroke-dasharray="4 3" />
-          <text x="210" y="155" class="cad-bg-text">FIRST FLOOR +3.600M</text>
-        </g>
+    <line x1="80" y1="320" x2="1840" y2="320" class="cad-mono-dash" />
+    <text x="90" y="310" class="cad-mono-text">+508.000M LEVEL · TAIPEI 101 APEX</text>
 
-        <!-- Storey 2 Slab (+7.200m Level) with Cantilever Balcony Projection -->
-        <g transform="translate(0, 200)">
-          <!-- Cantilever projection overhang -->
-          <polygon points="460,225 820,225 1200,225 960,105 640,105 320,105" class="cad-structure-slab" fill="rgba(255,255,255,0.04)" />
-          <line x1="460" y1="225" x2="1200" y2="225" class="cad-structure-beam cad-structure-trace" stroke-width="2.2" />
-          <line x1="1200" y1="225" x2="960" y2="105" class="cad-structure-beam" />
-          <line x1="460" y1="225" x2="320" y2="105" class="cad-structure-beam" />
-          <!-- Cantilever Witness Line & Dimension -->
-          <line x1="1140" y1="200" x2="1200" y2="225" class="cad-structure-dimension" />
-          <text x="1215" y="228" class="cad-bg-text" font-weight="700">CANTILEVER PROJECTION 1200MM</text>
-          <text x="210" y="155" class="cad-bg-text">SECOND FLOOR +7.200M</text>
-        </g>
+    <line x1="80" y1="100" x2="1840" y2="100" class="cad-mono-bold" stroke-dasharray="12 6" />
+    <text x="90" y="90" class="cad-mono-label">+828.000M BURJ KHALIFA PINNACLE APEX</text>
 
-        <!-- Roof Parapet (+10.800m Level) & Steel Pergola Rafters -->
-        <g transform="translate(0, 0)">
-          <polygon points="500,200 820,200 1140,200 960,105 640,105 320,105" class="cad-structure-slab" />
-          <line x1="500" y1="200" x2="1140" y2="200" class="cad-structure-beam" />
-          <line x1="1140" y1="200" x2="960" y2="105" class="cad-structure-beam" />
-          <line x1="960" y1="105" x2="320" y2="105" class="cad-structure-beam" />
-          <line x1="320" y1="105" x2="500" y2="200" class="cad-structure-beam" />
+    <!-- Master Vertical Altitude Scale Bar (Left) -->
+    <line x1="70" y1="80" x2="70" y2="980" class="cad-mono-bold" />
+    <line x1="60" y1="980" x2="80" y2="980" class="cad-mono-bold" />
+    <line x1="60" y1="740" x2="80" y2="740" class="cad-mono-mid" />
+    <line x1="60" y1="520" x2="80" y2="520" class="cad-mono-mid" />
+    <line x1="60" y1="320" x2="80" y2="320" class="cad-mono-mid" />
+    <line x1="60" y1="100" x2="80" y2="100" class="cad-mono-bold" />
+  </g>
 
-          <!-- Architectural Pergola Rafters -->
-          <line x1="540" y1="190" x2="400" y2="115" class="cad-structure-dimension" />
-          <line x1="620" y1="190" x2="480" y2="115" class="cad-structure-dimension" />
-          <line x1="700" y1="190" x2="560" y2="115" class="cad-structure-dimension" />
-          <line x1="780" y1="190" x2="640" y2="115" class="cad-structure-dimension" />
-          <line x1="860" y1="190" x2="720" y2="115" class="cad-structure-dimension" />
-          <line x1="940" y1="190" x2="800" y2="115" class="cad-structure-dimension" />
-          <line x1="1020" y1="190" x2="880" y2="115" class="cad-structure-dimension" />
+  <!-- ================= LAYER 02: BURJ KHALIFA (DUBAI - 828M) ================= -->
+  <!-- Placed gracefully on the far-right flank with pulsing beacon & floating breathe -->
+  <g id="Layer_02_Burj_Khalifa" serif:id="02 Burj Khalifa Spire" class="cad-burj-anim" transform="translate(1700, 100) scale(0.68)">
+    <!-- Central Axis & Vortex Shedding Aerodynamic Guides -->
+    <line x1="0" y1="0" x2="0" y2="1300" class="cad-mono-dash" stroke-width="1.2" opacity="0.35" />
 
-          <!-- Freehand Architectural Sketch Facade Curve -->
-          <path d="M 500,200 Q 720,140 820,200" stroke="var(--text-main)" stroke-width="1.8" fill="none" opacity="0.32" stroke-linecap="round" />
-          <text x="710" y="170" class="cad-bg-text">FAÇADE RADIUS R=4000MM</text>
-          <text x="210" y="155" class="cad-bg-text">ROOF PARAPET +10.800M</text>
-        </g>
+    <!-- Spire Pinnacle Tip (+828m) with Pulsing Beacon -->
+    <line x1="0" y1="0" x2="0" y2="120" class="cad-mono-bold" stroke-width="3" />
+    <circle cx="0" cy="0" r="5" fill="var(--text-main)" class="cad-beacon-pulse" />
+    <circle cx="0" cy="0" r="14" class="cad-mono-dash" />
+    <circle cx="0" cy="0" r="26" class="cad-mono-dot" />
 
-        <!-- Seismic Diagonal Bracing (NBC 205) -->
-        <g class="cad-structure-anim" opacity="0.3">
-          <line x1="500" y1="800" x2="820" y2="600" class="cad-structure-seismic" />
-          <line x1="820" y1="800" x2="500" y2="600" class="cad-structure-seismic" />
-          <line x1="820" y1="600" x2="1140" y2="400" class="cad-structure-seismic" />
-          <line x1="1140" y1="600" x2="820" y2="400" class="cad-structure-seismic" />
-          <!-- Shear Vector Arrows -->
-          <line x1="450" y1="500" x2="500" y2="500" stroke="var(--text-main)" stroke-width="1.5" marker-end="url(#bgCadArrow)" />
-          <text x="360" y="504" class="cad-bg-text">EQ BASE SHEAR Vb</text>
-        </g>
-      </g>
+    <!-- Tier 6: Spire Structural Mast (700m - 828m) -->
+    <polygon points="-8,120 8,120 12,220 -12,220" class="cad-slab-fill" />
+    <line x1="-8" y1="120" x2="-12" y2="220" class="cad-mono-bold" />
+    <line x1="8" y1="120" x2="12" y2="220" class="cad-mono-bold" />
 
-      <!-- ================= ARCHITECTURAL ELEVATION & SKETCH ARCS (LEFT FOREGROUND) ================= -->
-      <g transform="translate(60, 480) scale(0.65)" opacity="0.35">
-        <!-- Isometric Section Frame -->
-        <rect x="0" y="0" width="380" height="240" fill="none" stroke="var(--text-muted)" stroke-width="1" stroke-dasharray="8 4" />
-        <line x1="0" y1="120" x2="380" y2="120" stroke="var(--text-muted)" stroke-width="0.8" stroke-dasharray="4 2" />
-        <line x1="190" y1="0" x2="190" y2="240" stroke="var(--text-muted)" stroke-width="0.8" stroke-dasharray="4 2" />
-        
-        <!-- Freehand Architectural Arcs -->
-        <path d="M 40,200 Q 190,40 340,200" stroke="var(--text-main)" stroke-width="1.8" fill="none" class="cad-bg-trace" />
-        <circle cx="190" cy="120" r="80" class="cad-bg-arc" stroke-width="1" stroke-dasharray="6 3" />
-        <circle cx="190" cy="120" r="4" fill="var(--text-main)" />
-        
-        <text x="190" y="225" class="cad-bg-text" text-anchor="middle">SPATIAL HARMONY &amp; VASTU AXIS</text>
-        <text x="20" y="30" class="cad-bg-text">SEC 01-A · BIRGUNJ RESIDENCE</text>
-      </g>
+    <!-- Tier 5: High Setbacks (580m - 700m) -->
+    <polygon points="-24,220 24,220 32,350 -32,350" class="cad-slab-fill" />
+    <line x1="-24" y1="220" x2="-32" y2="350" class="cad-mono-bold" />
+    <line x1="24" y1="220" x2="32" y2="350" class="cad-mono-bold" />
+    <line x1="-24" y1="220" x2="24" y2="220" class="cad-mono-mid" />
+    <line x1="-27" y1="260" x2="27" y2="260" class="cad-mono-thin" />
+    <line x1="-29" y1="305" x2="29" y2="305" class="cad-mono-thin" />
 
-      <!-- Upper Right Golden Ratio Arc & Fibonacci Notation -->
-      <g transform="translate(1420, 120)">
-        <path d="M 0,260 A 260,260 0 0,1 260,0 A 160,160 0 0,1 420,160 A 100,100 0 0,1 320,260 A 60,60 0 0,1 260,200" stroke="var(--text-main)" stroke-width="1.8" fill="none" opacity="0.22" />
-        <text x="10" y="285" class="cad-bg-text">GOLDEN RATIO SPATIAL PROPORTION φ=1.618</text>
-        <text x="10" y="302" class="cad-bg-text">SCALE &amp; SPACES CIVIL &amp; INTERIOR RIGOR</text>
-      </g>
+    <!-- Tier 4: Mid-High Setbacks (440m - 580m) -->
+    <polygon points="-48,350 48,350 62,500 -62,500" class="cad-slab-fill" />
+    <line x1="-48" y1="350" x2="-62" y2="500" class="cad-mono-bold" stroke-width="2" />
+    <line x1="48" y1="350" x2="62" y2="500" class="cad-mono-bold" stroke-width="2" />
+    <line x1="-48" y1="350" x2="48" y2="350" class="cad-mono-bold" />
+    <line x1="0" y1="350" x2="0" y2="500" class="cad-mono-bold" />
+    <line x1="-52" y1="400" x2="52" y2="400" class="cad-mono-thin" />
+    <line x1="-56" y1="450" x2="56" y2="450" class="cad-mono-thin" />
 
-      <!-- Structural Column Grid Lines along Top & Sides -->
-      <g opacity="0.16">
-        <line x1="220" y1="0" x2="220" y2="1080" class="cad-bg-centerline" />
-        <line x1="680" y1="0" x2="680" y2="1080" class="cad-bg-centerline" />
-        <line x1="1240" y1="0" x2="1240" y2="1080" class="cad-bg-centerline" />
-        <line x1="1700" y1="0" x2="1700" y2="1080" class="cad-bg-centerline" />
-        <line x1="0" y1="280" x2="1920" y2="280" class="cad-bg-centerline" />
-        <line x1="0" y1="800" x2="1920" y2="800" class="cad-bg-centerline" />
-      </g>
+    <!-- Tier 3: Mid Setbacks (300m - 440m) -->
+    <polygon points="-78,500 78,500 98,670 -98,670" class="cad-slab-fill" />
+    <line x1="-78" y1="500" x2="-98" y2="670" class="cad-mono-bold" stroke-width="2.4" />
+    <line x1="78" y1="500" x2="98" y2="670" class="cad-mono-bold" stroke-width="2.4" />
+    <line x1="-78" y1="500" x2="78" y2="500" class="cad-mono-bold" />
+    <line x1="-84" y1="555" x2="84" y2="555" class="cad-mono-thin" />
+    <line x1="-90" y1="610" x2="90" y2="610" class="cad-mono-thin" />
 
-      <!-- Corner Construction Origin Datum -->
-      <g transform="translate(40, 40)" opacity="0.4">
-        <line x1="-12" y1="0" x2="12" y2="0" stroke="var(--text-main)" stroke-width="1" />
-        <line x1="0" y1="-12" x2="0" y2="12" stroke="var(--text-main)" stroke-width="1" />
-        <circle cx="0" cy="0" r="14" stroke="var(--text-main)" stroke-width="0.8" fill="none" />
-        <text x="22" y="4" class="cad-bg-text">DATUM [0,0] · NBC 205:2024</text>
-      </g>
-    </svg>
+    <!-- Tier 2: Lower-Mid Setbacks (160m - 300m) -->
+    <polygon points="-118,670 118,670 145,850 -145,850" class="cad-slab-fill" />
+    <line x1="-118" y1="670" x2="-145" y2="850" class="cad-mono-bold" stroke-width="2.6" />
+    <line x1="118" y1="670" x2="145" y2="850" class="cad-mono-bold" stroke-width="2.6" />
+    <line x1="-118" y1="670" x2="118" y2="670" class="cad-mono-bold" />
+    <path d="M -118,670 Q -60,760 -145,850" class="cad-mono-mid" stroke-dasharray="4 3" />
+    <path d="M 118,670 Q 60,760 145,850" class="cad-mono-mid" stroke-dasharray="4 3" />
+    <line x1="-128" y1="730" x2="128" y2="730" class="cad-mono-thin" />
+    <line x1="-138" y1="790" x2="138" y2="790" class="cad-mono-thin" />
+
+    <!-- Tier 1: Tripartite Base (0m - 160m) -->
+    <polygon points="-175,850 175,850 220,1020 -220,1020" class="cad-slab-fill" />
+    <line x1="-175" y1="850" x2="-220" y2="1020" class="cad-mono-bold" stroke-width="3" />
+    <line x1="175" y1="850" x2="220" y2="1020" class="cad-mono-bold" stroke-width="3" />
+    <line x1="-175" y1="850" x2="175" y2="850" class="cad-mono-bold" stroke-width="2" />
+    <rect x="-195" y="910" width="390" height="24" class="cad-slab-fill" stroke-width="1.8" />
+    <rect x="-215" y="980" width="430" height="30" class="cad-slab-fill" stroke-width="2" />
+
+    <!-- Technical Labels -->
+    <text x="35" y="50" class="cad-mono-label">BURJ KHALIFA</text>
+    <text x="35" y="68" class="cad-mono-text">+828.000M APEX · 163 FLOORS</text>
+    <text x="35" y="84" class="cad-mono-text">HEXAGONAL BUTTRESSED CORE</text>
+    <text x="35" y="100" class="cad-mono-text">VORTEX-SHEDDING SPIRAL FLUTES</text>
+  </g>
+
+  <!-- ================= LAYER 03: TAIPEI 101 WITH ACTIVE DAMPER (TAIPEI - 508M) ================= -->
+  <!-- Placed in the mid-right field with active swaying 660-tonne Tuned Mass Damper -->
+  <g id="Layer_03_Taipei_101" serif:id="03 Taipei 101 Damper" transform="translate(1360, 260) scale(0.62)">
+    <!-- Pagoda Spire -->
+    <line x1="0" y1="0" x2="0" y2="820" class="cad-mono-dash" opacity="0.35" />
+    <line x1="0" y1="0" x2="0" y2="80" class="cad-mono-bold" stroke-width="2.8" />
+    <circle cx="0" cy="0" r="4" fill="var(--text-main)" />
+
+    <!-- 8 Inverted Pagoda Modules (Bamboo Stalk Tiers) -->
+    <g transform="translate(0, 80)">
+      <polygon points="-25,0 25,0 35,55 -35,55" class="cad-slab-fill" />
+      <line x1="-35" y1="55" x2="35" y2="55" class="cad-mono-bold" />
+      <line x1="-25" y1="0" x2="-35" y2="55" class="cad-mono-mid" />
+      <line x1="25" y1="0" x2="35" y2="55" class="cad-mono-mid" />
+    </g>
+    <g transform="translate(0, 135)">
+      <polygon points="-30,0 30,0 42,55 -42,55" class="cad-slab-fill" />
+      <line x1="-42" y1="55" x2="42" y2="55" class="cad-mono-bold" />
+      <line x1="-30" y1="0" x2="-42" y2="55" class="cad-mono-mid" />
+      <line x1="30" y1="0" x2="42" y2="55" class="cad-mono-mid" />
+    </g>
+    <g transform="translate(0, 190)">
+      <polygon points="-35,0 35,0 49,55 -49,55" class="cad-slab-fill" />
+      <line x1="-49" y1="55" x2="49" y2="55" class="cad-mono-bold" />
+      <line x1="-35" y1="0" x2="-49" y2="55" class="cad-mono-mid" />
+      <line x1="35" y1="0" x2="49" y2="55" class="cad-mono-mid" />
+    </g>
+    <g transform="translate(0, 245)">
+      <polygon points="-40,0 40,0 56,55 -56,55" class="cad-slab-fill" />
+      <line x1="-56" y1="55" x2="56" y2="55" class="cad-mono-bold" />
+      <line x1="-40" y1="0" x2="-56" y2="55" class="cad-mono-mid" />
+      <line x1="40" y1="0" x2="56" y2="55" class="cad-mono-mid" />
+    </g>
+    <g transform="translate(0, 300)">
+      <polygon points="-45,0 45,0 63,55 -63,55" class="cad-slab-fill" />
+      <line x1="-63" y1="55" x2="63" y2="55" class="cad-mono-bold" />
+      <line x1="-45" y1="0" x2="-63" y2="55" class="cad-mono-mid" />
+      <line x1="45" y1="0" x2="63" y2="55" class="cad-mono-mid" />
+    </g>
+    <g transform="translate(0, 355)">
+      <polygon points="-50,0 50,0 70,55 -70,55" class="cad-slab-fill" />
+      <line x1="-70" y1="55" x2="70" y2="55" class="cad-mono-bold" />
+      <line x1="-50" y1="0" x2="-70" y2="55" class="cad-mono-mid" />
+      <line x1="50" y1="0" x2="70" y2="55" class="cad-mono-mid" />
+    </g>
+    <g transform="translate(0, 410)">
+      <polygon points="-55,0 55,0 77,55 -77,55" class="cad-slab-fill" />
+      <line x1="-77" y1="55" x2="77" y2="55" class="cad-mono-bold" />
+      <line x1="-55" y1="0" x2="-77" y2="55" class="cad-mono-mid" />
+      <line x1="55" y1="0" x2="77" y2="55" class="cad-mono-mid" />
+    </g>
+    <g transform="translate(0, 465)">
+      <polygon points="-60,0 60,0 84,55 -84,55" class="cad-slab-fill" />
+      <line x1="-84" y1="55" x2="84" y2="55" class="cad-mono-bold" />
+      <line x1="-60" y1="0" x2="-84" y2="55" class="cad-mono-mid" />
+      <line x1="60" y1="0" x2="84" y2="55" class="cad-mono-mid" />
+    </g>
+
+    <!-- Base Podiums (0m - 100m) -->
+    <polygon points="-84,520 84,520 110,720 -110,720" class="cad-slab-fill" />
+    <line x1="-84" y1="520" x2="-110" y2="720" class="cad-mono-bold" stroke-width="2.6" />
+    <line x1="84" y1="520" x2="110" y2="720" class="cad-mono-bold" stroke-width="2.6" />
+
+    <!-- TUNED MASS DAMPER (HARMONIC SWAY PENDULUM) -->
+    <!-- Oscillates at the exact natural period of the building -->
+    <g class="cad-damper-anim">
+      <!-- Suspension Cables -->
+      <line x1="-18" y1="250" x2="-8" y2="290" class="cad-mono-mid" />
+      <line x1="18" y1="250" x2="8" y2="290" class="cad-mono-mid" />
+      <!-- 660-Tonne Golden Seismic Sphere -->
+      <circle cx="0" cy="290" r="22" fill="rgba(255, 255, 255, 0.02)" stroke="var(--text-main)" stroke-width="2" />
+      <circle cx="0" cy="290" r="14" class="cad-mono-dash" />
+      <circle cx="0" cy="290" r="4" fill="var(--text-main)" />
+      <!-- Harmonic Amplitude Wave Indicator -->
+      <path d="M -35,290 Q 0,275 35,290 Q 0,305 -35,290" class="cad-mono-thin" stroke-dasharray="3 2" />
+    </g>
+
+    <text x="96" y="275" class="cad-mono-label">TAIPEI 101</text>
+    <text x="96" y="292" class="cad-mono-text">+508.0M · 8-PAGODA SEGMENTS</text>
+    <text x="96" y="308" class="cad-mono-text">TUNED MASS DAMPER Ø=5.5M (660T)</text>
+    <text x="96" y="324" class="cad-mono-text">SEISMIC &amp; TYPHOON SWAY DAMPING</text>
+  </g>
+
+  <!-- ================= LAYER 04: EIFFEL TOWER (PARIS - 300M) ================= -->
+  <!-- Placed in the center-left field with parabolic wind arch & iron diagonal trusses -->
+  <g id="Layer_04_Eiffel_Tower" serif:id="04 Eiffel Tower Lattice" class="cad-eiffel-anim" transform="translate(740, 480) scale(0.56)">
+    <!-- Central Pylon Axis -->
+    <line x1="0" y1="0" x2="0" y2="580" class="cad-mono-dash" opacity="0.3" />
+
+    <!-- Dome Lantern Spire (+300m) -->
+    <circle cx="0" cy="0" r="4" fill="var(--text-main)" />
+    <line x1="0" y1="0" x2="0" y2="35" class="cad-mono-bold" stroke-width="2.5" />
+    <polygon points="-8,35 8,35 12,65 -12,65" class="cad-slab-fill" />
+
+    <!-- Upper Mast (115m - 300m) -->
+    <line x1="-12" y1="65" x2="-35" y2="280" class="cad-mono-bold" stroke-width="2" />
+    <line x1="12" y1="65" x2="35" y2="280" class="cad-mono-bold" stroke-width="2" />
+    <line x1="-14" y1="100" x2="18" y2="140" class="cad-mono-thin" />
+    <line x1="14" y1="100" x2="-18" y2="140" class="cad-mono-thin" />
+    <line x1="-20" y1="150" x2="25" y2="190" class="cad-mono-thin" />
+    <line x1="20" y1="150" x2="-25" y2="190" class="cad-mono-thin" />
+    <line x1="-26" y1="200" x2="31" y2="240" class="cad-mono-thin" />
+    <line x1="26" y1="200" x2="-31" y2="240" class="cad-mono-thin" />
+
+    <!-- Platform 2 (+115m) -->
+    <rect x="-45" y="280" width="90" height="14" class="cad-slab-fill" stroke-width="1.8" />
+
+    <!-- Mid Section (57m - 115m) -->
+    <line x1="-42" y1="294" x2="-85" y2="420" class="cad-mono-bold" stroke-width="2.4" />
+    <line x1="42" y1="294" x2="85" y2="420" class="cad-mono-bold" stroke-width="2.4" />
+    <line x1="-46" y1="320" x2="55" y2="365" class="cad-mono-thin" />
+    <line x1="46" y1="320" x2="-55" y2="365" class="cad-mono-thin" />
+    <line x1="-60" y1="370" x2="72" y2="415" class="cad-mono-thin" />
+    <line x1="60" y1="370" x2="-72" y2="415" class="cad-mono-thin" />
+
+    <!-- Platform 1 (+57m) -->
+    <rect x="-95" y="420" width="190" height="20" class="cad-slab-fill" stroke-width="2.2" />
+
+    <!-- Monumental Ground Arches & Splayed Pylons -->
+    <line x1="-90" y1="440" x2="-160" y2="580" class="cad-mono-bold" stroke-width="3" />
+    <line x1="90" y1="440" x2="160" y2="580" class="cad-mono-bold" stroke-width="3" />
+    <path d="M -125,580 Q 0,440 125,580" class="cad-mono-bold" stroke-width="2" />
+    <path d="M -110,580 Q 0,460 110,580" class="cad-mono-dash" />
+
+    <!-- Footing Piers -->
+    <rect x="-180" y="570" width="45" height="10" class="cad-slab-fill" />
+    <rect x="135" y="570" width="45" height="10" class="cad-slab-fill" />
+
+    <text x="-160" y="380" class="cad-mono-label">EIFFEL TOWER</text>
+    <text x="-160" y="398" class="cad-mono-text">+300.0M · WROUGHT IRON LATTICE</text>
+    <text x="-160" y="414" class="cad-mono-text">PARABOLIC WIND RESISTANCE ARCH</text>
+  </g>
+
+  <!-- ================= LAYER 05: NEPALI NYATAPOLA PAGODA (BHAKTAPUR - 1702 AD) ================= -->
+  <!-- Placed gracefully on the upper-left flank with glowing heritage Gajur -->
+  <g id="Layer_05_Nepali_Nyatapola" serif:id="05 Nepali Nyatapola Pagoda" class="cad-nyatapola-anim" transform="translate(240, 180) scale(0.64)">
+    <!-- Pinnacle Gajur Spire with glowing pulse -->
+    <circle cx="0" cy="-18" r="4" fill="var(--text-main)" class="cad-gajur-anim" />
+    <line x1="0" y1="-18" x2="0" y2="20" class="cad-mono-bold" stroke-width="2" />
+
+    <!-- Tier 5 Roof (Topmost) -->
+    <path d="M -40,40 Q 0,20 40,40 L 0,20 Z" class="cad-slab-fill" />
+    <line x1="-50" y1="45" x2="50" y2="45" class="cad-mono-bold" />
+    <line x1="-30" y1="45" x2="-15" y2="65" class="cad-mono-thin" />
+    <line x1="30" y1="45" x2="15" y2="65" class="cad-mono-thin" />
+
+    <!-- Tier 4 Roof -->
+    <path d="M -70,85 Q 0,65 70,85 L 0,65 Z" class="cad-slab-fill" />
+    <line x1="-80" y1="90" x2="80" y2="90" class="cad-mono-bold" stroke-width="1.8" />
+    <line x1="-50" y1="90" x2="-25" y2="120" class="cad-mono-thin" />
+    <line x1="50" y1="90" x2="25" y2="120" class="cad-mono-thin" />
+
+    <!-- Tier 3 Roof -->
+    <path d="M -105,140 Q 0,115 105,140 L 0,115 Z" class="cad-slab-fill" />
+    <line x1="-120" y1="145" x2="120" y2="145" class="cad-mono-bold" stroke-width="2" />
+    <line x1="-75" y1="145" x2="-40" y2="185" class="cad-mono-thin" />
+    <line x1="75" y1="145" x2="40" y2="185" class="cad-mono-thin" />
+
+    <!-- Tier 2 Roof -->
+    <path d="M -145,210 Q 0,180 145,210 L 0,180 Z" class="cad-slab-fill" />
+    <line x1="-165" y1="215" x2="165" y2="215" class="cad-mono-bold" stroke-width="2.2" />
+    <line x1="-110" y1="215" x2="-60" y2="265" class="cad-mono-thin" />
+    <line x1="110" y1="215" x2="60" y2="265" class="cad-mono-thin" />
+
+    <!-- Tier 1 Roof (Grand Plinth Eaves) -->
+    <path d="M -195,290 Q 0,250 195,290 L 0,250 Z" class="cad-slab-fill" />
+    <line x1="-220" y1="298" x2="220" y2="298" class="cad-mono-bold" stroke-width="2.8" />
+
+    <!-- 5 Stepped Stone Terraces (Pithas) -->
+    <rect x="-180" y="300" width="360" height="20" class="cad-slab-fill" stroke-width="1.6" />
+    <rect x="-150" y="320" width="300" height="20" class="cad-slab-fill" stroke-width="1.8" />
+    <rect x="-120" y="340" width="240" height="20" class="cad-slab-fill" stroke-width="2" />
+    <rect x="-90" y="360" width="180" height="20" class="cad-slab-fill" stroke-width="2.2" />
+
+    <text x="135" y="105" class="cad-mono-label">NYATAPOLA TEMPLE</text>
+    <text x="135" y="123" class="cad-mono-text">BHAKTAPUR, NEPAL (1702 AD)</text>
+    <text x="135" y="139" class="cad-mono-text">5-TIER TIMBER PAGODA RIGOR</text>
+    <text x="135" y="155" class="cad-mono-text">EARTHQUAKE RESISTANT RING BEAMS</text>
+  </g>
+
+  <!-- ================= LAYER 06: SYDNEY OPERA HOUSE (JØRN UTZON - 1973) ================= -->
+  <!-- Placed in the lower-left oceanfront with dynamic self-tracing spherical shells -->
+  <g id="Layer_06_Sydney_Opera" serif:id="06 Sydney Opera Shells" transform="translate(220, 720) scale(0.60)">
+    <!-- Base Granite Podium -->
+    <polygon points="-120,220 540,220 500,180 -80,180" class="cad-slab-fill" />
+    <line x1="-120" y1="220" x2="540" y2="220" class="cad-mono-bold" stroke-width="2" />
+
+    <!-- Shell 1 (Large Concert Hall Sail) -->
+    <path d="M 0,220 Q 120,-60 260,220" class="cad-mono-bold cad-shell-trace" stroke-width="2.6" fill="rgba(255, 255, 255, 0.02)" />
+    <path d="M 40,220 Q 130,-20 240,220" class="cad-mono-mid" />
+    <path d="M 80,220 Q 140,20 220,220" class="cad-mono-thin" />
+    <circle cx="130" cy="180" r="190" class="cad-mono-dot" />
+
+    <!-- Shell 2 (Secondary Opera Theatre Sail) -->
+    <path d="M 180,220 Q 280,-20 400,220" class="cad-mono-bold cad-shell-trace" stroke-width="2.2" fill="rgba(255, 255, 255, 0.02)" />
+    <path d="M 220,220 Q 290,20 380,220" class="cad-mono-mid" />
+
+    <!-- Shell 3 (Restaurant / Entrance Vault) -->
+    <path d="M 330,220 Q 400,60 480,220" class="cad-mono-bold" stroke-width="1.8" />
+
+    <text x="60" y="260" class="cad-mono-label">SYDNEY OPERA HOUSE</text>
+    <text x="60" y="278" class="cad-mono-text">JØRN UTZON (1973) · SPHERICAL SHELLS R=75M</text>
+    <text x="60" y="294" class="cad-mono-text">INTERLOCKING PRECAST CHEVRON RIBS</text>
+  </g>
+
+  <!-- ================= LAYER 07: FUNKY ROTATING COMPASS & GOLDEN RATIO SPIRAL ================= -->
+  <g id="Layer_07_Funky_Dials" serif:id="07 Funky Dials and Spirals">
+    <!-- Center Rotating Technical Compass Reticle (Center: 960, 540) -->
+    <g class="cad-compass-spin">
+      <circle cx="960" cy="540" r="150" class="cad-mono-mid" stroke-width="1.2" />
+      <circle cx="960" cy="540" r="300" class="cad-mono-dash" stroke-width="1" />
+      <circle cx="960" cy="540" r="450" class="cad-mono-bold" stroke-width="1.5" />
+      <circle cx="960" cy="540" r="600" class="cad-mono-dot" />
+
+      <line x1="960" y1="80" x2="960" y2="1000" class="cad-mono-dash" />
+      <line x1="500" y1="540" x2="1420" y2="540" class="cad-mono-dash" />
+      <line x1="640" y1="220" x2="1280" y2="860" class="cad-mono-dash" />
+      <line x1="1280" y1="220" x2="640" y2="860" class="cad-mono-dash" />
+
+      <text x="960" y="70" class="cad-mono-text" text-anchor="middle">000° AZIMUTH NORTH</text>
+      <text x="1435" y="544" class="cad-mono-text">090° EAST</text>
+      <text x="960" y="1018" class="cad-mono-text" text-anchor="middle">180° SOUTH</text>
+      <text x="485" y="544" class="cad-mono-text" text-anchor="end">270° WEST</text>
+    </g>
+
+    <!-- Counter-Rotating Caliper Ring -->
+    <g class="cad-compass-counter">
+      <circle cx="960" cy="540" r="220" class="cad-mono-dash" stroke-width="0.8" />
+      <circle cx="960" cy="540" r="380" class="cad-mono-dash" stroke-width="0.8" />
+      <line x1="960" y1="310" x2="960" y2="330" class="cad-mono-bold" stroke-width="2" />
+      <line x1="960" y1="750" x2="960" y2="770" class="cad-mono-bold" stroke-width="2" />
+      <line x1="730" y1="540" x2="750" y2="540" class="cad-mono-bold" stroke-width="2" />
+      <line x1="1170" y1="540" x2="1190" y2="540" class="cad-mono-bold" stroke-width="2" />
+    </g>
+
+    <!-- Funky Golden Ratio Logarithmic Spiral (Lower Right) -->
+    <g transform="translate(1420, 760) scale(0.70)">
+      <path d="M 0,220 A 220,220 0 0,1 220,0 A 136,136 0 0,1 356,136 A 84,84 0 0,1 272,220 A 52,52 0 0,1 220,168" class="cad-mono-bold cad-golden-trace" stroke-width="2.2" />
+      <text x="20" y="245" class="cad-mono-text">GOLDEN RATIO SPATIAL PROPORTION φ=1.618</text>
+      <text x="20" y="262" class="cad-mono-text">SCALE &amp; SPACES CIVIL &amp; INTERIOR RIGOR</text>
+    </g>
+  </g>
+</svg>
   </div>
 
 

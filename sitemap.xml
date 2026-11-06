@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Primary Homepage & Canonical Root -->
+  <url>
+    <loc>https://chetankumarsarraf.com.np/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <!-- Civil Engineering & Architecture Portfolio -->
+  <url>
+    <loc>https://chetankumarsarraf.com.np/#portfolio</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <!-- Architectural Articles & Design Journal -->
+  <url>
+    <loc>https://chetankumarsarraf.com.np/#articles</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Verified Client & Visitor Reviews -->
+  <url>
+    <loc>https://chetankumarsarraf.com.np/#reviews</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Direct Studio Consultation Desk -->
+  <url>
+    <loc>https://chetankumarsarraf.com.np/#contact</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+</urlset>
