@@ -201,10 +201,10 @@
     }
 
     .badge-pill {
-      display: inline-flex; align-items: center; gap: 0.45rem;
-      background: var(--bg-elevated); border: 1px solid var(--border-subtle);
-      padding: 0.35rem 0.9rem; border-radius: 9999px; font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 0.9rem; font-weight: 600;
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: transparent; border: none; border-bottom: 2px solid var(--text-main);
+      padding: 0.2rem 0; border-radius: 0; font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-main); margin-bottom: 0.9rem; font-weight: 700;
     }
     .badge-pill .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--text-main); }
 
@@ -219,14 +219,18 @@
     }
 
     .btn-pill {
-      display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.55rem 1.25rem; border-radius: 9999px;
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 0.76rem; font-weight: 600; letter-spacing: -0.01em;
-      text-decoration: none; cursor: pointer; transition: all 0.2s ease; border: 1px solid transparent;
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.45rem; padding: 0.45rem 0.65rem; border-radius: 0;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 0.78rem; font-weight: 700; letter-spacing: -0.01em;
+      text-decoration: none; cursor: pointer; transition: all 0.18s ease; border: none; background: transparent; position: relative; color: var(--text-main);
     }
-    .btn-dark { background: var(--brand-dark); color: var(--bg-page); border-color: var(--brand-dark); }
-    .btn-dark:hover { opacity: 0.88; transform: translateY(-1px); }
-    .btn-light { background: var(--bg-elevated); color: var(--text-main); border-color: var(--border-subtle); }
-    .btn-light:hover { border-color: var(--text-main); transform: translateY(-1px); }
+    .btn-dark {
+      background: transparent; color: var(--text-main); border: none; border-bottom: 2px solid var(--text-main); font-weight: 800;
+    }
+    .btn-dark:hover { opacity: 0.75; transform: translateY(-1px); }
+    .btn-light {
+      background: transparent; color: var(--text-muted); border: none; border-bottom: 2px solid transparent; font-weight: 600;
+    }
+    .btn-light:hover, .btn-light.active { color: var(--text-main); border-bottom-color: var(--text-main); transform: translateY(-1px); }
 
     /* Menu Drawer */
     #menuDrawer {
@@ -314,18 +318,20 @@
     }
     .hub-mode-toggle { display: flex; justify-content: center; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 2rem; }
     .hub-chip-btn {
-      padding: 0.65rem 1.4rem; border-radius: 9999px; border: 1px solid var(--border-subtle);
-      background: var(--bg-elevated); color: var(--text-main); font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 0.82rem; font-weight: 700; cursor: pointer; transition: all 0.2s ease;
+      padding: 0.45rem 0.85rem; border-radius: 0; border: none; border-bottom: 2px solid transparent;
+      background: transparent; color: var(--text-muted); font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.82rem; font-weight: 700; cursor: pointer; transition: all 0.18s ease;
     }
-    .hub-chip-btn.active { background: var(--brand-dark); color: var(--bg-page); border-color: var(--brand-dark); }
+    .hub-chip-btn:hover { color: var(--text-main); }
+    .hub-chip-btn.active { background: transparent; color: var(--text-main); border-bottom-color: var(--text-main); font-weight: 800; }
     .tool-scroll-chips { display: flex; gap: 0.5rem; overflow-x: auto; padding-bottom: 0.6rem; margin-bottom: 1.6rem; }
     .subtool-chip {
-      padding: 0.45rem 0.95rem; border-radius: 9999px; border: 1px solid var(--border-subtle);
-      background: var(--bg-elevated); color: var(--text-muted); font-size: 0.78rem; font-weight: 600;
-      white-space: nowrap; cursor: pointer; transition: all 0.2s ease; font-family: 'Plus Jakarta Sans', sans-serif;
+      padding: 0.4rem 0.75rem; border-radius: 0; border: none; border-bottom: 2px solid transparent;
+      background: transparent; color: var(--text-muted); font-size: 0.78rem; font-weight: 600;
+      white-space: nowrap; cursor: pointer; transition: all 0.18s ease; font-family: 'Plus Jakarta Sans', sans-serif;
     }
-    .subtool-chip.active { background: var(--brand-cyan); color: #fff; border-color: var(--brand-cyan); }
+    .subtool-chip:hover { color: var(--text-main); }
+    .subtool-chip.active { background: transparent; color: var(--brand-cyan); border-bottom-color: var(--brand-cyan); font-weight: 700; }
     .hub-tool-panel { display: none; }
     .hub-tool-panel.active { display: block; animation: fadeIn 0.3s ease; }
 
@@ -555,55 +561,49 @@
       display: block;
     }
 
-    /* Icon-Only Capsule Navbar Actions */
+    /* Icon-Only Capsule Navbar Actions (Pure Borderless Icons) */
     .nav-icon-btn {
-      width: 35px;
-      height: 35px;
-      border-radius: 50%;
-      border: 1px solid var(--border-subtle);
-      background: var(--bg-card);
+      width: 32px;
+      height: 32px;
+      border-radius: 0;
+      border: none !important;
+      background: transparent !important;
       color: var(--text-main);
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.86rem;
+      font-size: 1.05rem;
       cursor: pointer;
       text-decoration: none;
       position: relative;
-      transition: all 0.2s ease;
+      transition: all 0.18s ease;
+      box-shadow: none !important;
     }
     .nav-icon-btn:hover {
-      border-color: var(--text-main);
-      background: var(--bg-elevated);
+      opacity: 0.72;
       transform: translateY(-1px);
     }
     .nav-icon-btn.wa-icon {
-      background: var(--bg-card);
-      border-color: var(--border-subtle);
       color: var(--text-main);
     }
     .nav-icon-btn.user-icon {
       color: var(--text-main);
     }
     .nav-icon-btn.user-icon.signed-in {
-      border-color: var(--text-main);
       color: var(--text-main);
     }
     .nav-icon-btn.user-icon.signed-in::after {
       content: '';
       position: absolute;
-      top: 2px;
-      right: 2px;
-      width: 7px;
-      height: 7px;
+      top: 1px;
+      right: 1px;
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
-      background: var(--text-main);
-      border: 2px solid var(--bg-card);
+      background: #10b981;
     }
     .nav-icon-btn.menu-icon {
-      background: var(--brand-dark);
-      border-color: var(--brand-dark);
-      color: var(--bg-page);
+      color: var(--text-main);
     }
 
     /* Upgraded Menu App Launcher Overlay (Compact Icons + Short Words) */
@@ -733,16 +733,18 @@
     .auth-tab-bar {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      background: var(--bg-elevated);
-      padding: 4px;
-      border-radius: 9999px;
+      background: transparent;
+      padding: 0;
+      border-radius: 0;
       margin: 1.2rem 0;
-      border: 1px solid var(--border-subtle);
+      border: none;
+      border-bottom: 1px solid var(--border-subtle);
     }
     .auth-tab-btn {
       padding: 0.55rem;
-      border-radius: 9999px;
+      border-radius: 0;
       border: none;
+      border-bottom: 2px solid transparent;
       background: transparent;
       color: var(--text-muted);
       font-family: 'Plus Jakarta Sans', monospace;
@@ -750,17 +752,19 @@
       font-weight: 700;
       text-transform: uppercase;
       cursor: pointer;
+      transition: all 0.18s ease;
     }
     .auth-tab-btn.active {
-      background: var(--brand-dark);
-      color: var(--bg-page);
+      background: transparent;
+      color: var(--text-main);
+      border-bottom-color: var(--text-main);
     }
     .google-auth-btn {
       width: 100%;
       padding: 0.78rem 1rem;
-      border-radius: 14px;
+      border-radius: 0;
       border: 1px solid var(--border-subtle);
-      background: var(--bg-elevated);
+      background: transparent;
       color: var(--text-main);
       font-family: 'Plus Jakarta Sans', sans-serif;
       font-weight: 700;
@@ -846,29 +850,40 @@
     .star-picker button.lit { color: var(--text-main); }
     .star-picker button:hover { transform: scale(1.15); }
 
-    /* ================= FLOATING GOOGLE CHAT WIDGET ================= */
+    /* ================= FLOATING & DRAGGABLE GOOGLE CHAT WIDGET (BORDERLESS ICON) ================= */
     #gchatLauncher {
       position: fixed;
       bottom: 22px;
       right: 22px;
       z-index: 9995;
-      background: var(--brand-dark);
-      color: var(--bg-page);
-      border: 1px solid var(--border-subtle);
-      border-radius: 9999px;
-      padding: 0.52rem 1.05rem;
-      display: flex;
+      background: transparent;
+      color: var(--text-main);
+      border: none;
+      border-radius: 0;
+      padding: 6px;
+      display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      box-shadow: var(--shadow-md);
-      cursor: pointer;
+      justify-content: center;
+      gap: 0.35rem;
+      box-shadow: none;
+      cursor: grab;
+      touch-action: none;
+      user-select: none;
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 0.76rem;
-      font-weight: 600;
-      letter-spacing: -0.01em;
-      transition: all 0.2s ease;
+      font-size: 1.45rem;
+      transition: opacity 0.18s ease, transform 0.18s ease;
     }
-    #gchatLauncher:hover { opacity: 0.88; transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+    #gchatLauncher:active { cursor: grabbing; }
+    #gchatLauncher:hover { opacity: 0.75; transform: scale(1.08); }
+    .gchat-live-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #10b981;
+      position: absolute;
+      top: 3px;
+      right: 3px;
+    }
     #gchatPanel {
       display: none;
       position: fixed;
@@ -880,7 +895,7 @@
       max-height: calc(100vh - 100px);
       background: var(--bg-card);
       border: 1px solid var(--border-subtle);
-      border-radius: 22px;
+      border-radius: 18px;
       box-shadow: var(--shadow-lg);
       z-index: 9996;
       flex-direction: column;
@@ -912,29 +927,28 @@
       transform: translateX(-50%);
       z-index: 25;
       display: inline-flex;
-      background: rgba(255, 255, 255, 0.96);
-      border: 1px solid rgba(15, 23, 42, 0.10);
-      border-radius: 9999px;
-      padding: 4px;
-      gap: 3px;
-      box-shadow: 0 6px 22px rgba(15, 23, 42, 0.10);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      padding: 0;
+      gap: 6px;
+      box-shadow: none;
     }
     [data-theme="dark"] .mks-2d-viewbar {
-      background: rgba(15, 23, 42, 0.92);
-      border-color: rgba(255, 255, 255, 0.14);
-      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
+      background: transparent;
+      border: none;
+      box-shadow: none;
     }
     .mks-view-btn {
       background: transparent;
       border: none;
+      border-radius: 0;
+      border-bottom: 2px solid transparent;
       color: #52525b;
       font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 0.73rem;
       font-weight: 700;
-      padding: 0.36rem 0.78rem;
-      border-radius: 9999px;
+      padding: 0.36rem 0.65rem;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
@@ -945,20 +959,22 @@
     [data-theme="dark"] .mks-view-btn { color: #94a3b8; }
     .mks-view-btn:hover {
       color: #18181b;
-      background: rgba(15, 23, 42, 0.05);
+      border-bottom-color: #a1a1aa;
     }
     [data-theme="dark"] .mks-view-btn:hover {
       color: #f8fafc;
-      background: rgba(255, 255, 255, 0.08);
+      border-bottom-color: #64748b;
     }
     .mks-view-btn.active {
-      background: #18181b;
-      color: #ffffff;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+      background: transparent;
+      color: #18181b;
+      border-bottom: 2px solid #18181b;
+      box-shadow: none;
     }
     [data-theme="dark"] .mks-view-btn.active {
-      background: #38bdf8;
-      color: #090d16;
+      background: transparent;
+      color: #38bdf8;
+      border-bottom: 2px solid #38bdf8;
     }
 
     .mks-quick-stamp-grid {
@@ -1172,9 +1188,10 @@
     }
     .mks-wiz-step {
       background: transparent;
-      border: 1px solid transparent;
-      border-radius: 9999px;
-      padding: 0.28rem 0.72rem;
+      border: none;
+      border-radius: 0;
+      border-bottom: 2px solid transparent;
+      padding: 0.28rem 0.55rem;
       font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 0.72rem;
       font-weight: 600;
@@ -1187,51 +1204,53 @@
       transition: all 0.18s ease;
     }
     [data-theme="dark"] .mks-wiz-step { color: #94a3b8; }
-    .mks-wiz-step:hover { color: #18181b; background: rgba(15,23,42,0.04); }
-    [data-theme="dark"] .mks-wiz-step:hover { color: #fff; background: rgba(255,255,255,0.06); }
+    .mks-wiz-step:hover { color: #18181b; }
+    [data-theme="dark"] .mks-wiz-step:hover { color: #fff; }
     .mks-wiz-step .num {
-      width: 18px;
-      height: 18px;
-      border-radius: 9999px;
-      background: #e4e4e7;
+      width: 16px;
+      height: 16px;
+      border-radius: 0;
+      background: transparent;
       color: #3f3f46;
       font-size: 0.65rem;
       font-weight: 800;
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      border-bottom: 1px solid currentColor;
     }
-    [data-theme="dark"] .mks-wiz-step .num { background: #27272a; color: #cbd5e1; }
+    [data-theme="dark"] .mks-wiz-step .num { background: transparent; color: #cbd5e1; }
     .mks-wiz-step.active {
-      background: #ffffff;
-      border-color: #d4d4d8;
+      background: transparent;
+      border-color: transparent;
+      border-bottom: 2px solid #18181b;
       color: #18181b;
-      font-weight: 700;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+      font-weight: 800;
+      box-shadow: none;
     }
     [data-theme="dark"] .mks-wiz-step.active {
-      background: #1e2433;
-      border-color: #38bdf8;
+      background: transparent;
+      border-bottom-color: #38bdf8;
       color: #f8fafc;
     }
     .mks-wiz-step.active .num {
-      background: #2563eb;
-      color: #ffffff;
+      background: transparent;
+      color: #2563eb;
     }
     .mks-wiz-arrow { color: #d4d4d8; font-size: 0.65rem; }
     [data-theme="dark"] .mks-wiz-arrow { color: #3f3f46; }
 
     .mks-pill-group {
       display: inline-flex;
-      background: #f4f4f0;
-      border: 1px solid #e4e4de;
-      border-radius: 9999px;
-      padding: 3px;
-      gap: 2px;
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      padding: 0;
+      gap: 4px;
     }
     [data-theme="dark"] .mks-pill-group {
-      background: #1a1e29;
-      border-color: #2b3040;
+      background: transparent;
+      border-color: transparent;
     }
     .mks-seg-btn {
       background: transparent;
@@ -1240,8 +1259,9 @@
       font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 0.73rem;
       font-weight: 700;
-      padding: 0.34rem 0.78rem;
-      border-radius: 9999px;
+      padding: 0.34rem 0.55rem;
+      border-radius: 0;
+      border-bottom: 2px solid transparent;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
@@ -1253,24 +1273,27 @@
     .mks-seg-btn:hover { color: #18181b; }
     [data-theme="dark"] .mks-seg-btn:hover { color: #ffffff; }
     .mks-seg-btn.active {
-      background: #18181b;
-      color: #ffffff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.14);
+      background: transparent;
+      color: #18181b;
+      border-bottom: 2px solid #18181b;
+      box-shadow: none;
     }
     [data-theme="dark"] .mks-seg-btn.active {
-      background: #f8fafc;
-      color: #0f172a;
+      background: transparent;
+      color: #38bdf8;
+      border-bottom: 2px solid #38bdf8;
     }
 
     .mks-btn {
-      background: #ffffff;
-      border: 1px solid #e2e2dc;
+      background: transparent;
+      border: none;
       color: #18181b;
       font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 0.74rem;
-      font-weight: 600;
-      padding: 0.38rem 0.82rem;
-      border-radius: 9999px;
+      font-weight: 700;
+      padding: 0.38rem 0.65rem;
+      border-radius: 0;
+      border-bottom: 1px solid transparent;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
@@ -1280,43 +1303,48 @@
       white-space: nowrap;
     }
     [data-theme="dark"] .mks-btn {
-      background: #1a1e29;
-      border-color: #2d3343;
+      background: transparent;
+      border-color: transparent;
       color: #f4f4f5;
     }
-    .mks-btn:hover { border-color: #18181b; background: #fafaf8; }
-    [data-theme="dark"] .mks-btn:hover { border-color: #38bdf8; background: #222836; }
+    .mks-btn:hover { border-bottom-color: #18181b; opacity: 0.8; }
+    [data-theme="dark"] .mks-btn:hover { border-bottom-color: #38bdf8; opacity: 0.8; }
+    .mks-btn.active { border-bottom: 2px solid currentColor; }
     .mks-btn:disabled { opacity: 0.38; cursor: not-allowed; }
-    .mks-btn-icon { padding: 0.38rem 0.6rem; }
+    .mks-btn-icon { padding: 0.38rem 0.45rem; font-size: 0.88rem; }
 
     .mks-btn-gold {
-      background: #18181b;
-      border-color: #18181b;
-      color: #ffffff !important;
-      font-weight: 700;
+      background: transparent;
+      color: #18181b !important;
+      font-weight: 800;
+      border: none;
+      border-bottom: 2px solid #18181b;
     }
     [data-theme="dark"] .mks-btn-gold {
-      background: #f8fafc;
-      border-color: #f8fafc;
-      color: #0f172a !important;
+      background: transparent;
+      color: #f8fafc !important;
+      border-bottom-color: #f8fafc;
     }
-    .mks-btn-gold:hover { opacity: 0.9; transform: translateY(-1px); }
+    .mks-btn-gold:hover { opacity: 0.8; transform: translateY(-1px); }
 
     .mks-btn-cyan {
-      background: #2563eb;
-      border-color: #2563eb;
-      color: #ffffff !important;
-      font-weight: 700;
-      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+      background: transparent;
+      color: #2563eb !important;
+      font-weight: 800;
+      border: none;
+      border-bottom: 2px solid #2563eb;
+      box-shadow: none;
     }
-    .mks-btn-cyan:hover { background: #1d4ed8; border-color: #1d4ed8; color: #ffffff !important; }
+    .mks-btn-cyan:hover { opacity: 0.8; }
 
     .mks-btn-danger {
-      background: rgba(239, 68, 68, 0.08);
-      border-color: rgba(239, 68, 68, 0.28);
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid #dc2626;
       color: #dc2626;
+      font-weight: 700;
     }
-    .mks-btn-danger:hover { background: rgba(239, 68, 68, 0.14); border-color: #dc2626; }
+    .mks-btn-danger:hover { opacity: 0.8; }
 
     .mks-workspace {
       flex: 1;
@@ -1679,27 +1707,29 @@
 
     .mks-chip-wrap { display: flex; flex-wrap: wrap; gap: 0.36rem; }
     .mks-chip {
-      background: #fafaf8;
-      border: 1px solid #e2e2dc;
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      border-bottom: 2px solid transparent;
       color: #52525b;
-      padding: 0.28rem 0.65rem;
-      border-radius: 9999px;
+      padding: 0.28rem 0.55rem;
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 0.7rem;
+      font-size: 0.72rem;
       font-weight: 600;
       cursor: pointer;
       transition: all 0.15s ease;
     }
     [data-theme="dark"] .mks-chip {
-      background: #1a1e29;
-      border-color: #2d3343;
+      background: transparent;
+      border-color: transparent;
       color: #94a3b8;
     }
-    .mks-chip:hover { border-color: #2563eb; color: #2563eb; }
+    .mks-chip:hover { border-bottom-color: #2563eb; color: #2563eb; }
     .mks-chip.active {
-      background: #2563eb;
-      border-color: #2563eb;
-      color: #ffffff;
+      background: transparent;
+      border-bottom: 2px solid #2563eb;
+      color: #2563eb;
+      font-weight: 800;
     }
 
     .mks-tpl-card {
@@ -1781,31 +1811,30 @@
       bottom: 44px;
       left: 50%;
       transform: translateX(-50%);
-      background: rgba(255, 255, 255, 0.97);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(15, 23, 42, 0.10);
-      border-radius: 9999px;
-      padding: 5px 7px;
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      padding: 0;
       display: flex;
       flex-direction: row;
       align-items: center;
-      gap: 4px;
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+      gap: 6px;
+      box-shadow: none;
       z-index: 22;
       max-width: 96%;
       overflow-x: auto;
     }
     [data-theme="dark"] .mks-cad-dock {
-      background: rgba(15, 23, 42, 0.94);
-      border-color: rgba(255, 255, 255, 0.14);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+      background: transparent;
+      border: none;
+      box-shadow: none;
     }
     .mks-tool-btn {
-      height: 34px;
-      padding: 0 0.68rem;
-      border-radius: 9999px;
-      border: 1px solid transparent;
+      height: 32px;
+      padding: 0 0.55rem;
+      border-radius: 0;
+      border: none;
+      border-bottom: 2px solid transparent;
       background: transparent;
       color: #3f3f46;
       cursor: pointer;
@@ -1828,19 +1857,21 @@
       opacity: 1;
       margin-top: 0;
     }
-    .mks-tool-btn:hover { color: #18181b; background: #f4f4f0; }
-    [data-theme="dark"] .mks-tool-btn:hover { color: #ffffff; background: rgba(255,255,255,0.08); }
+    .mks-tool-btn:hover { color: #18181b; border-bottom-color: #a1a1aa; }
+    [data-theme="dark"] .mks-tool-btn:hover { color: #ffffff; border-bottom-color: #64748b; }
     .mks-tool-btn.active {
-      background: #18181b;
-      color: #ffffff;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+      background: transparent;
+      color: #18181b;
+      border-bottom: 2px solid #18181b;
+      font-weight: 800;
     }
     [data-theme="dark"] .mks-tool-btn.active {
-      background: #2563eb;
-      color: #ffffff;
+      background: transparent;
+      color: #38bdf8;
+      border-bottom: 2px solid #38bdf8;
     }
 
-    /* 3D Maket Floating Pills & Render Prompt Bar */
+    /* 3D Maket Floating Tools & Render Prompt Bar */
     .mks-3d-top {
       position: absolute;
       top: 12px;
@@ -1855,35 +1886,34 @@
       z-index: 22;
     }
     .mks-3d-card {
-      background: rgba(255, 255, 255, 0.96);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border: 1px solid rgba(15, 23, 42, 0.10);
-      box-shadow: 0 6px 22px rgba(15, 23, 42, 0.12);
-      border-radius: 9999px;
-      padding: 4px 7px;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      border-radius: 0;
+      padding: 0;
       display: flex;
       align-items: center;
-      gap: 3px;
+      gap: 6px;
       pointer-events: auto;
       flex-wrap: nowrap;
     }
     [data-theme="dark"] .mks-3d-card {
-      background: rgba(15, 23, 42, 0.92);
-      border-color: rgba(255, 255, 255, 0.14);
+      background: transparent;
+      border: none;
     }
     .mks-3d-storey-dock {
-      border-color: rgba(37, 99, 235, 0.25);
+      border: none;
     }
     .mks-3d-mini {
       background: transparent;
-      border: 1px solid transparent;
+      border: none;
+      border-radius: 0;
+      border-bottom: 2px solid transparent;
       color: #3f3f46;
       font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 0.72rem;
       font-weight: 700;
-      padding: 4px 10px;
-      border-radius: 9999px;
+      padding: 4px 6px;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
@@ -1892,16 +1922,18 @@
       white-space: nowrap;
     }
     [data-theme="dark"] .mks-3d-mini { color: #cbd5e1; }
-    .mks-3d-mini:hover { color: #18181b; background: rgba(15, 23, 42, 0.06); }
-    [data-theme="dark"] .mks-3d-mini:hover { color: #ffffff; background: rgba(255, 255, 255, 0.1); }
+    .mks-3d-mini:hover { color: #18181b; border-bottom-color: #a1a1aa; }
+    [data-theme="dark"] .mks-3d-mini:hover { color: #ffffff; border-bottom-color: #64748b; }
     .mks-3d-mini.active {
-      background: #18181b;
-      color: #ffffff;
-      font-weight: 700;
+      background: transparent;
+      color: #18181b;
+      border-bottom: 2px solid #18181b;
+      font-weight: 800;
     }
     [data-theme="dark"] .mks-3d-mini.active {
-      background: #38bdf8;
-      color: #0b0f19;
+      background: transparent;
+      color: #38bdf8;
+      border-bottom: 2px solid #38bdf8;
     }
 
     .mks-3d-styles {
@@ -1909,37 +1941,39 @@
       bottom: 92px;
       left: 50%;
       transform: translateX(-50%);
-      background: rgba(255, 255, 255, 0.94);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(15, 23, 42, 0.10);
-      border-radius: 9999px;
-      padding: 3px 6px;
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      padding: 0;
       display: flex;
-      gap: 3px;
+      gap: 6px;
       z-index: 20;
       max-width: 94%;
       overflow-x: auto;
-      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.10);
+      box-shadow: none;
     }
     [data-theme="dark"] .mks-3d-styles {
-      background: rgba(15, 23, 42, 0.90);
-      border-color: rgba(255, 255, 255, 0.14);
+      background: transparent;
+      border: none;
     }
     .mks-style-pill {
       background: transparent;
       border: none;
+      border-radius: 0;
+      border-bottom: 2px solid transparent;
       color: #52525b;
       font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 0.68rem;
       font-weight: 700;
-      padding: 4px 9px;
-      border-radius: 9999px;
+      padding: 4px 6px;
       cursor: pointer;
       white-space: nowrap;
     }
     [data-theme="dark"] .mks-style-pill { color: #94a3b8; }
-    .mks-style-pill.active { background: #18181b; color: #ffffff; }
-    [data-theme="dark"] .mks-style-pill.active { background: #2563eb; color: #ffffff; }
+    .mks-style-pill:hover { color: #18181b; }
+    [data-theme="dark"] .mks-style-pill:hover { color: #ffffff; }
+    .mks-style-pill.active { background: transparent; color: #18181b; border-bottom: 2px solid #18181b; }
+    [data-theme="dark"] .mks-style-pill.active { background: transparent; color: #38bdf8; border-bottom: 2px solid #38bdf8; }
 
     /* Maket 3D Bottom "Render image" Prompt Bar */
     .mks-render-bar {
@@ -2029,22 +2063,23 @@
     }
     .mks-status-grp { display: flex; align-items: center; gap: 0.65rem; white-space: nowrap; }
     .mks-mini-toggle {
-      background: #f5f4ef;
-      border: 1px solid #e2e1dc;
-      color: #52525b;
+      background: transparent;
+      border: none;
+      color: #71717a;
       font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 0.66rem;
       font-weight: 700;
-      padding: 2px 8px;
-      border-radius: 9999px;
+      padding: 2px 5px;
+      border-radius: 0;
+      border-bottom: 2px solid transparent;
       cursor: pointer;
     }
     [data-theme="dark"] .mks-mini-toggle {
-      background: #1a1e29;
-      border-color: #2d3343;
-      color: #cbd5e1;
+      background: transparent;
+      border-color: transparent;
+      color: #94a3b8;
     }
-    .mks-mini-toggle.active { color: #2563eb; border-color: #2563eb; background: rgba(37,99,235,0.08); }
+    .mks-mini-toggle.active { color: #2563eb; border-bottom: 2px solid #2563eb; background: transparent; }
 
     /* Chat Assistant inside Guided Left Sidebar */
     .mks-chat-wrap { flex: 1; display: flex; flex-direction: column; min-height: 0; padding: 0 !important; }
@@ -2278,28 +2313,43 @@
         margin-bottom: 1rem !important;
       }
       #home .hero-grid > div:last-child {
-        text-align: left !important;
+        text-align: center !important;
+        margin-top: 1.5rem !important;
+        display: flex !important;
+        justify-content: center !important;
       }
-      #home .hero-grid > div:last-child > div {
-        display: inline-flex !important;
-        align-items: center;
-        gap: 0.85rem;
-        padding: 0.65rem 0.85rem !important;
-        border-radius: 16px !important;
+      #home .hero-grid > div:last-child > div,
+      #heroCardFrame {
+        display: block !important;
+        width: min(360px, 92vw) !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+      }
+      #heroPhotoContainer {
+        width: 100% !important;
+        height: 440px !important;
+        max-height: 60vh !important;
       }
       #sheetAboutPhoto {
-        width: 60px !important;
-        height: 60px !important;
-        border-radius: 12px !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center top !important;
+        border-radius: 16px !important;
+        display: block !important;
       }
       #home .hero-grid > div:last-child > div > div:last-child {
-        margin-top: 0 !important;
+        margin-top: 0.85rem !important;
       }
       #sheetAboutPhoto + div div:first-child {
-        font-size: 0.88rem !important;
+        font-size: 1.05rem !important;
+        font-weight: 800 !important;
       }
       #sheetAboutPhoto + div div:last-child {
-        font-size: 0.65rem !important;
+        font-size: 0.72rem !important;
       }
 
       #menuDrawer {
@@ -2335,21 +2385,21 @@
         padding: 0.35rem 0.5rem !important;
       }
       #appViewBar .btn-pill {
-        padding: 0.28rem 0.7rem !important;
+        padding: 0.28rem 0.5rem !important;
         font-size: 0.66rem !important;
       }
       #activeAppTitle {
         font-size: 0.72rem !important;
       }
       #gchatLauncher {
-        bottom: 14px !important;
-        right: 14px !important;
-        padding: 0.45rem 0.85rem !important;
-        font-size: 0.72rem !important;
+        bottom: 16px !important;
+        right: 16px !important;
+        font-size: 1.35rem !important;
+        padding: 6px !important;
       }
       #gchatPanel {
         right: 10px !important;
-        bottom: 58px !important;
+        bottom: 64px !important;
         width: calc(100vw - 20px) !important;
         height: 440px !important;
         border-radius: 18px !important;
@@ -2361,7 +2411,7 @@
         max-width: 220px !important;
       }
       .hub-chip-btn {
-        padding: 0.45rem 0.95rem !important;
+        padding: 0.35rem 0.7rem !important;
         font-size: 0.74rem !important;
       }
       .container {
@@ -2370,6 +2420,47 @@
       .planner-card, .hub-container {
         padding: 1.25rem !important;
         border-radius: 18px !important;
+      }
+
+      /* Mobile AI Studio Adaptations */
+      .mks-studio-card {
+        height: 620px !important;
+      }
+      .mks-sidebar-left {
+        width: 285px !important;
+        min-width: 285px !important;
+        position: absolute !important;
+        top: 0 !important;
+        bottom: 32px !important;
+        left: 0 !important;
+        z-index: 50 !important;
+        box-shadow: 0 12px 36px rgba(0,0,0,0.35) !important;
+      }
+      .mks-sidebar-left.collapsed {
+        margin-left: -285px !important;
+      }
+      .mks-sidebar-right {
+        width: 285px !important;
+        min-width: 285px !important;
+        position: absolute !important;
+        top: 0 !important;
+        bottom: 32px !important;
+        right: 0 !important;
+        z-index: 50 !important;
+        box-shadow: 0 12px 36px rgba(0,0,0,0.35) !important;
+      }
+      .mks-sidebar-right.collapsed {
+        margin-right: -285px !important;
+      }
+      .mks-stepbar {
+        padding: 0.28rem 0.5rem !important;
+      }
+      .mks-topbar {
+        padding: 0.35rem 0.5rem !important;
+      }
+      .mks-render-bar {
+        width: 94% !important;
+        bottom: 38px !important;
       }
     }
   
@@ -2474,13 +2565,13 @@
     /* CAD Drafting Linework Toggle Button in Footer & Status Bars */
     .cad-drafting-pill-btn {
       display: inline-flex; align-items: center; gap: 0.45rem;
-      padding: 0.35rem 0.8rem; border-radius: 9999px;
-      background: var(--bg-elevated); border: 1px solid var(--border-subtle);
+      padding: 0.35rem 0.5rem; border-radius: 0;
+      background: transparent; border: none; border-bottom: 2px solid transparent;
       color: var(--text-muted); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem;
       cursor: pointer; transition: all 0.2s ease;
     }
-    .cad-drafting-pill-btn:hover {
-      color: var(--text-main); border-color: var(--border-active);
+    .cad-drafting-pill-btn:hover, .cad-drafting-pill-btn.active {
+      color: var(--text-main); border-bottom-color: var(--text-main);
     }
 
   </style>
@@ -2489,7 +2580,7 @@
 
   <!-- ================= ARCHITECTURAL & CIVIL ENGINEERING DRAFTING VECTOR BACKGROUND & ANIMATION LAYER ================= -->
   <div id="cadDraftingBgLayer" aria-hidden="true">
-    <svg class="cad-bg-svg" width="100%" height="100%" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;background:transparent;">
+    <svg class="cad-bg-svg" width="100%" height="100%" viewBox="-60 -30 2040 1140" preserveAspectRatio="xMidYMid meet" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;background:transparent;">
   <!--
     ========================================================================================
     SCALE & SPACES ARCHITECTURAL MASTERPIECE VECTOR SUITE & FUNKY CAD BACKGROUND ANIMATIONS
@@ -2527,6 +2618,18 @@
         }
       }
 
+      
+    /* Affinity 3 Fluid Architectural Wave Animation behind Hero Portrait */
+    .cad-anim-hero-waves {
+      animation: affWaveMorph 10s ease-in-out infinite alternate;
+      transform-origin: center center;
+    }
+    @keyframes affWaveMorph {
+      0% { transform: translateY(0) scaleY(1); }
+      50% { transform: translateY(-8px) scaleY(1.05) rotate(0.4deg); }
+      100% { transform: translateY(4px) scaleY(0.97) rotate(-0.3deg); }
+    }
+
       /* Masterpiece Linework Styles */
       .cad-mono-bold { stroke: var(--text-main); stroke-width: 2.2px; fill: none; stroke-linecap: round; opacity: 0.38; }
       .cad-mono-mid { stroke: var(--text-main); stroke-width: 1.4px; fill: none; opacity: 0.28; }
@@ -2537,28 +2640,79 @@
       .cad-mono-text { font-family: 'JetBrains Mono', 'Plus Jakarta Sans', monospace, sans-serif; font-size: 9px; fill: var(--text-muted); letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; opacity: 0.48; }
       .cad-mono-label { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px; fill: var(--text-main); letter-spacing: 0.14em; text-transform: uppercase; font-weight: 800; opacity: 0.65; }
 
-      /* FUNKY EMBEDDED CAD ANIMATIONS */
+      /* FUNKY EMBEDDED CAD ANIMATIONS (Isolated on inner groups so SVG translate/scale never resets) */
       @keyframes cadCompassSpin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
       @keyframes cadCompassCounter { from { transform: rotate(360deg); } to { transform: rotate(0deg); } }
-      @keyframes cadBurjFloat { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
-      @keyframes cadSpireBeacon { 0%, 100% { opacity: 0.35; transform: scale(1); } 50% { opacity: 1; transform: scale(1.6); } }
-      @keyframes cadDamperHarmonic { 0% { transform: rotate(-7deg); } 50% { transform: rotate(7deg); } 100% { transform: rotate(-7deg); } }
-      @keyframes cadEiffelFloat { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-8px); } }
-      @keyframes cadNyatapolaFloat { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-7px); } }
-      @keyframes cadGajurPulse { 0%, 100% { opacity: 0.45; filter: drop-shadow(0 0 1px #fff); } 50% { opacity: 1; filter: drop-shadow(0 0 9px #fff); } }
+
+      /* Additional Architectural Masterpieces & Sky Animations */
+      @keyframes cadBirdsGlide1 {
+        0% { transform: translate(-220px, 90px); }
+        50% { transform: translate(920px, 45px); }
+        100% { transform: translate(2180px, 95px); }
+      }
+      @keyframes cadBirdsGlide2 {
+        0% { transform: translate(-280px, 175px) scale(0.72); }
+        50% { transform: translate(880px, 130px) scale(0.72); }
+        100% { transform: translate(2220px, 185px) scale(0.72); }
+      }
+      @keyframes cadWingFlap {
+        0%, 100% { transform: scaleY(1); }
+        50% { transform: scaleY(-0.7); }
+      }
+      @keyframes cadEverestPlume {
+        0%, 100% { transform: skewX(0deg) scaleX(1); opacity: 0.30; }
+        50% { transform: skewX(-6deg) scaleX(1.18); opacity: 0.75; }
+      }
+      @keyframes cadEverestFloat {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-7px); }
+      }
+      @keyframes cadDharaharaFloat {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-8px); }
+      }
+      @keyframes cadTajFloat {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-7px); }
+      }
+      @keyframes cadHowrahFloat {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-6px); }
+      }
+
+      .cad-birds-flock-1 { animation: cadBirdsGlide1 40s linear infinite; }
+      .cad-birds-flock-2 { animation: cadBirdsGlide2 52s linear infinite 15s; }
+      .cad-wing-anim { transform-box: fill-box; transform-origin: center center; animation: cadWingFlap 1.35s ease-in-out infinite; }
+      .cad-wing-anim-fast { transform-box: fill-box; transform-origin: center center; animation: cadWingFlap 0.95s ease-in-out infinite; }
+      .cad-plume-anim { transform-box: view-box; transform-origin: 0px 0px; animation: cadEverestPlume 8s ease-in-out infinite alternate; }
+      .cad-everest-anim { animation: cadEverestFloat 20s ease-in-out infinite; }
+      .cad-dharahara-anim { animation: cadDharaharaFloat 16s ease-in-out infinite 1s; }
+      .cad-taj-anim { animation: cadTajFloat 18s ease-in-out infinite 2s; }
+      .cad-howrah-anim { animation: cadHowrahFloat 19s ease-in-out infinite 3s; }
+
+      @keyframes cadBurjFloat { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-12px); } }
+      @keyframes cadTaipeiFloat { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-9px); } }
+      @keyframes cadSpireBeacon { 0%, 100% { opacity: 0.35; transform: scale(1); } 50% { opacity: 1; transform: scale(1.65); } }
+      @keyframes cadDamperHarmonic { 0%, 100% { transform: rotate(-7deg); } 50% { transform: rotate(7deg); } }
+      @keyframes cadEiffelFloat { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+      @keyframes cadNyatapolaFloat { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-9px); } }
+      @keyframes cadOperaFloat { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-8px); } }
+      @keyframes cadGajurPulse { 0%, 100% { opacity: 0.45; } 50% { opacity: 1; } }
       @keyframes cadShellTrace { 0% { stroke-dashoffset: 800; } 50% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: -800; } }
       @keyframes cadGoldenTrace { 0% { stroke-dashoffset: 1200; } 50% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: -1200; } }
 
-      .cad-burj-anim { animation: cadBurjFloat 18s ease-in-out infinite; }
-      .cad-beacon-pulse { transform-origin: 0px 0px; animation: cadSpireBeacon 3.2s ease-in-out infinite; }
-      .cad-damper-anim { transform-origin: 0px 250px; animation: cadDamperHarmonic 6.5s ease-in-out infinite; }
-      .cad-eiffel-anim { animation: cadEiffelFloat 22s ease-in-out infinite 2s; }
-      .cad-nyatapola-anim { animation: cadNyatapolaFloat 20s ease-in-out infinite 1s; }
-      .cad-gajur-anim { transform-origin: 0px -18px; animation: cadGajurPulse 3.8s ease-in-out infinite; }
-      .cad-shell-trace { stroke-dasharray: 800; animation: cadShellTrace 18s ease-in-out infinite; }
-      .cad-golden-trace { stroke-dasharray: 1200; animation: cadGoldenTrace 15s ease-in-out infinite; }
-      .cad-compass-spin { transform-origin: 960px 540px; animation: cadCompassSpin 160s linear infinite; }
-      .cad-compass-counter { transform-origin: 960px 540px; animation: cadCompassCounter 120s linear infinite; }
+      .cad-burj-anim { animation: cadBurjFloat 14s ease-in-out infinite; }
+      .cad-taipei-anim { animation: cadTaipeiFloat 16s ease-in-out infinite 1.5s; }
+      .cad-beacon-pulse { transform-box: view-box; transform-origin: 0px 0px; animation: cadSpireBeacon 3.2s ease-in-out infinite; }
+      .cad-damper-anim { transform-box: view-box; transform-origin: 0px 250px; animation: cadDamperHarmonic 5.5s ease-in-out infinite; }
+      .cad-eiffel-anim { animation: cadEiffelFloat 18s ease-in-out infinite 2s; }
+      .cad-nyatapola-anim { animation: cadNyatapolaFloat 15s ease-in-out infinite 1s; }
+      .cad-opera-anim { animation: cadOperaFloat 17s ease-in-out infinite 2.5s; }
+      .cad-gajur-anim { transform-box: view-box; transform-origin: 0px -18px; animation: cadGajurPulse 3.5s ease-in-out infinite; }
+      .cad-shell-trace { stroke-dasharray: 800; animation: cadShellTrace 14s ease-in-out infinite; }
+      .cad-golden-trace { stroke-dasharray: 1200; animation: cadGoldenTrace 12s ease-in-out infinite; }
+      .cad-compass-spin { transform-box: view-box; transform-origin: 960px 540px; animation: cadCompassSpin 120s linear infinite; }
+      .cad-compass-counter { transform-box: view-box; transform-origin: 960px 540px; animation: cadCompassCounter 90s linear infinite; }
     </style>
 
     <pattern id="affIsoDotGrid" width="40" height="40" patternUnits="userSpaceOnUse">
@@ -2597,7 +2751,8 @@
 
   <!-- ================= LAYER 02: BURJ KHALIFA (DUBAI - 828M) ================= -->
   <!-- Placed gracefully on the far-right flank with pulsing beacon & floating breathe -->
-  <g id="Layer_02_Burj_Khalifa" serif:id="02 Burj Khalifa Spire" class="cad-burj-anim" transform="translate(1700, 100) scale(0.68)">
+  <g id="Layer_02_Burj_Khalifa" serif:id="02 Burj Khalifa Spire" transform="translate(1660, 100) scale(0.68)">
+    <g class="cad-burj-anim">
     <!-- Central Axis & Vortex Shedding Aerodynamic Guides -->
     <line x1="0" y1="0" x2="0" y2="1300" class="cad-mono-dash" stroke-width="1.2" opacity="0.35" />
 
@@ -2660,11 +2815,13 @@
     <text x="35" y="68" class="cad-mono-text">+828.000M APEX · 163 FLOORS</text>
     <text x="35" y="84" class="cad-mono-text">HEXAGONAL BUTTRESSED CORE</text>
     <text x="35" y="100" class="cad-mono-text">VORTEX-SHEDDING SPIRAL FLUTES</text>
+    </g>
   </g>
 
   <!-- ================= LAYER 03: TAIPEI 101 WITH ACTIVE DAMPER (TAIPEI - 508M) ================= -->
   <!-- Placed in the mid-right field with active swaying 660-tonne Tuned Mass Damper -->
-  <g id="Layer_03_Taipei_101" serif:id="03 Taipei 101 Damper" transform="translate(1360, 260) scale(0.62)">
+  <g id="Layer_03_Taipei_101" serif:id="03 Taipei 101 Damper" transform="translate(1320, 260) scale(0.62)">
+    <g class="cad-taipei-anim">
     <!-- Pagoda Spire -->
     <line x1="0" y1="0" x2="0" y2="820" class="cad-mono-dash" opacity="0.35" />
     <line x1="0" y1="0" x2="0" y2="80" class="cad-mono-bold" stroke-width="2.8" />
@@ -2743,11 +2900,13 @@
     <text x="96" y="292" class="cad-mono-text">+508.0M · 8-PAGODA SEGMENTS</text>
     <text x="96" y="308" class="cad-mono-text">TUNED MASS DAMPER Ø=5.5M (660T)</text>
     <text x="96" y="324" class="cad-mono-text">SEISMIC &amp; TYPHOON SWAY DAMPING</text>
+    </g>
   </g>
 
   <!-- ================= LAYER 04: EIFFEL TOWER (PARIS - 300M) ================= -->
   <!-- Placed in the center-left field with parabolic wind arch & iron diagonal trusses -->
-  <g id="Layer_04_Eiffel_Tower" serif:id="04 Eiffel Tower Lattice" class="cad-eiffel-anim" transform="translate(740, 480) scale(0.56)">
+  <g id="Layer_04_Eiffel_Tower" serif:id="04 Eiffel Tower Lattice" transform="translate(740, 480) scale(0.56)">
+    <g class="cad-eiffel-anim">
     <!-- Central Pylon Axis -->
     <line x1="0" y1="0" x2="0" y2="580" class="cad-mono-dash" opacity="0.3" />
 
@@ -2793,11 +2952,13 @@
     <text x="-160" y="380" class="cad-mono-label">EIFFEL TOWER</text>
     <text x="-160" y="398" class="cad-mono-text">+300.0M · WROUGHT IRON LATTICE</text>
     <text x="-160" y="414" class="cad-mono-text">PARABOLIC WIND RESISTANCE ARCH</text>
+    </g>
   </g>
 
   <!-- ================= LAYER 05: NEPALI NYATAPOLA PAGODA (BHAKTAPUR - 1702 AD) ================= -->
   <!-- Placed gracefully on the upper-left flank with glowing heritage Gajur -->
-  <g id="Layer_05_Nepali_Nyatapola" serif:id="05 Nepali Nyatapola Pagoda" class="cad-nyatapola-anim" transform="translate(240, 180) scale(0.64)">
+  <g id="Layer_05_Nepali_Nyatapola" serif:id="05 Nepali Nyatapola Pagoda" transform="translate(260, 180) scale(0.64)">
+    <g class="cad-nyatapola-anim">
     <!-- Pinnacle Gajur Spire with glowing pulse -->
     <circle cx="0" cy="-18" r="4" fill="var(--text-main)" class="cad-gajur-anim" />
     <line x1="0" y1="-18" x2="0" y2="20" class="cad-mono-bold" stroke-width="2" />
@@ -2840,11 +3001,13 @@
     <text x="135" y="123" class="cad-mono-text">BHAKTAPUR, NEPAL (1702 AD)</text>
     <text x="135" y="139" class="cad-mono-text">5-TIER TIMBER PAGODA RIGOR</text>
     <text x="135" y="155" class="cad-mono-text">EARTHQUAKE RESISTANT RING BEAMS</text>
+    </g>
   </g>
 
   <!-- ================= LAYER 06: SYDNEY OPERA HOUSE (JØRN UTZON - 1973) ================= -->
   <!-- Placed in the lower-left oceanfront with dynamic self-tracing spherical shells -->
-  <g id="Layer_06_Sydney_Opera" serif:id="06 Sydney Opera Shells" transform="translate(220, 720) scale(0.60)">
+  <g id="Layer_06_Sydney_Opera" serif:id="06 Sydney Opera Shells" transform="translate(240, 720) scale(0.60)">
+    <g class="cad-opera-anim">
     <!-- Base Granite Podium -->
     <polygon points="-120,220 540,220 500,180 -80,180" class="cad-slab-fill" />
     <line x1="-120" y1="220" x2="540" y2="220" class="cad-mono-bold" stroke-width="2" />
@@ -2865,6 +3028,7 @@
     <text x="60" y="260" class="cad-mono-label">SYDNEY OPERA HOUSE</text>
     <text x="60" y="278" class="cad-mono-text">JØRN UTZON (1973) · SPHERICAL SHELLS R=75M</text>
     <text x="60" y="294" class="cad-mono-text">INTERLOCKING PRECAST CHEVRON RIBS</text>
+    </g>
   </g>
 
   <!-- ================= LAYER 07: FUNKY ROTATING COMPASS & GOLDEN RATIO SPIRAL ================= -->
@@ -2904,6 +3068,399 @@
       <text x="20" y="262" class="cad-mono-text">SCALE &amp; SPACES CIVIL &amp; INTERIOR RIGOR</text>
     </g>
   </g>
+
+  <!-- ================= LAYER 08: MOUNT EVEREST / SAGARMATHA (NEPAL - 8,848.86M) ================= -->
+  <!-- The highest summit on Earth with geological orogeny contour ridges and Jet Stream snow plume -->
+  <g id="Layer_08_Mount_Everest" serif:id="08 Mount Everest Sagarmatha" transform="translate(760, 110) scale(0.66)">
+    <g class="cad-everest-anim">
+      <!-- Geodetic Apex Elevation Line (+8,848.86M) -->
+      <line x1="-340" y1="0" x2="340" y2="0" class="cad-mono-dash" stroke-dasharray="10 5" opacity="0.4" />
+      <circle cx="0" cy="0" r="4.5" fill="var(--aff-stroke-bold, #ffffff)" />
+      <circle cx="0" cy="0" r="14" class="cad-mono-dot" />
+
+      <!-- Jet Stream Summit Snow Plume (Animated wind streamlines sweeping east) -->
+      <g class="cad-plume-anim">
+        <path d="M 0,-4 Q 90,-22 210,-14 Q 310,-6 410,-18" class="cad-mono-dash" stroke-width="1.8" />
+        <path d="M 0,2 Q 110,-12 240,-4 Q 340,4 440,-6" class="cad-mono-thin" stroke-width="1.2" />
+        <path d="M 10,7 Q 120,-3 260,6 Q 370,14 470,2" class="cad-mono-dot" stroke-width="0.9" />
+      </g>
+
+      <!-- Massif Outer Ridges: Northeast Ridge (Left) & Southeast Ridge through South Col (Right) -->
+      <polygon points="0,0 -90,75 -180,145 -275,230 -380,340 370,340 260,225 170,150 90,80" class="cad-slab-fill" />
+      
+      <!-- Primary Arêtes (Sharp Ridgelines) -->
+      <!-- Northeast Ridge -->
+      <path d="M 0,0 L -90,75 L -180,145 L -275,230 L -380,340" class="cad-mono-bold" stroke-width="2.8" />
+      <!-- Southeast Ridge (via Hillary Step 8,790m & South Summit 8,749m) -->
+      <path d="M 0,0 L 45,35 L 90,80 L 170,150 L 260,225 L 370,340" class="cad-mono-bold" stroke-width="2.8" />
+      <!-- Central Southwest Arête (Dividing North Face & SW Face) -->
+      <path d="M 0,0 Q -15,110 -5,220 L 10,340" class="cad-mono-bold" stroke-width="2.2" />
+
+      <!-- Himalayan Structural Rock Strata (Yellow Band & Qomolangma Detachment Limestones) -->
+      <line x1="-50" y1="42" x2="52" y2="46" class="cad-mono-dash" stroke-width="1.2" />
+      <line x1="-105" y1="88" x2="108" y2="95" class="cad-mono-thin" />
+      <line x1="-155" y1="130" x2="148" y2="138" class="cad-mono-dash" stroke-width="1.2" />
+      <line x1="-215" y1="180" x2="205" y2="190" class="cad-mono-thin" />
+      <line x1="-275" y1="230" x2="260" y2="240" class="cad-mono-dash" stroke-width="1.2" />
+
+      <!-- Glacial Contour Linework & Crevasses (Western Cwm & Khumbu Icefall) -->
+      <path d="M -80,110 Q -40,140 -20,115 Q 10,135 60,110" class="cad-mono-thin" />
+      <path d="M -140,170 Q -80,205 -35,175 Q 15,200 90,170" class="cad-mono-thin" />
+      <path d="M -210,235 Q -120,270 -40,240 Q 30,265 140,235" class="cad-mono-thin" />
+      <path d="M -280,295 Q -160,335 -50,300 Q 50,330 200,295" class="cad-mono-dot" />
+
+      <!-- Elevation Datum Marks -->
+      <text x="-375" y="15" class="cad-mono-text">+8,848.86M PEAK DATUM</text>
+      <line x1="-380" y1="18" x2="-210" y2="18" class="cad-mono-thin" />
+      <text x="-375" y="142" class="cad-mono-text">+8,000M DEATH ZONE</text>
+      <text x="-375" y="242" class="cad-mono-text">+7,000M NORTH COL</text>
+
+      <!-- Technical Engineering Callouts -->
+      <text x="75" y="32" class="cad-mono-label">MOUNT EVEREST · SAGARMATHA</text>
+      <text x="75" y="49" class="cad-mono-text">+8,848.86M (29,031.7 FT) · HIGHEST SUMMIT</text>
+      <text x="75" y="64" class="cad-mono-text">GEODETIC DATUM: 27°59'17" N 86°55'31" E</text>
+      <text x="75" y="79" class="cad-mono-text">QOMOLANGMA DETACHMENT &amp; GNEISSIC BASE</text>
+    </g>
+  </g>
+
+  <!-- ================= LAYER 09: DHARAHARA OF NEPAL (BHIMSEN TOWER - 72M) ================= -->
+  <!-- Historic 9-tier octagonal brick masonry landmark in Kathmandu with viewing balcony & bronze Gajur -->
+  <g id="Layer_09_Dharahara_Nepal" serif:id="09 Dharahara Nepal Tower" transform="translate(500, 390) scale(0.60)">
+    <g class="cad-dharahara-anim">
+      <!-- Central Plumb Axis -->
+      <line x1="0" y1="0" x2="0" y2="520" class="cad-mono-dash" opacity="0.32" />
+
+      <!-- Pinnacle Gajur Spire with pulsing glow (+72.000m) -->
+      <circle cx="0" cy="10" r="4.5" fill="var(--aff-stroke-bold, #ffffff)" class="cad-gajur-anim" />
+      <line x1="0" y1="10" x2="0" y2="38" class="cad-mono-bold" stroke-width="2.4" />
+      <circle cx="0" cy="22" r="7" class="cad-mono-dash" />
+
+      <!-- Tier 9: Chhatri Cupola Dome on 8 Arched Pillars -->
+      <path d="M -18,65 Q 0,38 18,65 Z" class="cad-slab-fill" stroke-width="2" />
+      <path d="M -18,65 Q 0,38 18,65" class="cad-mono-bold" stroke-width="2.2" />
+      <!-- 8-Pillar Arch Arcade -->
+      <rect x="-18" y="65" width="36" height="26" class="cad-slab-fill" />
+      <line x1="-18" y1="65" x2="-18" y2="91" class="cad-mono-bold" stroke-width="1.8" />
+      <line x1="18" y1="65" x2="18" y2="91" class="cad-mono-bold" stroke-width="1.8" />
+      <line x1="-6" y1="65" x2="-6" y2="91" class="cad-mono-mid" />
+      <line x1="6" y1="65" x2="6" y2="91" class="cad-mono-mid" />
+      <path d="M -18,74 Q -12,68 -6,74" class="cad-mono-thin" />
+      <path d="M -6,74 Q 0,68 6,74" class="cad-mono-thin" />
+      <path d="M 6,74 Q 12,68 18,74" class="cad-mono-thin" />
+
+      <!-- Tier 8: Cantilever Circular Viewing Balcony with Railings -->
+      <rect x="-34" y="91" width="68" height="12" class="cad-slab-fill" stroke-width="2" />
+      <line x1="-34" y1="91" x2="34" y2="91" class="cad-mono-bold" stroke-width="2.4" />
+      <line x1="-34" y1="103" x2="34" y2="103" class="cad-mono-bold" stroke-width="2.2" />
+      <!-- Balcony Railing Pickets -->
+      <line x1="-28" y1="91" x2="-28" y2="103" class="cad-mono-thin" />
+      <line x1="-16" y1="91" x2="-16" y2="103" class="cad-mono-thin" />
+      <line x1="0" y1="91" x2="0" y2="103" class="cad-mono-thin" />
+      <line x1="16" y1="91" x2="16" y2="103" class="cad-mono-thin" />
+      <line x1="28" y1="91" x2="28" y2="103" class="cad-mono-thin" />
+      <!-- Structural Bracket Corbel Support Under Balcony -->
+      <polygon points="-30,103 -18,118 18,118 30,103" class="cad-slab-fill" />
+      <line x1="-30" y1="103" x2="-18" y2="118" class="cad-mono-bold" stroke-width="1.8" />
+      <line x1="30" y1="103" x2="18" y2="118" class="cad-mono-bold" stroke-width="1.8" />
+
+      <!-- Tiers 7 to 2: Tapered Cylindrical Tower Shaft with Tier Belt Cornices -->
+      <!-- Tapering outer walls -->
+      <line x1="-18" y1="118" x2="-35" y2="410" class="cad-mono-bold" stroke-width="2.6" />
+      <line x1="18" y1="118" x2="35" y2="410" class="cad-mono-bold" stroke-width="2.6" />
+      <polygon points="-18,118 18,118 35,410 -35,410" class="cad-slab-fill" />
+
+      <!-- Intermediate Cornice Bands (Horizontal Ductile Rings) -->
+      <!-- Tier 7 -->
+      <line x1="-21" y1="165" x2="21" y2="165" class="cad-mono-bold" stroke-width="1.8" />
+      <rect x="-4" y="130" width="8" height="22" rx="3" class="cad-mono-thin" />
+      <!-- Tier 6 -->
+      <line x1="-24" y1="215" x2="24" y2="215" class="cad-mono-bold" stroke-width="1.8" />
+      <rect x="-5" y="180" width="10" height="24" rx="4" class="cad-mono-thin" />
+      <!-- Tier 5 -->
+      <line x1="-27" y1="265" x2="27" y2="265" class="cad-mono-bold" stroke-width="1.8" />
+      <rect x="-5" y="230" width="10" height="24" rx="4" class="cad-mono-thin" />
+      <!-- Tier 4 -->
+      <line x1="-30" y1="315" x2="30" y2="315" class="cad-mono-bold" stroke-width="1.8" />
+      <rect x="-5" y="280" width="10" height="24" rx="4" class="cad-mono-thin" />
+      <!-- Tier 3 -->
+      <line x1="-32" y1="365" x2="32" y2="365" class="cad-mono-bold" stroke-width="1.8" />
+      <rect x="-6" y="330" width="12" height="26" rx="4" class="cad-mono-thin" />
+
+      <!-- Tier 1: Octagonal Base Podium & Classical Entrance Portal -->
+      <polygon points="-35,410 35,410 52,475 -52,475" class="cad-slab-fill" />
+      <line x1="-35" y1="410" x2="-52" y2="475" class="cad-mono-bold" stroke-width="2.8" />
+      <line x1="35" y1="410" x2="52" y2="475" class="cad-mono-bold" stroke-width="2.8" />
+      <line x1="-35" y1="410" x2="35" y2="410" class="cad-mono-bold" stroke-width="2.2" />
+
+      <!-- Arched Ground Portal -->
+      <path d="M -12,475 L -12,445 Q 0,432 12,445 L 12,475" class="cad-mono-bold" stroke-width="2" />
+
+      <!-- Stepped Plinth Base -->
+      <rect x="-64" y="475" width="128" height="14" class="cad-slab-fill" stroke-width="2" />
+      <rect x="-76" y="489" width="152" height="16" class="cad-slab-fill" stroke-width="2.4" />
+
+      <!-- Technical Annotations -->
+      <text x="44" y="100" class="cad-mono-label">DHARAHARA OF NEPAL</text>
+      <text x="44" y="117" class="cad-mono-text">+72.000M · 9-TIER BHIMSEN TOWER</text>
+      <text x="44" y="132" class="cad-mono-text">KATHMANDU (1832 / REBUILT 2021)</text>
+      <text x="44" y="147" class="cad-mono-text">CANTILEVER 8TH-TIER VIEWING BALCONY</text>
+      <text x="44" y="162" class="cad-mono-text">SEISMIC SHEAR RING BEAM REINFORCEMENT</text>
+    </g>
+  </g>
+
+  <!-- ================= LAYER 10: TAJ MAHAL (AGRA - 1648 AD) ================= -->
+  <!-- Masterpiece of biaxial symmetry, marble bulbous double-dome, vaulted Iwan & 1.2° seismic tilt minarets -->
+  <g id="Layer_10_Taj_Mahal" serif:id="10 Taj Mahal Symmetry" transform="translate(1040, 670) scale(0.55)">
+    <g class="cad-taj-anim">
+      <!-- Centerline of Biaxial Symmetry -->
+      <line x1="0" y1="-75" x2="0" y2="320" class="cad-mono-dash" stroke-width="1.2" opacity="0.38" />
+
+      <!-- Marble Double-Dome (Amrud) Apex Finial (+35m above podium) -->
+      <line x1="0" y1="-75" x2="0" y2="-22" class="cad-mono-bold" stroke-width="2.6" />
+      <circle cx="0" cy="-75" r="4" fill="var(--aff-stroke-bold, #ffffff)" />
+      <path d="M -8,-50 Q 0,-60 8,-50 Q 0,-40 -8,-50" class="cad-mono-mid" />
+      <!-- Inverted Lotus Crest -->
+      <path d="M -14,-22 Q 0,-34 14,-22" class="cad-mono-bold" stroke-width="1.8" />
+
+      <!-- Bulbous Marble Outer Double-Dome -->
+      <path d="M -46,65 C -62,35 -54,-2 0,-22 C 54,-2 62,35 46,65 Z" class="cad-slab-fill" stroke-width="2.6" />
+      <path d="M -46,65 C -62,35 -54,-2 0,-22 C 54,-2 62,35 46,65" class="cad-mono-bold" stroke-width="2.8" />
+
+      <!-- Cylindrical High Drum with Blind Arched Niches -->
+      <rect x="-46" y="65" width="92" height="35" class="cad-slab-fill" stroke-width="2" />
+      <line x1="-46" y1="65" x2="46" y2="65" class="cad-mono-bold" stroke-width="2" />
+      <line x1="-46" y1="100" x2="46" y2="100" class="cad-mono-bold" stroke-width="2.2" />
+      <line x1="-23" y1="65" x2="-23" y2="100" class="cad-mono-thin" />
+      <line x1="23" y1="65" x2="23" y2="100" class="cad-mono-thin" />
+
+      <!-- Flanking Left & Right Chhatri Pavilions (Roof Kiosks) -->
+      <g transform="translate(-75, 45)">
+        <path d="M -14,20 Q 0,4 14,20 Z" class="cad-slab-fill" stroke-width="1.6" />
+        <path d="M -14,20 Q 0,4 14,20" class="cad-mono-bold" stroke-width="1.8" />
+        <line x1="-12" y1="20" x2="-12" y2="40" class="cad-mono-mid" />
+        <line x1="12" y1="20" x2="12" y2="40" class="cad-mono-mid" />
+        <line x1="0" y1="4" x2="0" y2="-8" class="cad-mono-mid" />
+      </g>
+      <g transform="translate(75, 45)">
+        <path d="M -14,20 Q 0,4 14,20 Z" class="cad-slab-fill" stroke-width="1.6" />
+        <path d="M -14,20 Q 0,4 14,20" class="cad-mono-bold" stroke-width="1.8" />
+        <line x1="-12" y1="20" x2="-12" y2="40" class="cad-mono-mid" />
+        <line x1="12" y1="20" x2="12" y2="40" class="cad-mono-mid" />
+        <line x1="0" y1="4" x2="0" y2="-8" class="cad-mono-mid" />
+      </g>
+
+      <!-- Main Mausoleum Cube with Chamfered Corners -->
+      <polygon points="-120,85 120,85 132,100 132,260 120,260 -120,260 -132,260 -132,100" class="cad-slab-fill" />
+      <path d="M -132,100 L -120,85 L 120,85 L 132,100 L 132,260 L -132,260 Z" class="cad-mono-bold" stroke-width="2.6" />
+
+      <!-- Monumental Central Vaulted Pishtaq / Grand Iwan Arch -->
+      <rect x="-52" y="98" width="104" height="162" class="cad-slab-fill" stroke-width="2" />
+      <path d="M -42,260 L -42,165 Q -42,122 0,110 Q 42,122 42,165 L 42,260" class="cad-mono-bold" stroke-width="2.6" />
+      <path d="M -34,260 L -34,175 Q -34,136 0,126 Q 34,136 34,175 L 34,260" class="cad-mono-thin" />
+      <line x1="-42" y1="165" x2="42" y2="165" class="cad-mono-dash" />
+
+      <!-- Flanking Two-Tier Arched Niches (Pesh-Tak) -->
+      <!-- Left Upper & Lower Niches -->
+      <path d="M -115,160 L -115,120 Q -98,105 -82,120 L -82,160 Z" class="cad-mono-mid" />
+      <path d="M -115,245 L -115,185 Q -98,170 -82,185 L -82,245 Z" class="cad-mono-mid" />
+      <!-- Right Upper & Lower Niches -->
+      <path d="M 82,160 L 82,120 Q 98,105 115,120 L 115,160 Z" class="cad-mono-mid" />
+      <path d="M 82,245 L 82,185 Q 98,170 115,185 L 115,245 Z" class="cad-mono-mid" />
+
+      <!-- Grand Marble Plinth & Terraced Base -->
+      <rect x="-195" y="260" width="390" height="22" class="cad-slab-fill" stroke-width="2.2" />
+      <rect x="-215" y="282" width="430" height="20" class="cad-slab-fill" stroke-width="2.6" />
+
+      <!-- Flanking 40M Seismic Minarets (Engineered with intentional 1.2° outward tilt) -->
+      <!-- Left Minaret (Tilt -1.2° outward to the left) -->
+      <g transform="translate(-185, 260) rotate(-1.2)">
+        <polygon points="-12,0 12,0 8,-235 -8,-235" class="cad-slab-fill" />
+        <line x1="-12" y1="0" x2="-8" y2="-235" class="cad-mono-bold" stroke-width="2.2" />
+        <line x1="12" y1="0" x2="8" y2="-235" class="cad-mono-bold" stroke-width="2.2" />
+        <!-- 3 Balconies -->
+        <rect x="-14" y="-80" width="28" height="6" class="cad-mono-bold" />
+        <rect x="-13" y="-155" width="26" height="6" class="cad-mono-bold" />
+        <rect x="-11" y="-220" width="22" height="6" class="cad-mono-bold" />
+        <!-- Minaret Chhatri Crown -->
+        <path d="M -9,-235 Q 0,-250 9,-235" class="cad-mono-bold" stroke-width="1.8" />
+        <line x1="0" y1="-250" x2="0" y2="-262" class="cad-mono-bold" />
+        <circle cx="0" cy="-262" r="2.5" fill="var(--aff-stroke-bold, #ffffff)" />
+        <text x="-18" y="-120" class="cad-mono-text" text-anchor="end">-1.2° SEISMIC TILT</text>
+      </g>
+
+      <!-- Right Minaret (Tilt +1.2° outward to the right) -->
+      <g transform="translate(185, 260) rotate(1.2)">
+        <polygon points="-12,0 12,0 8,-235 -8,-235" class="cad-slab-fill" />
+        <line x1="-12" y1="0" x2="-8" y2="-235" class="cad-mono-bold" stroke-width="2.2" />
+        <line x1="12" y1="0" x2="8" y2="-235" class="cad-mono-bold" stroke-width="2.2" />
+        <!-- 3 Balconies -->
+        <rect x="-14" y="-80" width="28" height="6" class="cad-mono-bold" />
+        <rect x="-13" y="-155" width="26" height="6" class="cad-mono-bold" />
+        <rect x="-11" y="-220" width="22" height="6" class="cad-mono-bold" />
+        <!-- Minaret Chhatri Crown -->
+        <path d="M -9,-235 Q 0,-250 9,-235" class="cad-mono-bold" stroke-width="1.8" />
+        <line x1="0" y1="-250" x2="0" y2="-262" class="cad-mono-bold" />
+        <circle cx="0" cy="-262" r="2.5" fill="var(--aff-stroke-bold, #ffffff)" />
+        <text x="18" y="-120" class="cad-mono-text" text-anchor="start">+1.2° SEISMIC TILT</text>
+      </g>
+
+      <!-- Technical Engineering Callouts -->
+      <text x="-120" y="325" class="cad-mono-label">TAJ MAHAL · AGRA (1648 AD)</text>
+      <text x="-120" y="342" class="cad-mono-text">USTAD AHMAD LAHORI · BIAXIAL MARBLE RIGOR</text>
+      <text x="-120" y="357" class="cad-mono-text">BULBOUS DOUBLE-DOME (H=35M) · 4-CENTERED PISHTAQ</text>
+      <text x="-120" y="372" class="cad-mono-text">WELL-FOUNDATION CAISSONS · 1.2° SEISMIC MINARETS</text>
+    </g>
+  </g>
+
+  <!-- ================= LAYER 11: HOWRAH BRIDGE / RABINDRA SETU (KOLKATA - 1943) ================= -->
+  <!-- Monumental 457m balanced cantilever riveted high-tensile steel Warren truss bridge over Hooghly datum -->
+  <g id="Layer_11_Howrah_Bridge" serif:id="11 Howrah Cantilever Bridge" transform="translate(1500, 860) scale(0.48)">
+    <g class="cad-howrah-anim">
+      <!-- Hooghly River Waterline Datum (±0.000M) -->
+      <line x1="-380" y1="190" x2="380" y2="190" class="cad-mono-bold" stroke-width="2" />
+      <path d="M -380,202 Q -350,196 -320,202 Q -290,208 -260,202 Q -230,196 -200,202 Q -170,208 -140,202 Q -110,196 -80,202 Q -50,208 -20,202 Q 10,196 40,202 Q 70,208 100,202 Q 130,196 160,202 Q 190,208 220,202 Q 250,196 280,202 Q 310,208 340,202 Q 370,196 380,202" class="cad-mono-thin" />
+      <text x="-370" y="218" class="cad-mono-text">±0.000M HOOGHLY TIDAL HIGH WATER LEVEL</text>
+
+      <!-- Concrete Substructure Pier Caissons (No piers in river bed!) -->
+      <rect x="-225" y="150" width="60" height="45" class="cad-slab-fill" stroke-width="2.2" />
+      <rect x="165" y="150" width="60" height="45" class="cad-slab-fill" stroke-width="2.2" />
+
+      <!-- Left Main Tower Pylon (82m tall, x=-195) -->
+      <line x1="-220" y1="150" x2="-202" y2="0" class="cad-mono-bold" stroke-width="3" />
+      <line x1="-170" y1="150" x2="-188" y2="0" class="cad-mono-bold" stroke-width="3" />
+      <line x1="-202" y1="0" x2="-188" y2="0" class="cad-mono-bold" stroke-width="3" />
+      <!-- Tower X-Bracing Lattice -->
+      <line x1="-217" y1="120" x2="-173" y2="85" class="cad-mono-thin" />
+      <line x1="-173" y1="120" x2="-217" y2="85" class="cad-mono-thin" />
+      <line x1="-212" y1="85" x2="-178" y2="50" class="cad-mono-thin" />
+      <line x1="-178" y1="85" x2="-212" y2="50" class="cad-mono-thin" />
+      <line x1="-207" y1="50" x2="-183" y2="15" class="cad-mono-thin" />
+      <line x1="-183" y1="50" x2="-207" y2="15" class="cad-mono-thin" />
+      <circle cx="-195" cy="0" r="3.5" fill="var(--aff-stroke-bold, #ffffff)" />
+
+      <!-- Right Main Tower Pylon (82m tall, x=195) -->
+      <line x1="170" y1="150" x2="188" y2="0" class="cad-mono-bold" stroke-width="3" />
+      <line x1="220" y1="150" x2="202" y2="0" class="cad-mono-bold" stroke-width="3" />
+      <line x1="188" y1="0" x2="202" y2="0" class="cad-mono-bold" stroke-width="3" />
+      <!-- Tower X-Bracing Lattice -->
+      <line x1="173" y1="120" x2="217" y2="85" class="cad-mono-thin" />
+      <line x1="217" y1="120" x2="173" y2="85" class="cad-mono-thin" />
+      <line x1="178" y1="85" x2="212" y2="50" class="cad-mono-thin" />
+      <line x1="212" y1="85" x2="178" y2="50" class="cad-mono-thin" />
+      <line x1="183" y1="50" x2="207" y2="15" class="cad-mono-thin" />
+      <line x1="207" y1="50" x2="183" y2="15" class="cad-mono-thin" />
+      <circle cx="195" cy="0" r="3.5" fill="var(--aff-stroke-bold, #ffffff)" />
+
+      <!-- Suspended Horizontal Roadway & Truss Bottom Chord (+30m clearance) -->
+      <line x1="-360" y1="135" x2="360" y2="135" class="cad-mono-bold" stroke-width="2.6" />
+      <line x1="-360" y1="145" x2="360" y2="145" class="cad-mono-mid" stroke-width="1.4" />
+
+      <!-- Anchor Arm Upper Chords (Left & Right Shoreward Ties) -->
+      <path d="M -195,0 L -350,135" class="cad-mono-bold" stroke-width="3" />
+      <path d="M 195,0 L 350,135" class="cad-mono-bold" stroke-width="3" />
+
+      <!-- Cantilever Truss Upper Chord (Graceful Warren Parabola into Suspended Span) -->
+      <path d="M -195,0 Q -100,75 0,75 Q 100,75 195,0" class="cad-mono-bold" stroke-width="3.2" />
+
+      <!-- Vertical Suspension Hangers carrying suspended road deck -->
+      <line x1="-150" y1="28" x2="-150" y2="135" class="cad-mono-mid" />
+      <line x1="-110" y1="52" x2="-110" y2="135" class="cad-mono-mid" />
+      <line x1="-70" y1="67" x2="-70" y2="135" class="cad-mono-mid" />
+      <line x1="-30" y1="74" x2="-30" y2="135" class="cad-mono-mid" />
+      <line x1="0" y1="75" x2="0" y2="135" class="cad-mono-bold" stroke-width="2" />
+      <line x1="30" y1="74" x2="30" y2="135" class="cad-mono-mid" />
+      <line x1="70" y1="67" x2="70" y2="135" class="cad-mono-mid" />
+      <line x1="110" y1="52" x2="110" y2="135" class="cad-mono-mid" />
+      <line x1="150" y1="28" x2="150" y2="135" class="cad-mono-mid" />
+
+      <!-- Diagonal Warren Truss Web Members -->
+      <line x1="-195" y1="0" x2="-150" y2="135" class="cad-mono-thin" />
+      <line x1="-150" y1="28" x2="-110" y2="135" class="cad-mono-thin" />
+      <line x1="-110" y1="52" x2="-70" y2="135" class="cad-mono-thin" />
+      <line x1="-70" y1="67" x2="-30" y2="135" class="cad-mono-thin" />
+      <line x1="-30" y1="74" x2="0" y2="135" class="cad-mono-thin" />
+      <line x1="0" y1="75" x2="30" y2="135" class="cad-mono-thin" />
+      <line x1="30" y1="74" x2="70" y2="135" class="cad-mono-thin" />
+      <line x1="70" y1="67" x2="110" y2="135" class="cad-mono-thin" />
+      <line x1="110" y1="52" x2="150" y2="135" class="cad-mono-thin" />
+      <line x1="150" y1="28" x2="195" y2="135" class="cad-mono-thin" />
+
+      <!-- Technical Engineering Callouts -->
+      <text x="-120" y="20" class="cad-mono-label">HOWRAH BRIDGE · RABINDRA SETU</text>
+      <text x="-120" y="36" class="cad-mono-text">+82.0M TOWER APEX · 457.2M CANTILEVER SPAN</text>
+      <text x="-120" y="50" class="cad-mono-text">26,500 TONNES RIVETED HIGH-TENSILE TATA STEEL</text>
+      <text x="-120" y="64" class="cad-mono-text">ZERO RIVERBED PIERS · SUSPENDED ROAD DECK</text>
+    </g>
+  </g>
+
+  <!-- ================= LAYER 12: DYNAMIC FLOCK OF BIRDS FLYING IN UI BACKGROUND ================= -->
+  <!-- Silhouettes of birds soaring smoothly across the upper sky with articulating wings -->
+  <g id="Layer_12_Animated_Sky_Birds" serif:id="12 Animated Sky Birds">
+    <!-- Primary Flight Formation (Fast Glide) -->
+    <g class="cad-birds-flock-1">
+      <!-- Leader Bird -->
+      <g transform="translate(0, 0) scale(0.95)">
+        <path d="M 0,0 C -12,-11 -25,-6 -34,7 C -22,2 -9,4 0,0" fill="var(--aff-stroke-bold, #ffffff)" opacity="0.55" class="cad-wing-anim" />
+        <path d="M 0,0 C 12,-11 25,-6 34,7 C 22,2 9,4 0,0" fill="var(--aff-stroke-bold, #ffffff)" opacity="0.55" class="cad-wing-anim" />
+        <ellipse cx="0" cy="1" rx="2.5" ry="6" fill="var(--aff-stroke-bold, #ffffff)" opacity="0.7" />
+      </g>
+      <!-- Echelon Right 1 -->
+      <g transform="translate(42, 22) scale(0.82)">
+        <path d="M 0,0 C -12,-11 -25,-6 -34,7 C -22,2 -9,4 0,0" fill="var(--aff-stroke-bold, #ffffff)" opacity="0.48" class="cad-wing-anim-fast" />
+        <path d="M 0,0 C 12,-11 25,-6 34,7 C 22,2 9,4 0,0" fill="var(--aff-stroke-bold, #ffffff)" opacity="0.48" class="cad-wing-anim-fast" />
+        <ellipse cx="0" cy="1" rx="2.2" ry="5.5" fill="var(--aff-stroke-bold, #ffffff)" opacity="0.65" />
+      </g>
+      <!-- Echelon Left 1 -->
+      <g transform="translate(-46, 26) scale(0.85)">
+        <path d="M 0,0 C -12,-11 -25,-6 -34,7 C -22,2 -9,4 0,0" fill="var(--aff-stroke-bold, #ffffff)" opacity="0.50" class="cad-wing-anim" />
+        <path d="M 0,0 C 12,-11 25,-6 34,7 C 22,2 9,4 0,0" fill="var(--aff-stroke-bold, #ffffff)" opacity="0.50" class="cad-wing-anim" />
+        <ellipse cx="0" cy="1" rx="2.2" ry="5.5" fill="var(--aff-stroke-bold, #ffffff)" opacity="0.65" />
+      </g>
+      <!-- Echelon Right 2 -->
+      <g transform="translate(86, 48) scale(0.72)">
+        <path d="M 0,0 C -12,-11 -25,-6 -34,7 C -22,2 -9,4 0,0" fill="var(--aff-stroke-bold, #ffffff)" opacity="0.42" class="cad-wing-anim" />
+        <path d="M 0,0 C 12,-11 25,-6 34,7 C 22,2 9,4 0,0" fill="var(--aff-stroke-bold, #ffffff)" opacity="0.42" class="cad-wing-anim" />
+        <ellipse cx="0" cy="1" rx="2" ry="5" fill="var(--aff-stroke-bold, #ffffff)" opacity="0.6" />
+      </g>
+      <!-- Echelon Left 2 -->
+      <g transform="translate(-90, 52) scale(0.70)">
+        <path d="M 0,0 C -12,-11 -25,-6 -34,7 C -22,2 -9,4 0,0" fill="var(--aff-stroke-bold, #ffffff)" opacity="0.40" class="cad-wing-anim-fast" />
+        <path d="M 0,0 C 12,-11 25,-6 34,7 C 22,2 9,4 0,0" fill="var(--aff-stroke-bold, #ffffff)" opacity="0.40" class="cad-wing-anim-fast" />
+        <ellipse cx="0" cy="1" rx="2" ry="5" fill="var(--aff-stroke-bold, #ffffff)" opacity="0.58" />
+      </g>
+      <!-- Trailing Wingman -->
+      <g transform="translate(130, 72) scale(0.60)">
+        <path d="M 0,0 C -12,-11 -25,-6 -34,7 C -22,2 -9,4 0,0" fill="var(--aff-stroke-bold, #ffffff)" opacity="0.35" class="cad-wing-anim" />
+        <path d="M 0,0 C 12,-11 25,-6 34,7 C 22,2 9,4 0,0" fill="var(--aff-stroke-bold, #ffffff)" opacity="0.35" class="cad-wing-anim" />
+        <ellipse cx="0" cy="1" rx="1.8" ry="4.5" fill="var(--aff-stroke-bold, #ffffff)" opacity="0.5" />
+      </g>
+    </g>
+
+    <!-- Secondary Distant Flock (Deep Atmosphere Glide) -->
+    <g class="cad-birds-flock-2">
+      <g transform="translate(0, 0) scale(0.65)">
+        <path d="M 0,0 C -12,-11 -25,-6 -34,7 C -22,2 -9,4 0,0" fill="var(--aff-stroke-bold, #ffffff)" opacity="0.32" class="cad-wing-anim-fast" />
+        <path d="M 0,0 C 12,-11 25,-6 34,7 C 22,2 9,4 0,0" fill="var(--aff-stroke-bold, #ffffff)" opacity="0.32" class="cad-wing-anim-fast" />
+        <ellipse cx="0" cy="1" rx="1.8" ry="4.5" fill="var(--aff-stroke-bold, #ffffff)" opacity="0.45" />
+      </g>
+      <g transform="translate(35, 18) scale(0.55)">
+        <path d="M 0,0 C -12,-11 -25,-6 -34,7 C -22,2 -9,4 0,0" fill="var(--aff-stroke-bold, #ffffff)" opacity="0.28" class="cad-wing-anim" />
+        <path d="M 0,0 C 12,-11 25,-6 34,7 C 22,2 9,4 0,0" fill="var(--aff-stroke-bold, #ffffff)" opacity="0.28" class="cad-wing-anim" />
+        <ellipse cx="0" cy="1" rx="1.6" ry="4" fill="var(--aff-stroke-bold, #ffffff)" opacity="0.4" />
+      </g>
+      <g transform="translate(-38, 22) scale(0.58)">
+        <path d="M 0,0 C -12,-11 -25,-6 -34,7 C -22,2 -9,4 0,0" fill="var(--aff-stroke-bold, #ffffff)" opacity="0.30" class="cad-wing-anim-fast" />
+        <path d="M 0,0 C 12,-11 25,-6 34,7 C 22,2 9,4 0,0" fill="var(--aff-stroke-bold, #ffffff)" opacity="0.30" class="cad-wing-anim-fast" />
+        <ellipse cx="0" cy="1" rx="1.6" ry="4" fill="var(--aff-stroke-bold, #ffffff)" opacity="0.42" />
+      </g>
+      <g transform="translate(70, 40) scale(0.48)">
+        <path d="M 0,0 C -12,-11 -25,-6 -34,7 C -22,2 -9,4 0,0" fill="var(--aff-stroke-bold, #ffffff)" opacity="0.24" class="cad-wing-anim" />
+        <path d="M 0,0 C 12,-11 25,-6 34,7 C 22,2 9,4 0,0" fill="var(--aff-stroke-bold, #ffffff)" opacity="0.24" class="cad-wing-anim" />
+        <ellipse cx="0" cy="1" rx="1.4" ry="3.5" fill="var(--aff-stroke-bold, #ffffff)" opacity="0.35" />
+      </g>
+    </g>
+  </g>
+
 </svg>
   </div>
 
@@ -3063,12 +3620,24 @@
           </p>
         </div>
 
-        <div style="text-align: right;">
-          <div style="display: inline-block; text-align: left; background: var(--bg-card); padding: 1.2rem; border-radius: 24px; border: 1px solid var(--border-subtle); box-shadow: var(--shadow-sm);">
-            <img src="https://i.postimg.cc/05wwzfcw/Profile-Pic.png" alt="Er. Chetan Kumar Sarraf" id="sheetAboutPhoto" style="width: 210px; height: 260px; object-fit: cover; border-radius: 18px;" />
-            <div style="margin-top: 0.8rem;">
-              <div style="font-family: 'Plus Jakarta Sans', serif; font-size: 1.1rem; font-weight: 700;">Er. Chetan Kr. Sarraf</div>
-                          </div>
+        <div style="display: flex; justify-content: flex-end;">
+          <div id="heroCardFrame" style="display: inline-block; text-align: left; background: transparent; padding: 0; border: none; box-shadow: none; width: 380px; max-width: 100%; position: relative;">
+            
+            <!-- Clean Portrait Frame (Wave & Oval Highlight Hidden) -->
+
+            <!-- Portrait Presentation (Seamless, No Outer Box) -->
+            <div id="heroPhotoContainer" style="position: relative; z-index: 1; width: 100%; height: 460px; overflow: hidden; border-radius: 20px; background: transparent; box-shadow: 0 20px 45px rgba(0,0,0,0.18);">
+              <img src="https://i.postimg.cc/05wwzfcw/Profile-Pic.png" alt="Er. Chetan Kumar Sarraf" id="sheetAboutPhoto" onerror="this.onerror=null;this.src='https://i.postimg.cc/05wwzfcw/Profile-Pic.png';" style="width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block;" />
+              <div id="sheetNecBadge" style="display:none; position: absolute; bottom: 12px; right: 12px; background: rgba(0,0,0,0.82); backdrop-filter: blur(8px); color: #fff; font-family: 'JetBrains Mono', monospace; font-size: 0.66rem; font-weight: 700; padding: 4px 10px; border-radius: 6px; letter-spacing: 0.05em;"></div>
+            </div>
+            
+            <div style="position: relative; z-index: 1; margin-top: 1rem; padding: 0 0.1rem;">
+              <div style="font-family: 'Plus Jakarta Sans', serif; font-size: 1.25rem; font-weight: 800; color: var(--text-main); line-height: 1.2;">Er. Chetan Kr. Sarraf</div>
+              <div style="font-family: 'Plus Jakarta Sans', monospace; font-size: 0.70rem; text-transform: uppercase; color: var(--brand-gold); letter-spacing: 0.08em; margin-top: 0.3rem; font-weight: 700;">Civil Engineer &amp; Spatial Designer</div>
+              <div style="font-size: 0.76rem; color: var(--text-muted); margin-top: 0.35rem; display: flex; align-items: center; gap: 0.45rem;">
+                <i class="fa-solid fa-location-dot" style="color: var(--text-muted);"></i> Birgunj, Parsa, Nepal
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -3523,7 +4092,7 @@
               <form id="mksChatForm" class="mks-reply-box">
                 <input type="text" id="mksChatInput" style="border:none; background:transparent; outline:none; font-size:0.79rem; color:inherit; width:100%;" placeholder="Reply to Studio AI or answer step above..." maxlength="300" autocomplete="off" />
                 <div style="display:flex; justify-content:space-between; align-items:center;">
-                  <span style="font-size:0.65rem; color:#94a3b8; font-family:'JetBrains Mono',monospace;" id="mksChatCounter">AI Co-Pilot Ready</span>
+                  <span style="font-size:0.65rem; color:#94a3b8; font-family:\'JetBrains Mono\',monospace;" id="mksChatCounter">AI Co-Pilot Ready</span>
                   <button type="submit" style="width:26px; height:26px; border-radius:50%; border:none; background:#18181b; color:#fff; cursor:pointer; display:inline-flex; align-items:center; justify-content:center;" title="Send to AI">
                     <i class="fa-solid fa-arrow-up" style="font-size:0.7rem;"></i>
                   </button>
@@ -3593,8 +4162,25 @@
                     <input type="number" id="mksStairLandInp" class="mks-input" style="padding:0.36rem 0.45rem;" value="3.5" min="3.0" max="5.0" step="0.25" onchange="window.CKSStudio && window.CKSStudio.applyProStairSpecs()" />
                   </div>
                 </div>
-                <div id="mksStairFormulaReadout" style="font-family:'JetBrains Mono',monospace; font-size:0.66rem; color:#15803d; background:rgba(22,163,74,0.08); padding:0.38rem 0.5rem; border-radius:8px;">
+                <div id="mksStairFormulaReadout" style="font-family:monospace; font-size:0.66rem; color:#15803d; background:rgba(22,163,74,0.08); padding:0.38rem 0.5rem; border-radius:8px;">
                   Riser: 7.5" · Tread: 10.5" · 2R+T = 25.5" (NBC OK)
+                </div>
+              </div>
+
+              <!-- Architectural Railing & Balcony System Customizer -->
+              <div style="background:#fafaf8; border:1px solid #e4e4de; border-radius:12px; padding:0.68rem 0.75rem;" id="mksRailingBox">
+                <div class="mks-label"><span style="color:#0f172a;">2B · Balcony &amp; Railing System (NBC 205)</span></div>
+                <div style="margin-bottom:0.38rem;">
+                  <span style="font-size:0.63rem; color:#71717a;">Architectural Railing Typology</span>
+                  <select id="mksRailingTypeSel" class="mks-select" style="padding:0.38rem 0.5rem; font-size:0.73rem;" onchange="window.CKSStudio && window.CKSStudio.setRailingType(this.value)">
+                    <option value="glass" selected>Frameless Tempered Glass + SS Handrail</option>
+                    <option value="baluster">Vertical Matte-Black Steel Balusters (4" c/c)</option>
+                    <option value="cable">Horizontal Tensioned Marine Stainless Cables</option>
+                    <option value="masonry_grill">Half-Height RCC Parapet + Upper Louver Grill</option>
+                  </select>
+                </div>
+                <div style="font-family:monospace; font-size:0.66rem; color:#15803d; background:rgba(22,163,74,0.08); padding:0.38rem 0.5rem; border-radius:8px;">
+                  Guardrail Height: 3'-6" (1066mm) · NBC 205 &amp; IS 456 Safety OK
                 </div>
               </div>
 
@@ -3615,6 +4201,7 @@
                       <option value="office" selected>Study / Puja</option>
                       <option value="closet">Walk-In Closet / Laundry</option>
                       <option value="patio">Verandah / Deck</option>
+                      <option value="balcony">Balcony / Terrace</option>
                     </optgroup>
                     <optgroup label="Commercial &amp; Institutional">
                       <option value="reception">Reception / Lobby</option>
@@ -3727,6 +4314,7 @@
                   <button type="button" class="mks-stamp-btn" onclick="window.CKSStudio && window.CKSStudio.stampRoom('kitchen', 12, 10)"><i class="fa-solid fa-kitchen-set"></i> Kitchen (12×10)</button>
                   <button type="button" class="mks-stamp-btn" onclick="window.CKSStudio && window.CKSStudio.stampRoom('pantry', 8, 6)"><i class="fa-solid fa-jar"></i> Pantry (8×6)</button>
                   <button type="button" class="mks-stamp-btn" onclick="window.CKSStudio && window.CKSStudio.stampRoom('bathroom', 8, 6)"><i class="fa-solid fa-bath"></i> Bath (8×6)</button>
+                  <button type="button" class="mks-stamp-btn" onclick="window.CKSStudio && window.CKSStudio.stampRoom('balcony', 14, 6)"><i class="fa-solid fa-person-through-window"></i> Balcony (14×6)</button>
                   <button type="button" class="mks-stamp-btn" onclick="window.CKSStudio && window.CKSStudio.stampRoom('hallway', 8, 12)"><i class="fa-solid fa-stairs"></i> Stair Core (8×12)</button>
                   <button type="button" class="mks-stamp-btn" onclick="window.CKSStudio && window.CKSStudio.stampRoom('open_office', 24, 18)"><i class="fa-solid fa-building"></i> Office (24×18)</button>
                   <button type="button" class="mks-stamp-btn" onclick="window.CKSStudio && window.CKSStudio.stampRoom('conference', 18, 14)"><i class="fa-solid fa-users-rectangle"></i> Boardroom (18×14)</button>
@@ -3746,7 +4334,7 @@
               </div>
               <div style="font-size:0.72rem; color:#71717a; line-height:1.38; display:flex; justify-content:space-between; align-items:center;">
                 <span>Click block to place on 2D plan · <strong>R</strong> rotates 90°</span>
-                <span id="mksLibCountBadge" style="font-family:'JetBrains Mono',monospace; font-size:0.65rem; font-weight:700; color:#2563eb;">75 items</span>
+                <span id="mksLibCountBadge" style="font-family:monospace; font-size:0.65rem; font-weight:700; color:#2563eb;">75 items</span>
               </div>
               <div id="mksLibWrap" style="display:flex; flex-direction:column; gap:0.65rem;"></div>
             </div>
@@ -4545,7 +5133,7 @@
 
         <div class="skill-bar-grid" id="aboutSkills"></div>
 
-        <div id="aboutMetaCard" style="margin-top:1.8rem; padding:1.2rem 1.5rem; border-radius:18px; background:var(--bg-card); border:1px solid var(--border-subtle); display:flex; justify-content:space-around; flex-wrap:wrap; gap:1rem; font-family:'JetBrains Mono',monospace; font-size:0.76rem; color:var(--text-muted);"></div>
+        <div id="aboutMetaCard" style="margin-top:1.8rem; padding:1.2rem 1.5rem; border-radius:18px; background:var(--bg-card); border:1px solid var(--border-subtle); display:flex; justify-content:space-around; flex-wrap:wrap; gap:1rem; font-family:monospace; font-size:0.76rem; color:var(--text-muted);"></div>
       </div>
 
       <!-- Live Dynamic Team Grid Linked to Team Tab -->
@@ -4627,7 +5215,7 @@
         <div>
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; flex-wrap:wrap; gap:0.5rem;">
             <span style="font-family: 'Plus Jakarta Sans',monospace; font-size:0.75rem; text-transform:uppercase; color:var(--text-muted);">Latest Verified &amp; Visitor Reviews</span>
-            <span id="revSheetSyncTag" style="font-family:'JetBrains Mono',monospace; font-size:0.68rem; color:var(--brand-cyan);"><i class="fa-solid fa-database"></i> Sheet + Local Sync Active</span>
+            <span id="revSheetSyncTag" style="font-family:monospace; font-size:0.68rem; color:var(--brand-cyan);"><i class="fa-solid fa-database"></i> Sheet + Local Sync Active</span>
           </div>
           <div id="reviewsList" style="display:flex; flex-direction:column; gap:1rem;"></div>
         </div>
@@ -4843,92 +5431,147 @@
 
   <!-- ================= USER SIGN-IN & CREATE ACCOUNT PAGE MODAL ================= -->
   <div id="userAuthModal" onclick="if(event.target===this) closeAuthModal()">
-    <div class="auth-card">
-      <button type="button" onclick="closeAuthModal()" style="position:absolute; top:18px; right:18px; width:34px; height:34px; border-radius:50%; border:1px solid var(--border-subtle); background:var(--bg-elevated); color:var(--text-main); cursor:pointer;">
+    <div class="auth-card" style="border: 1px solid var(--border-subtle); border-radius: 0; box-shadow: var(--shadow-lg);">
+      <button type="button" onclick="closeAuthModal()" style="position:absolute; top:18px; right:18px; width:34px; height:34px; border:none; background:transparent; color:var(--text-main); cursor:pointer; font-size:1.1rem; display:flex; align-items:center; justify-content:center;" title="Close Modal">
         <i class="fa-solid fa-xmark"></i>
       </button>
 
       <div style="font-family: 'Plus Jakarta Sans',monospace; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.15em; color:var(--brand-gold);">Scale &amp; Spaces Client Portal</div>
-      <h3 style="font-family: 'Plus Jakarta Sans',sans-serif; font-size:1.3rem; font-weight:800; margin-top:0.25rem;">Sign In</h3>
-      <p id="authTargetHint" style="font-size:0.84rem; color:var(--text-muted); margin-top:0.35rem;">Sign in to unlock the AI 2D/3D Floor Studio and save your session.</p>
+      <h3 id="authTitle" style="font-family: 'Plus Jakarta Sans',sans-serif; font-size:1.35rem; font-weight:800; margin-top:0.25rem;">Sign In to Studio</h3>
+      <p id="authTargetHint" style="font-size:0.84rem; color:var(--text-muted); margin-top:0.35rem;">Access the AI 2D/3D Floor Studio, manage architectural sessions, and sync cloud designs.</p>
 
-      <div class="auth-tab-bar">
-        <button type="button" class="auth-tab-btn active" id="authTabSignIn" onclick="switchAuthTab('signin')">Sign In</button>
-        <button type="button" class="auth-tab-btn" id="authTabSignUp" onclick="switchAuthTab('signup')">Create Account</button>
+      <div class="auth-tab-bar" style="border-bottom: 1px solid var(--border-subtle); margin: 1rem 0;">
+        <button type="button" class="auth-tab-btn active" id="authTabSignIn" onclick="switchAuthTab('signin')" style="border:none; border-bottom:2px solid var(--brand-gold); background:transparent; border-radius:0; padding:0.6rem 1.2rem; font-weight:700; cursor:pointer;">Sign In</button>
+        <button type="button" class="auth-tab-btn" id="authTabSignUp" onclick="switchAuthTab('signup')" style="border:none; border-bottom:2px solid transparent; background:transparent; border-radius:0; padding:0.6rem 1.2rem; font-weight:700; cursor:pointer;">Create Account</button>
       </div>
 
-      <button type="button" class="google-auth-btn" onclick="signInWithGoogle()">
-        <i class="fa-brands fa-google" style="font-size:1.05rem;"></i>
-        Continue with Google
+      <!-- Google Sign In -->
+      <button type="button" class="google-auth-btn" id="googleCustomAuthBtn" onclick="signInWithGoogle()" style="border: 1px solid var(--border-subtle); border-radius: 0; background: var(--bg-elevated); color: var(--text-main); font-weight: 600; padding: 0.8rem 1rem; width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.75rem; cursor: pointer;">
+        <i class="fa-brands fa-google" style="color: #4285F4; font-size: 1.1rem;"></i>
+        <span>Continue with Google</span>
       </button>
 
-      <div style="display:flex; align-items:center; gap:0.75rem; margin:1rem 0; color:var(--text-muted); font-family:'JetBrains Mono',monospace; font-size:0.68rem;">
+      <div style="display:flex; align-items:center; gap:0.75rem; margin:1rem 0; color:var(--text-muted); font-family:monospace; font-size:0.68rem;">
         <div style="flex:1; height:1px; background:var(--border-subtle);"></div>
-        <span>OR EMAIL PORTAL</span>
+        <span>OR CONTINUE WITH EMAIL</span>
         <div style="flex:1; height:1px; background:var(--border-subtle);"></div>
       </div>
 
-      <form id="userAuthForm" onsubmit="submitUserAuth(event)" style="display:flex; flex-direction:column; gap:0.8rem;">
+      <!-- Real Standard Login Form -->
+      <form id="userAuthForm" onsubmit="submitUserAuth(event)" style="display:flex; flex-direction:column; gap:0.85rem;">
         <div id="authNameFieldWrap" style="display:none;">
-          <input type="text" id="authFullName" placeholder="Full Name (e.g. Aarav Sharma)" style="width:100%; padding:0.78rem 1rem; border-radius:12px; background:var(--bg-elevated); border:1px solid var(--border-subtle); color:var(--text-main);" />
+          <input type="text" id="authFullName" placeholder="Full Name (e.g. Aarav Sharma)" style="width:100%; padding:0.8rem 1rem; border-radius:0; background:var(--bg-elevated); border:1px solid var(--border-subtle); color:var(--text-main); font-size:0.88rem;" />
         </div>
-        <input type="email" id="authEmail" placeholder="Email Address *" required style="width:100%; padding:0.78rem 1rem; border-radius:12px; background:var(--bg-elevated); border:1px solid var(--border-subtle); color:var(--text-main);" />
-        <div class="auth-pass-wrap">
-          <input type="password" id="authPassword" placeholder="Password (min 4 characters) *" minlength="4" required style="width:100%; padding:0.78rem 2.8rem 0.78rem 1rem; border-radius:12px; background:var(--bg-elevated); border:1px solid var(--border-subtle); color:var(--text-main);" />
-          <button type="button" class="auth-pass-toggle-btn" onclick="toggleAuthPasswordVisibility()" title="Show/Hide Password">
+        <input type="email" id="authEmail" placeholder="Email Address *" required style="width:100%; padding:0.8rem 1rem; border-radius:0; background:var(--bg-elevated); border:1px solid var(--border-subtle); color:var(--text-main); font-size:0.88rem;" />
+
+        <div class="auth-pass-wrap" style="position:relative;">
+          <input type="password" id="authPassword" placeholder="Password (min 6 characters) *" minlength="6" required style="width:100%; padding:0.8rem 2.8rem 0.8rem 1rem; border-radius:0; background:var(--bg-elevated); border:1px solid var(--border-subtle); color:var(--text-main); font-size:0.88rem;" />
+          <button type="button" class="auth-pass-toggle-btn" onclick="toggleAuthPasswordVisibility()" title="Show/Hide Password" style="position:absolute; right:10px; top:50%; transform:translateY(-50%); border:none; background:transparent; color:var(--text-muted); cursor:pointer;">
             <i id="authPassEyeIcon" class="fa-solid fa-eye"></i>
           </button>
         </div>
+        <div id="authForgotRow" style="display:flex; justify-content:space-between; align-items:center; margin-top:-0.35rem;">
+          <span style="font-size:0.75rem; color:var(--text-muted);">Encrypted Session</span>
+          <button type="button" onclick="switchAuthTab('forgot')" style="background:transparent; border:none; color:var(--brand-cyan); font-size:0.76rem; cursor:pointer; text-decoration:underline; font-weight:700;">Forgot password?</button>
+        </div>
+
         <div id="authFeedbackMsg"></div>
-        <button type="submit" id="authSubmitBtn" class="btn-pill btn-dark" style="justify-content:center; padding:0.82rem; margin-top:0.2rem;">
+
+        <button type="submit" id="authSubmitBtn" class="btn-pill btn-dark" style="justify-content:center; padding:0.85rem; margin-top:0.3rem; border-radius:0; font-weight:700;">
           Sign In &amp; Unlock Studio <i class="fa-solid fa-arrow-right"></i>
         </button>
-        <div class="auth-demo-badge">
-          <span><i class="fa-solid fa-key" style="color:var(--brand-gold);"></i> Demo: <code>guest@chetan.com</code> / <code>guest123</code></span>
-          <button type="button" onclick="fillDemoAuth()" style="background:transparent; border:none; color:var(--brand-cyan); font-weight:700; cursor:pointer; font-size:0.72rem; text-decoration:underline;">Auto-fill</button>
+
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:0.3rem; font-size:0.75rem; color:var(--text-muted);">
+          <span>Encrypted session · Saved to Cloud</span>
+          <button type="button" onclick="quickGuestAccess()" style="background:transparent; border:none; color:var(--brand-cyan); font-weight:700; cursor:pointer; font-size:0.75rem; text-decoration:underline;">Explore as Guest</button>
         </div>
       </form>
 
-      <div id="authSignedInFooter" style="display:none; margin-top:1rem; padding-top:1rem; border-top:1px solid var(--border-subtle); justify-content:space-between; align-items:center;">
-        <span id="authCurrentAccountTxt" style="font-family:'JetBrains Mono',monospace; font-size:0.72rem; color:var(--text-main);"></span>
-        <button type="button" onclick="signOutUser()" class="btn-pill btn-light" style="padding:0.35rem 0.85rem; font-size:0.7rem;">Sign Out</button>
+      <!-- ================= FORGOT PASSWORD & EMAIL VERIFICATION CODE VIEW ================= -->
+      <div id="authForgotWrap" style="display:none; margin-top:0.5rem;">
+        <div style="font-family:'Plus Jakarta Sans',monospace; font-size:0.68rem; text-transform:uppercase; letter-spacing:0.12em; color:var(--brand-gold); margin-bottom:0.25rem;">Account Recovery Desk</div>
+        <h4 style="font-family:'Plus Jakarta Sans',sans-serif; font-size:1.15rem; font-weight:800; color:var(--text-main); margin:0 0 0.5rem;">Reset Your Password</h4>
+
+        <!-- Step 1: Request 6-digit Code -->
+        <div id="forgotStep1">
+          <p style="font-size:0.82rem; color:var(--text-muted); margin-bottom:0.85rem; line-height:1.45;">Enter your registered email address. We will send a secure 6-digit verification code to your email.</p>
+          <div style="display:flex; flex-direction:column; gap:0.75rem;">
+            <input type="email" id="forgotEmailInput" placeholder="Registered Email (e.g. master.cks009@gmail.com) *" required style="width:100%; padding:0.8rem 1rem; border-radius:0; background:var(--bg-elevated); border:1px solid var(--border-subtle); color:var(--text-main); font-size:0.88rem;" />
+            <button type="button" id="forgotSendCodeBtn" onclick="requestPasswordResetCode()" class="btn-pill btn-dark" style="justify-content:center; padding:0.85rem; border-radius:0; font-weight:700;">
+              Send Verification Code <i class="fa-solid fa-paper-plane" style="margin-left:0.4rem;"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 2: Enter Code & New Password -->
+        <div id="forgotStep2" style="display:none;">
+          <p style="font-size:0.82rem; color:var(--text-muted); margin-bottom:0.85rem; line-height:1.45;">Enter the 6-digit verification code sent to your email and choose your new password.</p>
+          <div style="display:flex; flex-direction:column; gap:0.75rem;">
+            <input type="text" id="forgotCodeInput" placeholder="6-Digit Code (e.g. 529104) *" maxlength="6" style="width:100%; padding:0.8rem 1rem; border-radius:0; background:var(--bg-elevated); border:1px solid var(--border-subtle); color:var(--text-main); font-size:1.15rem; letter-spacing:0.25em; text-align:center; font-family:monospace; font-weight:700;" />
+            
+            <div style="position:relative;">
+              <input type="password" id="forgotNewPasswordInput" placeholder="New Password (min 6 characters) *" minlength="6" style="width:100%; padding:0.8rem 2.8rem 0.8rem 1rem; border-radius:0; background:var(--bg-elevated); border:1px solid var(--border-subtle); color:var(--text-main); font-size:0.88rem;" />
+              <button type="button" onclick="toggleForgotPassVisibility()" style="position:absolute; right:10px; top:50%; transform:translateY(-50%); border:none; background:transparent; color:var(--text-muted); cursor:pointer;">
+                <i id="forgotPassEyeIcon" class="fa-solid fa-eye"></i>
+              </button>
+            </div>
+
+            <button type="button" id="forgotResetConfirmBtn" onclick="confirmPasswordReset()" class="btn-pill btn-dark" style="justify-content:center; padding:0.85rem; border-radius:0; font-weight:700;">
+              Reset Password &amp; Sign In <i class="fa-solid fa-check" style="margin-left:0.4rem;"></i>
+            </button>
+          </div>
+        </div>
+
+        <div id="forgotFeedbackMsg" style="margin-top:0.75rem;"></div>
+
+        <div style="margin-top:1.1rem; text-align:center; border-top:1px solid var(--border-subtle); padding-top:0.85rem;">
+          <button type="button" onclick="switchAuthTab('signin')" style="background:transparent; border:none; color:var(--brand-cyan); font-size:0.78rem; font-weight:700; cursor:pointer; text-decoration:underline;">
+            &larr; Back to Sign In
+          </button>
+        </div>
+      </div>
+
+      <div id="authSignedInFooter" style="display:none; margin-top:1.2rem; padding-top:1rem; border-top:1px solid var(--border-subtle); justify-content:space-between; align-items:center;">
+        <span id="authCurrentAccountTxt" style="font-family:monospace; font-size:0.72rem; color:var(--text-main);"></span>
+        <button type="button" onclick="signOutUser()" class="btn-pill btn-light" style="padding:0.35rem 0.85rem; font-size:0.7rem; border-radius:0;">Sign Out</button>
       </div>
     </div>
   </div>
 
   <!-- ================= FLOATING GOOGLE CHAT FEATURE WIDGET ================= -->
-  <button type="button" id="gchatLauncher" onclick="toggleGChat()">
-    <i class="fa-brands fa-google" style="font-size:0.85rem;"></i>
-    <span>Google Chat</span>
+  <button type="button" id="gchatLauncher" onclick="onGChatLauncherClick(event)" title="Live Google Chat with Studio">
+    <i class="fa-brands fa-google"></i>
+    <span class="gchat-live-dot"></span>
   </button>
 
   <div id="gchatPanel">
     <div style="padding:0.9rem 1.15rem; background:var(--bg-elevated); color:var(--text-main); border-bottom:1px solid var(--border-subtle); display:flex; justify-content:space-between; align-items:center; gap:0.6rem;">
       <div style="display:flex; align-items:center; gap:0.65rem;">
-        <div style="width:32px; height:32px; border-radius:50%; background:var(--bg-card); border:1px solid var(--border-subtle); display:flex; align-items:center; justify-content:center; color:var(--text-main); font-size:0.85rem;">
+        <div style="width:28px; height:28px; border:none; background:transparent; display:flex; align-items:center; justify-content:center; color:var(--brand-gold); font-size:1.1rem;">
           <i class="fa-brands fa-google"></i>
         </div>
         <div>
           <div style="font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:0.86rem; color:var(--text-main);">Google Chat · Studio Desk</div>
+          <div style="font-size:0.66rem; color:var(--brand-cyan); font-family:monospace;">Online · Studio Support Desk</div>
         </div>
       </div>
       <div style="display:flex; align-items:center;">
-        <button type="button" onclick="toggleGChat(false)" style="width:28px; height:28px; border-radius:50%; border:1px solid var(--border-subtle); background:var(--bg-card); color:var(--text-main); cursor:pointer;"><i class="fa-solid fa-xmark"></i></button>
+        <button type="button" onclick="toggleGChat(false)" style="width:28px; height:28px; border:none; background:transparent; color:var(--text-main); cursor:pointer; font-size:1rem;" title="Close Chat"><i class="fa-solid fa-xmark"></i></button>
       </div>
     </div>
 
-    <div style="padding:0.55rem 0.85rem; background:var(--bg-elevated); border-bottom:1px solid var(--border-subtle); display:flex; gap:0.4rem; overflow-x:auto;">
-      <button type="button" onclick="quickAskGChat('What are the latest Birgunj construction rates?')" class="btn-pill btn-light" style="padding:0.28rem 0.7rem; font-size:0.66rem; white-space:nowrap;">Material Rates</button>
-      <button type="button" onclick="quickAskGChat('Show 360 VR tours')" class="btn-pill btn-light" style="padding:0.28rem 0.7rem; font-size:0.66rem; white-space:nowrap;">360° VR Tours</button>
-      <button type="button" onclick="quickAskGChat('How much does interior design cost per sq.ft?')" class="btn-pill btn-light" style="padding:0.28rem 0.7rem; font-size:0.66rem; white-space:nowrap;">Design Fees</button>
-      <button type="button" onclick="quickAskGChat('Download Resume & Brochures')" class="btn-pill btn-light" style="padding:0.28rem 0.7rem; font-size:0.66rem; white-space:nowrap;">Resume PDF</button>
+    <div style="padding:0.55rem 0.85rem; background:var(--bg-elevated); border-bottom:1px solid var(--border-subtle); display:flex; gap:0.6rem; overflow-x:auto;">
+      <button type="button" onclick="quickAskGChat('What are the latest Birgunj construction rates?')" class="btn-pill btn-light" style="padding:0.28rem 0.7rem; font-size:0.66rem; white-space:nowrap; border-radius:0;">Material Rates</button>
+      <button type="button" onclick="quickAskGChat('Show 360 VR tours')" class="btn-pill btn-light" style="padding:0.28rem 0.7rem; font-size:0.66rem; white-space:nowrap; border-radius:0;">360° VR Tours</button>
+      <button type="button" onclick="quickAskGChat('How much does interior design cost per sq.ft?')" class="btn-pill btn-light" style="padding:0.28rem 0.7rem; font-size:0.66rem; white-space:nowrap; border-radius:0;">Design Fees</button>
+      <button type="button" onclick="quickAskGChat('Download Resume & Brochures')" class="btn-pill btn-light" style="padding:0.28rem 0.7rem; font-size:0.66rem; white-space:nowrap; border-radius:0;">Resume PDF</button>
     </div>
 
     <div id="gchatMessages" style="flex:1; padding:1rem; overflow-y:auto; display:flex; flex-direction:column; gap:0.75rem; font-size:0.84rem;"></div>
 
-    <form onsubmit="sendGChatMsg(event)" style="padding:0.75rem; border-top:1px solid var(--border-subtle); background:var(--bg-card); display:flex; gap:0.5rem;">
-      <input type="text" id="gchatInput" placeholder="Message Studio or start Google Chat..." style="flex:1; padding:0.65rem 0.9rem; border-radius:9999px; border:1px solid var(--border-subtle); background:var(--bg-elevated); color:var(--text-main); font-size:0.82rem;" />
-      <button type="submit" style="width:38px; height:38px; border-radius:50%; border:0; background:var(--brand-dark); color:var(--bg-page); cursor:pointer;"><i class="fa-solid fa-paper-plane"></i></button>
+    <form onsubmit="sendGChatMsg(event)" style="padding:0.75rem; border-top:1px solid var(--border-subtle); background:var(--bg-card); display:flex; gap:0.5rem; align-items:center;">
+      <input type="text" id="gchatInput" placeholder="Message Studio or start Google Chat..." style="flex:1; padding:0.65rem 0.9rem; border-radius:0; border:1px solid var(--border-subtle); background:var(--bg-elevated); color:var(--text-main); font-size:0.82rem;" />
+      <button type="submit" style="width:38px; height:38px; border:none; background:transparent; color:var(--brand-gold); cursor:pointer; font-size:1.1rem; display:flex; align-items:center; justify-content:center;" title="Send Message"><i class="fa-solid fa-paper-plane"></i></button>
     </form>
   </div>
 
@@ -4980,7 +5623,17 @@
   <!-- ================= NATIVE LOGIC ENGINE (100% GOOGLE SHEET CONNECTED & UPGRADABLE) ================= -->
   <script>
     const DEFAULT_SHEET_ID = "1cQ724gHkaWJCNc5n6b6-qtCgNw6y41YB8ZgQDgTgGO4";
+    const DEFAULT_GOOGLE_CLIENT_ID = "619955856662-7d6fpmorphkkq4deri46eq417sh4nrji.apps.googleusercontent.com";
     const DEFAULT_REVIEW_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycby1xacxsW9pRkaU1L4thsxcdf54NNLRrlBA4NOZyZFkS41jfGwVolEYn4vl4aMzzlg9og/exec";
+
+    function normalizeWebhookUrl(url) {
+      if (!url || typeof url !== 'string') return '';
+      let u = url.trim();
+      if (u.endsWith('/dev')) {
+        u = u.replace(/\/dev$/, '/exec');
+      }
+      return u;
+    }
     const MASTER_SHEET_ID = DEFAULT_SHEET_ID; // Backward-compatibility alias
 
     function getActiveSheetId() {
@@ -5017,7 +5670,7 @@
       studioAddress: 'Birgunj, Parsa, Nepal',
       studioCoords: '27° 0\' 36.7668" N 84° 53\' 34.8936" E',
       googleChatUrl: '',
-      googleClientId: '',
+      googleClientId: DEFAULT_GOOGLE_CLIENT_ID,
       reviewWebhookUrl: DEFAULT_REVIEW_WEBHOOK_URL,
       resumeUrl: 'https://drive.google.com/file/d/1GYduTB03A4mX0UdiN3vgtmNJGHo9QwPb/view?usp=drive_link',
       authMode: 'signin',
@@ -5155,15 +5808,16 @@
           const script = document.createElement('script');
           let settled = false;
 
+          let timer = null;
           const cleanup = () => {
             if (settled) return;
             settled = true;
-            clearTimeout(timer);
+            if (timer) clearTimeout(timer);
             try { delete window[cb]; } catch(e) { window[cb] = undefined; }
             if (script.parentNode) script.parentNode.removeChild(script);
           };
 
-          const timer = setTimeout(() => {
+          timer = setTimeout(() => {
             cleanup();
             tryDirectFetch();
           }, 6000);
@@ -5288,7 +5942,7 @@
     async function initLiveSheet() {
       try {
         // Fetch all 10 core tabs + optional 'Reviews' tab in parallel with zero-CORS
-        const [hero, about, downloads, team, port, art, posts, sc, rates, faqs, sheetReviews] = await Promise.all([
+        const [hero, about, downloads, team, port, art, posts, sc, rates, faqs, sheetReviews, customSettings] = await Promise.all([
           fetchSheetTab('Hero'),
           fetchSheetTab('About'),
           fetchSheetTab('Downloads'),
@@ -5299,8 +5953,31 @@
           fetchSheetTab('Showcase'),
           fetchSheetTab('Rates'),
           fetchSheetTab('FAQs'),
-          fetchSheetTab('Reviews', true)
+          fetchSheetTab('Reviews', true),
+          fetchSheetTab('Your settings tab', true)
         ]);
+
+        // Parse custom settings tab if present (e.g. Google_Client_ID, Review_Webhook_URL)
+        if (customSettings && customSettings.length) {
+          try {
+            customSettings.forEach(r => {
+              if (!r || !r[0]) return;
+              const cell = String(r[0]).trim();
+              if (cell.includes('=')) {
+                const parts = cell.split('=');
+                const k = parts[0].trim();
+                const v = parts.slice(1).join('=').trim();
+                if (/g+o+g+l+e.*client.*id/i.test(k) && v) state.googleClientId = v;
+                if (/webhook/i.test(k) && v) state.reviewWebhookUrl = cleanLink(v);
+              } else if (r[1]) {
+                const k = cell;
+                const v = String(r[1]).trim();
+                if (/g+o+g+l+e.*client.*id/i.test(k) && v) state.googleClientId = v;
+                if (/webhook/i.test(k) && v) state.reviewWebhookUrl = cleanLink(v);
+              }
+            });
+          } catch(e) {}
+        }
 
         // 1. HERO TAB (All 8 rows + SEO Meta + Spotlight Links + Upgradable Config Keys)
         try {
@@ -5413,6 +6090,16 @@
               if (el) el.textContent = p2;
             }
 
+            const nec = getVal(m, 'NEC_No', 'NEC No', 'NEC', 'License');
+            const necEl = document.getElementById('sheetNecBadge');
+            if (necEl) {
+              if (nec && nec.trim()) {
+                necEl.textContent = 'NEC ' + nec.trim();
+                necEl.style.display = 'block';
+              } else {
+                necEl.style.display = 'none';
+              }
+            }
             const photo = getVal(m, 'Photo_URL', 'Photo URL', 'Photo', 'Image', 'Profile_Pic', 'Avatar');
             if (photo) {
               const pUrl = cleanImg(photo);
@@ -6055,8 +6742,8 @@
           <img src="${escapeHtml(p.cover)}" alt="${escapeHtml(p.title)}" style="width: 100%; height: 185px; object-fit: cover;" />
           <div style="padding: 1rem 1.2rem;">
             <div style="display:flex; justify-content:space-between; align-items:center; gap:0.4rem; margin-bottom:0.25rem;">
-              <span style="font-family:'JetBrains Mono',monospace; font-size:0.64rem; text-transform:uppercase; color:var(--text-main); font-weight:600;">● ${escapeHtml(p.status)}</span>
-              ${p.images.length > 1 ? `<span style="font-family:'JetBrains Mono',monospace; font-size:0.64rem; color:var(--brand-gold);">${p.images.length} Photos</span>` : ''}
+              <span style="font-family:monospace; font-size:0.64rem; text-transform:uppercase; color:var(--text-main); font-weight:600;">● ${escapeHtml(p.status)}</span>
+              ${p.images.length > 1 ? `<span style="font-family:monospace; font-size:0.64rem; color:var(--brand-gold);">${p.images.length} Photos</span>` : ''}
             </div>
             <strong style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.1rem; display: block;">${escapeHtml(p.title)}</strong>
             <span style="font-size: 0.75rem; color: var(--text-muted); font-family: 'Plus Jakarta Sans',monospace;">${escapeHtml(p.clientName ? 'Client: ' + p.clientName : p.caption)}</span>
@@ -6128,7 +6815,7 @@
             <div>
               <div style="font-family: 'Plus Jakarta Sans',monospace; font-size:0.68rem; text-transform:uppercase; color:var(--brand-cyan);">${escapeHtml(d.category)} ${d.size ? '· ' + escapeHtml(d.size) : ''}</div>
               <h4 style="font-family: 'Plus Jakarta Sans',sans-serif; font-size:1.1rem; font-weight:700; margin-top:0.2rem;">${escapeHtml(d.title)}</h4>
-              <div style="font-family:'JetBrains Mono',monospace; font-size:0.68rem; color:var(--text-muted); margin-top:0.2rem;">
+              <div style="font-family:monospace; font-size:0.68rem; color:var(--text-muted); margin-top:0.2rem;">
                 ${hasDirect ? '<span><i class="fa-solid fa-cloud-arrow-down"></i> Direct Google Drive PDF</span>' : '<span><i class="fa-brands fa-whatsapp"></i> Instant Studio Dispatch</span>'}
               </div>
             </div>
@@ -6403,7 +7090,7 @@
         <tr style="border-bottom: 1px solid var(--border-subtle);">
           <td style="padding: 10px 14px; font-family: 'Plus Jakarta Sans',sans-serif; font-weight:700;">${r.name}</td>
           <td style="padding: 10px 14px; font-family: 'Plus Jakarta Sans',monospace; color:var(--brand-cyan);">${r.zone}</td>
-          <td style="padding: 10px 14px; font-family:'JetBrains Mono',monospace;">~${r.w}' × ${r.l}' ft</td>
+          <td style="padding: 10px 14px; font-family:monospace;">~${r.w}' × ${r.l}' ft</td>
           <td style="padding: 10px 14px; font-family: 'Plus Jakarta Sans',monospace; font-weight:700;">${r.area} sq.ft</td>
         </tr>
       `).join('');
@@ -6563,13 +7250,13 @@
         </p>
 
         <div>
-          <label style="font-family:'JetBrains Mono',monospace; font-size:0.72rem; text-transform:uppercase; color:var(--text-muted); display:block; margin-bottom:0.4rem; font-weight:600;">
+          <label style="font-family:monospace; font-size:0.72rem; text-transform:uppercase; color:var(--text-muted); display:block; margin-bottom:0.4rem; font-weight:600;">
             Google Sheet URL or ID:
           </label>
-          <input type="text" id="customSheetIdInput" placeholder="Paste link (https://docs.google.com/spreadsheets/d/.../edit) or ID" style="width:100%; padding:0.85rem 1.1rem; border-radius:14px; border:1px solid var(--border-subtle); background:var(--bg-elevated); color:var(--text-main); font-family:'JetBrains Mono',monospace; font-size:0.82rem;" />
+          <input type="text" id="customSheetIdInput" placeholder="Paste link (https://docs.google.com/spreadsheets/d/.../edit) or ID" style="width:100%; padding:0.85rem 1.1rem; border-radius:14px; border:1px solid var(--border-subtle); background:var(--bg-elevated); color:var(--text-main); font-family:monospace; font-size:0.82rem;" />
         </div>
 
-        <div id="sheetModalFeedback" style="display:none; padding:0.8rem 1.1rem; border-radius:12px; font-family:'JetBrains Mono',monospace; font-size:0.75rem;"></div>
+        <div id="sheetModalFeedback" style="display:none; padding:0.8rem 1.1rem; border-radius:12px; font-family:monospace; font-size:0.75rem;"></div>
 
         <div style="display:flex; gap:0.6rem; flex-wrap:wrap;">
           <button type="button" onclick="saveAndApplyCustomSheet()" class="btn-pill btn-dark" style="flex:1; justify-content:center; padding:0.75rem 1.2rem;">
@@ -6804,7 +7491,7 @@
           const parsed = JSON.parse(raw);
           if (parsed && typeof parsed === 'object') {
             if (!parsed.name || /^google(\s+visitor)?$/i.test(String(parsed.name).trim())) {
-              parsed.name = 'Studio Member';
+              parsed.name = 'Client';
               try { localStorage.setItem(USER_STORAGE_KEY, JSON.stringify(parsed)); } catch (err) {}
             }
             state.currentUser = parsed;
@@ -6918,23 +7605,352 @@
       }
     }
 
-    function fillDemoAuth() {
-      document.getElementById('authEmail').value = 'guest@chetan.com';
-      document.getElementById('authPassword').value = 'guest123';
-      switchAuthTab('signin');
-      showAuthFeedback('success', 'Demo credentials loaded! Click Sign In &amp; Unlock Studio.');
+    function initGoogleSignIn() {
+      if (window.google && window.google.accounts && window.google.accounts.id && state.googleClientId) {
+        try {
+          window.google.accounts.id.initialize({
+            client_id: state.googleClientId,
+            callback: handleGoogleCredentialResponse,
+            auto_select: false,
+            cancel_on_tap_outside: true
+          });
+          const container = document.getElementById('googleGsiBtnContainer');
+          if (container) {
+            container.innerHTML = '';
+            window.google.accounts.id.renderButton(container, {
+              theme: 'outline',
+              size: 'large',
+              text: 'continue_with',
+              shape: 'rectangular',
+              width: 320
+            });
+          }
+        } catch (err) {
+          console.warn('Google GSI init notice:', err);
+        }
+      }
+    }
+
+    function handleGoogleCredentialResponse(resp) {
+      try {
+        const base64Url = resp.credential.split('.')[1];
+        const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+        const jsonPayload = decodeURIComponent(atob(base64).split('').map(c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join(''));
+        const payload = JSON.parse(jsonPayload);
+        const userObj = {
+          name: payload.name || payload.email.split('@')[0],
+          email: payload.email,
+          picture: payload.picture || '',
+          provider: 'google',
+          sub: payload.sub
+        };
+        // Record user in background to Apps Script Users tab
+        if (state.reviewWebhookUrl) {
+          fetch(state.reviewWebhookUrl, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              action: 'google_login',
+              credential: resp.credential,
+              email: payload.email,
+              name: payload.name || '',
+              picture: payload.picture || ''
+            })
+          }).catch(() => {});
+        }
+        showAuthFeedback('success', 'Google verification successful! Welcome ' + (userObj.name) + '.');
+        setTimeout(() => completeAuthSession(userObj), 300);
+      } catch (err) {
+        console.error('Google Auth Parse Error:', err);
+        showAuthFeedback('error', 'Google Sign-In response could not be verified. Please try Email OTP.');
+      }
+    }
+
+    // Centralized Google Sheet & Webhook Dual-Dispatch (POST + GET Beacon)
+    function dispatchToGoogleSheet(action, payload) {
+      const hook = normalizeWebhookUrl(state.reviewWebhookUrl || DEFAULT_REVIEW_WEBHOOK_URL);
+      if (!hook) return;
+      const data = Object.assign({ action: action, timestamp: new Date().toISOString() }, payload || {});
+
+      // 1. Dual-Dispatch: POST (no-cors)
+      try {
+        fetch(hook, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify(data)
+        }).catch(() => {});
+      } catch (err) {}
+
+      // 2. Dual-Dispatch: GET Image Beacon (Guarantees zero-CORS delivery across all browsers)
+      try {
+        const params = new URLSearchParams();
+        for (const k in data) {
+          if (data[k] !== undefined && data[k] !== null) {
+            params.append(k, String(data[k]));
+          }
+        }
+        params.append('_t', String(Date.now()));
+        const beacon = new Image();
+        beacon.src = hook + '?' + params.toString();
+      } catch (err) {}
+    }
+
+    function toggleForgotPassVisibility() {
+      const inp = document.getElementById('forgotNewPasswordInput');
+      const icon = document.getElementById('forgotPassEyeIcon');
+      if (!inp || !icon) return;
+      if (inp.type === 'password') {
+        inp.type = 'text';
+        icon.className = 'fa-solid fa-eye-slash';
+      } else {
+        inp.type = 'password';
+        icon.className = 'fa-solid fa-eye';
+      }
     }
 
     function switchAuthTab(mode) {
       state.authMode = mode;
       const fb = document.getElementById('authFeedbackMsg');
       if (fb) fb.style.display = 'none';
-      document.getElementById('authTabSignIn').classList.toggle('active', mode === 'signin');
-      document.getElementById('authTabSignUp').classList.toggle('active', mode === 'signup');
-      document.getElementById('authNameFieldWrap').style.display = mode === 'signup' ? 'block' : 'none';
-      document.getElementById('authSubmitBtn').innerHTML = mode === 'signup'
-        ? 'Create Account &amp; Unlock <i class="fa-solid fa-user-plus"></i>'
-        : 'Sign In &amp; Unlock Studio <i class="fa-solid fa-arrow-right"></i>';
+      const forgotFb = document.getElementById('forgotFeedbackMsg');
+      if (forgotFb) forgotFb.style.display = 'none';
+
+      const tabSignIn = document.getElementById('authTabSignIn');
+      const tabSignUp = document.getElementById('authTabSignUp');
+      const nameWrap = document.getElementById('authNameFieldWrap');
+      const submitBtn = document.getElementById('authSubmitBtn');
+      const titleEl = document.getElementById('authTitle');
+      const authForm = document.getElementById('userAuthForm');
+      const googleBtn = document.getElementById('googleCustomAuthBtn');
+      const forgotWrap = document.getElementById('authForgotWrap');
+      const tabBar = document.querySelector('.auth-tab-bar');
+      const orDivider = googleBtn ? googleBtn.nextElementSibling : null;
+
+      if (mode === 'forgot') {
+        if (tabBar) tabBar.style.display = 'none';
+        if (googleBtn) googleBtn.style.display = 'none';
+        if (orDivider) orDivider.style.display = 'none';
+        if (authForm) authForm.style.display = 'none';
+        if (forgotWrap) forgotWrap.style.display = 'block';
+        if (titleEl) titleEl.textContent = 'Reset Password';
+        document.getElementById('forgotStep1').style.display = 'block';
+        document.getElementById('forgotStep2').style.display = 'none';
+        const curEmail = document.getElementById('authEmail')?.value.trim();
+        if (curEmail) {
+          const forgotEmail = document.getElementById('forgotEmailInput');
+          if (forgotEmail) forgotEmail.value = curEmail;
+        }
+        return;
+      }
+
+      // Normal signin / signup
+      if (tabBar) tabBar.style.display = 'flex';
+      if (googleBtn) googleBtn.style.display = 'flex';
+      if (orDivider) orDivider.style.display = 'flex';
+      if (authForm) authForm.style.display = 'flex';
+      if (forgotWrap) forgotWrap.style.display = 'none';
+
+      if (mode === 'signin') {
+        if (tabSignIn) tabSignIn.style.borderBottom = '2px solid var(--brand-gold)';
+        if (tabSignUp) tabSignUp.style.borderBottom = '2px solid transparent';
+        if (nameWrap) nameWrap.style.display = 'none';
+        if (titleEl) titleEl.textContent = 'Sign In to Studio';
+        if (submitBtn) submitBtn.innerHTML = 'Sign In & Unlock Studio <i class="fa-solid fa-arrow-right"></i>';
+      } else {
+        if (tabSignIn) tabSignIn.style.borderBottom = '2px solid transparent';
+        if (tabSignUp) tabSignUp.style.borderBottom = '2px solid var(--brand-gold)';
+        if (nameWrap) nameWrap.style.display = 'block';
+        if (titleEl) titleEl.textContent = 'Create Studio Account';
+        if (submitBtn) submitBtn.innerHTML = 'Create Account & Unlock <i class="fa-solid fa-user-plus"></i>';
+      }
+    }
+
+    function showForgotFeedback(type, text) {
+      const fb = document.getElementById('forgotFeedbackMsg');
+      if (!fb) return;
+      const isErr = type === 'error';
+      fb.style.display = 'block';
+      fb.style.padding = '0.65rem 0.85rem';
+      fb.style.borderRadius = '0';
+      fb.style.fontSize = '0.8rem';
+      fb.style.background = isErr ? 'rgba(239,68,68,0.1)' : 'rgba(34,197,94,0.1)';
+      fb.style.border = isErr ? '1px solid #ef4444' : '1px solid #22c55e';
+      fb.style.color = isErr ? '#ef4444' : '#22c55e';
+      fb.innerHTML = text;
+    }
+
+    function requestPasswordResetCode() {
+      const email = (document.getElementById('forgotEmailInput')?.value || '').trim().toLowerCase();
+      if (!email || !email.includes('@')) {
+        showForgotFeedback('error', 'Please enter a valid email address.');
+        document.getElementById('forgotEmailInput').focus();
+        return;
+      }
+
+      const btn = document.getElementById('forgotSendCodeBtn');
+      if (btn) {
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending Code...';
+      }
+
+      // Generate secure 6-digit verification code
+      const localCode = String(Math.floor(100000 + Math.random() * 900000));
+      state.pendingResetCode = localCode;
+      state.pendingResetEmail = email;
+
+      // Dispatch to Google Apps Script -> Sends Email directly to the visitor's Gmail
+      dispatchToGoogleSheet('forgot_password', { email: email, code: localCode });
+
+      setTimeout(() => {
+        if (btn) {
+          btn.disabled = false;
+          btn.innerHTML = 'Send Verification Code <i class="fa-solid fa-paper-plane" style="margin-left:0.4rem;"></i>';
+        }
+        showForgotFeedback('success', 
+          '✓ 6-Digit verification code sent to <strong>' + escapeHtml(email) + '</strong>.<br/>' +
+          '<span style="font-size:0.75rem;color:var(--text-muted);">Please check your email inbox (and spam folder) and enter the 6 digits below.</span>'
+        );
+        document.getElementById('forgotStep1').style.display = 'none';
+        document.getElementById('forgotStep2').style.display = 'block';
+        const codeInput = document.getElementById('forgotCodeInput');
+        if (codeInput) { codeInput.value = ''; codeInput.focus(); }
+      }, 550);
+    }
+
+    function confirmPasswordReset() {
+      const email = state.pendingResetEmail || (document.getElementById('forgotEmailInput')?.value || '').trim().toLowerCase();
+      const code = (document.getElementById('forgotCodeInput')?.value || '').trim();
+      const newPass = (document.getElementById('forgotNewPasswordInput')?.value || '').trim();
+
+      if (!code || code.length !== 6) {
+        showForgotFeedback('error', 'Please enter the 6-digit verification code.');
+        return;
+      }
+      if (!newPass || newPass.length < 6) {
+        showForgotFeedback('error', 'New password must be at least 6 characters.');
+        return;
+      }
+
+      // Verify code
+      if (state.pendingResetCode && code !== state.pendingResetCode) {
+        showForgotFeedback('error', 'Incorrect verification code. Please check your email.');
+        return;
+      }
+
+      // Update password in localStorage accounts
+      const accounts = getStoredAccounts();
+      const key = email.toLowerCase();
+      if (!accounts[key]) {
+        accounts[key] = {
+          name: email.split('@')[0].replace(/[._-]+/g, ' ').replace(/\b\w/g, c => c.toUpperCase()),
+          email: key,
+          password: newPass,
+          provider: 'standard_email',
+          createdAt: new Date().toISOString()
+        };
+      } else {
+        accounts[key].password = newPass;
+      }
+      try { localStorage.setItem(ACCOUNTS_STORAGE_KEY, JSON.stringify(accounts)); } catch (err) {}
+
+      // Dispatch update to Google Sheet Users tab
+      dispatchToGoogleSheet('reset_password', { email: key, code: code, newPassword: newPass, password: newPass });
+
+      showForgotFeedback('success', '✓ Password reset successfully! Signing you in...');
+
+      const userName = accounts[key].name || email.split('@')[0];
+      setTimeout(() => {
+        completeAuthSession({ name: userName, email: key, provider: 'standard_email' });
+        closeAuthModal();
+      }, 900);
+    }
+
+    function quickGuestAccess() {
+      completeAuthSession({
+        name: 'Studio Guest',
+        email: 'guest@scaleandspaces.com',
+        provider: 'guest'
+      });
+      showAuthFeedback('success', 'Logged in as Studio Guest. Unlocking AI Studio...');
+    }
+
+    async function submitUserAuth(e) {
+      e.preventDefault();
+      const email = (document.getElementById('authEmail')?.value || '').trim();
+      const pass = (document.getElementById('authPassword')?.value || '').trim();
+      const fullNameInput = (document.getElementById('authFullName')?.value || '').trim();
+
+      if (!email || !email.includes('@')) {
+        showAuthFeedback('error', 'Please enter a valid email address.');
+        document.getElementById('authEmail').focus();
+        return;
+      }
+      if (!pass || pass.length < 6) {
+        showAuthFeedback('error', 'Password must be at least 6 characters.');
+        document.getElementById('authPassword').focus();
+        return;
+      }
+
+      const key = email.toLowerCase();
+      const accounts = getStoredAccounts();
+
+      if (state.authMode === 'signup') {
+        if (accounts[key]) {
+          showAuthFeedback('error', 'An account with this email already exists. Please switch to Sign In.');
+          return;
+        }
+        const derivedName = fullNameInput || email.split('@')[0].replace(/[._-]+/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+        accounts[key] = {
+          name: derivedName,
+          email: key,
+          password: pass,
+          provider: 'standard_email',
+          createdAt: new Date().toISOString()
+        };
+        try { localStorage.setItem(ACCOUNTS_STORAGE_KEY, JSON.stringify(accounts)); } catch (err) {}
+
+        // Sync directly to Google Sheet Users tab & trigger welcome notification
+        dispatchToGoogleSheet('register', { name: derivedName, email: key, password: pass });
+
+        showAuthFeedback('success', '✓ Account created! Welcome, ' + derivedName + '. Unlocking Studio...');
+        setTimeout(() => {
+          completeAuthSession({ name: derivedName, email: key, provider: 'standard_email' });
+          e.target.reset();
+        }, 350);
+        return;
+      }
+
+      // SIGN IN MODE
+      const acc = accounts[key];
+      if (!acc) {
+        // Auto-provision account for smooth client onboarding
+        const derivedName = fullNameInput || email.split('@')[0].replace(/[._-]+/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+        accounts[key] = { name: derivedName, email: key, password: pass, provider: 'standard_email', createdAt: new Date().toISOString() };
+        try { localStorage.setItem(ACCOUNTS_STORAGE_KEY, JSON.stringify(accounts)); } catch (err) {}
+        dispatchToGoogleSheet('user_login', { name: derivedName, email: key, password: pass });
+        showAuthFeedback('success', '✓ Account registered! Welcome, ' + derivedName + '. Unlocking Studio...');
+        setTimeout(() => {
+          completeAuthSession({ name: derivedName, email: key, provider: 'standard_email' });
+          e.target.reset();
+        }, 350);
+        return;
+      }
+
+      // Existing account password check
+      if (acc.password && acc.password !== pass) {
+        showAuthFeedback('error', 'Incorrect password. Click "Forgot password?" below to reset it.');
+        document.getElementById('authPassword').focus();
+        return;
+      }
+
+      dispatchToGoogleSheet('user_login', { name: acc.name || 'Client', email: acc.email, password: pass });
+      showAuthFeedback('success', '✓ Welcome back, ' + (acc.name || 'Client') + '! Unlocking Studio...');
+      setTimeout(() => {
+        completeAuthSession({ name: acc.name || 'Client', email: acc.email, provider: 'standard_email' });
+        e.target.reset();
+      }, 350);
     }
 
     function completeAuthSession(userObj) {
@@ -6949,82 +7965,18 @@
       }
     }
 
-    function submitUserAuth(e) {
-      e.preventDefault();
-      const email = document.getElementById('authEmail').value.trim();
-      const pass = document.getElementById('authPassword').value;
-      const fullNameInput = document.getElementById('authFullName').value.trim();
-      if (!email || !pass) {
-        showAuthFeedback('error', 'Please enter your email and password.');
-        return;
-      }
-
-      const accounts = getStoredAccounts();
-      const key = email.toLowerCase();
-
-      if (state.authMode === 'signin') {
-        const acc = accounts[key];
-        if (!acc) {
-          showAuthFeedback('error', 'Account not found. Please click "Create Account" above to register, or use Demo: guest@chetan.com / guest123');
-          return;
-        }
-        if (acc.password && acc.password !== pass) {
-          showAuthFeedback('error', 'Incorrect password. Please verify your credentials.');
-          document.getElementById('authPassword').focus();
-          return;
-        }
-        showAuthFeedback('success', 'Welcome back, ' + (acc.name || 'Member') + '! Unlocking Studio...');
-        setTimeout(() => {
-          completeAuthSession({ name: acc.name || 'Studio Member', email: acc.email, provider: 'email' });
-          e.target.reset();
-        }, 320);
-      } else {
-        // Sign Up
-        if (pass.length < 4) {
-          showAuthFeedback('error', 'Password must be at least 4 characters.');
-          return;
-        }
-        if (accounts[key]) {
-          showAuthFeedback('error', 'An account with this email already exists. Please switch to Sign In.');
-          return;
-        }
-        const derivedName = fullNameInput || email.split('@')[0].replace(/[._-]+/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
-        accounts[key] = { name: derivedName, email: key, password: pass, provider: 'email', createdAt: new Date().toISOString() };
-        try { localStorage.setItem(ACCOUNTS_STORAGE_KEY, JSON.stringify(accounts)); } catch (err) {}
-
-        showAuthFeedback('success', 'Account created! Welcome to Scale & Spaces.');
-        setTimeout(() => {
-          completeAuthSession({ name: derivedName, email: key, provider: 'email' });
-          e.target.reset();
-        }, 320);
-      }
-    }
+    // Obsolete duplicate auth handler purged permanently
 
     function signInWithGoogle() {
-      // Use real Google Identity Services popup/prompt if Google_Client_ID is configured in Google Sheet
       if (state.googleClientId && window.google && window.google.accounts && window.google.accounts.id) {
-        window.google.accounts.id.initialize({
-          client_id: state.googleClientId,
-          callback: (resp) => {
-            try {
-              const payload = JSON.parse(atob(resp.credential.split('.')[1]));
-              completeAuthSession({
-                name: payload.name || payload.email,
-                email: payload.email,
-                picture: payload.picture || '',
-                provider: 'google'
-              });
-            } catch (err) {}
-          }
-        });
+        initGoogleSignIn();
         window.google.accounts.id.prompt();
         return;
       }
-
-      // Instant Sign-In flow (works immediately on both web & local file:// without OAuth setup)
+      // Direct instant fallback
       const emailInput = document.getElementById('authEmail').value.trim();
       const email = emailInput && emailInput.includes('@') ? emailInput : 'visitor@gmail.com';
-      const name = document.getElementById('authFullName').value.trim() || (email === 'visitor@gmail.com' ? 'Studio Member' : email.split('@')[0].replace(/[._-]+/g, ' ').replace(/\b\w/g, c => c.toUpperCase()));
+      const name = document.getElementById('authFullName').value.trim() || (email === 'visitor@gmail.com' ? 'Client' : email.split('@')[0].replace(/[._-]+/g, ' ').replace(/\b\w/g, c => c.toUpperCase()));
       completeAuthSession({ name, email, provider: 'google' });
     }
 
@@ -7266,7 +8218,7 @@
           const c = list.filter(r => Math.round(Number(r.rating)) === star).length;
           const pct = Math.round((c / total) * 100);
           return `
-            <div style="display:flex; align-items:center; gap:0.5rem; font-family:'JetBrains Mono',monospace; font-size:0.7rem;">
+            <div style="display:flex; align-items:center; gap:0.5rem; font-family:monospace; font-size:0.7rem;">
               <span style="width:26px;">${star}★</span>
               <div style="flex:1; height:6px; background:var(--bg-elevated); border-radius:9999px; overflow:hidden;">
                 <div style="width:${pct}%; height:100%; background:var(--text-main); border-radius:9999px;"></div>
@@ -7288,16 +8240,15 @@
                 <div style="display:flex; align-items:center; gap:0.75rem;">
                   <div style="width:42px; height:42px; border-radius:50%; background:var(--bg-elevated); border:1px solid var(--border-subtle); display:flex; align-items:center; justify-content:center; font-family: 'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:0.85rem; color:var(--brand-gold);">${escapeHtml(initials)}</div>
                   <div>
-                    <div style="font-family: 'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:1rem; display:flex; align-items:center; gap:0.45rem;">
+                    <div style="font-family: 'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:1.02rem; color:var(--text-main);">
                       ${escapeHtml(r.name)}
-                      <span style="font-family:'JetBrains Mono',monospace; font-size:0.62rem; color:var(--text-muted); background:var(--bg-elevated); border:1px solid var(--border-subtle); padding:2px 7px; border-radius:9999px;">${r.verified ? '✓ Verified Client' : '✓ Studio Visitor'}</span>
                     </div>
                     <div style="font-family: 'Plus Jakarta Sans',monospace; font-size:0.72rem; color:var(--text-muted);">${escapeHtml(r.city)} · ${escapeHtml(r.projectType)}</div>
                   </div>
                 </div>
                 <div style="text-align:right;">
                   <div style="color:var(--text-main); font-size:0.95rem; letter-spacing:1px;">${stars}</div>
-                  <div style="font-family:'JetBrains Mono',monospace; font-size:0.66rem; color:var(--text-muted);">${escapeHtml(r.date)}</div>
+                  <div style="font-family:monospace; font-size:0.66rem; color:var(--text-muted);">${escapeHtml(r.date)}</div>
                 </div>
               </div>
               <p style="margin-top:0.9rem; color:var(--text-main); font-size:0.92rem; line-height:1.7;">"${escapeHtml(r.comment)}"</p>
@@ -7432,39 +8383,202 @@
       }
     }
 
-    function buildGChatAnswer(qRaw) {
-      const q = qRaw.toLowerCase();
+    function isKnownStandardTopic(qRaw) {
+      const q = (qRaw || '').toLowerCase().trim();
+      return /^(hi|hello|namaste|hey|hola|good\s*morning|good\s*afternoon|good\s*evening)/.test(q) ||
+             /rate|cement|brick|sand|marble|tile|paint|price|material/.test(q) ||
+             /360|vr|tour|showcase|walkthrough|video|reel/.test(q) ||
+             /resume|cv|brochure|catalog|download|pdf/.test(q) ||
+             /fee|cost|boq|sq\.?ft|charge|package|budget/.test(q) ||
+             /balcony|railing|guardrail|terrace|parapet/.test(q) ||
+             /vastu|direction|north|east|south|west|puja/.test(q) ||
+             /where|location|address|office|birgunj|parsa|contact/.test(q) ||
+             /plan|floor|studio|cad|draw|3d|bhk|bedroom|house/.test(q);
+    }
+
+    function buildGChatAnswer(qRaw, isSignedIn) {
+      const q = (qRaw || '').toLowerCase().trim();
+
+      // Greetings & Introductions
+      if (/^(hi|hello|namaste|hey|hola|good\s*morning|good\s*afternoon|good\s*evening)/.test(q)) {
+        return `Namaste! I am the automated Studio Desk for <strong>Er. Chetan Kumar Sarraf</strong>.<br/>I can help you explore <strong>live Terai construction rates</strong>, calculate your <strong>interior BOQ</strong>, review <strong>360° VR tours</strong>, or launch the <strong>AI 2D/3D Floor Studio</strong>. What would you like to design today?`;
+      }
+
+      // Live Rates & Material Benchmark
       if (/rate|cement|brick|sand|marble|tile|paint|price|material/.test(q) && state.rates.length) {
         const sample = state.rates.slice(0, 4).map(r => `• <strong>${escapeHtml(r.item)}</strong>: Rs. ${escapeHtml(r.rate)} (${escapeHtml(r.unit)})`).join('<br/>');
-        return `Here are live Terai benchmark rates from our Google Sheet:<br/>${sample}<br/><button type="button" onclick="openAppSection('resources','Rates')" class="btn-pill btn-dark" style="margin-top:0.5rem; padding:0.3rem 0.8rem; font-size:0.7rem;">Open Rates</button>`;
+        return `Here are live Terai benchmark rates from our Google Sheet:<br/>${sample}<br/><button type="button" onclick="openAppSection('resources','Rates')" class="btn-pill btn-dark" style="margin-top:0.5rem; padding:0.3rem 0.8rem; font-size:0.7rem; border-radius:0;">Open Rates Table</button>`;
       }
-      if (/360|vr|tour|showcase|walkthrough/.test(q) && state.showcase.length) {
-        return `We have <strong>${state.showcase.length} immersive tours &amp; reels</strong> synced live (including 360° panoramic walkthroughs).<br/><button type="button" onclick="openAppSection('showcase','360° VR')" class="btn-pill btn-dark" style="margin-top:0.5rem; padding:0.3rem 0.8rem; font-size:0.7rem;">Open 360° VR</button>`;
+
+      // 360 VR & Video Walkthroughs
+      if (/360|vr|tour|showcase|walkthrough|video|reel/.test(q) && state.showcase.length) {
+        return `We have <strong>${state.showcase.length} immersive tours &amp; reels</strong> synced live (including 360° panoramic walkthroughs).<br/><button type="button" onclick="openAppSection('showcase','360° VR')" class="btn-pill btn-dark" style="margin-top:0.5rem; padding:0.3rem 0.8rem; font-size:0.7rem; border-radius:0;">Open 360° VR Tours</button>`;
       }
+
+      // Resume & Brochures
       if (/resume|cv|brochure|catalog|download|pdf/.test(q)) {
-        return `You can view Er. Chetan's official Resume &amp; Studio Brochures right here:<br/><a href="${escapeHtml(state.resumeUrl)}" target="_blank" rel="noopener" class="btn-pill btn-dark" style="margin-top:0.5rem; padding:0.3rem 0.8rem; font-size:0.7rem;">Resume PDF ↗</a>`;
+        return `You can view Er. Chetan's official Resume &amp; Studio Brochures right here:<br/><a href="${escapeHtml(state.resumeUrl)}" target="_blank" rel="noopener" class="btn-pill btn-dark" style="margin-top:0.5rem; padding:0.3rem 0.8rem; font-size:0.7rem; border-radius:0;">View Resume PDF ↗</a>`;
       }
-      if (/fee|cost|boq|sq\.?ft|charge|package/.test(q)) {
+
+      // Fees, BOQ & Cost estimation
+      if (/fee|cost|boq|sq\.?ft|charge|package|price|budget/.test(q)) {
         const faqMatch = state.faqs.find(f => /charge|cost|fee|sq/i.test(f.q));
-        return `${faqMatch ? escapeHtml(faqMatch.a) : '2D Planning starts Rs. 25–45/sq.ft, 3D + Working Blueprints Rs. 65–110/sq.ft, and Turnkey Execution Rs. 1,600–2,800/sq.ft.'}<br/><button type="button" onclick="openAppSection('studio-tools','BOQ')" class="btn-pill btn-dark" style="margin-top:0.5rem; padding:0.3rem 0.8rem; font-size:0.7rem;">Calculate BOQ</button>`;
+        return `${faqMatch ? escapeHtml(faqMatch.a) : '2D Planning starts Rs. 25–45/sq.ft, 3D + Working Blueprints Rs. 65–110/sq.ft, and Turnkey Execution Rs. 1,600–2,800/sq.ft.'}<br/><button type="button" onclick="openAppSection('studio-tools','BOQ')" class="btn-pill btn-dark" style="margin-top:0.5rem; padding:0.3rem 0.8rem; font-size:0.7rem; border-radius:0;">Calculate BOQ</button>`;
       }
-      return `Thank you! You can connect directly with <strong>Er. Chetan Kumar Sarraf</strong> via our Consultation Desk or WhatsApp (${escapeHtml(state.studioPhoneDisplay)}).<br/><div style="display:flex; gap:0.45rem; flex-wrap:wrap; margin-top:0.55rem;"><button type="button" onclick="openAppSection('contact','Contact')" class="btn-pill btn-dark" style="padding:0.3rem 0.75rem; font-size:0.68rem;">Contact Desk</button><a href="https://wa.me/${state.whatsappDigits}?text=${encodeURIComponent(qRaw)}" target="_blank" rel="noopener" class="btn-pill btn-light" style="padding:0.3rem 0.75rem; font-size:0.68rem;">WhatsApp ↗</a></div>`;
+
+      // Balcony & Railing Systems (NBC 205:2024)
+      if (/balcony|railing|guardrail|terrace|parapet/.test(q)) {
+        return `Our studio models 4 architectural railing systems compliant with <strong>NBC 205:2024 (3'-6" / 1066mm guard height)</strong>:<br/>• Frameless Glass + SS Handrail<br/>• Vertical Matte-Black Steel Balusters (4" c/c)<br/>• Horizontal Tensioned Marine Stainless Cables<br/>• Half-Height RCC Parapet + Upper Louver Grill<br/><button type="button" onclick="openAppSection('studio-tools','Floor Studio')" class="btn-pill btn-dark" style="margin-top:0.5rem; padding:0.3rem 0.8rem; font-size:0.7rem; border-radius:0;">Launch Studio Railings</button>`;
+      }
+
+      // Vastu Shastra & Orientation
+      if (/vastu|direction|north|east|south|west|puja/.test(q)) {
+        return `Under Terai spatial design, we harmonize <strong>Vastu Shastra with NBC structural safety</strong>: Entrance preferred in North/East, Master Suite in South-West (stability), Kitchen in South-East (Agni), and Puja in North-East (Ishanya).`;
+      }
+
+      // Office Location & Hours
+      if (/where|location|address|office|birgunj|parsa|contact/.test(q)) {
+        return `Er. Chetan Kumar Sarraf's Studio is located at <strong>Birgunj, Parsa, Nepal</strong>.<br/>Phone / WhatsApp: <strong>${escapeHtml(state.studioPhoneDisplay)}</strong><br/>Email: <strong>${escapeHtml(state.studioEmail)}</strong><br/><button type="button" onclick="openAppSection('contact','Contact')" class="btn-pill btn-dark" style="margin-top:0.5rem; padding:0.3rem 0.8rem; font-size:0.7rem; border-radius:0;">Open Contact Desk</button>`;
+      }
+
+      // Floor Plan / AI Studio
+      if (/plan|floor|studio|cad|draw|3d|bhk|bedroom|house/.test(q)) {
+        return `You can generate full 2D architectural CAD plans and interactive 3D multi-storey walkthrus right in our AI Studio.<br/><button type="button" onclick="openAppSection('studio-tools','Floor Studio')" class="btn-pill btn-dark" style="margin-top:0.5rem; padding:0.3rem 0.8rem; font-size:0.7rem; border-radius:0;">Open AI Floor Studio</button>`;
+      }
+
+      // Custom / Off-Topic Inquiry for Verified Signed-In Client
+      const clientName = state.currentUser?.name || 'Valued Client';
+      return `Thank you, <strong>${escapeHtml(clientName)}</strong>!<br/>Your custom inquiry has been recorded and dispatched directly to <strong>Er. Chetan Kumar Sarraf</strong>.<br/>Connect directly 1-on-1 on Google Chat or WhatsApp:<br/><div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-top:0.65rem;"><a href="https://mail.google.com/chat/u/0/#chat/dm/master.cks009@gmail.com" target="_blank" rel="noopener" class="btn-pill btn-dark" style="padding:0.38rem 0.85rem; font-size:0.74rem; text-decoration:none; display:flex; align-items:center; gap:0.4rem; background:#1e293b; color:#fff; border-radius:0;"><i class="fa-solid fa-comments" style="color:var(--brand-cyan);"></i> Open Direct Google Chat</a><a href="https://wa.me/${state.whatsappDigits}?text=${encodeURIComponent(qRaw)}" target="_blank" rel="noopener" class="btn-pill btn-light" style="padding:0.38rem 0.85rem; font-size:0.74rem; text-decoration:none; display:flex; align-items:center; gap:0.35rem; color:#16a34a; border-radius:0;"><i class="fa-brands fa-whatsapp"></i> WhatsApp Direct</a></div>`;
+    }
+
+        function initDraggableGChatLauncher() {
+      const el = document.getElementById('gchatLauncher');
+      if (!el) return;
+
+      let isDragging = false;
+      let hasMoved = false;
+      let startX = 0, startY = 0;
+      let initLeft = 0, initTop = 0;
+
+      try {
+        const saved = localStorage.getItem('cks_gchat_pos');
+        if (saved) {
+          const pos = JSON.parse(saved);
+          if (typeof pos.left === 'number' && typeof pos.top === 'number') {
+            const maxL = Math.max(10, window.innerWidth - 60);
+            const maxT = Math.max(10, window.innerHeight - 60);
+            const clL = Math.min(maxL, Math.max(10, pos.left));
+            const clT = Math.min(maxT, Math.max(10, pos.top));
+            el.style.left = clL + 'px';
+            el.style.top = clT + 'px';
+            el.style.right = 'auto';
+            el.style.bottom = 'auto';
+          }
+        }
+      } catch (e) {}
+
+      const onPointerDown = (e) => {
+        isDragging = true;
+        hasMoved = false;
+        const rect = el.getBoundingClientRect();
+        startX = e.clientX || (e.touches && e.touches[0].clientX) || 0;
+        startY = e.clientY || (e.touches && e.touches[0].clientY) || 0;
+        initLeft = rect.left;
+        initTop = rect.top;
+        try { el.setPointerCapture(e.pointerId); } catch(err) {}
+      };
+
+      const onPointerMove = (e) => {
+        if (!isDragging) return;
+        const curX = e.clientX || (e.touches && e.touches[0].clientX) || 0;
+        const curY = e.clientY || (e.touches && e.touches[0].clientY) || 0;
+        const dx = curX - startX;
+        const dy = curY - startY;
+        if (!hasMoved && Math.hypot(dx, dy) > 4) {
+          hasMoved = true;
+        }
+        if (hasMoved) {
+          const newL = Math.max(10, Math.min(window.innerWidth - 56, initLeft + dx));
+          const newT = Math.max(10, Math.min(window.innerHeight - 56, initTop + dy));
+          el.style.left = newL + 'px';
+          el.style.top = newT + 'px';
+          el.style.right = 'auto';
+          el.style.bottom = 'auto';
+        }
+      };
+
+      const onPointerUp = (e) => {
+        if (!isDragging) return;
+        isDragging = false;
+        if (hasMoved) {
+          const rect = el.getBoundingClientRect();
+          try {
+            localStorage.setItem('cks_gchat_pos', JSON.stringify({ left: Math.round(rect.left), top: Math.round(rect.top) }));
+          } catch (err) {}
+          el.dataset.justDragged = '1';
+          setTimeout(() => { delete el.dataset.justDragged; }, 140);
+        }
+      };
+
+      el.addEventListener('pointerdown', onPointerDown);
+      window.addEventListener('pointermove', onPointerMove, { passive: true });
+      window.addEventListener('pointerup', onPointerUp, { passive: true });
+      window.addEventListener('pointercancel', onPointerUp, { passive: true });
+    }
+
+    function onGChatLauncherClick(e) {
+      const el = document.getElementById('gchatLauncher');
+      if (el && el.dataset.justDragged) return;
+      toggleGChat();
     }
 
     function quickAskGChat(text) {
       toggleGChat(true);
       appendGChatBubble('user', escapeHtml(text));
-      setTimeout(() => appendGChatBubble('bot', buildGChatAnswer(text)), 220);
+      setTimeout(() => appendGChatBubble('bot', buildGChatAnswer(text, !!state.currentUser)), 220);
     }
 
     function sendGChatMsg(e) {
       e.preventDefault();
       const inp = document.getElementById('gchatInput');
-      const txt = inp.value.trim();
+      const txt = (inp.value || '').trim();
       if (!txt) return;
       inp.value = '';
       appendGChatBubble('user', escapeHtml(txt));
-      setTimeout(() => appendGChatBubble('bot', buildGChatAnswer(txt)), 240);
+
+      const isSignedIn = !!(state.currentUser && state.currentUser.email && state.currentUser.provider !== 'guest');
+      const isStandard = isKnownStandardTopic(txt);
+
+      // ACCESS GATE: If visitor is NOT signed in AND types off-topic / custom question, prompt for login
+      if (!isSignedIn && !isStandard) {
+        setTimeout(() => {
+          appendGChatBubble('bot', `
+            🔒 <strong>Direct Studio Desk Connection:</strong><br/>
+            To send custom inquiries directly to <strong>Er. Chetan Kumar Sarraf</strong>, please sign in or register your verified client account.<br/>
+            <div style="margin-top:0.65rem; display:flex; gap:0.5rem; flex-wrap:wrap;">
+              <button type="button" onclick="openAuthModal('Sign in to forward custom inquiries directly to Er. Chetan on Google Chat.')" class="btn-pill btn-dark" style="padding:0.4rem 0.9rem; font-size:0.74rem; font-weight:700; border-radius:0;">
+                Sign In / Register <i class="fa-solid fa-arrow-right" style="margin-left:0.35rem;"></i>
+              </button>
+            </div>
+          `);
+        }, 250);
+        return;
+      }
+
+      const answer = buildGChatAnswer(txt, isSignedIn);
+
+      // Dispatch to Google Apps Script -> Logs to Messages tab & Emails master.cks009@gmail.com
+      dispatchToGoogleSheet('chat_message', {
+        name: state.currentUser?.name || 'Studio Visitor',
+        email: state.currentUser?.email || 'visitor@scaleandspaces.com',
+        message: txt,
+        messages: txt,
+        page: 'studio_chat',
+        is_signed_in: isSignedIn,
+        is_offtopic: !isStandard
+      });
+
+      setTimeout(() => appendGChatBubble('bot', answer), 250);
     }
 
     // ================= AUTOMATIC SIGNATURE GIF PLAYBACK & AUTO SLIDE-UP PRELOADER =================
@@ -7555,6 +8669,16 @@
     function bootApp() {
       startAutoPreloader();
       restoreUserSession();
+      initGoogleSignIn();
+      initDraggableGChatLauncher();
+      // Proactive gentle chat prompt after 5s
+      setTimeout(() => {
+        const p = document.getElementById('gchatPanel');
+        if (p && !p.classList.contains('open') && !localStorage.getItem('cks_gchat_dismissed')) {
+          const l = document.getElementById('gchatLauncher');
+          if (l) l.classList.add('gchat-wiggle');
+        }
+      }, 5000);
       initReviewsData([]);
 
       const menuBtn = document.getElementById('menuBtn');
@@ -7620,6 +8744,7 @@
         closet:       { label: 'Walk-In Closet / Laundry',light: '#f3f5f8', dark: '#12151c', border: '#52525b', floor3d: 0xedf0f5, floorPat: 'tile',        heated: true,  costMult: 0.85 },
         garage:       { label: 'Car Porch / Park',        light: '#e7e9ee', dark: '#18181b', border: '#52525b', floor3d: 0xcbd5e1, floorPat: 'stone',       heated: false, costMult: 0.55 },
         patio:        { label: 'Verandah / Deck',         light: '#e8dccb', dark: '#1c1917', border: '#52525b', floor3d: 0xc9b08f, floorPat: 'deck',        heated: false, costMult: 0.42 },
+        balcony:      { label: 'Balcony / Terrace',       light: '#e8dccb', dark: '#1c1917', border: '#52525b', floor3d: 0xc9b08f, floorPat: 'deck',        heated: false, costMult: 0.45 },
         reception:    { label: 'Reception / Lobby',       light: '#f5f3ee', dark: '#171923', border: '#27272a', floor3d: 0xefede7, floorPat: 'terrazzo',    heated: true,  costMult: 1.20 },
         open_office:  { label: 'Open Office / Co-Work',   light: '#f4efe6', dark: '#181b24', border: '#27272a', floor3d: 0xdfcbb0, floorPat: 'oak',         heated: true,  costMult: 1.15 },
         conference:   { label: 'Boardroom / Conference',  light: '#efe8dc', dark: '#1c202b', border: '#18181b', floor3d: 0xd6be9c, floorPat: 'herringbone', heated: true,  costMult: 1.28 },
@@ -7723,7 +8848,12 @@
         { id: 'dental_chair',      name: 'Dental / Specialist Unit',       cat: 'Clinic & Fitness',    w: 5.8,  h: 3.2, z: 3.6 },
         { id: 'pharmacy_rack',     name: 'Pharmacy / Dispensary Shelving', cat: 'Clinic & Fitness',    w: 6.0,  h: 1.8, z: 6.6 },
         { id: 'treadmill',         name: 'Commercial Cardio Treadmill',    cat: 'Clinic & Fitness',    w: 3.0,  h: 6.6, z: 4.6 },
-        { id: 'weight_rack',       name: 'Dumbbell Rack & Training Bench', cat: 'Clinic & Fitness',    w: 6.2,  h: 3.6, z: 3.8 }
+        { id: 'weight_rack',       name: 'Dumbbell Rack & Training Bench', cat: 'Clinic & Fitness',    w: 6.2,  h: 3.6, z: 3.8 },
+        // 9. Balcony & Railing Systems (07Sketches Ch.9 & NBC 205:2024)
+        { id: 'balcony_railing_glass', name: 'Frameless Glass Guardrail (6ft / NBC 205)', cat: 'Balcony & Railing', w: 6.0,  h: 0.6, z: 3.5 },
+        { id: 'balcony_railing_iron',  name: 'Vertical Steel Baluster Railing (6ft)',     cat: 'Balcony & Railing', w: 6.0,  h: 0.6, z: 3.5 },
+        { id: 'balcony_planter',       name: 'Balcony Planter Box & Trough (07Sketches)', cat: 'Balcony & Railing', w: 4.0,  h: 1.2, z: 1.8 },
+        { id: 'outdoor_lounger',       name: 'Outdoor Terrace Reclining Lounger',         cat: 'Balcony & Railing', w: 2.3,  h: 5.8, z: 2.2 }
       ];
 
       const FINISH_CATALOG = {
@@ -7767,6 +8897,12 @@
           { id: 'alabaster', label: 'Alabaster',    swatch: '#eeece3', hex3d: 0xeeece3 },
           { id: 'walnut',    label: 'Walnut',       swatch: '#734a2d', hex3d: 0x734a2d },
           { id: 'slate',     label: 'Slate Blue',   swatch: '#475569', hex3d: 0x475569 }
+        ],
+        railing: [
+          { id: 'glass',         label: 'Frameless Glass + SS Handrail (NBC 205:2024)', swatch: '#93c5fd', hex3d: 0x93c5fd, heightFt: 3.5, posts: 'stainless' },
+          { id: 'baluster',      label: 'Vertical Matte-Black Steel Balusters (4" c/c)', swatch: '#18181b', hex3d: 0x18181b, heightFt: 3.5, posts: 'matte_black' },
+          { id: 'cable',         label: 'Horizontal Tensioned Marine Stainless Cables',  swatch: '#a1a1aa', hex3d: 0xa1a1aa, heightFt: 3.5, posts: 'brushed_steel' },
+          { id: 'masonry_grill', label: 'Half-Height RCC Parapet + Upper Louver Grill',   swatch: '#d4d4d8', hex3d: 0xd4d4d8, heightFt: 3.5, posts: 'concrete_louver' }
         ]
       };
 
@@ -8069,7 +9205,7 @@
           doors: '#EEECE3',
           windows: '#EEECE3',
           countertop: 'marble',
-          cabinets: 'oak_light'
+          cabinets: 'oak_light', railing: 'glass'
         },
         stairSpec: {
           type: 'stairs',
@@ -8271,7 +9407,7 @@
         };
 
         for (const r of fl.rooms) {
-          const p = r.type === 'patio';
+          const p = r.type === 'patio' || r.type === 'balcony';
           addH(r.y, r.x, r.x + r.w, +1, r.id, p);
           addH(r.y + r.h, r.x, r.x + r.w, -1, r.id, p);
           addV(r.x, r.y, r.y + r.h, +1, r.id, p);
@@ -9938,6 +11074,26 @@
           } else {
             c.beginPath(); c.moveTo(0, hh - 4); c.lineTo(0, hh); c.stroke();
           }
+        } else if (f.type === 'balcony_railing_glass' || f.type === 'balcony_railing_iron') {
+          c.fillStyle = f.type === 'balcony_railing_glass' ? 'rgba(56, 189, 248, 0.25)' : 'rgba(39, 39, 42, 0.45)';
+          c.fillRect(-hw, -hh, pw, ph);
+          c.strokeStyle = f.type === 'balcony_railing_glass' ? '#0284c7' : '#18181b';
+          c.lineWidth = 1.4;
+          c.strokeRect(-hw, -hh, pw, ph);
+        } else if (f.type === 'balcony_planter') {
+          c.fillStyle = dark ? '#14532d' : '#166534';
+          c.fillRect(-hw, -hh, pw, ph);
+          c.strokeStyle = '#15803d';
+          c.strokeRect(-hw, -hh, pw, ph);
+          c.fillStyle = '#22c55e';
+          for (let px = -hw + pw / 5; px < hw - 2; px += pw / 5) {
+            c.beginPath(); c.arc(px, 0, Math.min(4, ph * 0.35), 0, Math.PI * 2); c.fill();
+          }
+        } else if (f.type === 'outdoor_lounger') {
+          c.fillStyle = dark ? '#78350f' : '#b45309';
+          c.fillRect(-hw, -hh, pw, ph);
+          c.fillStyle = '#f8fafc';
+          c.fillRect(-hw + 2, -hh + 3, pw - 4, ph * 0.35);
         } else if (f.type === 'laundry_counter' || f.type === 'pantry_rack' || f.type === 'dressing_table' || f.type === 'linen_closet') {
           if (f.type === 'laundry_counter') {
             c.fillStyle = dark ? '#334155' : '#e2e8f0';
@@ -11049,10 +12205,57 @@
           const p1 = w2s(w.x1, w.y1), p2 = w2s(w.x2, w.y2);
           ctx.save();
           if (w.isRailing) {
-            ctx.strokeStyle = dark ? '#94a3b8' : '#52525b';
-            ctx.lineWidth = Math.max(2, 0.24 * k);
-            ctx.setLineDash([6, 3]);
-            ctx.beginPath(); ctx.moveTo(p1.x, p1.y); ctx.lineTo(p2.x, p2.y); ctx.stroke();
+            const railTypology = s.finishes?.railing || 'glass';
+            const dx = p2.x - p1.x, dy = p2.y - p1.y;
+            const len = Math.hypot(dx, dy);
+            const ang = Math.atan2(dy, dx);
+
+            ctx.translate(p1.x, p1.y);
+            ctx.rotate(ang);
+
+            const rW = Math.max(3, 0.25 * k);
+            ctx.strokeStyle = dark ? '#94a3b8' : '#3f3f46';
+            ctx.lineWidth = 1.2;
+            ctx.beginPath();
+            ctx.moveTo(0, -rW / 2); ctx.lineTo(len, -rW / 2);
+            ctx.moveTo(0, rW / 2); ctx.lineTo(len, rW / 2);
+            ctx.stroke();
+
+            const postSz = Math.max(4, 0.35 * k);
+            ctx.fillStyle = dark ? '#e2e8f0' : '#18181b';
+            ctx.fillRect(-postSz / 2, -postSz / 2, postSz, postSz);
+            ctx.fillRect(len - postSz / 2, -postSz / 2, postSz, postSz);
+
+            const nInt = Math.max(1, Math.round((len / k) / 4.0));
+            for (let i = 1; i < nInt; i++) {
+              const ix = (len / nInt) * i;
+              ctx.fillRect(ix - postSz / 2, -postSz / 2, postSz, postSz);
+            }
+
+            if (railTypology === 'baluster') {
+              ctx.strokeStyle = dark ? '#cbd5e1' : '#52525b';
+              ctx.lineWidth = 1.0;
+              const nBal = Math.max(2, Math.floor((len / k) / 0.33));
+              ctx.beginPath();
+              for (let b = 1; b < nBal; b++) {
+                const bx = (len / nBal) * b;
+                ctx.moveTo(bx, -rW / 2); ctx.lineTo(bx, rW / 2);
+              }
+              ctx.stroke();
+            } else if (railTypology === 'glass') {
+              ctx.strokeStyle = dark ? 'rgba(56, 189, 248, 0.65)' : 'rgba(2, 132, 199, 0.7)';
+              ctx.lineWidth = 1.6;
+              ctx.beginPath(); ctx.moveTo(postSz, 0); ctx.lineTo(len - postSz, 0); ctx.stroke();
+            } else if (railTypology === 'cable') {
+              ctx.strokeStyle = dark ? '#94a3b8' : '#71717a';
+              ctx.lineWidth = 0.8;
+              ctx.setLineDash([4, 2]);
+              ctx.beginPath(); ctx.moveTo(postSz, 0); ctx.lineTo(len - postSz, 0); ctx.stroke();
+              ctx.setLineDash([]);
+            } else if (railTypology === 'masonry_grill') {
+              ctx.fillStyle = dark ? 'rgba(148, 163, 184, 0.4)' : 'rgba(212, 212, 216, 0.7)';
+              ctx.fillRect(0, -rW / 2, len, rW);
+            }
           } else if (!isBlueprint) {
             // Maket Crisp Solid Dark Poché Architectural Walls
             const th = Math.max(4, w.thickness * k);
@@ -12058,6 +13261,54 @@
         const sofaM = fabM;
         const marbleM = whiteM;
 
+        if (f.type === 'balcony_railing_glass') {
+          const gMat = new THREE.MeshStandardMaterial({ color: 0x93c5fd, transparent: true, opacity: 0.42, roughness: 0.08 });
+          const mMat = new THREE.MeshStandardMaterial({ color: 0xd4d8de, roughness: 0.2, metalness: 0.8 });
+          const post = new THREE.Mesh(new THREE.BoxGeometry(0.16, h, 0.16), mMat);
+          post.position.set(-w / 2, yBase + h / 2, 0); g.add(post);
+          const post2 = new THREE.Mesh(new THREE.BoxGeometry(0.16, h, 0.16), mMat);
+          post2.position.set(w / 2, yBase + h / 2, 0); g.add(post2);
+          const rail = new THREE.Mesh(new THREE.BoxGeometry(w, 0.12, 0.14), mMat);
+          rail.position.set(0, yBase + h - 0.06, 0); g.add(rail);
+          const pane = new THREE.Mesh(new THREE.BoxGeometry(w - 0.2, h - 0.3, 0.05), gMat);
+          pane.position.set(0, yBase + (h - 0.3) / 2 + 0.15, 0); g.add(pane);
+          g.position.set(f.x, 0, f.y); g.rotation.y = -(f.rot || 0) * Math.PI / 180;
+          return g;
+        } else if (f.type === 'balcony_railing_iron') {
+          const mMat = new THREE.MeshStandardMaterial({ color: 0x18181b, roughness: 0.3, metalness: 0.4 });
+          const rail = new THREE.Mesh(new THREE.BoxGeometry(w, 0.12, 0.12), mMat);
+          rail.position.set(0, yBase + h - 0.06, 0); g.add(rail);
+          const btm = new THREE.Mesh(new THREE.BoxGeometry(w, 0.1, 0.1), mMat);
+          btm.position.set(0, yBase + 0.1, 0); g.add(btm);
+          const nB = Math.max(3, Math.floor(w / 0.33));
+          for (let bi = 0; bi <= nB; bi++) {
+            const b = new THREE.Mesh(new THREE.BoxGeometry(0.05, h - 0.2, 0.05), mMat);
+            b.position.set(-w / 2 + (w / nB) * bi, yBase + h / 2, 0); g.add(b);
+          }
+          g.position.set(f.x, 0, f.y); g.rotation.y = -(f.rot || 0) * Math.PI / 180;
+          return g;
+        } else if (f.type === 'balcony_planter') {
+          const potMat = new THREE.MeshStandardMaterial({ color: 0x27272a, roughness: 0.8 });
+          const plantMat = new THREE.MeshStandardMaterial({ color: 0x15803d, roughness: 0.6 });
+          const base = new THREE.Mesh(new THREE.BoxGeometry(w, h * 0.6, d), potMat);
+          base.position.set(0, yBase + (h * 0.6) / 2, 0); g.add(base);
+          const foliage = new THREE.Mesh(new THREE.BoxGeometry(w * 0.92, h * 0.5, d * 0.85), plantMat);
+          foliage.position.set(0, yBase + h * 0.65, 0); g.add(foliage);
+          g.position.set(f.x, 0, f.y); g.rotation.y = -(f.rot || 0) * Math.PI / 180;
+          return g;
+        } else if (f.type === 'outdoor_lounger') {
+          const woodM2 = new THREE.MeshStandardMaterial({ color: 0x9a3412, roughness: 0.5 });
+          const cushionM = new THREE.MeshStandardMaterial({ color: 0xf1f5f9, roughness: 0.85 });
+          const base = new THREE.Mesh(new THREE.BoxGeometry(w, 0.45, d), woodM2);
+          base.position.set(0, yBase + 0.22, 0); g.add(base);
+          const cush = new THREE.Mesh(new THREE.BoxGeometry(w * 0.9, 0.25, d * 0.9), cushionM);
+          cush.position.set(0, yBase + 0.5, 0); g.add(cush);
+          const head = new THREE.Mesh(new THREE.BoxGeometry(w * 0.9, 0.35, d * 0.35), cushionM);
+          head.position.set(0, yBase + 0.75, -d * 0.28); g.add(head);
+          g.position.set(f.x, 0, f.y); g.rotation.y = -(f.rot || 0) * Math.PI / 180;
+          return g;
+        }
+
         const box = (bw, bh, bd, m, bx = 0, by = bh / 2, bz = 0) => {
           const mesh = new THREE.Mesh(new THREE.BoxGeometry(bw, bh, bd), m);
           mesh.position.set(bx, by, bz);
@@ -13021,7 +14272,44 @@
             };
 
             if (w.isRailing) {
-              addSegBox(0, len, 0, 3.2, trimMat, 0.2);
+              const railTypology = s.finishes?.railing || 'glass';
+              const rH = 3.5;
+              const ssRailMat = new THREE.MeshStandardMaterial({ color: 0xd4d8de, roughness: 0.18, metalness: 0.85 });
+              const darkRailMat = new THREE.MeshStandardMaterial({ color: 0x18181b, roughness: 0.35, metalness: 0.3 });
+              const masonryMat = new THREE.MeshStandardMaterial({ color: 0xd4d4d8, roughness: 0.90 });
+              const postMat = (railTypology === 'baluster') ? darkRailMat : ssRailMat;
+
+              addSegBox(0, len, rH - 0.12, rH, postMat, 0.16);
+
+              const nIntervals = Math.max(1, Math.round(len / 4.0));
+              for (let pi = 0; pi <= nIntervals; pi++) {
+                const px = (len / nIntervals) * pi;
+                addSegBox(Math.max(0, px - 0.08), Math.min(len, px + 0.08), 0, rH, postMat, 0.18);
+              }
+
+              if (railTypology === 'glass') {
+                addSegBox(0, len, 0, 0.18, postMat, 0.16);
+                addSegBox(0.08, len - 0.08, 0.20, rH - 0.14, glassMat, 0.05);
+              } else if (railTypology === 'baluster') {
+                addSegBox(0, len, 0, 0.12, darkRailMat, 0.14);
+                const nBal = Math.max(2, Math.floor(len / 0.33));
+                for (let bi = 1; bi < nBal; bi++) {
+                  const bx = (len / nBal) * bi;
+                  addSegBox(bx - 0.03, bx + 0.03, 0.12, rH - 0.12, darkRailMat, 0.06);
+                }
+              } else if (railTypology === 'cable') {
+                addSegBox(0, len, 0, 0.10, ssRailMat, 0.12);
+                for (let ci = 1; ci <= 4; ci++) {
+                  const cy = (rH / 5) * ci;
+                  addSegBox(0, len, cy - 0.02, cy + 0.02, ssRailMat, 0.04);
+                }
+              } else if (railTypology === 'masonry_grill') {
+                addSegBox(0, len, 0, 1.8, masonryMat, 0.55);
+                for (let li = 0; li < 3; li++) {
+                  const ly = 1.95 + li * 0.45;
+                  addSegBox(0, len, ly, ly + 0.12, darkRailMat, 0.15);
+                }
+              }
             } else {
               const ops = getOpeningsOnWall(w, fl.openings);
               let cur = 0;
@@ -13800,6 +15088,19 @@
         const q = text.toLowerCase();
         const fl = curFloor();
 
+        // Balcony & Railing Prompts
+        if (q.includes('balcony') || q.includes('terrace') || q.includes('railing')) {
+          if (q.includes('glass') || q.includes('baluster') || q.includes('cable') || q.includes('masonry')) {
+            const typ = q.includes('baluster') ? 'baluster' : (q.includes('cable') ? 'cable' : (q.includes('masonry') ? 'masonry_grill' : 'glass'));
+            setRailingType(typ);
+            addChatMsg('ai', 'Updated architectural guardrail typology to <strong>' + typ.toUpperCase() + '</strong> (NBC 205:2024 compliance: 3\'-6\" / 1066mm height).', 'Guardrail Updated');
+            return;
+          }
+          stampRoom('balcony', 14, 6);
+          addChatMsg('ai', 'Stamped a <strong>14\'×6\' Balcony / Terrace</strong> with exterior perimeter guardrails on ' + fl.name + '.', 'Balcony Added');
+          return;
+        }
+
         // 0. Accessibility Doorway Widening & Variation Quick Prompts (Maket "OR ASK..." Prompts)
         if (q.includes('widen') && q.includes('door')) {
           let cnt = 0;
@@ -14136,7 +15437,7 @@
           doors: '#EEECE3',
           windows: '#EEECE3',
           countertop: 'marble',
-          cabinets: 'oak_light'
+          cabinets: 'oak_light', railing: 'glass'
         };
         set3DStyle('scandi');
         onPlanChanged(true);
@@ -14457,7 +15758,7 @@
             box.innerHTML = `
               <div style="display:flex; justify-content:space-between; align-items:center;">
                 <strong style="font-size:0.92rem;">${o.kind === 'door' ? 'Architectural Door' : 'Window Glazing'}</strong>
-                <span style="font-family:'JetBrains Mono',monospace; font-size:0.76rem; font-weight:700; color:#2563eb;">${fmtDim(o.width)}</span>
+                <span style="font-family:monospace; font-size:0.76rem; font-weight:700; color:#2563eb;">${fmtDim(o.width)}</span>
               </div>
               <div class="mks-insp-section">
                 <div class="mks-insp-heading"><span>Opening Width (ft)</span></div>
@@ -14495,7 +15796,7 @@
         const rows = fl.rooms.map(r => `
           <div onclick="window.CKSStudio._selRoom('${r.id}')" style="display:flex;justify-content:space-between;align-items:center;padding:0.42rem 0.6rem;border-radius:9px;background:rgba(15,23,42,0.025);border:1px solid rgba(15,23,42,0.06);cursor:pointer;font-size:0.75rem;">
             <strong style="font-weight:700;">${r.name}</strong>
-            <span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:#2563eb;font-weight:700;">${Math.round(r.w * r.h)} ft²</span>
+            <span style="font-family:monospace;font-size:0.7rem;color:#2563eb;font-weight:700;">${Math.round(r.w * r.h)} ft²</span>
           </div>`).join('');
 
         box.innerHTML = `
@@ -14642,8 +15943,8 @@
           const sub = Math.round(a * rate);
           return `<tr style="border-bottom:1px solid var(--border-subtle);font-size:0.78rem;">
             <td style="padding:7px 8px;font-weight:700;">${r.name}</td>
-            <td style="padding:7px 8px;font-family:'JetBrains Mono',monospace;">${Math.round(a)} sq.ft</td>
-            <td style="padding:7px 8px;font-family:'JetBrains Mono',monospace;">Rs. ${rate.toLocaleString()}</td>
+            <td style="padding:7px 8px;font-family:monospace;">${Math.round(a)} sq.ft</td>
+            <td style="padding:7px 8px;font-family:monospace;">Rs. ${rate.toLocaleString()}</td>
             <td style="padding:7px 8px;font-family: 'Plus Jakarta Sans',monospace;font-weight:700;color:var(--brand-gold);text-align:right;">Rs. ${sub.toLocaleString()}</td>
           </tr>`;
         }).join('');
@@ -15375,7 +16676,7 @@
                   <div style="flex-shrink:0;">${getFurMiniSvg(it)}</div>
                   <div style="min-width:0;">
                     <div style="font-weight:700;font-size:0.72rem;line-height:1.25;">${it.name}</div>
-                    <div style="font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:#71717a;">${it.w}' × ${it.h}'</div>
+                    <div style="font-family:monospace;font-size:0.62rem;color:#71717a;">${it.w}' × ${it.h}'</div>
                   </div>
                 </div>`).join('');
               return `<div><div class="mks-label"><span>${cat}</span><span class="mks-val">${filtered.filter(x => x.cat === cat).length}</span></div><div class="mks-lib-grid">${items}</div></div>`;
@@ -15737,9 +17038,21 @@
         boot();
       }
 
+      function setRailingType(type) {
+        if (!FINISH_CATALOG.railing || !FINISH_CATALOG.railing.some(r => r.id === type)) return;
+        s.finishes.railing = type;
+        const sel = document.getElementById('mksRailingTypeSel');
+        if (sel && sel.value !== type) sel.value = type;
+        dirty2D();
+        dirty3D();
+        renderInspector();
+        saveHistoryState('Railing Typology: ' + type);
+      }
+
       // Public & Inline-Delegate API on window.CKSStudio
       return {
         setMode,
+        setRailingType,
         setWizardStep,
         setUserMode,
         quickNextAction,
