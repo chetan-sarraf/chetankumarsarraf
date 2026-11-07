@@ -1,0 +1,1075 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="2400" height="3120" viewBox="0 0 2400 3120" version="1.1"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:serif="http://www.serif.com/"
+     style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;">
+  <title>Scale &amp; Spaces AI Studio — Affinity Designer v3 Master Residential, Commercial &amp; Architectural Vector Kit (75+ Standalone Symbols)</title>
+  <desc>75+ isolated standalone vector CAD/illustrated symbols for Affinity Designer v3: Residential Living, Kitchen, Butler's Pantry, Laundry, Bath, Walk-in Closets, Bedrooms, Staircase Typologies, Doors/Windows (per 07Sketches &amp; NBC 205:2024), Commercial Office/Retail/Cafe/Clinic/Fitness blocks, and World Architecture Landmarks.</desc>
+
+  <defs>
+    <!-- 1. White Oak Plank -->
+    <pattern id="pat_white_oak" width="120" height="36" patternUnits="userSpaceOnUse">
+      <rect width="120" height="36" fill="#E8DCC8"/>
+      <rect x="0" y="0" width="60" height="12" fill="#EADFD0" stroke="#D5C4AC" stroke-width="0.6"/>
+      <rect x="60" y="0" width="60" height="12" fill="#E3D5BF" stroke="#D5C4AC" stroke-width="0.6"/>
+      <rect x="-25" y="12" width="65" height="12" fill="#E5D8C3" stroke="#D5C4AC" stroke-width="0.6"/>
+      <rect x="40" y="12" width="80" height="12" fill="#EFE4D6" stroke="#D5C4AC" stroke-width="0.6"/>
+      <rect x="0" y="24" width="85" height="12" fill="#E2D3BC" stroke="#D5C4AC" stroke-width="0.6"/>
+      <rect x="85" y="24" width="35" height="12" fill="#EADECF" stroke="#D5C4AC" stroke-width="0.6"/>
+      <path d="M8,5 Q30,3 52,6 M68,6 Q90,8 112,5 M50,18 Q85,15 110,19" fill="none" stroke="#CBB79B" stroke-width="0.5" opacity="0.65"/>
+    </pattern>
+
+    <!-- 2. Luxury Walnut -->
+    <pattern id="pat_walnut" width="120" height="36" patternUnits="userSpaceOnUse">
+      <rect width="120" height="36" fill="#8C6243"/>
+      <rect x="0" y="0" width="64" height="12" fill="#946949" stroke="#6E4A30" stroke-width="0.6"/>
+      <rect x="64" y="0" width="56" height="12" fill="#835A3C" stroke="#6E4A30" stroke-width="0.6"/>
+      <rect x="0" y="12" width="42" height="12" fill="#7D5437" stroke="#6E4A30" stroke-width="0.6"/>
+      <rect x="42" y="12" width="78" height="12" fill="#8F6445" stroke="#6E4A30" stroke-width="0.6"/>
+      <rect x="0" y="24" width="76" height="12" fill="#8A5F41" stroke="#6E4A30" stroke-width="0.6"/>
+      <rect x="76" y="24" width="44" height="12" fill="#976C4C" stroke="#6E4A30" stroke-width="0.6"/>
+    </pattern>
+
+    <!-- 3. Herringbone Parquet -->
+    <pattern id="pat_herringbone" width="40" height="40" patternUnits="userSpaceOnUse">
+      <rect width="40" height="40" fill="#DFCBB0"/>
+      <path d="M0,20 L20,0 L40,20 M0,40 L20,20 L40,40 M20,0 L20,40" fill="none" stroke="#B6956E" stroke-width="1"/>
+    </pattern>
+
+    <!-- 4. Porcelain Bath Tile -->
+    <pattern id="pat_porcelain_tile" width="32" height="32" patternUnits="userSpaceOnUse">
+      <rect width="32" height="32" fill="#F4F5F6"/>
+      <path d="M32,0 L0,0 0,32" fill="none" stroke="#DCE0E5" stroke-width="1"/>
+    </pattern>
+
+    <!-- 5. Carrara Marble -->
+    <pattern id="pat_carrara_marble" width="80" height="80" patternUnits="userSpaceOnUse">
+      <rect width="80" height="80" fill="#F9F9F8"/>
+      <path d="M0,22 Q24,14 44,28 T80,18 M12,68 Q38,50 62,64 T80,55" fill="none" stroke="#D8DCE0" stroke-width="1.1" opacity="0.8"/>
+      <path d="M18,0 Q28,25 16,48 M56,10 Q48,38 68,78" fill="none" stroke="#E5E7EB" stroke-width="0.8"/>
+    </pattern>
+
+    <!-- 6. Commercial Terrazzo -->
+    <pattern id="pat_terrazzo" width="48" height="48" patternUnits="userSpaceOnUse">
+      <rect width="48" height="48" fill="#F1EFEA"/>
+      <polygon points="8,6 14,9 11,14" fill="#94A3B8"/>
+      <polygon points="30,10 37,7 35,15" fill="#C29568"/>
+      <polygon points="18,28 25,25 23,33" fill="#64748B"/>
+      <polygon points="38,34 44,38 39,43" fill="#B45309" opacity="0.65"/>
+      <circle cx="9" cy="38" r="2.5" fill="#CBD5E1"/>
+    </pattern>
+
+    <!-- 7. Exposed Industrial Brick -->
+    <pattern id="pat_brick" width="48" height="24" patternUnits="userSpaceOnUse">
+      <rect width="48" height="24" fill="#B45B42"/>
+      <path d="M0,12 H48 M24,0 V12 M0,12 V24 M48,12 V24" fill="none" stroke="#E5DED5" stroke-width="1.4"/>
+    </pattern>
+
+    <filter id="softShadow" x="-12%" y="-12%" width="124%" height="124%">
+      <feDropShadow dx="0" dy="2.5" stdDeviation="2.5" flood-color="#0F172A" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- ========================================================================= -->
+  <!-- 00 · ARTBOARD MASTER SHEET                                                -->
+  <!-- ========================================================================= -->
+  <g id="00_Artboard_Sheet" serif:id="00_Artboard_Sheet">
+    <rect x="0" y="0" width="2400" height="3120" fill="#F5F4EF"/>
+    <rect x="28" y="28" width="2344" height="3064" rx="22" fill="#FFFFFF" stroke="#E2E0D8" stroke-width="2"/>
+    <text x="68" y="82" font-family="'Plus Jakarta Sans', 'Segoe UI', sans-serif" font-size="28" font-weight="800" fill="#18181B">Scale &amp; Spaces AI Studio — Affinity Designer v3 Master Architectural &amp; Commercial Vector Kit</text>
+    <text x="68" y="110" font-family="'JetBrains Mono', monospace" font-size="13" fill="#475569">ER. CHETAN KUMAR SARRAF · 75+ STANDALONE ISOLATED SYMBOLS (SERIF:ID) · RESIDENTIAL + COMMERCIAL + NBC 205 + 07SKETCHES STANDARDS</text>
+    <line x1="68" y1="132" x2="2332" y2="132" stroke="#E5E4DE" stroke-width="1.5"/>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- 01 · STANDALONE SURFACE MATERIALS & SWATCHES (8 ISOLATED BLOCKS)          -->
+  <!-- ========================================================================= -->
+  <g id="01_Material_Swatches_Patterns" serif:id="01_Material_Swatches_Patterns" transform="translate(68, 158)">
+    <text x="0" y="18" font-family="sans-serif" font-size="14" font-weight="800" fill="#1E293B">01 · STANDALONE ARCHITECTURAL SURFACE PATTERNS &amp; FINISH SWATCHES (DRAG TO AFFINITY SWATCHES / ASSETS)</text>
+
+    <g id="swatch_white_oak" serif:id="Swatch_White_Oak" transform="translate(0, 36)">
+      <rect width="250" height="84" rx="10" fill="url(#pat_white_oak)" stroke="#CBD5E1" stroke-width="1.4"/>
+      <text x="12" y="104" font-family="sans-serif" font-size="12" font-weight="700" fill="#1E293B">White Oak Plank</text>
+    </g>
+    <g id="swatch_walnut" serif:id="Swatch_Luxury_Walnut" transform="translate(280, 36)">
+      <rect width="250" height="84" rx="10" fill="url(#pat_walnut)" stroke="#CBD5E1" stroke-width="1.4"/>
+      <text x="12" y="104" font-family="sans-serif" font-size="12" font-weight="700" fill="#1E293B">Luxury American Walnut</text>
+    </g>
+    <g id="swatch_herringbone" serif:id="Swatch_Herringbone_Parquet" transform="translate(560, 36)">
+      <rect width="250" height="84" rx="10" fill="url(#pat_herringbone)" stroke="#CBD5E1" stroke-width="1.4"/>
+      <text x="12" y="104" font-family="sans-serif" font-size="12" font-weight="700" fill="#1E293B">Herringbone Parquet</text>
+    </g>
+    <g id="swatch_porcelain" serif:id="Swatch_Porcelain_Tile" transform="translate(840, 36)">
+      <rect width="250" height="84" rx="10" fill="url(#pat_porcelain_tile)" stroke="#CBD5E1" stroke-width="1.4"/>
+      <text x="12" y="104" font-family="sans-serif" font-size="12" font-weight="700" fill="#1E293B">Porcelain Wet-Zone Tile</text>
+    </g>
+    <g id="swatch_marble" serif:id="Swatch_Carrara_Marble" transform="translate(1120, 36)">
+      <rect width="250" height="84" rx="10" fill="url(#pat_carrara_marble)" stroke="#CBD5E1" stroke-width="1.4"/>
+      <text x="12" y="104" font-family="sans-serif" font-size="12" font-weight="700" fill="#1E293B">Carrara White Marble</text>
+    </g>
+    <g id="swatch_terrazzo" serif:id="Swatch_Commercial_Terrazzo" transform="translate(1400, 36)">
+      <rect width="250" height="84" rx="10" fill="url(#pat_terrazzo)" stroke="#CBD5E1" stroke-width="1.4"/>
+      <text x="12" y="104" font-family="sans-serif" font-size="12" font-weight="700" fill="#1E293B">Commercial Terrazzo</text>
+    </g>
+    <g id="swatch_brick" serif:id="Swatch_Exposed_Brick" transform="translate(1680, 36)">
+      <rect width="250" height="84" rx="10" fill="url(#pat_brick)" stroke="#CBD5E1" stroke-width="1.4"/>
+      <text x="12" y="104" font-family="sans-serif" font-size="12" font-weight="700" fill="#1E293B">Industrial Exposed Brick</text>
+    </g>
+    <g id="swatch_alabaster" serif:id="Swatch_Alabaster_Wall" transform="translate(1960, 36)">
+      <rect width="250" height="84" rx="10" fill="#EEECE3" stroke="#CBD5E1" stroke-width="1.4"/>
+      <text x="12" y="104" font-family="sans-serif" font-size="12" font-weight="700" fill="#1E293B">Alabaster Wall #EEECE3</text>
+    </g>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- 02 · LIVING ROOM & FOYER STANDALONE ELEMENTS (14 ISOLATED SYMBOLS)        -->
+  <!-- ========================================================================= -->
+  <g id="02_Living_Room_Standalone_Vectors" serif:id="02_Living_Room_Standalone_Vectors" transform="translate(68, 330)">
+    <line x1="0" y1="-12" x2="2264" y2="-12" stroke="#E5E4DE" stroke-width="1.2"/>
+    <text x="0" y="16" font-family="sans-serif" font-size="14" font-weight="800" fill="#1E293B">02 · LIVING ROOM, LOUNGE &amp; FOYER STANDALONE SYMBOLS (CH. 1 &amp; CH. 8 STANDARDS)</text>
+
+    <!-- 2.1 L-Shaped Sectional Sofa (3683x3683mm) -->
+    <g id="sym_sectional_l_sofa" serif:id="Standalone_L_Sectional_Sofa" transform="translate(0, 38)" filter="url(#softShadow)">
+      <path d="M0,0 H210 V76 H76 V186 H0 Z" fill="#B8C7D9" stroke="#334155" stroke-width="1.6"/>
+      <rect x="0" y="0" width="210" height="18" fill="#9FB2C8" stroke="#334155" stroke-width="1.2"/>
+      <rect x="0" y="18" width="18" height="168" fill="#9FB2C8" stroke="#334155" stroke-width="1.2"/>
+      <line x1="76" y1="18" x2="76" y2="76" stroke="#475569" stroke-width="1.1"/>
+      <line x1="142" y1="18" x2="142" y2="76" stroke="#475569" stroke-width="1.1"/>
+      <line x1="18" y1="128" x2="76" y2="128" stroke="#475569" stroke-width="1.1"/>
+      <rect x="24" y="24" width="22" height="16" rx="3" transform="rotate(-25 35 32)" fill="#F5F2EB" stroke="#64748B" stroke-width="1"/>
+      <rect x="174" y="24" width="22" height="15" rx="3" transform="rotate(15 185 31)" fill="#F5F2EB" stroke="#64748B" stroke-width="1"/>
+      <text x="0" y="206" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">L-Sectional Sofa (3683mm)</text>
+    </g>
+
+    <!-- 2.2 Chaise Sectional Sofa (2387x1701mm) -->
+    <g id="sym_chaise_sectional" serif:id="Standalone_Chaise_Sectional" transform="translate(245, 38)" filter="url(#softShadow)">
+      <path d="M0,0 H196 V142 H124 V78 H0 Z" fill="#B8C7D9" stroke="#334155" stroke-width="1.6"/>
+      <rect x="0" y="0" width="196" height="18" fill="#9FB2C8" stroke="#334155" stroke-width="1.2"/>
+      <rect x="0" y="18" width="18" height="60" fill="#A8BBD0" stroke="#334155" stroke-width="1.2"/>
+      <rect x="178" y="18" width="18" height="72" fill="#A8BBD0" stroke="#334155" stroke-width="1.2"/>
+      <line x1="70" y1="18" x2="70" y2="78" stroke="#475569" stroke-width="1.1"/>
+      <line x1="124" y1="18" x2="124" y2="78" stroke="#475569" stroke-width="1.1"/>
+      <rect x="24" y="24" width="22" height="15" rx="3" transform="rotate(-14 35 31)" fill="#F5F2EB" stroke="#64748B" stroke-width="1"/>
+      <text x="0" y="206" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Chaise Sectional (2387×1701)</text>
+    </g>
+
+    <!-- 2.3 U-Shaped Conversation Sofa (3400x2290mm) -->
+    <g id="sym_u_shaped_sofa" serif:id="Standalone_U_Shaped_Sofa" transform="translate(475, 38)" filter="url(#softShadow)">
+      <path d="M0,0 H236 V164 H172 V72 H64 V164 H0 Z" fill="#D5B28A" stroke="#334155" stroke-width="1.6"/>
+      <rect x="0" y="0" width="236" height="18" fill="#BA9368" stroke="#334155" stroke-width="1.2"/>
+      <rect x="0" y="18" width="16" height="146" fill="#BA9368" stroke="#334155" stroke-width="1.2"/>
+      <rect x="220" y="18" width="16" height="146" fill="#BA9368" stroke="#334155" stroke-width="1.2"/>
+      <line x1="64" y1="18" x2="64" y2="72" stroke="#52525B" stroke-width="1"/>
+      <line x1="118" y1="18" x2="118" y2="72" stroke="#52525B" stroke-width="1"/>
+      <line x1="172" y1="18" x2="172" y2="72" stroke="#52525B" stroke-width="1"/>
+      <text x="0" y="206" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">U-Shaped Sofa (3400×2290)</text>
+    </g>
+
+    <!-- 2.4 3-Seat Nordic Plush Sofa (2280x900mm) -->
+    <g id="sym_nordic_sofa" serif:id="Standalone_3Seat_Sofa" transform="translate(745, 38)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="198" height="82" rx="9" fill="#B8C7D9" stroke="#334155" stroke-width="1.6"/>
+      <rect x="0" y="0" width="198" height="19" rx="6" fill="#9FB2C8" stroke="#334155" stroke-width="1.2"/>
+      <rect x="0" y="16" width="22" height="64" rx="5" fill="#A8BBD0" stroke="#334155" stroke-width="1.2"/>
+      <rect x="176" y="16" width="22" height="64" rx="5" fill="#A8BBD0" stroke="#334155" stroke-width="1.2"/>
+      <line x1="73" y1="19" x2="73" y2="80" stroke="#475569" stroke-width="1.1"/>
+      <line x1="125" y1="19" x2="125" y2="80" stroke="#475569" stroke-width="1.1"/>
+      <rect x="28" y="24" width="22" height="15" rx="4" transform="rotate(-12 39 31)" fill="#F3EFE6" stroke="#64748B" stroke-width="1"/>
+      <rect x="148" y="24" width="22" height="15" rx="4" transform="rotate(12 159 31)" fill="#F3EFE6" stroke="#64748B" stroke-width="1"/>
+      <text x="0" y="104" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">3-Seater Sofa (2280×900)</text>
+    </g>
+
+    <!-- 2.5 Sleeper Sofa Bed (2100x1550mm) -->
+    <g id="sym_sleeper_sofa" serif:id="Standalone_Sleeper_Sofa" transform="translate(745, 155)" filter="url(#softShadow)">
+      <rect x="12" y="42" width="162" height="86" rx="4" fill="#FEF9C3" stroke="#475569" stroke-width="1.3"/>
+      <rect x="0" y="0" width="186" height="58" rx="6" fill="#CBD5E1" stroke="#334155" stroke-width="1.5"/>
+      <rect x="16" y="10" width="74" height="24" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1"/>
+      <rect x="96" y="10" width="74" height="24" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1"/>
+      <text x="0" y="146" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Sleeper Sofa Bed (2100×1550)</text>
+    </g>
+
+    <!-- 2.6 Standalone Accent Armchair (914x810mm) -->
+    <g id="sym_armchair_single" serif:id="Standalone_Accent_Armchair" transform="translate(975, 38)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="82" height="76" rx="9" fill="#B8C7D9" stroke="#334155" stroke-width="1.5"/>
+      <rect x="0" y="0" width="82" height="18" rx="5" fill="#9FB2C8" stroke="#334155" stroke-width="1.2"/>
+      <rect x="0" y="15" width="16" height="59" rx="4" fill="#A8BBD0" stroke="#334155" stroke-width="1.2"/>
+      <rect x="66" y="15" width="16" height="59" rx="4" fill="#A8BBD0" stroke="#334155" stroke-width="1.2"/>
+      <text x="0" y="98" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Armchair (914mm)</text>
+    </g>
+
+    <!-- 2.7 Standalone Recliner w/ Footrest Clearance (864x1572mm) -->
+    <g id="sym_recliner_chair" serif:id="Standalone_Recliner_Chair" transform="translate(975, 155)" filter="url(#softShadow)">
+      <rect x="6" y="76" width="70" height="44" rx="4" fill="#E2E8F0" stroke="#64748B" stroke-width="1.1" stroke-dasharray="5 3"/>
+      <rect x="0" y="0" width="82" height="76" rx="9" fill="#C4B5FD" stroke="#334155" stroke-width="1.5"/>
+      <rect x="0" y="0" width="82" height="20" rx="5" fill="#A78BFA" stroke="#334155" stroke-width="1.2"/>
+      <text x="0" y="142" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Recliner (1572mm)</text>
+    </g>
+
+    <!-- 2.8 Standalone Round Pouf & Coffee Tables -->
+    <g id="sym_pouf_ottoman" serif:id="Standalone_Pouf_Ottoman" transform="translate(1095, 38)" filter="url(#softShadow)">
+      <circle cx="28" cy="28" r="26" fill="#E6CCB2" stroke="#334155" stroke-width="1.5"/>
+      <circle cx="28" cy="28" r="5" fill="#9C6644"/>
+      <text x="0" y="74" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Pouf (Ø500)</text>
+    </g>
+
+    <g id="sym_round_coffee_table" serif:id="Standalone_Round_Coffee_Table" transform="translate(1185, 38)" filter="url(#softShadow)">
+      <circle cx="44" cy="44" r="42" fill="#D5B28A" stroke="#334155" stroke-width="1.6"/>
+      <circle cx="44" cy="44" r="34" fill="none" stroke="#9C6F49" stroke-width="1"/>
+      <text x="0" y="106" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Round Table (Ø1214)</text>
+    </g>
+
+    <g id="sym_rect_coffee_table" serif:id="Standalone_Rect_Coffee_Table" transform="translate(1095, 165)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="142" height="64" rx="5" fill="#D5B28A" stroke="#334155" stroke-width="1.5"/>
+      <rect x="8" y="8" width="126" height="48" fill="none" stroke="#9C6F49" stroke-width="0.9"/>
+      <text x="0" y="84" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Rect Coffee Table (1371×609)</text>
+    </g>
+
+    <!-- 2.9 Standalone Space-Divider Console Table (1450x400mm) -->
+    <g id="sym_console_table" serif:id="Standalone_Console_Table" transform="translate(1315, 38)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="168" height="38" rx="4" fill="#D5B28A" stroke="#334155" stroke-width="1.5"/>
+      <circle cx="28" cy="19" r="9" fill="#FEF3C7" stroke="#475569" stroke-width="1"/>
+      <rect x="116" y="9" width="34" height="20" rx="2" fill="#F8FAFC" stroke="#64748B" stroke-width="1"/>
+      <text x="0" y="58" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Divider Console Table (1450×400)</text>
+    </g>
+
+    <!-- 2.10 Standalone Feature Fireplace Hearth (1650x480mm) -->
+    <g id="sym_fireplace_hearth" serif:id="Standalone_Fireplace_Hearth" transform="translate(1315, 125)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="176" height="52" rx="3" fill="#CBD5E1" stroke="#1E293B" stroke-width="1.8"/>
+      <rect x="28" y="6" width="120" height="32" fill="#1E293B"/>
+      <path d="M58,32 Q72,12 84,28 Q94,10 106,28 Q114,16 120,32 Z" fill="#F97316"/>
+      <text x="0" y="72" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Fireplace Hearth (1650×480)</text>
+    </g>
+
+    <!-- 2.11 Standalone Concert Baby Grand Piano (1520x1750mm - p.21-22) -->
+    <g id="sym_grand_piano" serif:id="Standalone_Baby_Grand_Piano" transform="translate(1535, 38)" filter="url(#softShadow)">
+      <path d="M0,148 V28 C0,8 28,0 64,0 C104,0 116,32 122,64 C126,88 158,96 158,128 V148 Z" fill="#18181B" stroke="#0F172A" stroke-width="1.8"/>
+      <rect x="10" y="132" width="138" height="14" fill="#FFFFFF" stroke="#18181B" stroke-width="1"/>
+      <path d="M20,132 V141 M32,132 V141 M44,132 V141 M62,132 V141 M74,132 V141 M86,132 V141 M104,132 V141 M116,132 V141 M128,132 V141" stroke="#18181B" stroke-width="2"/>
+      <rect x="44" y="156" width="70" height="22" rx="3" fill="#334155" stroke="#0F172A" stroke-width="1.2"/>
+      <text x="0" y="198" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Baby Grand Piano (1520×1750)</text>
+    </g>
+
+    <!-- 2.12 Standalone Floor Lamp, Full-Wall Curtain & Mudroom Bench -->
+    <g id="sym_floor_lamp" serif:id="Standalone_Tripod_Floor_Lamp" transform="translate(1735, 38)" filter="url(#softShadow)">
+      <circle cx="32" cy="32" r="28" fill="#FEF3C7" stroke="#334155" stroke-width="1.5"/>
+      <line x1="32" y1="6" x2="32" y2="58" stroke="#64748B" stroke-width="1"/>
+      <line x1="6" y1="32" x2="58" y2="32" stroke="#64748B" stroke-width="1"/>
+      <circle cx="32" cy="32" r="5" fill="#D97706"/>
+      <text x="0" y="80" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Floor Lamp (Ø508)</text>
+    </g>
+
+    <g id="sym_foyer_mudroom" serif:id="Standalone_Foyer_Mudroom_Bench" transform="translate(1865, 38)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="172" height="50" rx="5" fill="#D5B28A" stroke="#334155" stroke-width="1.5"/>
+      <line x1="12" y1="12" x2="160" y2="12" stroke="#475569" stroke-width="1.5"/>
+      <circle cx="36" cy="12" r="4" fill="#1E293B"/>
+      <circle cx="86" cy="12" r="4" fill="#1E293B"/>
+      <circle cx="136" cy="12" r="4" fill="#1E293B"/>
+      <text x="0" y="72" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Foyer Mudroom Bench (1500×480)</text>
+    </g>
+
+    <g id="sym_indoor_plant" serif:id="Standalone_Botanical_Planter" transform="translate(1735, 132)" filter="url(#softShadow)">
+      <circle cx="38" cy="38" r="32" fill="#E5E0D5" stroke="#334155" stroke-width="1.4"/>
+      <ellipse cx="38" cy="16" rx="8" ry="18" fill="#2F6F3E" stroke="#1B4325" stroke-width="1"/>
+      <ellipse cx="38" cy="60" rx="8" ry="18" fill="#3B824B" stroke="#1B4325" stroke-width="1"/>
+      <ellipse cx="16" cy="38" rx="18" ry="8" fill="#3B824B" stroke="#1B4325" stroke-width="1"/>
+      <ellipse cx="60" cy="38" rx="18" ry="8" fill="#2F6F3E" stroke="#1B4325" stroke-width="1"/>
+      <circle cx="38" cy="38" r="5" fill="#1B4325"/>
+      <text x="86" y="42" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Indoor Planter (Ø500)</text>
+    </g>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- 03 · KITCHEN, BUTLER'S PANTRY & LAUNDRY STANDALONE ELEMENTS (11 SYMBOLS)  -->
+  <!-- ========================================================================= -->
+  <g id="03_Kitchen_Pantry_Laundry_Vectors" serif:id="03_Kitchen_Pantry_Laundry_Vectors" transform="translate(68, 695)">
+    <line x1="0" y1="-12" x2="2264" y2="-12" stroke="#E5E4DE" stroke-width="1.2"/>
+    <text x="0" y="16" font-family="sans-serif" font-size="14" font-weight="800" fill="#1E293B">03 · MODULAR KITCHEN, WALK-IN BUTLER'S PANTRY &amp; LAUNDRY SYMBOLS (CH. 2, CH. 3 &amp; CH. 4)</text>
+
+    <!-- 3.1 Standalone L-Shaped Kitchen (3410x2640mm) -->
+    <g id="sym_l_kitchen_standalone" serif:id="Standalone_L_Shaped_Kitchen" transform="translate(0, 38)" filter="url(#softShadow)">
+      <path d="M0,0 H210 V52 H52 V170 H0 Z" fill="url(#pat_carrara_marble)" stroke="#334155" stroke-width="1.6"/>
+      <rect x="86" y="8" width="66" height="36" rx="4" fill="#E2E8F0" stroke="#334155" stroke-width="1.2"/>
+      <rect x="90" y="12" width="27" height="28" rx="2" fill="#CBD5E1" stroke="#475569" stroke-width="1"/>
+      <rect x="121" y="12" width="27" height="28" rx="2" fill="#CBD5E1" stroke="#475569" stroke-width="1"/>
+      <rect x="8" y="76" width="36" height="54" rx="4" fill="#1E293B"/>
+      <circle cx="19" cy="91" r="5.5" fill="none" stroke="#94A3B8" stroke-width="1.2"/>
+      <circle cx="33" cy="91" r="5.5" fill="none" stroke="#94A3B8" stroke-width="1.2"/>
+      <circle cx="19" cy="115" r="5.5" fill="none" stroke="#94A3B8" stroke-width="1.2"/>
+      <circle cx="33" cy="115" r="5.5" fill="none" stroke="#94A3B8" stroke-width="1.2"/>
+      <text x="0" y="192" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">L-Shaped Kitchen (3410×2640)</text>
+    </g>
+
+    <!-- 3.2 Standalone U-Shaped Kitchen (3410x3000mm - p.29) -->
+    <g id="sym_u_kitchen_standalone" serif:id="Standalone_U_Shaped_Kitchen" transform="translate(245, 38)" filter="url(#softShadow)">
+      <path d="M0,0 H216 V170 H166 V50 H50 V170 H0 Z" fill="url(#pat_carrara_marble)" stroke="#334155" stroke-width="1.6"/>
+      <rect x="80" y="8" width="56" height="34" rx="4" fill="#E2E8F0" stroke="#334155" stroke-width="1.2"/>
+      <rect x="8" y="84" width="34" height="50" rx="3" fill="#1E293B"/>
+      <circle cx="18" cy="98" r="5" fill="none" stroke="#94A3B8" stroke-width="1.1"/>
+      <circle cx="32" cy="98" r="5" fill="none" stroke="#94A3B8" stroke-width="1.1"/>
+      <circle cx="18" cy="119" r="5" fill="none" stroke="#94A3B8" stroke-width="1.1"/>
+      <circle cx="32" cy="119" r="5" fill="none" stroke="#94A3B8" stroke-width="1.1"/>
+      <rect x="170" y="116" width="42" height="50" rx="3" fill="#CBD5E1" stroke="#334155" stroke-width="1.2"/>
+      <text x="0" y="192" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">U-Shaped Kitchen (3410×3000)</text>
+    </g>
+
+    <!-- 3.3 Standalone Kitchen Island w/ Sink & 3 Barstools (2133x914mm - p.28,30) -->
+    <g id="sym_kitchen_island_standalone" serif:id="Standalone_Kitchen_Island" transform="translate(495, 38)" filter="url(#softShadow)">
+      <circle cx="38" cy="108" r="14" fill="#1E293B"/>
+      <circle cx="96" cy="108" r="14" fill="#1E293B"/>
+      <circle cx="154" cy="108" r="14" fill="#1E293B"/>
+      <rect x="0" y="0" width="192" height="94" rx="6" fill="url(#pat_carrara_marble)" stroke="#334155" stroke-width="1.6"/>
+      <rect x="66" y="14" width="60" height="34" rx="4" fill="#E2E8F0" stroke="#334155" stroke-width="1.2"/>
+      <line x1="0" y1="70" x2="192" y2="70" stroke="#94A3B8" stroke-width="1" stroke-dasharray="4 3"/>
+      <text x="0" y="146" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Island + 250mm Legroom (2133×914)</text>
+    </g>
+
+    <!-- 3.4 Standalone 8-Seater Banquet Dining Table (p.42-43) -->
+    <g id="sym_dining_8seat" serif:id="Standalone_8Seat_Dining_Table" transform="translate(725, 38)" filter="url(#softShadow)">
+      <rect x="30" y="0" width="32" height="14" rx="5" fill="#475569"/>
+      <rect x="84" y="0" width="32" height="14" rx="5" fill="#475569"/>
+      <rect x="138" y="0" width="32" height="14" rx="5" fill="#475569"/>
+      <rect x="30" y="114" width="32" height="14" rx="5" fill="#475569"/>
+      <rect x="84" y="114" width="32" height="14" rx="5" fill="#475569"/>
+      <rect x="138" y="114" width="32" height="14" rx="5" fill="#475569"/>
+      <rect x="0" y="48" width="14" height="32" rx="5" fill="#475569"/>
+      <rect x="186" y="48" width="14" height="32" rx="5" fill="#475569"/>
+      <rect x="12" y="12" width="176" height="104" rx="7" fill="#D5B28A" stroke="#334155" stroke-width="1.6"/>
+      <text x="0" y="152" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">8-Seat Banquet Dining (2400×1050)</text>
+    </g>
+
+    <!-- 3.5 Standalone Side-by-Side Fridge (908x700mm - p.26) -->
+    <g id="sym_side_by_side_fridge" serif:id="Standalone_SideBySide_Fridge" transform="translate(965, 38)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="84" height="68" rx="5" fill="#E2E8F0" stroke="#334155" stroke-width="1.5"/>
+      <line x1="0" y1="54" x2="84" y2="54" stroke="#475569" stroke-width="1.2"/>
+      <line x1="42" y1="54" x2="42" y2="68" stroke="#1E293B" stroke-width="1.6"/>
+      <text x="42" y="34" text-anchor="middle" font-family="monospace" font-size="11" font-weight="800" fill="#334155">REF</text>
+      <text x="0" y="90" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Fridge (908×700)</text>
+    </g>
+
+    <!-- 3.6 Standalone Dishwasher (600x600mm - p.26) -->
+    <g id="sym_dishwasher_unit" serif:id="Standalone_Dishwasher_600" transform="translate(965, 138)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="60" height="58" rx="4" fill="#F8FAFC" stroke="#334155" stroke-width="1.4" stroke-dasharray="6 3"/>
+      <text x="30" y="34" text-anchor="middle" font-family="monospace" font-size="11" font-weight="800" fill="#334155">DW</text>
+      <text x="0" y="76" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Dishwasher (600)</text>
+    </g>
+
+    <!-- 3.7 Standalone Built-in Hob & Oven (600x600mm - p.26) -->
+    <g id="sym_hob_oven_unit" serif:id="Standalone_Hob_And_Oven" transform="translate(1090, 38)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="64" height="64" rx="4" fill="#1E293B" stroke="#0F172A" stroke-width="1.5"/>
+      <circle cx="20" cy="20" r="9" fill="none" stroke="#E2E8F0" stroke-width="1.3"/>
+      <circle cx="44" cy="20" r="9" fill="none" stroke="#E2E8F0" stroke-width="1.3"/>
+      <circle cx="20" cy="44" r="9" fill="none" stroke="#E2E8F0" stroke-width="1.3"/>
+      <circle cx="44" cy="44" r="9" fill="none" stroke="#E2E8F0" stroke-width="1.3"/>
+      <text x="0" y="86" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Hob/Oven (600)</text>
+    </g>
+
+    <!-- 3.8 Standalone Butler's Pantry Rack (1970x600mm - Ch.3 p.40) -->
+    <g id="sym_butler_pantry_rack" serif:id="Standalone_Butlers_Pantry_Unit" transform="translate(1210, 38)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="196" height="58" rx="4" fill="#EAD7BC" stroke="#334155" stroke-width="1.5"/>
+      <line x1="65" y1="0" x2="65" y2="58" stroke="#475569" stroke-width="1.2"/>
+      <line x1="131" y1="0" x2="131" y2="58" stroke="#475569" stroke-width="1.2"/>
+      <circle cx="22" cy="29" r="9" fill="#D5B28A" stroke="#52525B" stroke-width="1"/>
+      <circle cx="44" cy="29" r="9" fill="#D5B28A" stroke="#52525B" stroke-width="1"/>
+      <rect x="76" y="14" width="44" height="30" rx="3" fill="#E2E8F0" stroke="#475569" stroke-width="1"/>
+      <text x="0" y="80" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Butler's Pantry Storage (1970×600)</text>
+    </g>
+
+    <!-- 3.9 Standalone Stacked Washer/Dryer Tower (650x650mm - Ch.4) -->
+    <g id="sym_washer_dryer_standalone" serif:id="Standalone_Washer_Dryer_Tower" transform="translate(1450, 38)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="66" height="66" rx="6" fill="#F1F5F9" stroke="#334155" stroke-width="1.5"/>
+      <circle cx="33" cy="36" r="19" fill="#CBD5E1" stroke="#334155" stroke-width="1.2"/>
+      <text x="33" y="16" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="800" fill="#0F172A">WD</text>
+      <text x="0" y="86" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">WD Tower (650)</text>
+    </g>
+
+    <!-- 3.10 Standalone Laundry Utility Sink + Fold-Out Ironing Board (p.47) -->
+    <g id="sym_laundry_ironing_station" serif:id="Standalone_Laundry_Sink_Ironing" transform="translate(1575, 38)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="176" height="58" rx="4" fill="#F8FAFC" stroke="#334155" stroke-width="1.5"/>
+      <rect x="16" y="10" width="54" height="38" rx="4" fill="#E2E8F0" stroke="#475569" stroke-width="1.2"/>
+      <path d="M116,58 V124 C116,138 148,138 148,124 V58 Z" fill="#FEF3C7" stroke="#475569" stroke-width="1.3"/>
+      <text x="0" y="156" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Laundry Sink + Fold-Out Ironing (p.47)</text>
+    </g>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- 04 · BATHROOM, WALK-IN CLOSET & BEDROOM STANDALONE ELEMENTS (13 SYMBOLS)  -->
+  <!-- ========================================================================= -->
+  <g id="04_Bath_Closet_Bedroom_Vectors" serif:id="04_Bath_Closet_Bedroom_Vectors" transform="translate(68, 955)">
+    <line x1="0" y1="-12" x2="2264" y2="-12" stroke="#E5E4DE" stroke-width="1.2"/>
+    <text x="0" y="16" font-family="sans-serif" font-size="14" font-weight="800" fill="#1E293B">04 · BATHROOM, WALK-IN CLOSET &amp; BEDROOM STANDALONE SYMBOLS (CH. 5, CH. 6 &amp; CH. 7)</text>
+
+    <!-- 4.1 Freestanding Oval Bathtub (1700x750mm - p.50, 63) -->
+    <g id="sym_freestanding_oval_tub" serif:id="Standalone_Freestanding_Oval_Tub" transform="translate(0, 38)" filter="url(#softShadow)">
+      <ellipse cx="82" cy="38" rx="80" ry="36" fill="#FFFFFF" stroke="#334155" stroke-width="1.6"/>
+      <ellipse cx="82" cy="38" rx="68" ry="26" fill="#EFF6FF" stroke="#64748B" stroke-width="1.1"/>
+      <circle cx="82" cy="38" r="3.5" fill="#475569"/>
+      <text x="0" y="96" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Freestanding Oval Tub (1700×750)</text>
+    </g>
+
+    <!-- 4.2 Alcove Bathtub (1520x663mm - p.50) -->
+    <g id="sym_alcove_bathtub" serif:id="Standalone_Alcove_Bathtub" transform="translate(0, 148)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="152" height="68" rx="6" fill="#FFFFFF" stroke="#334155" stroke-width="1.6"/>
+      <rect x="10" y="9" width="132" height="50" rx="18" fill="#F1F5F9" stroke="#64748B" stroke-width="1.1"/>
+      <circle cx="26" cy="34" r="3.5" fill="#475569"/>
+      <text x="0" y="88" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Alcove Bathtub (1520×663)</text>
+    </g>
+
+    <!-- 4.3 Double Countertop Basin Vanity (1400x480mm - p.50) -->
+    <g id="sym_double_vanity" serif:id="Standalone_Double_Sink_Vanity" transform="translate(205, 38)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="148" height="52" rx="4" fill="#D5B28A" stroke="#334155" stroke-width="1.5"/>
+      <ellipse cx="38" cy="28" rx="22" ry="15" fill="#FFFFFF" stroke="#334155" stroke-width="1.2"/>
+      <ellipse cx="110" cy="28" rx="22" ry="15" fill="#FFFFFF" stroke="#334155" stroke-width="1.2"/>
+      <line x1="38" y1="6" x2="38" y2="16" stroke="#0F172A" stroke-width="2"/>
+      <line x1="110" y1="6" x2="110" y2="16" stroke="#0F172A" stroke-width="2"/>
+      <text x="0" y="72" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Double Sink Vanity (1400×480)</text>
+    </g>
+
+    <!-- 4.4 Wall-Hung W.C. & Bidet (p.50, 62) -->
+    <g id="sym_wall_hung_wc" serif:id="Standalone_Wall_Hung_WC" transform="translate(205, 132)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="44" height="14" rx="3" fill="#FFFFFF" stroke="#334155" stroke-width="1.4"/>
+      <ellipse cx="22" cy="38" rx="19" ry="24" fill="#FFFFFF" stroke="#334155" stroke-width="1.4"/>
+      <ellipse cx="22" cy="40" rx="13" ry="16" fill="#F1F5F9" stroke="#64748B" stroke-width="1"/>
+      <text x="0" y="80" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Wall WC</text>
+    </g>
+
+    <g id="sym_bidet_fixture" serif:id="Standalone_Ceramic_Bidet" transform="translate(285, 132)" filter="url(#softShadow)">
+      <path d="M4,0 H40 V36 C40,52 4,52 4,36 Z" fill="#FFFFFF" stroke="#334155" stroke-width="1.4"/>
+      <ellipse cx="22" cy="28" rx="13" ry="16" fill="#EFF6FF" stroke="#64748B" stroke-width="1"/>
+      <circle cx="22" cy="8" r="2.5" fill="#0F172A"/>
+      <text x="0" y="80" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Bidet (530)</text>
+    </g>
+
+    <!-- 4.5 Enclosed Glass Shower (914x914mm - p.51) -->
+    <g id="sym_enclosed_shower" serif:id="Standalone_Glass_Shower_914" transform="translate(395, 38)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="96" height="96" fill="#F8FAFC" stroke="#334155" stroke-width="1.6"/>
+      <line x1="0" y1="0" x2="96" y2="96" stroke="#94A3B8" stroke-width="1"/>
+      <line x1="96" y1="0" x2="0" y2="96" stroke="#94A3B8" stroke-width="1"/>
+      <circle cx="48" cy="48" r="5" fill="#FFFFFF" stroke="#334155" stroke-width="1.3"/>
+      <text x="0" y="116" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Glass Shower (914×914)</text>
+    </g>
+
+    <!-- 4.6 L-Shaped Walk-In Closet System (2200x1500mm - Ch.6 p.67-68) -->
+    <g id="sym_walkin_l_closet" serif:id="Standalone_WalkIn_Closet_L" transform="translate(535, 38)" filter="url(#softShadow)">
+      <path d="M0,0 H196 V52 H52 V154 H0 Z" fill="#EAD7BC" stroke="#334155" stroke-width="1.6"/>
+      <line x1="12" y1="26" x2="184" y2="26" stroke="#475569" stroke-width="1.2"/>
+      <line x1="26" y1="52" x2="26" y2="142" stroke="#475569" stroke-width="1.2"/>
+      <g stroke="#52525B" stroke-width="1">
+        <line x1="24" y1="10" x2="24" y2="42"/><line x1="42" y1="10" x2="42" y2="42"/><line x1="60" y1="10" x2="60" y2="42"/>
+        <line x1="78" y1="10" x2="78" y2="42"/><line x1="96" y1="10" x2="96" y2="42"/><line x1="114" y1="10" x2="114" y2="42"/>
+        <line x1="132" y1="10" x2="132" y2="42"/><line x1="150" y1="10" x2="150" y2="42"/><line x1="168" y1="10" x2="168" y2="42"/>
+        <line x1="10" y1="68" x2="42" y2="68"/><line x1="10" y1="86" x2="42" y2="86"/><line x1="10" y1="104" x2="42" y2="104"/><line x1="10" y1="122" x2="42" y2="122"/>
+      </g>
+      <text x="0" y="176" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">L-Walk-In Closet (2200×1500)</text>
+    </g>
+
+    <!-- 4.7 Bifold Linen Closet (1220x600mm - p.69) -->
+    <g id="sym_bifold_linen_closet" serif:id="Standalone_Bifold_Linen_Closet" transform="translate(770, 38)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="128" height="54" fill="#EAD7BC" stroke="#334155" stroke-width="1.5"/>
+      <polyline points="4,54 32,74 60,54 92,74 124,54" fill="none" stroke="#334155" stroke-width="1.5"/>
+      <text x="0" y="96" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Bifold Closet (1220×600)</text>
+    </g>
+
+    <!-- 4.8 Standalone King Bed (1930x2032mm - Ch.7 p.71) -->
+    <g id="sym_king_bed_only" serif:id="Standalone_King_Bed_1930" transform="translate(940, 38)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="172" height="182" rx="7" fill="#F8FAFC" stroke="#334155" stroke-width="1.6"/>
+      <rect x="0" y="0" width="172" height="15" rx="3" fill="#8C6243" stroke="#334155" stroke-width="1.3"/>
+      <rect x="14" y="21" width="66" height="34" rx="6" fill="#FFFFFF" stroke="#64748B" stroke-width="1.1"/>
+      <rect x="92" y="21" width="66" height="34" rx="6" fill="#FFFFFF" stroke="#64748B" stroke-width="1.1"/>
+      <rect x="4" y="64" width="164" height="114" rx="5" fill="#E6E4DF" stroke="#475569" stroke-width="1.1"/>
+      <text x="0" y="202" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">King Bed (1930×2032)</text>
+    </g>
+
+    <!-- 4.9 Standalone Queen Bed (1524x2032mm - p.71) -->
+    <g id="sym_queen_bed_only" serif:id="Standalone_Queen_Bed_1524" transform="translate(1145, 38)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="138" height="182" rx="7" fill="#F8FAFC" stroke="#334155" stroke-width="1.6"/>
+      <rect x="0" y="0" width="138" height="15" rx="3" fill="#8C6243" stroke="#334155" stroke-width="1.3"/>
+      <rect x="12" y="21" width="52" height="34" rx="6" fill="#FFFFFF" stroke="#64748B" stroke-width="1.1"/>
+      <rect x="74" y="21" width="52" height="34" rx="6" fill="#FFFFFF" stroke="#64748B" stroke-width="1.1"/>
+      <rect x="4" y="64" width="130" height="114" rx="5" fill="#E6E4DF" stroke="#475569" stroke-width="1.1"/>
+      <text x="0" y="202" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Queen Bed (1524×2032)</text>
+    </g>
+
+    <!-- 4.10 Standalone Twin Bed (990x1905mm - p.71) -->
+    <g id="sym_twin_bed_only" serif:id="Standalone_Twin_Bed_990" transform="translate(1315, 38)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="92" height="170" rx="6" fill="#F8FAFC" stroke="#334155" stroke-width="1.6"/>
+      <rect x="0" y="0" width="92" height="14" rx="3" fill="#8C6243" stroke="#334155" stroke-width="1.3"/>
+      <rect x="16" y="20" width="60" height="32" rx="5" fill="#FFFFFF" stroke="#64748B" stroke-width="1.1"/>
+      <rect x="4" y="60" width="84" height="106" rx="5" fill="#E6E4DF" stroke="#475569" stroke-width="1.1"/>
+      <text x="0" y="192" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Twin Bed (990×1905)</text>
+    </g>
+
+    <!-- 4.11 Standalone End-of-Bed Bench & Oak Nightstand (p.71) -->
+    <g id="sym_bedroom_bench" serif:id="Standalone_Bedroom_Seating_Bench" transform="translate(1445, 38)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="138" height="44" rx="7" fill="#B8C7D9" stroke="#334155" stroke-width="1.5"/>
+      <line x1="46" y1="4" x2="46" y2="40" stroke="#64748B" stroke-width="1"/>
+      <line x1="92" y1="4" x2="92" y2="40" stroke="#64748B" stroke-width="1"/>
+      <text x="0" y="64" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">End Seating Bench (1300×480)</text>
+    </g>
+
+    <g id="sym_nightstand_only" serif:id="Standalone_Oak_Nightstand" transform="translate(1445, 122)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="52" height="48" rx="4" fill="#D5B28A" stroke="#334155" stroke-width="1.5"/>
+      <circle cx="26" cy="24" r="10" fill="#FEF3C7" stroke="#64748B" stroke-width="1"/>
+      <text x="66" y="28" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Side Table (500×500)</text>
+    </g>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- 05 · STAIRCASES, DOORS & WINDOWS TYPOLOGIES (CH. 9 & CH. 10 - 11 SYMBOLS) -->
+  <!-- ========================================================================= -->
+  <g id="05_Stairs_Doors_Windows_Vectors" serif:id="05_Stairs_Doors_Windows_Vectors" transform="translate(68, 1235)">
+    <line x1="0" y1="-12" x2="2264" y2="-12" stroke="#E5E4DE" stroke-width="1.2"/>
+    <text x="0" y="16" font-family="sans-serif" font-size="14" font-weight="800" fill="#1E293B">05 · STAIRCASE TYPOLOGIES, DOORS &amp; WINDOWS STANDALONE SYMBOLS (CH. 9 &amp; CH. 10 + NBC 205)</text>
+
+    <!-- 5.1 Half-Turn / Dog-Legged Stair (p.91) -->
+    <g id="sym_stair_doglegged" serif:id="Standalone_Stair_DogLegged_U" transform="translate(0, 38)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="164" height="214" rx="4" fill="#FFFFFF" stroke="#18181B" stroke-width="2.4"/>
+      <rect x="3" y="3" width="158" height="58" fill="#EFECE4" stroke="#334155" stroke-width="1.2"/>
+      <rect x="76" y="61" width="12" height="150" fill="#E2E8F0" stroke="#334155" stroke-width="1.2"/>
+      <g stroke="#334155" stroke-width="1.1">
+        <line x1="3" y1="82" x2="76" y2="82"/><line x1="3" y1="103" x2="76" y2="103"/><line x1="3" y1="124" x2="76" y2="124"/>
+        <line x1="3" y1="145" x2="76" y2="145"/><line x1="3" y1="166" x2="76" y2="166"/><line x1="3" y1="187" x2="76" y2="187"/>
+        <line x1="88" y1="82" x2="161" y2="82"/><line x1="88" y1="103" x2="161" y2="103"/><line x1="88" y1="124" x2="161" y2="124"/>
+        <line x1="88" y1="145" x2="161" y2="145" stroke-dasharray="4 3"/><line x1="88" y1="166" x2="161" y2="166" stroke-dasharray="4 3"/><line x1="88" y1="187" x2="161" y2="187" stroke-dasharray="4 3"/>
+      </g>
+      <path d="M40,202 V34 H124 V200" fill="none" stroke="#2563EB" stroke-width="1.8"/>
+      <text x="0" y="234" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Dog-Legged U-Stair (NBC 205)</text>
+    </g>
+
+    <!-- 5.2 Straight-Run Mid-Landing Stair (p.91) -->
+    <g id="sym_stair_straight_mid" serif:id="Standalone_Stair_Straight_MidLanding" transform="translate(198, 38)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="84" height="214" rx="3" fill="#FFFFFF" stroke="#18181B" stroke-width="2.2"/>
+      <rect x="3" y="84" width="78" height="46" fill="#EFECE4" stroke="#334155" stroke-width="1.2"/>
+      <g stroke="#334155" stroke-width="1.1">
+        <line x1="3" y1="21" x2="81" y2="21"/><line x1="3" y1="42" x2="81" y2="42"/><line x1="3" y1="63" x2="81" y2="63"/>
+        <line x1="3" y1="151" x2="81" y2="151"/><line x1="3" y1="172" x2="81" y2="172"/><line x1="3" y1="193" x2="81" y2="193"/>
+      </g>
+      <line x1="42" y1="204" x2="42" y2="14" stroke="#2563EB" stroke-width="1.8"/>
+      <text x="0" y="234" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Straight Mid-Landing</text>
+    </g>
+
+    <!-- 5.3 L-Shaped Quarter-Turn Stair (p.92) -->
+    <g id="sym_stair_l_quarter" serif:id="Standalone_Stair_L_QuarterTurn" transform="translate(318, 38)" filter="url(#softShadow)">
+      <path d="M0,0 H188 V76 H76 V188 H0 Z" fill="#FFFFFF" stroke="#18181B" stroke-width="2.2"/>
+      <rect x="2" y="2" width="74" height="74" fill="#EFECE4" stroke="#334155" stroke-width="1.2"/>
+      <g stroke="#334155" stroke-width="1.1">
+        <line x1="2" y1="98" x2="76" y2="98"/><line x1="2" y1="120" x2="76" y2="120"/><line x1="2" y1="142" x2="76" y2="142"/><line x1="2" y1="164" x2="76" y2="164"/>
+        <line x1="98" y1="2" x2="98" y2="76"/><line x1="120" y1="2" x2="120" y2="76"/><line x1="142" y1="2" x2="142" y2="76"/><line x1="164" y1="2" x2="164" y2="76"/>
+      </g>
+      <path d="M38,178 V38 H178" fill="none" stroke="#2563EB" stroke-width="1.8"/>
+      <text x="0" y="212" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">L-Shaped Quarter-Turn (p.92)</text>
+    </g>
+
+    <!-- 5.4 Spiral Staircase (p.93, 101 Villa Savoye) -->
+    <g id="sym_stair_spiral" serif:id="Standalone_Stair_Spiral" transform="translate(540, 38)" filter="url(#softShadow)">
+      <circle cx="78" cy="78" r="74" fill="#EAD7BC" stroke="#18181B" stroke-width="2.2"/>
+      <g stroke="#334155" stroke-width="1.2">
+        <line x1="78" y1="4" x2="78" y2="152"/><line x1="4" y1="78" x2="152" y2="78"/>
+        <line x1="26" y1="26" x2="130" y2="130"/><line x1="130" y1="26" x2="26" y2="130"/>
+        <line x1="50" y1="10" x2="106" y2="146"/><line x1="10" y1="50" x2="146" y2="106"/>
+      </g>
+      <circle cx="78" cy="78" r="14" fill="#1E293B" stroke="#FFFFFF" stroke-width="2"/>
+      <path d="M124,78 A46,46 0 1,1 78,32" fill="none" stroke="#2563EB" stroke-width="2"/>
+      <text x="0" y="176" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Spiral Staircase (Ø1600mm)</text>
+    </g>
+
+    <!-- 5.5 Doors: Single, Double, Bifold & Commercial Revolving (Ch.10 p.97) -->
+    <g id="sym_door_single" serif:id="Standalone_Door_Single_Swing" transform="translate(730, 48)">
+      <rect x="0" y="72" width="32" height="12" fill="#232325"/>
+      <rect x="114" y="72" width="32" height="12" fill="#232325"/>
+      <rect x="32" y="0" width="6" height="78" fill="#8B5E3C" stroke="#1E293B" stroke-width="1"/>
+      <path d="M38,0 A78,78 0 0,1 114,78" fill="none" stroke="#64748B" stroke-width="1.3" stroke-dasharray="4 3"/>
+      <text x="0" y="106" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Single Swing Door</text>
+    </g>
+
+    <g id="sym_door_bifold" serif:id="Standalone_Door_Bifold_Folding" transform="translate(905, 48)">
+      <rect x="0" y="72" width="24" height="12" fill="#232325"/>
+      <rect x="148" y="72" width="24" height="12" fill="#232325"/>
+      <polyline points="24,78 55,42 86,78 117,42 148,78" fill="none" stroke="#8B5E3C" stroke-width="4"/>
+      <text x="0" y="106" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Bifold Folding Door (p.97)</text>
+    </g>
+
+    <g id="sym_door_revolving" serif:id="Standalone_Door_Commercial_Revolving" transform="translate(1110, 38)" filter="url(#softShadow)">
+      <circle cx="64" cy="64" r="56" fill="#EFF6FF" stroke="#1E293B" stroke-width="1.8" stroke-dasharray="18 12"/>
+      <line x1="20" y1="64" x2="108" y2="64" stroke="#0F172A" stroke-width="2.6"/>
+      <line x1="64" y1="20" x2="64" y2="108" stroke="#0F172A" stroke-width="2.6"/>
+      <circle cx="64" cy="64" r="7" fill="#2563EB"/>
+      <text x="0" y="142" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Commercial Revolving Door</text>
+    </g>
+
+    <!-- 5.6 Windows: Double Casement, Projecting Bay Window & Curtain Wall (Ch.10 p.95-96) -->
+    <g id="sym_window_casement" serif:id="Standalone_Window_Double_Casement" transform="translate(1295, 58)">
+      <rect x="0" y="0" width="28" height="14" fill="#232325"/>
+      <rect x="28" y="1" width="112" height="12" fill="#FFFFFF" stroke="#1E293B" stroke-width="1.3"/>
+      <line x1="28" y1="7" x2="84" y2="54" stroke="#2563EB" stroke-width="1.3"/>
+      <line x1="140" y1="7" x2="84" y2="54" stroke="#2563EB" stroke-width="1.3"/>
+      <path d="M84,54 A56,56 0 0,1 28,7 M84,54 A56,56 0 0,0 140,7" fill="none" stroke="#94A3B8" stroke-width="1.1" stroke-dasharray="4 3"/>
+      <rect x="140" y="0" width="28" height="14" fill="#232325"/>
+      <text x="0" y="82" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Double-Casement Window (p.96)</text>
+    </g>
+
+    <g id="sym_window_bay" serif:id="Standalone_Window_Projecting_Bay" transform="translate(1510, 46)">
+      <polyline points="0,54 32,54 58,14 142,14 168,54 200,54" fill="none" stroke="#1E293B" stroke-width="8"/>
+      <polyline points="34,52 60,14 140,14 166,52" fill="none" stroke="#38BDF8" stroke-width="3.5"/>
+      <text x="0" y="88" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">45° Projecting Bay Window (p.96)</text>
+    </g>
+
+    <g id="sym_curtain_wall" serif:id="Standalone_Commercial_Curtain_Wall" transform="translate(1755, 58)">
+      <line x1="0" y1="8" x2="230" y2="8" stroke="#38BDF8" stroke-width="5"/>
+      <rect x="0" y="0" width="10" height="16" fill="#0F172A"/>
+      <rect x="73" y="0" width="10" height="16" fill="#0F172A"/>
+      <rect x="146" y="0" width="10" height="16" fill="#0F172A"/>
+      <rect x="220" y="0" width="10" height="16" fill="#0F172A"/>
+      <text x="0" y="42" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Commercial Curtain Wall Glazing (p.95)</text>
+    </g>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- 06 · COMMERCIAL OFFICE, RETAIL, CAFE, CLINIC & FITNESS SYMBOLS (16 ITEMS) -->
+  <!-- ========================================================================= -->
+  <g id="06_Commercial_Office_Retail_Hospitality_Vectors" serif:id="06_Commercial_Office_Retail_Hospitality_Vectors" transform="translate(68, 1540)">
+    <line x1="0" y1="-12" x2="2264" y2="-12" stroke="#E5E4DE" stroke-width="1.2"/>
+    <text x="0" y="16" font-family="sans-serif" font-size="14" font-weight="800" fill="#2563EB">06 · COMMERCIAL ARCHITECTURE SYMBOLS — CORPORATE OFFICE, RETAIL, CAFÉ, HEALTHCARE &amp; FITNESS CENTRE</text>
+
+    <!-- 6.1 Curved Commercial Reception & Concierge Desk -->
+    <g id="sym_comm_reception_desk" serif:id="Standalone_Comm_Reception_Desk" transform="translate(0, 42)" filter="url(#softShadow)">
+      <path d="M0,78 C0,22 44,0 110,0 C176,0 220,22 220,78 H184 C184,42 156,30 110,30 C64,30 36,42 36,78 Z" fill="#D5B28A" stroke="#1E293B" stroke-width="1.6"/>
+      <circle cx="84" cy="58" r="13" fill="#1E293B"/>
+      <circle cx="136" cy="58" r="13" fill="#1E293B"/>
+      <text x="0" y="104" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Curved Reception Desk (3200×1100)</text>
+    </g>
+
+    <!-- 6.2 10-Seat Executive Conference / Boardroom Table -->
+    <g id="sym_comm_conf_table_10" serif:id="Standalone_Comm_Conference_Table_10" transform="translate(260, 42)" filter="url(#softShadow)">
+      <g fill="#334155">
+        <rect x="34" y="0" width="28" height="12" rx="4"/><rect x="82" y="0" width="28" height="12" rx="4"/>
+        <rect x="130" y="0" width="28" height="12" rx="4"/><rect x="178" y="0" width="28" height="12" rx="4"/>
+        <rect x="34" y="96" width="28" height="12" rx="4"/><rect x="82" y="96" width="28" height="12" rx="4"/>
+        <rect x="130" y="96" width="28" height="12" rx="4"/><rect x="178" y="96" width="28" height="12" rx="4"/>
+        <rect x="0" y="40" width="12" height="28" rx="4"/><rect x="228" y="40" width="12" height="28" rx="4"/>
+      </g>
+      <rect x="14" y="12" width="212" height="84" rx="18" fill="url(#pat_walnut)" stroke="#1E293B" stroke-width="1.6"/>
+      <rect x="76" y="46" width="88" height="16" rx="3" fill="#CBD5E1" stroke="#334155" stroke-width="1"/>
+      <text x="0" y="130" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">10-Seat Boardroom Table (3600×1200)</text>
+    </g>
+
+    <!-- 6.3 4-Person Open-Office Workstation Pod -->
+    <g id="sym_comm_workstation_pod" serif:id="Standalone_Comm_4Pod_Workstation" transform="translate(538, 42)" filter="url(#softShadow)">
+      <circle cx="48" cy="10" r="11" fill="#1E293B"/><circle cx="148" cy="10" r="11" fill="#1E293B"/>
+      <circle cx="48" cy="114" r="11" fill="#1E293B"/><circle cx="148" cy="114" r="11" fill="#1E293B"/>
+      <rect x="0" y="18" width="196" height="88" rx="4" fill="#F8FAFC" stroke="#334155" stroke-width="1.5"/>
+      <line x1="0" y1="62" x2="196" y2="62" stroke="#2563EB" stroke-width="3"/>
+      <line x1="98" y1="18" x2="98" y2="106" stroke="#94A3B8" stroke-width="1.4"/>
+      <rect x="28" y="48" width="40" height="6" fill="#0F172A"/><rect x="128" y="48" width="40" height="6" fill="#0F172A"/>
+      <rect x="28" y="70" width="40" height="6" fill="#0F172A"/><rect x="128" y="70" width="40" height="6" fill="#0F172A"/>
+      <text x="0" y="144" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">4-Seat Office Workstation Pod</text>
+    </g>
+
+    <!-- 6.4 Office Acoustic Zoom / Phone Booth -->
+    <g id="sym_comm_acoustic_booth" serif:id="Standalone_Comm_Acoustic_Phone_Pod" transform="translate(772, 42)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="96" height="96" rx="8" fill="#E2E8F0" stroke="#1E293B" stroke-width="2.4"/>
+      <rect x="10" y="10" width="76" height="24" rx="3" fill="#D5B28A" stroke="#475569" stroke-width="1"/>
+      <circle cx="48" cy="58" r="14" fill="#334155"/>
+      <line x1="20" y1="96" x2="76" y2="96" stroke="#38BDF8" stroke-width="4"/>
+      <text x="0" y="118" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Acoustic Zoom Pod</text>
+    </g>
+
+    <!-- 6.5 Passenger Elevator / Lift Shaft Core (p.111) -->
+    <g id="sym_comm_elevator_core" serif:id="Standalone_Comm_Elevator_Core" transform="translate(906, 42)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="136" height="136" fill="#CBD5E1" stroke="#18181B" stroke-width="4"/>
+      <rect x="14" y="14" width="108" height="96" fill="#FFFFFF" stroke="#334155" stroke-width="1.6"/>
+      <line x1="14" y1="14" x2="122" y2="110" stroke="#94A3B8" stroke-width="1.2"/>
+      <line x1="122" y1="14" x2="14" y2="110" stroke="#94A3B8" stroke-width="1.2"/>
+      <rect x="24" y="115" width="88" height="12" fill="#475569"/>
+      <line x1="36" y1="136" x2="100" y2="136" stroke="#38BDF8" stroke-width="5"/>
+      <text x="68" y="66" text-anchor="middle" font-family="monospace" font-size="13" font-weight="800" fill="#0F172A">LIFT</text>
+      <text x="0" y="158" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Passenger Elevator Core</text>
+    </g>
+
+    <!-- 6.6 Commercial Mall Escalator -->
+    <g id="sym_comm_escalator" serif:id="Standalone_Comm_Escalator" transform="translate(1080, 42)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="88" height="196" rx="8" fill="#E2E8F0" stroke="#1E293B" stroke-width="2"/>
+      <rect x="10" y="16" width="68" height="164" fill="#F8FAFC" stroke="#475569" stroke-width="1.2"/>
+      <g stroke="#64748B" stroke-width="1">
+        <line x1="10" y1="36" x2="78" y2="36"/><line x1="10" y1="56" x2="78" y2="56"/><line x1="10" y1="76" x2="78" y2="76"/>
+        <line x1="10" y1="96" x2="78" y2="96"/><line x1="10" y1="116" x2="78" y2="116"/><line x1="10" y1="136" x2="78" y2="136"/><line x1="10" y1="156" x2="78" y2="156"/>
+      </g>
+      <line x1="44" y1="172" x2="44" y2="26" stroke="#2563EB" stroke-width="2"/>
+      <text x="0" y="218" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Commercial Escalator</text>
+    </g>
+
+    <!-- 6.7 Commercial Café Barista & Espresso Bar -->
+    <g id="sym_comm_espresso_bar" serif:id="Standalone_Comm_Cafe_Espresso_Bar" transform="translate(1206, 42)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="224" height="68" rx="6" fill="url(#pat_walnut)" stroke="#1E293B" stroke-width="1.6"/>
+      <rect x="18" y="12" width="58" height="38" rx="4" fill="#CBD5E1" stroke="#0F172A" stroke-width="1.4"/>
+      <circle cx="34" cy="31" r="6" fill="#334155"/><circle cx="60" cy="31" r="6" fill="#334155"/>
+      <rect x="96" y="10" width="72" height="44" rx="4" fill="#EFF6FF" stroke="#38BDF8" stroke-width="1.4"/>
+      <rect x="182" y="16" width="28" height="32" rx="3" fill="#18181B"/>
+      <text x="0" y="92" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Café Barista &amp; Pastry Counter</text>
+    </g>
+
+    <!-- 6.8 Restaurant Diner Booth + 4-Top Bistro Table -->
+    <g id="sym_comm_diner_booth" serif:id="Standalone_Comm_Restaurant_Booth" transform="translate(1466, 42)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="144" height="36" rx="5" fill="#B45309" stroke="#1E293B" stroke-width="1.4"/>
+      <rect x="12" y="42" width="120" height="54" rx="5" fill="#D5B28A" stroke="#1E293B" stroke-width="1.5"/>
+      <rect x="0" y="102" width="144" height="36" rx="5" fill="#B45309" stroke="#1E293B" stroke-width="1.4"/>
+      <text x="0" y="158" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Restaurant Diner Booth</text>
+    </g>
+
+    <g id="sym_comm_bistro_4top" serif:id="Standalone_Comm_Bistro_Round_4" transform="translate(1648, 42)" filter="url(#softShadow)">
+      <circle cx="52" cy="10" r="11" fill="#334155"/><circle cx="52" cy="94" r="11" fill="#334155"/>
+      <circle cx="10" cy="52" r="11" fill="#334155"/><circle cx="94" cy="52" r="11" fill="#334155"/>
+      <circle cx="52" cy="52" r="34" fill="url(#pat_carrara_marble)" stroke="#1E293B" stroke-width="1.6"/>
+      <text x="0" y="128" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">4-Top Bistro Table</text>
+    </g>
+
+    <!-- 6.9 Retail Gondola Shelving & POS Cash-Wrap -->
+    <g id="sym_comm_retail_gondola" serif:id="Standalone_Comm_Retail_Gondola" transform="translate(1792, 42)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="184" height="62" rx="4" fill="#F8FAFC" stroke="#1E293B" stroke-width="1.6"/>
+      <line x1="8" y1="31" x2="176" y2="31" stroke="#0F172A" stroke-width="2.5"/>
+      <line x1="62" y1="4" x2="62" y2="58" stroke="#94A3B8" stroke-width="1.1"/>
+      <line x1="122" y1="4" x2="122" y2="58" stroke="#94A3B8" stroke-width="1.1"/>
+      <text x="0" y="84" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Retail Gondola Display Island</text>
+    </g>
+
+    <g id="sym_comm_pos_checkout" serif:id="Standalone_Comm_POS_Checkout" transform="translate(2010, 42)" filter="url(#softShadow)">
+      <path d="M0,0 H168 V54 H52 V88 H0 Z" fill="#E2E8F0" stroke="#1E293B" stroke-width="1.6"/>
+      <rect x="78" y="12" width="38" height="28" rx="3" fill="#0F172A"/>
+      <circle cx="88" cy="72" r="11" fill="#334155"/>
+      <text x="0" y="110" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Retail POS Cash-Wrap</text>
+    </g>
+
+    <!-- Second Commercial Row (y = 246) -->
+    <!-- 6.10 Medical Clinic Examination Bed + Stool -->
+    <g id="sym_comm_clinic_exam_bed" serif:id="Standalone_Comm_Clinic_Exam_Bed" transform="translate(0, 246)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="168" height="64" rx="6" fill="#EFF6FF" stroke="#1E293B" stroke-width="1.6"/>
+      <rect x="8" y="8" width="42" height="48" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.1"/>
+      <line x1="56" y1="4" x2="56" y2="60" stroke="#94A3B8" stroke-width="1.2"/>
+      <circle cx="192" cy="32" r="13" fill="#2563EB" stroke="#1E293B" stroke-width="1.2"/>
+      <text x="0" y="86" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Medical Clinic Exam Bed + Stool</text>
+    </g>
+
+    <!-- 6.11 Salon / Dental Chair Station -->
+    <g id="sym_comm_salon_dental" serif:id="Standalone_Comm_Salon_Dental_Station" transform="translate(260, 246)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="104" height="16" rx="2" fill="#38BDF8" stroke="#1E293B" stroke-width="1.3"/>
+      <rect x="22" y="26" width="60" height="58" rx="12" fill="#1E293B"/>
+      <rect x="32" y="84" width="40" height="14" rx="3" fill="#94A3B8"/>
+      <text x="0" y="120" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Dental / Salon Styling Chair</text>
+    </g>
+
+    <!-- 6.12 Commercial Fitness Treadmill (07Sketches p.6!) -->
+    <g id="sym_comm_fitness_treadmill" serif:id="Standalone_Comm_Fitness_Treadmill" transform="translate(430, 246)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="158" height="72" rx="7" fill="#334155" stroke="#0F172A" stroke-width="1.6"/>
+      <rect x="8" y="6" width="32" height="60" rx="4" fill="#0F172A"/>
+      <rect x="44" y="10" width="104" height="52" rx="3" fill="#1E293B" stroke="#64748B" stroke-width="1"/>
+      <line x1="60" y1="36" x2="130" y2="36" stroke="#38BDF8" stroke-width="2" stroke-dasharray="6 4"/>
+      <text x="0" y="94" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Commercial Treadmill (p.6)</text>
+    </g>
+
+    <!-- 6.13 Gym Dumbbell Rack + Workout Bench -->
+    <g id="sym_comm_gym_weight_rack" serif:id="Standalone_Comm_Gym_Weight_Bench" transform="translate(635, 246)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="156" height="24" rx="3" fill="#1E293B"/>
+      <g fill="#94A3B8">
+        <rect x="12" y="4" width="16" height="16" rx="2"/><rect x="38" y="4" width="16" height="16" rx="2"/>
+        <rect x="64" y="4" width="16" height="16" rx="2"/><rect x="90" y="4" width="16" height="16" rx="2"/>
+        <rect x="116" y="4" width="16" height="16" rx="2"/>
+      </g>
+      <rect x="28" y="42" width="104" height="32" rx="5" fill="#DC2626" stroke="#1E293B" stroke-width="1.4"/>
+      <text x="0" y="96" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Gym Weight Rack + Bench</text>
+    </g>
+
+    <!-- 6.14 Commercial 6-Burner Restaurant Range -->
+    <g id="sym_comm_kitchen_range" serif:id="Standalone_Comm_6Burner_Range" transform="translate(840, 246)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="176" height="72" rx="4" fill="#CBD5E1" stroke="#1E293B" stroke-width="1.6"/>
+      <circle cx="28" cy="22" r="10" fill="#1E293B"/><circle cx="64" cy="22" r="10" fill="#1E293B"/><circle cx="100" cy="22" r="10" fill="#1E293B"/>
+      <circle cx="28" cy="50" r="10" fill="#1E293B"/><circle cx="64" cy="50" r="10" fill="#1E293B"/><circle cx="100" cy="50" r="10" fill="#1E293B"/>
+      <rect x="122" y="10" width="44" height="52" rx="2" fill="#94A3B8" stroke="#334155" stroke-width="1"/>
+      <text x="0" y="94" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">Commercial 6-Burner Range</text>
+    </g>
+
+    <!-- 6.15 IT Server & Plotter Cabinet -->
+    <g id="sym_comm_server_rack" serif:id="Standalone_Comm_IT_Server_Rack" transform="translate(1206, 246)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="76" height="76" rx="4" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+      <line x1="12" y1="20" x2="64" y2="20" stroke="#22C55E" stroke-width="2.5" stroke-dasharray="4 4"/>
+      <line x1="12" y1="38" x2="64" y2="38" stroke="#38BDF8" stroke-width="2.5" stroke-dasharray="6 4"/>
+      <text x="0" y="98" font-family="sans-serif" font-size="11" font-weight="700" fill="#334155">IT Server Rack (800×1000)</text>
+    </g>
+
+    <!-- 6.16 Commercial ADA Accessible Restroom w/ 1520mm Turning Radius (p.54, 72) -->
+    <g id="sym_comm_ada_restroom" serif:id="Standalone_Comm_ADA_Restroom_1520" transform="translate(1332, 224)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="148" height="142" fill="#F8FAFC" stroke="#1E293B" stroke-width="2.2"/>
+      <circle cx="88" cy="80" r="46" fill="none" stroke="#2563EB" stroke-width="1.4" stroke-dasharray="6 4"/>
+      <text x="88" y="84" text-anchor="middle" font-family="monospace" font-size="9.5" font-weight="700" fill="#2563EB">Ø1520mm ADA</text>
+      <rect x="10" y="12" width="38" height="14" fill="#FFFFFF" stroke="#334155" stroke-width="1.2"/>
+      <ellipse cx="29" cy="42" rx="15" ry="18" fill="#FFFFFF" stroke="#334155" stroke-width="1.2"/>
+      <line x1="4" y1="8" x2="4" y2="64" stroke="#0F172A" stroke-width="3"/>
+      <text x="0" y="162" font-family="sans-serif" font-size="10.5" font-weight="700" fill="#334155">ADA Restroom (Ø1520)</text>
+    </g>
+
+    <!-- 6.17 Mall / Commercial Escalator Core -->
+    <g id="sym_comm_escalator" serif:id="Standalone_Comm_Escalator_Core" transform="translate(1506, 224)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="68" height="142" rx="4" fill="#E2E8F0" stroke="#1E293B" stroke-width="1.8"/>
+      <rect x="0" y="0" width="7" height="142" fill="#0F172A"/>
+      <rect x="61" y="0" width="7" height="142" fill="#0F172A"/>
+      <g stroke="#64748B" stroke-width="1.1">
+        <line x1="8" y1="22" x2="60" y2="22"/><line x1="8" y1="40" x2="60" y2="40"/><line x1="8" y1="58" x2="60" y2="58"/>
+        <line x1="8" y1="76" x2="60" y2="76"/><line x1="8" y1="94" x2="60" y2="94"/><line x1="8" y1="112" x2="60" y2="112"/>
+      </g>
+      <line x1="34" y1="126" x2="34" y2="18" stroke="#2563EB" stroke-width="1.8"/>
+      <text x="0" y="162" font-family="sans-serif" font-size="10.5" font-weight="700" fill="#334155">Mall Escalator</text>
+    </g>
+
+    <!-- 6.18 Retail POS Cashier Desk -->
+    <g id="sym_comm_pos_cashier" serif:id="Standalone_Comm_POS_Cashier" transform="translate(1602, 224)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="112" height="54" rx="4" fill="url(#oakWoodGrain)" stroke="#1E293B" stroke-width="1.5"/>
+      <rect x="0" y="0" width="112" height="14" fill="#F8FAFC" stroke="#1E293B" stroke-width="1.2"/>
+      <rect x="64" y="20" width="32" height="22" rx="2" fill="#1E293B"/>
+      <text x="0" y="72" font-family="sans-serif" font-size="10.5" font-weight="700" fill="#334155">POS Checkout Desk</text>
+    </g>
+
+    <!-- 6.19 Round Café Bistro Table (2-Top) -->
+    <g id="sym_comm_bistro_table" serif:id="Standalone_Comm_Bistro_2Top" transform="translate(1602, 304)" filter="url(#softShadow)">
+      <rect x="6" y="14" width="20" height="24" rx="4" fill="#CBD5E1" stroke="#334155" stroke-width="1.2"/>
+      <rect x="86" y="14" width="20" height="24" rx="4" fill="#CBD5E1" stroke="#334155" stroke-width="1.2"/>
+      <circle cx="56" cy="26" r="22" fill="#F8FAFC" stroke="#1E293B" stroke-width="1.5"/>
+      <text x="0" y="64" font-family="sans-serif" font-size="10.5" font-weight="700" fill="#334155">Bistro 2-Top Table</text>
+    </g>
+
+    <!-- 6.20 Pharmacy Dispensary Shelving -->
+    <g id="sym_comm_pharmacy_rack" serif:id="Standalone_Comm_Pharmacy_Shelving" transform="translate(1740, 224)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="128" height="44" rx="3" fill="#F0F9FF" stroke="#0284C7" stroke-width="1.5"/>
+      <line x1="32" y1="0" x2="32" y2="44" stroke="#0284C7" stroke-width="1"/>
+      <line x1="64" y1="0" x2="64" y2="44" stroke="#0284C7" stroke-width="1"/>
+      <line x1="96" y1="0" x2="96" y2="44" stroke="#0284C7" stroke-width="1"/>
+      <text x="0" y="62" font-family="sans-serif" font-size="10.5" font-weight="700" fill="#334155">Pharmacy Dispensary</text>
+    </g>
+
+    <!-- 6.21 Commercial Revolving Lobby Door -->
+    <g id="sym_comm_revolving_door" serif:id="Standalone_Comm_Revolving_Door" transform="translate(1740, 294)" filter="url(#softShadow)">
+      <circle cx="44" cy="34" r="30" fill="#E0F2FE" fill-opacity="0.55" stroke="#0F172A" stroke-width="1.8"/>
+      <line x1="23" y1="13" x2="65" y2="55" stroke="#0284C7" stroke-width="1.8"/>
+      <line x1="65" y1="13" x2="23" y2="55" stroke="#0284C7" stroke-width="1.8"/>
+      <text x="0" y="80" font-family="sans-serif" font-size="10.5" font-weight="700" fill="#334155">Revolving Lobby Door</text>
+    </g>
+
+    <!-- 6.22 Commercial Curtain Wall Glazing -->
+    <g id="sym_comm_curtain_wall" serif:id="Standalone_Comm_Curtain_Wall" transform="translate(1894, 224)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="168" height="22" fill="#BAE6FD" stroke="#0F172A" stroke-width="1.6"/>
+      <rect x="40" y="-3" width="6" height="28" fill="#0F172A"/>
+      <rect x="82" y="-3" width="6" height="28" fill="#0F172A"/>
+      <rect x="124" y="-3" width="6" height="28" fill="#0F172A"/>
+      <text x="0" y="42" font-family="sans-serif" font-size="10.5" font-weight="700" fill="#334155">Curtain Wall Glazing</text>
+    </g>
+
+    <!-- 6.23 Built-In Wine Cooler & Beverage Chiller -->
+    <g id="sym_comm_wine_cooler" serif:id="Standalone_Comm_Wine_Cooler" transform="translate(1894, 280)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="66" height="58" rx="4" fill="#1E293B" stroke="#0F172A" stroke-width="1.5"/>
+      <circle cx="20" cy="20" r="6" fill="#7F1D1D"/><circle cx="44" cy="20" r="6" fill="#7F1D1D"/>
+      <circle cx="20" cy="40" r="6" fill="#7F1D1D"/><circle cx="44" cy="40" r="6" fill="#7F1D1D"/>
+      <text x="0" y="76" font-family="sans-serif" font-size="10.5" font-weight="700" fill="#334155">Wine Chiller</text>
+    </g>
+
+    <!-- 6.24 Magnetic Presentation Whiteboard + Credenza -->
+    <g id="sym_comm_whiteboard" serif:id="Standalone_Comm_Boardroom_Whiteboard" transform="translate(1984, 280)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="152" height="14" rx="2" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.6"/>
+      <rect x="16" y="24" width="120" height="34" rx="3" fill="url(#oakWoodGrain)" stroke="#1E293B" stroke-width="1.4"/>
+      <text x="0" y="76" font-family="sans-serif" font-size="10.5" font-weight="700" fill="#334155">Boardroom Credenza</text>
+    </g>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- 07 · WORLD ARCHITECTURE MASTERPIECES VECTOR STAMPS (CH. 11 - 8 ICONS)     -->
+  <!-- ========================================================================= -->
+  <g id="07_World_Architecture_Landmarks" serif:id="07_World_Architecture_Landmarks" transform="translate(68, 2005)">
+    <line x1="0" y1="-12" x2="2264" y2="-12" stroke="#E5E4DE" stroke-width="1.2"/>
+    <text x="0" y="16" font-family="sans-serif" font-size="14" font-weight="800" fill="#1E293B">07 · HISTORY OF ARCHITECTURE STANDALONE VECTOR STAMPS (CH. 11 — TAJ MAHAL, VILLA SAVOYE, GUGGENHEIM, OPERA HOUSE, PANTHEON)</text>
+
+    <!-- 7.1 Taj Mahal Agra (p.99) -->
+    <g id="landmark_taj_mahal" serif:id="Landmark_Taj_Mahal" transform="translate(0, 48)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="248" height="210" rx="14" fill="#FAF9F5" stroke="#CBD5E1" stroke-width="1.4"/>
+      <line x1="22" y1="168" x2="226" y2="168" stroke="#1E293B" stroke-width="2.5"/>
+      <rect x="30" y="64" width="12" height="104" fill="#FFFFFF" stroke="#1E293B" stroke-width="1.5"/>
+      <rect x="206" y="64" width="12" height="104" fill="#FFFFFF" stroke="#1E293B" stroke-width="1.5"/>
+      <rect x="64" y="102" width="120" height="66" fill="#FFFFFF" stroke="#1E293B" stroke-width="1.6"/>
+      <path d="M92,102 C82,66 106,42 124,28 C142,42 166,66 156,102 Z" fill="#FFFFFF" stroke="#1E293B" stroke-width="1.8"/>
+      <line x1="124" y1="16" x2="124" y2="28" stroke="#D97706" stroke-width="2"/>
+      <path d="M106,168 V128 C106,114 142,114 142,128 V168" fill="#E2E8F0" stroke="#1E293B" stroke-width="1.4"/>
+      <text x="124" y="194" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="800" fill="#1E293B">Taj Mahal · Agra (p.99)</text>
+    </g>
+
+    <!-- 7.2 Le Corbusier Villa Savoye Pilotis (p.101) -->
+    <g id="landmark_villa_savoye" serif:id="Landmark_Villa_Savoye" transform="translate(278, 48)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="248" height="210" rx="14" fill="#FAF9F5" stroke="#CBD5E1" stroke-width="1.4"/>
+      <path d="M92,82 C92,58 156,58 156,82" fill="#E2E8F0" stroke="#1E293B" stroke-width="1.6"/>
+      <rect x="34" y="82" width="180" height="46" fill="#FFFFFF" stroke="#1E293B" stroke-width="1.8"/>
+      <rect x="42" y="96" width="164" height="14" fill="#BAE6FD" stroke="#1E293B" stroke-width="1.3"/>
+      <g stroke="#1E293B" stroke-width="2.5">
+        <line x1="48" y1="128" x2="48" y2="168"/><line x1="86" y1="128" x2="86" y2="168"/>
+        <line x1="124" y1="128" x2="124" y2="168"/><line x1="162" y1="128" x2="162" y2="168"/><line x1="200" y1="128" x2="200" y2="168"/>
+      </g>
+      <line x1="24" y1="168" x2="224" y2="168" stroke="#1E293B" stroke-width="2.2"/>
+      <text x="124" y="194" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="800" fill="#1E293B">Villa Savoye · Pilotis (p.101)</text>
+    </g>
+
+    <!-- 7.3 Florence Cathedral Brunelleschi Dome (p.103) -->
+    <g id="landmark_florence_dome" serif:id="Landmark_Florence_Cathedral" transform="translate(556, 48)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="248" height="210" rx="14" fill="#FAF9F5" stroke="#CBD5E1" stroke-width="1.4"/>
+      <path d="M62,132 C62,74 96,46 124,36 C152,46 186,74 186,132 Z" fill="#C26D4F" stroke="#1E293B" stroke-width="1.8"/>
+      <path d="M92,132 C92,80 110,50 124,36 C138,50 156,80 156,132" fill="none" stroke="#FAF9F5" stroke-width="1.6"/>
+      <rect x="114" y="20" width="20" height="16" fill="#FFFFFF" stroke="#1E293B" stroke-width="1.4"/>
+      <rect x="54" y="132" width="140" height="36" fill="#EFECE4" stroke="#1E293B" stroke-width="1.6"/>
+      <text x="124" y="194" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="800" fill="#1E293B">Brunelleschi Dome (p.103)</text>
+    </g>
+
+    <!-- 7.4 FLW Guggenheim Spiral Museum (p.111) -->
+    <g id="landmark_guggenheim" serif:id="Landmark_Guggenheim_Museum" transform="translate(834, 48)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="248" height="210" rx="14" fill="#FAF9F5" stroke="#CBD5E1" stroke-width="1.4"/>
+      <polygon points="36,54 212,54 198,78 50,78" fill="#F8FAFC" stroke="#1E293B" stroke-width="1.6"/>
+      <polygon points="46,84 202,84 190,108 58,108" fill="#F1F5F9" stroke="#1E293B" stroke-width="1.6"/>
+      <polygon points="56,114 192,114 182,138 66,138" fill="#E2E8F0" stroke="#1E293B" stroke-width="1.6"/>
+      <rect x="30" y="138" width="188" height="30" fill="#FFFFFF" stroke="#1E293B" stroke-width="1.8"/>
+      <text x="124" y="194" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="800" fill="#1E293B">Guggenheim Rotunda (p.111)</text>
+    </g>
+
+    <!-- 7.5 Sydney Opera House Shells (p.113) -->
+    <g id="landmark_sydney_opera" serif:id="Landmark_Sydney_Opera_House" transform="translate(1112, 48)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="248" height="210" rx="14" fill="#FAF9F5" stroke="#CBD5E1" stroke-width="1.4"/>
+      <path d="M34,146 Q46,78 96,62 Q86,110 98,146 Z" fill="#FFFFFF" stroke="#1E293B" stroke-width="1.7"/>
+      <path d="M84,146 Q102,56 160,44 Q144,104 156,146 Z" fill="#FFFFFF" stroke="#1E293B" stroke-width="1.7"/>
+      <path d="M144,146 Q162,88 210,78 Q196,118 206,146 Z" fill="#FFFFFF" stroke="#1E293B" stroke-width="1.7"/>
+      <rect x="24" y="146" width="200" height="22" fill="#D5B28A" stroke="#1E293B" stroke-width="1.6"/>
+      <text x="124" y="194" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="800" fill="#1E293B">Sydney Opera Shells (p.113)</text>
+    </g>
+
+    <!-- 7.6 Roman Pantheon Coffered Oculus (p.115) -->
+    <g id="landmark_pantheon" serif:id="Landmark_Roman_Pantheon" transform="translate(1390, 48)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="248" height="210" rx="14" fill="#FAF9F5" stroke="#CBD5E1" stroke-width="1.4"/>
+      <path d="M48,108 A76,62 0 0,1 200,108 Z" fill="#CBD5E1" stroke="#1E293B" stroke-width="1.7"/>
+      <polygon points="40,108 124,72 208,108" fill="#EFECE4" stroke="#1E293B" stroke-width="1.7"/>
+      <rect x="48" y="108" width="152" height="60" fill="#F8FAFC" stroke="#1E293B" stroke-width="1.6"/>
+      <g stroke="#1E293B" stroke-width="3">
+        <line x1="68" y1="108" x2="68" y2="168"/><line x1="96" y1="108" x2="96" y2="168"/>
+        <line x1="124" y1="108" x2="124" y2="168"/><line x1="152" y1="108" x2="152" y2="168"/><line x1="180" y1="108" x2="180" y2="168"/>
+      </g>
+      <text x="124" y="194" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="800" fill="#1E293B">Pantheon Portico (p.115)</text>
+    </g>
+
+    <!-- 7.7 Roman Colosseum Arches (p.107) -->
+    <g id="landmark_colosseum" serif:id="Landmark_Roman_Colosseum" transform="translate(1668, 48)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="248" height="210" rx="14" fill="#FAF9F5" stroke="#CBD5E1" stroke-width="1.4"/>
+      <path d="M36,168 V60 H164 L212,102 V168 Z" fill="#EAD7BC" stroke="#1E293B" stroke-width="1.8"/>
+      <line x1="36" y1="96" x2="196" y2="96" stroke="#1E293B" stroke-width="1.4"/>
+      <line x1="36" y1="132" x2="212" y2="132" stroke="#1E293B" stroke-width="1.4"/>
+      <text x="124" y="194" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="800" fill="#1E293B">Roman Colosseum (p.107)</text>
+    </g>
+
+    <!-- 7.8 Parthenon Acropolis Doric Temple (p.124) -->
+    <g id="landmark_parthenon" serif:id="Landmark_Parthenon_Athens" transform="translate(1946, 48)" filter="url(#softShadow)">
+      <rect x="0" y="0" width="248" height="210" rx="14" fill="#FAF9F5" stroke="#CBD5E1" stroke-width="1.4"/>
+      <polygon points="32,88 124,46 216,88" fill="#EFECE4" stroke="#1E293B" stroke-width="1.8"/>
+      <rect x="40" y="88" width="168" height="10" fill="#E2E8F0" stroke="#1E293B" stroke-width="1.4"/>
+      <g stroke="#1E293B" stroke-width="4">
+        <line x1="52" y1="98" x2="52" y2="162"/><line x1="80" y1="98" x2="80" y2="162"/>
+        <line x1="108" y1="98" x2="108" y2="162"/><line x1="136" y1="98" x2="136" y2="162"/>
+        <line x1="164" y1="98" x2="164" y2="162"/><line x1="192" y1="98" x2="192" y2="162"/>
+      </g>
+      <rect x="30" y="162" width="188" height="10" fill="#CBD5E1" stroke="#1E293B" stroke-width="1.6"/>
+      <text x="124" y="194" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="800" fill="#1E293B">Parthenon · Athens (p.124)</text>
+    </g>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- 08 · NBC 205 & 07SKETCHES CLEARANCE & ERGONOMICS QUICK REFERENCE CHART    -->
+  <!-- ========================================================================= -->
+  <g id="08_Architectural_Ergonomics_Reference" serif:id="08_Architectural_Ergonomics_Reference" transform="translate(68, 2320)">
+    <line x1="0" y1="-12" x2="2264" y2="-12" stroke="#E5E4DE" stroke-width="1.2"/>
+    <rect x="0" y="14" width="2264" height="690" rx="16" fill="#FAF9F5" stroke="#E2E0D8" stroke-width="1.5"/>
+    <text x="36" y="56" font-family="sans-serif" font-size="16" font-weight="800" fill="#0F172A">08 · ARCHITECTURAL DIMENSION &amp; CLEARANCE SPECIFICATION SHEET (07SKETCHES + NBC 205:2024)</text>
+
+    <!-- Spec Card 1: Living & Dining Clearances -->
+    <g id="spec_living_dining" serif:id="Spec_Card_Living_Dining" transform="translate(36, 84)">
+      <rect width="520" height="260" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.3"/>
+      <text x="24" y="36" font-family="sans-serif" font-size="13" font-weight="800" fill="#2563EB">CH. 1 · LIVING &amp; DINING ERGONOMICS</text>
+      <text x="24" y="68" font-family="monospace" font-size="11.5" fill="#334155">• Sofa to Coffee Table Clearance: 305 – 457 mm (12" – 18")</text>
+      <text x="24" y="96" font-family="monospace" font-size="11.5" fill="#334155">• Dining Chair Pull-Back + Walk Zone: 914 – 1067 mm (36" – 42")</text>
+      <text x="24" y="124" font-family="monospace" font-size="11.5" fill="#334155">• 3-Seater Sofa Footprint: 2280 × 900 mm (7'-6" × 3'-0")</text>
+      <text x="24" y="152" font-family="monospace" font-size="11.5" fill="#334155">• L-Sectional / U-Sofa: 3683 × 3683 mm / 3400 × 2290 mm</text>
+      <text x="24" y="180" font-family="monospace" font-size="11.5" fill="#334155">• Space-Divider Console Table: 1370 – 1500 × 400 mm</text>
+      <text x="24" y="208" font-family="monospace" font-size="11.5" fill="#334155">• Rule: Frame ALL seating pieces on ONE large area rug (p.15)</text>
+    </g>
+
+    <!-- Spec Card 2: Kitchen & Butler's Pantry -->
+    <g id="spec_kitchen_pantry" serif:id="Spec_Card_Kitchen_Pantry" transform="translate(592, 84)">
+      <rect width="520" height="260" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.3"/>
+      <text x="24" y="36" font-family="sans-serif" font-size="13" font-weight="800" fill="#2563EB">CH. 2 &amp; 3 · KITCHEN TRIANGLE &amp; PANTRY</text>
+      <text x="24" y="68" font-family="monospace" font-size="11.5" fill="#334155">• Work Triangle Leg: 1220 – 2700 mm | Total Sum: 3960 – 7920 mm</text>
+      <text x="24" y="96" font-family="monospace" font-size="11.5" fill="#334155">• Two-Cook Aisle Clearance: 1220 mm (4'-0") | One-Cook: 1066 mm</text>
+      <text x="24" y="124" font-family="monospace" font-size="11.5" fill="#334155">• Base Cabinet: D 600 × H 900 mm | Wall Unit: D 320–350 × H 740 mm</text>
+      <text x="24" y="152" font-family="monospace" font-size="11.5" fill="#334155">• Island Counter Overhang Legroom: ≥ 250 mm | Plinth Toe-Kick: 150 mm</text>
+      <text x="24" y="180" font-family="monospace" font-size="11.5" fill="#334155">• Butler's Walk-In Pantry Passage: ≥ 1000 – 1200 mm clear</text>
+      <text x="24" y="208" font-family="monospace" font-size="11.5" fill="#334155">• Side-by-Side Fridge: 908 × 700 × H 1760 mm</text>
+    </g>
+
+    <!-- Spec Card 3: Bath, Closet & Bedroom -->
+    <g id="spec_bath_bedroom" serif:id="Spec_Card_Bath_Bedroom" transform="translate(1148, 84)">
+      <rect width="520" height="260" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.3"/>
+      <text x="24" y="36" font-family="sans-serif" font-size="13" font-weight="800" fill="#2563EB">CH. 4–7 · LAUNDRY, BATH, WIC &amp; BEDROOM</text>
+      <text x="24" y="68" font-family="monospace" font-size="11.5" fill="#334155">• Laundry Front Loading Zone: ≥ 1060 mm (42") clear</text>
+      <text x="24" y="96" font-family="monospace" font-size="11.5" fill="#334155">• Enclosed Shower Min: 914 × 914 mm | WC Center-to-Wall: ≥ 430 mm</text>
+      <text x="24" y="124" font-family="monospace" font-size="11.5" fill="#334155">• Wheelchair / Accessible Turning Circle: Ø 1520 mm (5'-0")</text>
+      <text x="24" y="152" font-family="monospace" font-size="11.5" fill="#334155">• Reach-In Wardrobe Depth: 609 mm (2'-0") | Max 680 mm</text>
+      <text x="24" y="180" font-family="monospace" font-size="11.5" fill="#334155">• King Bed: 1930×2032 mm | Queen: 1524×2032 mm | Twin: 990×1905 mm</text>
+      <text x="24" y="208" font-family="monospace" font-size="11.5" fill="#334155">• Egress Window: Sill ≤ 1118 mm, Clear ≥ 0.53 m² (W≥508, H≥610)</text>
+    </g>
+
+    <!-- Spec Card 4: Stairs & Commercial Codes -->
+    <g id="spec_stairs_commercial" serif:id="Spec_Card_Stairs_Commercial" transform="translate(1704, 84)">
+      <rect width="524" height="260" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.3"/>
+      <text x="24" y="36" font-family="sans-serif" font-size="13" font-weight="800" fill="#2563EB">CH. 9 &amp; COMMERCIAL · STAIRS &amp; PUBLIC CODES</text>
+      <text x="24" y="68" font-family="monospace" font-size="11.5" fill="#334155">• Ideal Riser: 152.4–190 mm (≤198 mm) | Tread: 270–304.8 mm</text>
+      <text x="24" y="96" font-family="monospace" font-size="11.5" fill="#334155">• Min Flight &amp; Landing Width: 914 mm Res / 1200–1500 mm Comm</text>
+      <text x="24" y="124" font-family="monospace" font-size="11.5" fill="#334155">• Stair Handrail: 863–965 mm | Upper Guardrail: 1066 mm | Headroom ≥ 2032</text>
+      <text x="24" y="152" font-family="monospace" font-size="11.5" fill="#334155">• Baluster Max Clear Spacing: ≤ 99 mm (4" sphere rule)</text>
+      <text x="24" y="180" font-family="monospace" font-size="11.5" fill="#334155">• Commercial Corridor: ≥ 1500–1800 mm | Exit Door: ≥ 1000–1200 mm</text>
+      <text x="24" y="208" font-family="monospace" font-size="11.5" fill="#334155">• Passenger Elevator Core: ~2100–2400 mm square shaft</text>
+    </g>
+
+    <!-- True Inclined Stair Section Diagram (Standalone Vector) -->
+    <g id="sym_stair_section_diagram" serif:id="Standalone_Stair_Section_Diagram" transform="translate(36, 372)">
+      <rect width="2192" height="284" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.3"/>
+      <text x="28" y="36" font-family="sans-serif" font-size="13" font-weight="800" fill="#0F172A">STANDALONE VECTOR STAIRCASE ELEVATION &amp; RAILING TYPES (CABLE · TEMPERED GLASS · BALUSTER — CH. 9 P.89–90)</text>
+      <polygon points="60,248 60,224 102,224 102,200 144,200 144,176 186,176 186,152 228,152 228,128 270,128 270,104 312,104 312,80 420,80 420,104 318,104 92,248"
+               fill="#E2E8F0" stroke="#1E293B" stroke-width="2"/>
+      <line x1="76" y1="154" x2="312" y2="20" stroke="#0F172A" stroke-width="3.5"/>
+      <line x1="312" y1="20" x2="416" y2="20" stroke="#0F172A" stroke-width="3.5"/>
+      <g stroke="#2563EB" stroke-width="1.5">
+        <line x1="76" y1="224" x2="76" y2="154"/><line x1="118" y1="200" x2="118" y2="130"/><line x1="160" y1="176" x2="160" y2="106"/>
+        <line x1="202" y1="152" x2="202" y2="82"/><line x1="244" y1="128" x2="244" y2="58"/><line x1="286" y1="104" x2="286" y2="34"/>
+      </g>
+      <!-- Glass Railing Detail -->
+      <g transform="translate(560, 28)">
+        <polygon points="0,210 220,86 220,18 0,142" fill="#BAE6FD" fill-opacity="0.45" stroke="#0284C7" stroke-width="1.6"/>
+        <line x1="0" y1="142" x2="220" y2="18" stroke="#0F172A" stroke-width="4"/>
+        <text x="0" y="234" font-family="sans-serif" font-size="12" font-weight="700" fill="#1E293B">Tempered Glass Balustrade</text>
+      </g>
+      <!-- Cable Railing Detail -->
+      <g transform="translate(900, 28)">
+        <line x1="0" y1="142" x2="220" y2="18" stroke="#0F172A" stroke-width="4"/>
+        <line x1="0" y1="162" x2="220" y2="38" stroke="#64748B" stroke-width="1.3"/>
+        <line x1="0" y1="180" x2="220" y2="56" stroke="#64748B" stroke-width="1.3"/>
+        <line x1="0" y1="198" x2="220" y2="74" stroke="#64748B" stroke-width="1.3"/>
+        <line x1="10" y1="136" x2="10" y2="210" stroke="#1E293B" stroke-width="3"/>
+        <line x1="210" y1="24" x2="210" y2="98" stroke="#1E293B" stroke-width="3"/>
+        <text x="0" y="234" font-family="sans-serif" font-size="12" font-weight="700" fill="#1E293B">Stainless Cable Railing</text>
+      </g>
+      <!-- Commercial Title Stamp -->
+      <g transform="translate(1280, 56)">
+        <rect width="860" height="172" rx="12" fill="#0F172A"/>
+        <text x="32" y="48" font-family="sans-serif" font-size="18" font-weight="800" fill="#FFFFFF">ER. CHETAN KUMAR SARRAF · SCALE &amp; SPACES STUDIO</text>
+        <text x="32" y="80" font-family="monospace" font-size="12.5" fill="#38BDF8">AFFINITY DESIGNER V3 MASTER VECTOR LIBRARY · 75+ STANDALONE ARCHITECTURAL &amp; COMMERCIAL BLOCKS</text>
+        <text x="32" y="112" font-family="sans-serif" font-size="12" fill="#CBD5E1">Tip in Affinity Designer 3: Open the Layers Studio — every symbol is isolated with its own serif:id.</text>
+        <text x="32" y="136" font-family="sans-serif" font-size="12" fill="#CBD5E1">Select any group and click "Add from Selection" in the Assets Studio to build a reusable drag-and-drop CAD library.</text>
+      </g>
+    </g>
+  </g>
+</svg>
