@@ -1,0 +1,7 @@
+# Backup files created during editing
+*.bak
+*.bak_*
+*.pre_*
+*.tmp
+.DS_Store
+Thumbs.db
