@@ -146,20 +146,26 @@
   <!-- Official Favicon -->
   <link rel="icon" type="image/png" href="https://i.postimg.cc/vBg8pLjk/signature-(3).png" />
   <link rel="apple-touch-icon" href="https://i.postimg.cc/vBg8pLjk/signature-(3).png" />
-  <link rel="preload" as="image" href="https://i.postimg.cc/66gczq9y/signature-realistic.gif" fetchpriority="high" />
-
-  <!-- Cybermatic & Sci-Fi Font Stack -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <!-- Google Identity Services for One-Click Google Sign-In -->
-  <script src="https://accounts.google.com/gsi/client" async defer></script>
-  <!-- Three.js WebGL Engine for 3D Spatial Floor Studio (with built-in offline axonometric fallback) -->
-  <!-- Preconnect Resource Hints for Critical Assets -->
+  
+  <!-- Critical Resource Preload & Preconnect for High-Speed Mobile LCP & Fast DNS Resolution -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="preconnect" href="https://i.postimg.cc" crossorigin />
+  <link rel="dns-prefetch" href="https://i.postimg.cc" />
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+  <link rel="preload" as="image" href="https://i.postimg.cc/05wwzfcw/Profile-Pic.png" fetchpriority="high" type="image/png" />
+
+  <!-- Non-blocking Asynchronous Font Stack (Zero Render-Blocking Penalty on Mobile) -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" /></noscript>
+
+  <!-- Non-blocking Asynchronous FontAwesome 6.5.1 (Eliminates Render-Blocking CSS on Google PageSpeed) -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" /></noscript>
+
+  <!-- Google Identity Services for One-Click Google Sign-In -->
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
   <!-- Three.js WebGL Engine for 3D Spatial Floor Studio (deferred to unblock main thread) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
 
@@ -260,11 +266,24 @@
 
     #scrollProgress { position: fixed; top: 0; left: 0; height: 2px; background: var(--text-main); width: 0%; z-index: 10000; }
 
-    /* Mobile CAD Background Animation: ACTIVE & Hardware-Accelerated on Phones & Tablets */
+    /* Mobile CAD Background Animation: STABLE, Zero-Jitter & Hardware-Accelerated on Phones & Tablets */
     @media (max-width: 768px) {
-      #cadDraftingBgLayer {
-        will-change: transform;
-        transform: translate3d(0, 0, 0);
+      #cadDraftingBgLayer,
+      #geiselBimScrollLayer {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100vw !important;
+        height: 100lvh !important;
+        min-height: 100% !important;
+        transform: translateZ(0) !important;
+        -webkit-transform: translateZ(0) !important;
+        transition: opacity 0.3s ease !important;
+        contain: strict !important;
+      }
+      .cad-bg-svg {
+        transform: none !important;
+        will-change: auto;
       }
       .cad-bg-arc { opacity: 0.28 !important; stroke-width: 1.2px !important; }
       .cad-bg-trace { opacity: 0.40 !important; stroke-width: 1.4px !important; }
@@ -4704,13 +4723,21 @@
     #cadDraftingBgLayer,
     #geiselBimScrollLayer {
       position: fixed;
-      inset: 0;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100lvh;
+      min-height: 100vh;
+      min-height: 100%;
       pointer-events: none;
       z-index: 0;
       overflow: hidden;
-      transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s ease;
-      will-change: transform, opacity;
-      transform: translate3d(0, 0, 0);
+      transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      transform: translateZ(0);
+      -webkit-transform: translateZ(0);
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      contain: strict;
     }
 
     #cadDraftingBgLayer {
@@ -4852,6 +4879,8 @@
       right: 0;
       width: 330px;
       max-width: 90vw;
+      max-height: 85vh;
+      overflow-y: auto;
       background: var(--bg-card, rgba(15, 23, 42, 0.95));
       backdrop-filter: blur(20px) saturate(140%);
       -webkit-backdrop-filter: blur(20px) saturate(140%);
@@ -4859,13 +4888,62 @@
       border-radius: 16px;
       padding: 1.1rem;
       box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4), 0 0 1px rgba(255, 122, 69, 0.35);
-      z-index: 9999;
+      z-index: 99999;
       font-family: 'Plus Jakarta Sans', sans-serif;
       animation: cadMenuFadeIn 0.22s cubic-bezier(0.16, 1, 0.3, 1);
     }
     @keyframes cadMenuFadeIn {
       from { opacity: 0; transform: translateY(8px) scale(0.97); }
       to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    @keyframes cadMenuFadeInMobile {
+      from { opacity: 0; transform: translate(-50%, 12px) scale(0.95); }
+      to { opacity: 1; transform: translate(-50%, 0) scale(1); }
+    }
+
+    /* Mobile & Responsive Optimization for CAD Drafting Capsule (Prevents Off-screen Clipping) */
+    @media (max-width: 768px) {
+      .cad-drafting-popup-capsule {
+        position: fixed !important;
+        left: 50% !important;
+        right: auto !important;
+        bottom: 76px !important;
+        top: auto !important;
+        transform: translateX(-50%) !important;
+        width: calc(100vw - 28px) !important;
+        max-width: 360px !important;
+        box-sizing: border-box !important;
+        z-index: 100050 !important;
+        animation: cadMenuFadeInMobile 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        padding: 1rem 0.9rem !important;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(255, 122, 69, 0.4) !important;
+      }
+      .cad-popup-header {
+        font-size: 0.74rem !important;
+        padding-bottom: 0.55rem !important;
+      }
+      .cad-popup-close-btn {
+        font-size: 1.35rem !important;
+        padding: 2px 8px !important;
+      }
+      .cad-popup-section {
+        margin-top: 0.75rem !important;
+      }
+      .cad-popup-label {
+        font-size: 0.62rem !important;
+        margin-bottom: 0.4rem !important;
+      }
+      .cad-seg-control {
+        gap: 0.25rem !important;
+        padding: 3px !important;
+      }
+      .cad-seg-btn {
+        padding: 0.48rem 0.25rem !important;
+        font-size: 0.68rem !important;
+        white-space: normal !important;
+        text-align: center !important;
+        line-height: 1.25 !important;
+      }
     }
     .cad-popup-header {
       display: flex;
@@ -4946,6 +5024,8 @@
       height: 100%;
       display: block;
       object-fit: cover;
+      transform: none !important;
+      pointer-events: none;
     }
     .cad-bg-arc { stroke: var(--text-main); fill: none; opacity: 0.12; }
     .cad-bg-trace { stroke: var(--text-main); fill: none; opacity: 0.22; stroke-dasharray: 600; animation: cadArcTrace 16s ease-in-out infinite; }
@@ -4972,8 +5052,8 @@
 
     /* Architectural Masterpieces & Funky Linework Styles */
     .cad-masterpiece-group {
-      transition: opacity 0.4s ease, transform 0.4s ease;
-      will-change: transform, opacity;
+      transition: opacity 0.3s ease;
+      will-change: opacity;
     }
     .cad-masterpiece-bold { stroke: var(--text-main); stroke-width: 2.2px; fill: none; stroke-linecap: round; opacity: 0.35; }
     .cad-masterpiece-mid { stroke: var(--text-main); stroke-width: 1.4px; fill: none; opacity: 0.25; }
@@ -5239,7 +5319,7 @@
 
   </style>
 </head>
-<body class="cks-app-mode" data-cad-layer="geisel" data-cad-intensity="active">
+<body class="cks-app-mode" data-cad-layer="monuments" data-cad-intensity="vivid">
 
     <!-- ================= ARCHITECTURAL & CIVIL ENGINEERING DRAFTING VECTOR BACKGROUND & ANIMATION LAYER ================= -->
   <div id="cadDraftingBgLayer" aria-hidden="true">
@@ -6721,8 +6801,8 @@
             <!-- Clean Portrait Frame (Wave & Oval Highlight Hidden) -->
 
             <!-- Portrait Presentation (Seamless, No Outer Box) -->
-            <div id="heroPhotoContainer" style="position: relative; z-index: 1; width: 100%; height: 460px; overflow: hidden; border-radius: 20px; background: transparent; box-shadow: 0 20px 45px rgba(0,0,0,0.18);">
-              <img src="https://i.postimg.cc/05wwzfcw/Profile-Pic.png" alt="Er. Chetan Kumar Sarraf" id="sheetAboutPhoto" onerror="this.onerror=null;this.src='https://i.postimg.cc/05wwzfcw/Profile-Pic.png';" style="width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block;" />
+            <div id="heroPhotoContainer" style="position: relative; z-index: 1; width: 100%; height: 460px; aspect-ratio: 380 / 460; overflow: hidden; border-radius: 20px; background: transparent; box-shadow: 0 20px 45px rgba(0,0,0,0.18);">
+              <img src="https://i.postimg.cc/05wwzfcw/Profile-Pic.png" alt="Er. Chetan Kumar Sarraf" id="sheetAboutPhoto" width="380" height="460" fetchpriority="high" decoding="async" onerror="this.onerror=null;this.src='https://i.postimg.cc/05wwzfcw/Profile-Pic.png';" style="width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block;" />
               <div id="sheetNecBadge" style="display:none; position: absolute; bottom: 12px; right: 12px; background: rgba(0,0,0,0.82); backdrop-filter: blur(8px); color: #fff; font-family: 'JetBrains Mono', monospace; font-size: 0.66rem; font-weight: 700; padding: 4px 10px; border-radius: 6px; letter-spacing: 0.05em;"></div>
             </div>
             
@@ -6770,7 +6850,7 @@
 
       <!-- Featured Image Banner Linked Directly to Active Portfolio -->
       <div class="hero-featured-card" id="heroBannerCard" onclick="openFeaturedProject()">
-        <img src="https://i.postimg.cc/yND7Z8Ld/AT-01.jpg" alt="Featured Built Architecture" id="sheetFeaturedImg" />
+        <img src="https://i.postimg.cc/yND7Z8Ld/AT-01.jpg" alt="Featured Built Architecture" id="sheetFeaturedImg" width="1440" height="620" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover;" />
         <div class="hero-caption">
           <div class="feat-caption-tag">Featured Built Architecture · Birgunj, Nepal · 2026 Archive</div>
           <h3 class="feat-caption-title" id="sheetFeaturedTitle">Commercial Office Renovation at Bypass Road</h3>
@@ -7979,10 +8059,10 @@
               <i class="fa-solid fa-arrows-to-eye"></i> <span id="baFitText">Full View</span>
             </button>
             <div class="ba-under" id="baUnder">
-              <img src="https://i.postimg.cc/ryKvxdrN/Bedroom-render-Project2-1.png" alt="3D Photorealistic Interior" loading="lazy" />
+              <img src="https://i.postimg.cc/ryKvxdrN/Bedroom-render-Project2-1.png" alt="3D Photorealistic Interior" loading="lazy" decoding="async" />
             </div>
             <div class="ba-over" id="baOver">
-              <img src="https://i.postimg.cc/jjb8122k/Bedroom-Layout-Project2.png" alt="2D CAD Blueprint" loading="lazy" />
+              <img src="https://i.postimg.cc/jjb8122k/Bedroom-Layout-Project2.png" alt="2D CAD Blueprint" loading="lazy" decoding="async" />
             </div>
             <div class="ba-divider" id="baLine"></div>
             <div class="ba-knob" id="baKnob" aria-label="Drag to compare"><i class="fa-solid fa-left-right"></i></div>
@@ -9207,7 +9287,7 @@
         <h2 class="section-title" id="aboutTitle">Where Engineering Rigor Harmonizes with <em>Interior Luxury</em></h2>
 
         <div style="margin: 1.8rem auto 0; display:flex; align-items:center; justify-content:center; gap:1rem; flex-wrap:wrap;">
-          <img id="aboutSectionPhoto" src="https://i.postimg.cc/05wwzfcw/Profile-Pic.png" alt="Er. Chetan Kumar Sarraf" style="width:92px; height:92px; border-radius:50%; object-fit:cover; border:3px solid var(--brand-gold);" />
+          <img id="aboutSectionPhoto" src="https://i.postimg.cc/05wwzfcw/Profile-Pic.png" alt="Er. Chetan Kumar Sarraf" width="92" height="92" loading="lazy" decoding="async" style="width:92px; height:92px; border-radius:50%; object-fit:cover; border:3px solid var(--brand-gold);" />
           <div style="text-align:left;">
             <div style="font-family: 'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:1.1rem;">Er. Chetan Kumar Sarraf</div>
             <div id="aboutLanguages" style="font-family: 'Plus Jakarta Sans',monospace; font-size:0.76rem; color:var(--brand-cyan); margin-top:0.2rem;">English · Nepali · Hindi · Bhojpuri · Maithili</div>
@@ -9517,7 +9597,7 @@
         <div style="display:flex; gap:1rem; align-items:center; flex-wrap:wrap;">
           <div class="cad-drafting-menu-wrapper" style="position: relative; display: inline-flex;">
             <button type="button" onclick="toggleCadDraftingMenu(event)" class="cad-drafting-pill-btn" id="cadDraftingBtn" title="Architectural CAD &amp; 4D BIM Linework Studio">
-              <i class="fa-solid fa-building"></i> <span id="cadDraftingStatusTxt">Geisel BIM (Active)</span>
+              <i class="fa-solid fa-landmark"></i> <span id="cadDraftingStatusTxt">Monuments (Vivid)</span>
               <i class="fa-solid fa-chevron-up" style="font-size: 0.62rem; margin-left: 4px; opacity: 0.7;"></i>
             </button>
 
@@ -9532,10 +9612,10 @@
               <div class="cad-popup-section">
                 <div class="cad-popup-label"><i class="fa-solid fa-layer-group"></i> ARCHITECTURAL DRAWING:</div>
                 <div class="cad-seg-control" id="cadLayerSeg">
-                  <button type="button" class="cad-seg-btn active" data-layer="geisel" onclick="setCadLayer('geisel')">
+                  <button type="button" class="cad-seg-btn" data-layer="geisel" onclick="setCadLayer('geisel')">
                     <i class="fa-solid fa-building"></i> Geisel 4D BIM
                   </button>
-                  <button type="button" class="cad-seg-btn" data-layer="monuments" onclick="setCadLayer('monuments')">
+                  <button type="button" class="cad-seg-btn active" data-layer="monuments" onclick="setCadLayer('monuments')">
                     <i class="fa-solid fa-landmark"></i> Monuments
                   </button>
                   <button type="button" class="cad-seg-btn" data-layer="both" onclick="setCadLayer('both')">
@@ -9548,10 +9628,10 @@
               <div class="cad-popup-section">
                 <div class="cad-popup-label"><i class="fa-solid fa-sliders"></i> LINEWORK INTENSITY:</div>
                 <div class="cad-seg-control" id="cadIntensitySeg">
-                  <button type="button" class="cad-seg-btn" data-intensity="vivid" onclick="setCadIntensity('vivid')">
+                  <button type="button" class="cad-seg-btn active" data-intensity="vivid" onclick="setCadIntensity('vivid')">
                     <i class="fa-solid fa-wand-magic-sparkles"></i> Vivid
                   </button>
-                  <button type="button" class="cad-seg-btn active" data-intensity="active" onclick="setCadIntensity('active')">
+                  <button type="button" class="cad-seg-btn" data-intensity="active" onclick="setCadIntensity('active')">
                     <i class="fa-solid fa-bolt"></i> Active
                   </button>
                   <button type="button" class="cad-seg-btn" data-intensity="subtle" onclick="setCadIntensity('subtle')">
@@ -10777,8 +10857,8 @@
     }
 
     // --- ADVANCED ARCHITECTURAL CAD & 4D BIM BACKGROUND CONTROLLER ---
-    let currentCadLayer = 'geisel';       // 'geisel' | 'monuments' | 'both'
-    let currentCadIntensity = 'active';   // 'vivid' | 'active' | 'subtle' | 'off'
+    let currentCadLayer = 'monuments';       // 'geisel' | 'monuments' | 'both'
+    let currentCadIntensity = 'vivid';       // 'vivid' | 'active' | 'subtle' | 'off'
 
     function setCadLayer(layer) {
       currentCadLayer = layer;
@@ -10809,8 +10889,8 @@
       const txt = document.getElementById('cadDraftingStatusTxt');
       const icon = document.querySelector('#cadDraftingBtn > i:first-child');
       
-      let label = 'Geisel BIM';
-      let iconClass = 'fa-solid fa-building';
+      let label = 'Monuments (Vivid)';
+      let iconClass = 'fa-solid fa-landmark';
 
       if (currentCadIntensity === 'off') {
         label = 'CAD Off';
@@ -10871,13 +10951,14 @@
     // Rapid cycle through top presets
     function cycleCadDraftingPreset() {
       const presets = [
-        { layer: 'geisel', intensity: 'active' },
-        { layer: 'geisel', intensity: 'vivid' },
-        { layer: 'monuments', intensity: 'active' },
         { layer: 'monuments', intensity: 'vivid' },
+        { layer: 'monuments', intensity: 'active' },
+        { layer: 'geisel', intensity: 'vivid' },
+        { layer: 'geisel', intensity: 'active' },
+        { layer: 'both', intensity: 'vivid' },
         { layer: 'both', intensity: 'active' },
-        { layer: 'geisel', intensity: 'subtle' },
-        { layer: 'geisel', intensity: 'off' }
+        { layer: 'monuments', intensity: 'subtle' },
+        { layer: 'monuments', intensity: 'off' }
       ];
 
       let currentIndex = presets.findIndex(p => p.layer === currentCadLayer && p.intensity === currentCadIntensity);
@@ -10899,16 +10980,26 @@
       }
     }
 
-    // Restore saved user preferences
+    // Restore saved user preferences (defaults to Monuments + Vivid)
     function restoreCadDraftingMode() {
       try {
-        const savedLayer = localStorage.getItem('CKS_CAD_LAYER');
-        const savedIntensity = localStorage.getItem('CKS_CAD_INTENSITY');
-        if (savedLayer && ['geisel', 'monuments', 'both'].includes(savedLayer)) {
-          currentCadLayer = savedLayer;
-        }
-        if (savedIntensity && ['vivid', 'active', 'subtle', 'off'].includes(savedIntensity)) {
-          currentCadIntensity = savedIntensity;
+        const ver = localStorage.getItem('CKS_CAD_VER');
+        if (ver !== '2.1') {
+          // Initialize to user's requested default: Monuments + Vivid
+          localStorage.setItem('CKS_CAD_VER', '2.1');
+          localStorage.setItem('CKS_CAD_LAYER', 'monuments');
+          localStorage.setItem('CKS_CAD_INTENSITY', 'vivid');
+          currentCadLayer = 'monuments';
+          currentCadIntensity = 'vivid';
+        } else {
+          const savedLayer = localStorage.getItem('CKS_CAD_LAYER');
+          const savedIntensity = localStorage.getItem('CKS_CAD_INTENSITY');
+          if (savedLayer && ['geisel', 'monuments', 'both'].includes(savedLayer)) {
+            currentCadLayer = savedLayer;
+          }
+          if (savedIntensity && ['vivid', 'active', 'subtle', 'off'].includes(savedIntensity)) {
+            currentCadIntensity = savedIntensity;
+          }
         }
       } catch(e) {}
       applyCadMode();
@@ -11007,7 +11098,7 @@
         return `
           <div class="project-card" onclick="openProjectDetail('${p.id}')">
             <div class="project-img-box">
-              <img src="${escapeHtml(p.imageUrl)}" alt="${escapeHtml(p.title)}" loading="lazy" />
+              <img src="${escapeHtml(p.imageUrl)}" alt="${escapeHtml(p.title)}" loading="lazy" decoding="async" />
               ${plates > 1 ? `<div class="plates-tag">${plates} PLATES</div>` : ''}
             </div>
             <div class="project-info">
@@ -11026,7 +11117,7 @@
       container.innerHTML = state.articles.map((a, idx) => `
         <article class="article-card">
           <div class="article-img-box" onclick="openArticleReader(${idx})" style="cursor:pointer;">
-            <img src="${escapeHtml(a.image)}" alt="${escapeHtml(a.title)}" loading="lazy" />
+            <img src="${escapeHtml(a.image)}" alt="${escapeHtml(a.title)}" loading="lazy" decoding="async" />
           </div>
           <div style="padding: 1.6rem; display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1;">
             <div>
@@ -11051,7 +11142,7 @@
     function renderPostsAndReel() {
       const cardsHtml = state.posts.map((p, idx) => `
         <div class="marquee-card" onclick="openPostReader(${idx})">
-          <img src="${escapeHtml(p.cover)}" alt="${escapeHtml(p.title)}" style="width: 100%; height: 185px; object-fit: cover;" />
+          <img src="${escapeHtml(p.cover)}" alt="${escapeHtml(p.title)}" loading="lazy" decoding="async" style="width: 100%; height: 185px; object-fit: cover;" />
           <div style="padding: 1rem 1.2rem;">
             <div style="display:flex; justify-content:space-between; align-items:center; gap:0.4rem; margin-bottom:0.25rem;">
               <span style="font-family:monospace; font-size:0.64rem; text-transform:uppercase; color:var(--text-main); font-weight:600;">● ${escapeHtml(p.status)}</span>
@@ -11070,7 +11161,7 @@
         grid.innerHTML = state.posts.map((p, idx) => `
           <div class="project-card">
             <div class="project-img-box" onclick="openPostReader(${idx})" style="cursor:pointer;">
-              <img src="${escapeHtml(p.cover)}" alt="${escapeHtml(p.title)}" loading="lazy" />
+              <img src="${escapeHtml(p.cover)}" alt="${escapeHtml(p.title)}" loading="lazy" decoding="async" />
               ${p.images.length > 1 ? `<div class="plates-tag">${p.images.length} SITE PHOTOS</div>` : ''}
             </div>
             <div class="project-info">
@@ -11099,7 +11190,7 @@
       grid.innerHTML = state.showcase.map((s, idx) => `
         <div class="project-card">
           <div class="project-img-box" onclick="${s.canEmbed ? `openShowcaseEmbed(${idx})` : (s.tourUrl ? `window.open('${escapeHtml(s.tourUrl)}','_blank')` : '')}" style="cursor:pointer;">
-            <img src="${escapeHtml(s.thumb)}" alt="${escapeHtml(s.title)}" loading="lazy" />
+            <img src="${escapeHtml(s.thumb)}" alt="${escapeHtml(s.title)}" loading="lazy" decoding="async" />
             <div class="plates-tag">${escapeHtml(s.platform)}</div>
           </div>
           <div class="project-info">
@@ -15886,6 +15977,19 @@
         }
       }
 
+      function lockMobileCadBackground() {
+        if (typeof window === 'undefined') return;
+        if (window.innerWidth <= 768) {
+          // Lock to maximum screen height to prevent mobile browser URL bar resize/drag jitter while scrolling
+          const stableH = Math.max(window.innerHeight, window.screen?.height || 0, document.documentElement.clientHeight);
+          const bg = document.getElementById('cadDraftingBgLayer');
+          const bim = document.getElementById('geiselBimScrollLayer');
+          if (bg) bg.style.height = `${stableH}px`;
+          if (bim) bim.style.height = `${stableH}px`;
+        }
+      }
+      lockMobileCadBackground();
+
       window.addEventListener('scroll', onUnifiedScroll, { passive: true });
       // Initial render on page load
       onUnifiedScroll();
@@ -15918,6 +16022,7 @@
 
       window.addEventListener('orientationchange', () => {
         setTimeout(() => {
+          lockMobileCadBackground();
           if (document.getElementById('sitePlanCanvas')) redrawSitePlan();
         }, 150);
       });
