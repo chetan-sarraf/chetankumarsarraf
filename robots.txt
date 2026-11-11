@@ -1,8 +1,9 @@
 # robots.txt for https://chetankumarsarraf.com.np
 # Er. Chetan Kumar Sarraf - Civil Engineer & Spatial Designer
+# Birgunj, Parsa, Nepal
 
 User-agent: *
 Allow: /
 
-# Sitemap reference for Google Search Console
+# Sitemap reference for Search Engines
 Sitemap: https://chetankumarsarraf.com.np/sitemap.xml

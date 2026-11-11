@@ -1,0 +1,15 @@
+/* CREATOR & ARCHITECT */
+  Civil Engineer & Spatial Designer: Er. Chetan Kumar Sarraf
+  Contact: master.er.cks@outlook.com
+  Practice: Er. Chetan Kumar Sarraf Architectural & Civil Engineering Practice
+  Location: Birgunj, Parsa, Madhesh Pradesh, Nepal
+  Website: https://chetankumarsarraf.com.np
+  WhatsApp: +977 9766188838
+
+/* SITE & ARCHITECTURE */
+  Standards: HTML5 Semantic Markup, CSS3 Variables, Vanilla ECMAScript 2024
+  Engines: Three.js Interactive 3D Canvas, Affinity Designer Vectors, Google Apps Script Cloud Engine
+  Typography: Plus Jakarta Sans, Outfit, Cinzel, JetBrains Mono
+  Hosting: GitHub Pages via Fastly CDN & Cloudflare Edge Network
+  Last Updated: 2026-11-11
+  Language: English / Nepali / Hindi

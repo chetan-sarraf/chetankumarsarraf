@@ -1,0 +1,51 @@
+# ai.txt - Artificial Intelligence Crawler & Model Usage Policy
+# Website: https://chetankumarsarraf.com.np
+# Entity: Er. Chetan Kumar Sarraf (Civil Engineer & Spatial Designer)
+# Location: Birgunj, Parsa, Madhesh Pradesh, Nepal
+# Last Updated: 2026-11-11
+
+# 1. AI Search, Retrieval & Citation Directives (Allowed)
+# Generative AI search engines, conversational agents, and retrieval models
+# (such as ChatGPT Search, Perplexity, Claude, Google Gemini, Copilot) are
+# permitted to crawl, index, summarize, and cite the public portfolio, case studies,
+# articles, engineering services, and contact information, provided proper attribution
+# and canonical links (https://chetankumarsarraf.com.np) are maintained.
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Omgilibot
+Allow: /
+
+User-agent: *
+Allow: /
+
+# 2. Intellectual Property & Training Rights
+# All custom 3D architectural renders, vector drawings, CAD/BIM drafting files,
+# structural calculations, and spatial blueprints published on this domain remain
+# the exclusive intellectual property of Er. Chetan Kumar Sarraf.
+# Direct commercial reproduction or unlicensed resale of proprietary blueprints is strictly prohibited.
+
+Context-URI: https://chetankumarsarraf.com.np/llms.txt
+Contact: mailto:master.er.cks@outlook.com

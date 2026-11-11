@@ -1,0 +1,11 @@
+# security.txt - RFC 9116 Vulnerability Disclosure Policy
+# Entity: Er. Chetan Kumar Sarraf (Civil Engineer & Spatial Designer)
+# Domain: chetankumarsarraf.com.np
+
+Contact: mailto:master.er.cks@outlook.com
+Contact: https://chetankumarsarraf.com.np/#contact
+Expires: 2027-12-31T23:59:59.000Z
+Preferred-Languages: en, ne, hi
+Canonical: https://chetankumarsarraf.com.np/.well-known/security.txt
+Policy: https://chetankumarsarraf.com.np/terms.html
+Acknowledgments: https://chetankumarsarraf.com.np/humans.txt

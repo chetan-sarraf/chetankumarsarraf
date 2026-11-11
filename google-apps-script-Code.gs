@@ -1,6 +1,6 @@
 /**
  * ============================================================================
- * ER. CHETAN KUMAR SARRAF · SCALE & SPACES STUDIO — UNIFIED GOOGLE APPS SCRIPT
+ * ER. CHETAN KUMAR SARRAF STUDIO — UNIFIED GOOGLE APPS SCRIPT
  * ============================================================================
  * Sheet File: chetan-interior
  * Connected Tabs:
@@ -32,7 +32,7 @@
 function authorizeEmailAndTest() {
   MailApp.sendEmail({
     to: 'master.cks009@gmail.com',
-    subject: '✓ Scale & Spaces Studio — Email Sending Authorized!',
+    subject: '✓ Er. Chetan Kumar Sarraf Studio — Email Sending Authorized!',
     body: 'Congratulations Er. Chetan! Your Google Apps Script is now permanently authorized to send verification codes, password resets, and chat notifications.'
   });
   Logger.log('Success: Email authorization verified!');
@@ -165,7 +165,7 @@ function handleChatMessage(ss, payload) {
   ]);
   var nowIso = new Date().toISOString();
   var name = String(payload.name || 'Studio Visitor').trim();
-  var email = String(payload.email || 'visitor@scaleandspaces.com').trim();
+  var email = String(payload.email || 'visitor@chetankumarsarraf.com.np').trim();
   var msg = String(payload.message || payload.messages || '').trim();
   var page = String(payload.page || 'studio_chat').trim();
   var isSignedIn = payload.is_signed_in === true || payload.is_signed_in === 'true';
@@ -192,11 +192,11 @@ function handleChatMessage(ss, payload) {
   try {
     MailApp.sendEmail({
       to: NOTIFY_EMAIL,
-      replyTo: (email.indexOf('@') !== -1 && email !== 'visitor@scaleandspaces.com') ? email : NOTIFY_EMAIL,
+      replyTo: (email.indexOf('@') !== -1 && email !== 'visitor@chetankumarsarraf.com.np') ? email : NOTIFY_EMAIL,
       subject: subjectPrefix + name + ' (' + email + ')',
       htmlBody:
         '<div style="font-family:Arial,sans-serif;max-width:560px;padding:24px;border:1px solid #e4e4e7;border-radius:10px;background:#ffffff;">' +
-        '<div style="font-family:monospace;font-size:11px;color:#d97706;letter-spacing:0.15em;text-transform:uppercase;font-weight:700;">SCALE &amp; SPACES STUDIO DESK</div>' +
+        '<div style="font-family:monospace;font-size:11px;color:#d97706;letter-spacing:0.15em;text-transform:uppercase;font-weight:700;">ER. CHETAN KUMAR SARRAF STUDIO DESK</div>' +
         '<h3 style="margin:6px 0 6px;color:#09090b;font-size:18px;">' + (isOfftopic ? 'Direct Client Inquiry from Website' : 'New Studio Chat Message') + '</h3>' +
         '<p style="margin:0 0 16px;color:#71717a;font-size:13px;">' + (isSignedIn ? '✓ Verified Signed-In Client Account' : 'Guest Visitor') + '</p>' +
         '<div style="background:#f4f4f5;padding:16px;border-radius:8px;margin:16px 0;font-size:14px;line-height:1.5;">' +
@@ -244,10 +244,10 @@ function handleForgotPassword(ss, payload) {
   try {
     MailApp.sendEmail({
       to: email,
-      subject: 'Scale & Spaces Studio — Your 6-Digit Password Reset Code: ' + code,
+      subject: 'Er. Chetan Kumar Sarraf Studio — Your 6-Digit Password Reset Code: ' + code,
       htmlBody:
         '<div style="font-family:Arial,sans-serif;max-width:500px;padding:26px;border:1px solid #e4e4e7;border-radius:10px;background:#ffffff;">' +
-        '<div style="font-family:monospace;font-size:11px;color:#d97706;letter-spacing:0.15em;text-transform:uppercase;font-weight:700;">SCALE &amp; SPACES STUDIO</div>' +
+        '<div style="font-family:monospace;font-size:11px;color:#d97706;letter-spacing:0.15em;text-transform:uppercase;font-weight:700;">ER. CHETAN KUMAR SARRAF STUDIO</div>' +
         '<h2 style="margin:6px 0 10px;color:#09090b;font-size:20px;">Password Reset Verification Code</h2>' +
         '<p style="font-size:14px;color:#52525b;line-height:1.5;">You requested to reset your password for the AI 2D/3D Floor Studio portal. Please enter this 6-digit verification code to confirm your identity:</p>' +
         '<div style="font-size:32px;font-weight:800;letter-spacing:8px;padding:18px 24px;background:#f4f4f5;color:#09090b;text-align:center;margin:20px 0;border-radius:8px;border:1px dashed #d4d4d8;">' +
@@ -377,10 +377,10 @@ function handleUserAuth(ss, payload) {
   try {
     MailApp.sendEmail({
       to: email,
-      subject: 'Welcome to Scale & Spaces Studio — Account Registered',
+      subject: 'Welcome to Er. Chetan Kumar Sarraf Studio — Account Registered',
       htmlBody:
         '<div style="font-family:Arial,sans-serif;max-width:500px;padding:24px;border:1px solid #e4e4e7;border-radius:10px;background:#ffffff;">' +
-        '<div style="font-family:monospace;font-size:11px;color:#d97706;letter-spacing:0.15em;text-transform:uppercase;font-weight:700;">SCALE &amp; SPACES STUDIO</div>' +
+        '<div style="font-family:monospace;font-size:11px;color:#d97706;letter-spacing:0.15em;text-transform:uppercase;font-weight:700;">ER. CHETAN KUMAR SARRAF STUDIO</div>' +
         '<h2 style="color:#09090b;margin:8px 0 10px;font-size:20px;">Welcome, ' + (name || 'Client') + '!</h2>' +
         '<p style="font-size:14px;color:#52525b;line-height:1.5;">Your account for Er. Chetan Kumar Sarraf\'s AI 2D/3D Floor Studio has been successfully created.</p>' +
         '<div style="background:#f4f4f5;padding:12px 16px;border-radius:6px;margin:16px 0;font-size:13px;color:#18181b;">' +
@@ -471,7 +471,7 @@ function doGet(e) {
   if (action === 'ping') {
     return jsonResponse({
       ok: true,
-      service: 'Scale & Spaces Studio Backend Unified',
+      service: 'Er. Chetan Kumar Sarraf Studio Backend Unified',
       status: 'active',
       clientId: EXPECTED_GOOGLE_CLIENT_ID
     });
