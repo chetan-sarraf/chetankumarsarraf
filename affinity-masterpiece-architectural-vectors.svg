@@ -76,20 +76,9 @@
       .cad-compass-counter { transform-box: view-box; transform-origin: 960px 540px; animation: cadCompassCounter 90s linear infinite; }
     
       /* Additional Architectural Masterpieces & Sky Animations */
-      @keyframes cadBirdsGlide1 {
-        0% { transform: translate(-220px, 90px); }
-        50% { transform: translate(920px, 45px); }
-        100% { transform: translate(2180px, 95px); }
-      }
-      @keyframes cadBirdsGlide2 {
-        0% { transform: translate(-280px, 175px) scale(0.72); }
-        50% { transform: translate(880px, 130px) scale(0.72); }
-        100% { transform: translate(2220px, 185px) scale(0.72); }
-      }
-      @keyframes cadWingFlap {
-        0%, 100% { transform: scaleY(1); }
-        50% { transform: scaleY(-0.7); }
-      }
+      
+      
+      
       @keyframes cadEverestPlume {
         0%, 100% { transform: skewX(0deg) scaleX(1); opacity: 0.30; }
         50% { transform: skewX(-6deg) scaleX(1.18); opacity: 0.75; }
@@ -111,15 +100,39 @@
         50% { transform: translateY(-6px); }
       }
 
-      .cad-birds-flock-1 { animation: cadBirdsGlide1 40s linear infinite; }
-      .cad-birds-flock-2 { animation: cadBirdsGlide2 52s linear infinite 15s; }
-      .cad-wing-anim { transform-box: fill-box; transform-origin: center center; animation: cadWingFlap 1.35s ease-in-out infinite; }
-      .cad-wing-anim-fast { transform-box: fill-box; transform-origin: center center; animation: cadWingFlap 0.95s ease-in-out infinite; }
+      
+      
+      
+      
       .cad-plume-anim { transform-box: view-box; transform-origin: 0px 0px; animation: cadEverestPlume 8s ease-in-out infinite alternate; }
       .cad-everest-anim { animation: cadEverestFloat 20s ease-in-out infinite; }
       .cad-dharahara-anim { animation: cadDharaharaFloat 16s ease-in-out infinite 1s; }
       .cad-taj-anim { animation: cadTajFloat 18s ease-in-out infinite 2s; }
       .cad-howrah-anim { animation: cadHowrahFloat 19s ease-in-out infinite 3s; }
+
+    
+      
+
+    
+      /* High-Altitude Animated Birds Flying (Monuments Sky Layer) */
+      @keyframes cadBirdsGlide1 {
+        0% { transform: translate(-220px, 90px); }
+        50% { transform: translate(920px, 45px); }
+        100% { transform: translate(2180px, 95px); }
+      }
+      @keyframes cadBirdsGlide2 {
+        0% { transform: translate(-280px, 175px) scale(0.72); }
+        50% { transform: translate(880px, 130px) scale(0.72); }
+        100% { transform: translate(2220px, 185px) scale(0.72); }
+      }
+      @keyframes cadWingFlex {
+        0%, 100% { transform: scaleY(1); }
+        50% { transform: scaleY(0.42); }
+      }
+      .cad-birds-flock-1 { animation: cadBirdsGlide1 40s linear infinite; will-change: transform; }
+      .cad-birds-flock-2 { animation: cadBirdsGlide2 52s linear infinite 15s; will-change: transform; }
+      .cad-wing-anim { transform-box: fill-box; transform-origin: 0px 0px; animation: cadWingFlex 1.45s ease-in-out infinite; }
+      .cad-wing-anim-fast { transform-box: fill-box; transform-origin: 0px 0px; animation: cadWingFlex 1.05s ease-in-out infinite; }
 
     </style>
 
@@ -801,8 +814,6 @@
     </g>
   </g>
 
-  <!-- ================= LAYER 12: DYNAMIC FLOCK OF BIRDS FLYING IN UI BACKGROUND ================= -->
-  <!-- Silhouettes of birds soaring smoothly across the upper sky with articulating wings -->
   <g id="Layer_12_Animated_Sky_Birds" serif:id="12 Animated Sky Birds">
     <!-- Primary Flight Formation (Fast Glide) -->
     <g class="cad-birds-flock-1">
@@ -868,5 +879,6 @@
       </g>
     </g>
   </g>
+  
 
 </svg>
