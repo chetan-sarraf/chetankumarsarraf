@@ -1,13 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Primary Interactive Studio & Canonical Homepage -->
   <url>
     <loc>https://chetankumarsarraf.com.np/</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  <!-- Projects, Handovers & 360 VR Hub -->
+  <url>
+    <loc>https://chetankumarsarraf.com.np/home</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://chetankumarsarraf.com.np/aistudio</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://chetankumarsarraf.com.np/sitecad</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://chetankumarsarraf.com.np/boq</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://chetankumarsarraf.com.np/civilhub</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://chetankumarsarraf.com.np/works</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://chetankumarsarraf.com.np/posts</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://chetankumarsarraf.com.np/360vr</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://chetankumarsarraf.com.np/rates</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://chetankumarsarraf.com.np/journal</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://chetankumarsarraf.com.np/reviews</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://chetankumarsarraf.com.np/team</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://chetankumarsarraf.com.np/ethos</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://chetankumarsarraf.com.np/faqs</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://chetankumarsarraf.com.np/contacts</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://chetankumarsarraf.com.np/menu</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://chetankumarsarraf.com.np/projects/</loc>
     <lastmod>2026-11-14</lastmod>
@@ -32,7 +126,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
-  <!-- Architecture & Interior Design Journal -->
   <url>
     <loc>https://chetankumarsarraf.com.np/articles/</loc>
     <lastmod>2026-11-14</lastmod>
@@ -45,21 +138,18 @@
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
-  <!-- Engineering Hub Tools, Terai Material Rates, Catalogs & FAQs -->
   <url>
     <loc>https://chetankumarsarraf.com.np/services/</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-  <!-- About Er. Chetan Kumar Sarraf, Skills, Team & Birgunj Studio Map -->
   <url>
     <loc>https://chetankumarsarraf.com.np/about/</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
-  <!-- Legal Policies -->
   <url>
     <loc>https://chetankumarsarraf.com.np/privacy.html</loc>
     <lastmod>2026-11-14</lastmod>

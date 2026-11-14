@@ -220,10 +220,11 @@
         Current Choice: <strong id="cookiePrefStatus" style="color:var(--brand-orange);">Checking...</strong>
       </div>
       <div class="pref-actions">
-        <button type="button" class="btn-decline" onclick="updateStandaloneCookiePref('declined')">Decline Optional</button>
-        <button type="button" class="btn-accept" onclick="updateStandaloneCookiePref('accepted')">Accept All</button>
+        <button type="button" id="standaloneDeclineBtn" class="btn-decline" onclick="updateStandaloneCookiePref('declined')">Decline Optional</button>
+        <button type="button" id="standaloneAcceptBtn" class="btn-accept" onclick="updateStandaloneCookiePref('accepted')">Accept All</button>
       </div>
     </div>
+    <div id="cookiePrefToast" role="status" aria-live="polite" style="display:none; margin-top:1rem; padding:0.75rem 1rem; border-radius:10px; border:1px solid var(--brand-orange); background:rgba(255,122,69,0.12); color:var(--text-main); font-size:0.84rem; font-weight:600; align-items:center; gap:0.55rem;"></div>
   </div>
 
   <div class="footer">
@@ -256,6 +257,13 @@
         }
       } catch (e) {}
       renderStandaloneCookiePref();
+      const toast = document.getElementById('cookiePrefToast');
+      if (toast) {
+        toast.innerHTML = allowed
+          ? '<i class="fa-solid fa-circle-check" style="color:var(--brand-orange);"></i> <span>Cookies accepted — studio preferences &amp; history enabled.</span>'
+          : '<i class="fa-solid fa-shield-halved" style="color:var(--brand-orange);"></i> <span>Optional cookies declined — only essential storage remains active.</span>';
+        toast.style.display = 'inline-flex';
+      }
     }
     renderStandaloneCookiePref();
   </script>

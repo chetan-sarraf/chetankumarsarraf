@@ -4,6 +4,23 @@
 
 ## Official Website & Clean Indexable Pages
 - **Interactive Studio Homepage:** https://chetankumarsarraf.com.np/
+- **Clean Section Routes:**
+  - **Home:** https://chetankumarsarraf.com.np/home
+  - **Studio Apps Menu:** https://chetankumarsarraf.com.np/menu
+  - **AI 2D/3D Floor Studio:** https://chetankumarsarraf.com.np/aistudio
+  - **Site CAD Planner:** https://chetankumarsarraf.com.np/sitecad
+  - **Room BOQ Estimator:** https://chetankumarsarraf.com.np/boq
+  - **Civil Engineering & Vastu Hub:** https://chetankumarsarraf.com.np/civilhub
+  - **Works & Portfolio:** https://chetankumarsarraf.com.np/works
+  - **Client Posts & Handovers:** https://chetankumarsarraf.com.np/posts
+  - **360° VR Showcase:** https://chetankumarsarraf.com.np/360vr
+  - **Material & Labour Rates:** https://chetankumarsarraf.com.np/rates
+  - **Journal & Articles:** https://chetankumarsarraf.com.np/journal
+  - **Client Reviews:** https://chetankumarsarraf.com.np/reviews
+  - **Team & Qualifications:** https://chetankumarsarraf.com.np/team
+  - **Design Ethos:** https://chetankumarsarraf.com.np/ethos
+  - **FAQs:** https://chetankumarsarraf.com.np/faqs
+  - **Contacts & Studio Map:** https://chetankumarsarraf.com.np/contacts
 - **Architecture & Interior Projects Archive (Portfolio, Handovers, 360° VR Tours):** https://chetankumarsarraf.com.np/projects/
   - **Contemporary Master Bedroom with Custom Wardrobes and Geometric Ceiling:** https://chetankumarsarraf.com.np/projects/contemporary-master-bedroom/
   - **School office Renovation — Trijuddha High School Birgunj:** https://chetankumarsarraf.com.np/projects/school-office-renovation/
