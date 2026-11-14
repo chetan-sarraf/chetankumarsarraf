@@ -44,7 +44,7 @@ var ADMIN_EMAILS = [
 ];
 
 var NOTIFY_EMAIL = 'master.cks009@gmail.com';
-var EXPECTED_GOOGLE_CLIENT_ID = '619955856662-7d6fpmorphkkq4deri46eq417sh4nrji.apps.googleusercontent.com';
+var EXPECTED_GOOGLE_CLIENT_ID = '529244725979-vippnhl2uhq4504fk9gjcd596qdao9bl.apps.googleusercontent.com';
 
 function jsonResponse(obj) {
   return ContentService

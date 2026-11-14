@@ -63,15 +63,23 @@
       var ua = (typeof navigator !== 'undefined' && navigator.userAgent) ? navigator.userAgent : '';
       var isSearchCrawler = /Googlebot|Bingbot|bingpreview|msnbot|DuckDuckBot|Applebot|Slurp|Yandex|Baiduspider|OAI-SearchBot|GPTBot|PerplexityBot|ClaudeBot|GTmetrix|Pingdom/i.test(ua);
       if (isSearchCrawler || typeof window === 'undefined' || !window.location || window.location.protocol === 'file:' || typeof fetch !== 'function') return;
+      document.documentElement.classList.add('cks-route-boot');
+      var bootFailSafe = setTimeout(function () {
+        document.documentElement.classList.remove('cks-route-boot');
+      }, 4500);
       fetch('/index.html', { cache: 'default' })
         .then(function (res) { if (!res.ok) throw new Error('HTTP ' + res.status); return res.text(); })
         .then(function (html) {
+          clearTimeout(bootFailSafe);
           var injected = html.replace('<head>', '<head><script>window.__CKS_FROM_ROUTE_PAGE=true;<\/script>');
           document.open();
           document.write(injected);
           document.close();
         })
-        .catch(function () {});
+        .catch(function () {
+          clearTimeout(bootFailSafe);
+          document.documentElement.classList.remove('cks-route-boot');
+        });
     })();
   </script>
 
@@ -82,6 +90,8 @@
   <style>
     :root { --bg-dark:#09090b; --bg-card:#121216; --bg-elevated:#19191f; --border:#27272d; --accent:#ff7a45; --text:#FAF7F2; --muted:#b4b4be; }
     * { box-sizing:border-box; margin:0; padding:0; }
+    html.cks-route-boot { background:#09090b; }
+    html.cks-route-boot body { opacity:0 !important; pointer-events:none !important; overflow:hidden !important; }
     body { background:var(--bg-dark); color:var(--text); font-family:'Plus Jakarta Sans',sans-serif; line-height:1.7; }
     a { color:inherit; }
     .topbar { position:sticky; top:0; z-index:40; background:rgba(9,9,11,0.92); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); padding:0.9rem 1.4rem; }
