@@ -1,51 +1,47 @@
-# Er. Chetan Kumar Sarraf — Civil Engineer & Spatial Designer
+# Er. Chetan Kumar Sarraf — Civil Engineer & Interior Designer in Birgunj, Nepal
 
-> Authoritative profile and structured knowledge base for search engines and AI research agents (Google, Bing, ChatGPT, Claude, Perplexity, Gemini, Copilot).
+> Official portfolio, civil engineering toolkit, Room BOQ calculator, NBC 205 site bylaws planner, and architectural design studio of Er. Chetan Kumar Sarraf in Birgunj, Parsa, Nepal.
 
-## Official Website & Clean Indexable Pages
-- **Interactive Studio Homepage:** https://chetankumarsarraf.com.np/
-- **Clean Section Routes:**
-  - **Home:** https://chetankumarsarraf.com.np/home
-  - **Studio Apps Menu:** https://chetankumarsarraf.com.np/menu
-  - **AI 2D/3D Floor Studio:** https://chetankumarsarraf.com.np/aistudio
-  - **Site CAD Planner:** https://chetankumarsarraf.com.np/sitecad
-  - **Room BOQ Estimator:** https://chetankumarsarraf.com.np/boq
-  - **Civil Engineering & Vastu Hub:** https://chetankumarsarraf.com.np/civilhub
-  - **Works & Portfolio:** https://chetankumarsarraf.com.np/works
-  - **Client Posts & Handovers:** https://chetankumarsarraf.com.np/posts
-  - **360° VR Showcase:** https://chetankumarsarraf.com.np/360vr
-  - **Material & Labour Rates:** https://chetankumarsarraf.com.np/rates
-  - **Journal & Articles:** https://chetankumarsarraf.com.np/journal
-  - **Client Reviews:** https://chetankumarsarraf.com.np/reviews
-  - **Team & Qualifications:** https://chetankumarsarraf.com.np/team
-  - **Design Ethos:** https://chetankumarsarraf.com.np/ethos
-  - **FAQs:** https://chetankumarsarraf.com.np/faqs
-  - **Contacts & Studio Map:** https://chetankumarsarraf.com.np/contacts
-- **Architecture & Interior Projects Archive (Portfolio, Handovers, 360° VR Tours):** https://chetankumarsarraf.com.np/projects/
-  - **Contemporary Master Bedroom with Custom Wardrobes and Geometric Ceiling:** https://chetankumarsarraf.com.np/projects/contemporary-master-bedroom/
-  - **School office Renovation — Trijuddha High School Birgunj:** https://chetankumarsarraf.com.np/projects/school-office-renovation/
-  - **Office Interior — Bypass Road (Client: Aalok Tulshyan):** https://chetankumarsarraf.com.np/projects/aalok-tulshyan-office-interior/
-- **Architecture & Interior Design Journal (Full Articles & Guides):** https://chetankumarsarraf.com.np/articles/
-  - **Modular Kitchen vs Carpenter Kitchen in Birgunj:** https://chetankumarsarraf.com.np/articles/modular-kitchen-vs-carpenter-kitchen-birgunj/
-- **Engineering Suite (39 Tools), Terai Material Rates, Catalogs & FAQs:** https://chetankumarsarraf.com.np/services/
-- **About Er. Chetan Kumar Sarraf, Skills, Team & Birgunj Studio Map:** https://chetankumarsarraf.com.np/about/
-- **Sitemap:** https://chetankumarsarraf.com.np/sitemap.xml
-- **Site Search (OpenSearch):** https://chetankumarsarraf.com.np/?q={searchTerms}
+Er. Chetan Kumar Sarraf is a Nepal Engineering Council (NEC) registered Civil Engineer (`76273 Civil "A"`) and spatial/interior designer serving Birgunj, Parsa, Madhesh Province, and Nepal with 2D AutoCAD drawings, 3D interior visualization, turnkey execution, Vastu planning, and transparent BOQ estimation.
 
-## Overview
-- **Name:** Er. Chetan Kumar Sarraf (Chetan Sarraf)
-- **Profession:** Civil Engineer & Spatial / Interior Design Professional
-- **Associated Studio:** Scale and Spaces Pvt. Ltd.
-- **Headquarters:** Birgunj, Parsa District, Madhesh Pradesh, Nepal
-- **Geographic Coordinates:** 27° 0' 36.7668" N, 84° 53' 34.8936" E (27.010213, 84.893026)
-- **Primary Contact Email:** master.er.cks@outlook.com
-- **Direct Phone & WhatsApp:** +977 9766188838
+## Main Pages
 
-## Featured Projects, Articles & Services
-- **Contemporary Master Bedroom with Custom Wardrobes and Geometric Ceiling** — Full Bedroom Interior (Modern Contemporary, Walnut Brown & Cream, Custom Wardrobes, Designer Ceiling, Study Desk).
-- **School office Renovation** — Principal Office Renovation at Trijuddha High School, Birta, Birgunj, Parsa, Nepal (Scale and Spaces Pvt. Ltd.).
-- **Office Interior — Bypass Road (Client: Aalok Tulshyan)** — Completed executive corporate workspace renovation.
-- **Full 360° Master Bedroom Tour** — Interactive 360° VR panorama walkthrough.
-- **Modular Kitchen vs Carpenter Kitchen in Birgunj** — Guide comparing durability, moisture resistance, and cost differences in the Terai region.
-- **39-Tool Interactive Engineering Hub & AI 2D/3D Floor Studio** — Concrete RCC Mix, Rebar Weight, NBC 205/105 Seismic checks, Municipal Setbacks & FAR, 2D Site CAD Planner, Room BOQ Estimator, 16-Zone Vastu Shastra & Panchanga, Solar PV, and Rainwater Harvesting.
-- **Terai Material & Labour Rate Chart (NPR)** — OPC Cement, River Sand, 2x2 Vitrified Tiles, False Ceiling, Toughened Glass, Aluminium, and Electrician/Mason daily wages in Birgunj, Nepal.
+- [Home — Studio & Portfolio](https://chetankumarsarraf.com.np/home): Main overview featuring featured interior projects, structural services, studio highlights, and direct inquiry form.
+- [Works — Architectural & Interior Portfolio](https://chetankumarsarraf.com.np/works): Curated residential, commercial, clinic, showroom, and custom interior execution showcase.
+- [Projects Directory](https://chetankumarsarraf.com.np/projects/): Crawl-ready project index with scope summaries, square footage, locations, and detailed case-study views.
+- [Engineering & Design Journal](https://chetankumarsarraf.com.np/journal): Long-form technical articles covering NBC 205 structural compliance, Birgunj interior design trends, Vastu, and construction planning.
+- [Technical Articles Archive](https://chetankumarsarraf.com.np/articles/): Searchable archive of civil engineering guides and interior architecture resources in Nepal.
+- [Services & Design Scope](https://chetankumarsarraf.com.np/services/): Detailed service offerings spanning interior design, Vastu planning, 2D municipal drawings, 3D renders, and turnkey build supervision.
+- [About Er. Chetan Kumar Sarraf](https://chetankumarsarraf.com.np/about/): Credentials, NEC registration, Birgunj practice background, ethos, and design philosophy.
+
+## Featured Projects & Articles
+
+- [Contemporary Master Bedroom with Custom Wardrobes](https://chetankumarsarraf.com.np/projects/contemporary-master-bedroom/): Full residential bedroom interior with custom wardrobes, study desk, and layered false ceiling lighting.
+- [School Office Renovation — Trijuddha High School Birgunj](https://chetankumarsarraf.com.np/projects/school-office-renovation/): Institutional principal office interior redesign in Birta, Birgunj, Parsa, Nepal.
+- [Office Interior at Bypass Road (Client: Aalok Tulshyan)](https://chetankumarsarraf.com.np/projects/aalok-tulshyan-office-interior/): Corporate office interior featuring acoustic wood detailing, lighting, and custom seating.
+- [Modular Kitchen vs Carpenter Kitchen in Birgunj](https://chetankumarsarraf.com.np/articles/modular-kitchen-vs-carpenter-kitchen-birgunj/): Technical cost, durability, and Terai moisture-resistance comparison for homeowners in Nepal.
+
+## Engineering Tools & Calculators
+
+- [Site CAD & Municipal Bylaws Planner](https://chetankumarsarraf.com.np/sitecad): Interactive plot setback, FAR, ground coverage, and NBC 205 compliance planning tool.
+- [Room BOQ & Quantity Estimator](https://chetankumarsarraf.com.np/boq): Live Bill of Quantities estimator for flooring, false ceiling, wall panelling, paint, electrical, and modular joinery.
+- [Civil Engineering & Vastu Hub](https://chetankumarsarraf.com.np/civilhub): Steel bar weight calculator, concrete mix ratios, unit converters, Vastu compass, and Nepali Panchanga tools.
+- [Rates & Material Cost Guide](https://chetankumarsarraf.com.np/rates): Up-to-date Nepal construction & interior finishing rate reference in NPR per sq.ft.
+- [360° VR Architectural Walkthroughs](https://chetankumarsarraf.com.np/360vr): Interactive panoramic interior visualizations and immersive spatial previews.
+
+## Studio Details & Client Support
+
+- [Recent Visual Posts](https://chetankumarsarraf.com.np/posts): Latest studio updates, site execution photos, and design snapshots.
+- [Client Reviews & Testimonials](https://chetankumarsarraf.com.np/reviews): Verified residential and commercial client feedback and rating submission form.
+- [Studio Team](https://chetankumarsarraf.com.np/team): Multidisciplinary civil engineering, drafting, and site supervision specialists.
+- [Studio Ethos](https://chetankumarsarraf.com.np/ethos): Core engineering precision, Vastu harmony, and transparent budgeting principles.
+- [Frequently Asked Questions](https://chetankumarsarraf.com.np/faqs): Answers on design fees, turnkey timelines, Birgunj municipal approvals, and project onboarding.
+- [Contact & Studio Booking](https://chetankumarsarraf.com.np/contacts): Direct WhatsApp, email, Birgunj studio location, and consultation booking form.
+- [Studio Apps Directory](https://chetankumarsarraf.com.np/menu): Quick launcher for all calculators, sections, and studio tools.
+
+## Optional
+
+- [XML Sitemap](https://chetankumarsarraf.com.np/sitemap.xml): Complete machine-readable URL index for search engines.
+- [Agentic Resource Discovery (ARD) Manifest](https://chetankumarsarraf.com.np/.well-known/ard.json): ARD v0.91 discovery manifest listing WebMCP tools and studio skill cards.
+- [WebMCP Tools Descriptor](https://chetankumarsarraf.com.np/.well-known/mcp-tools.json): Structured MCP tool schemas exposed on this site for AI assistants.
+- [Studio Agent Skills Card](https://chetankumarsarraf.com.np/.well-known/studio-skills.json): Capabilities and calculators available across the Civil Hub and Room BOQ Studio.
