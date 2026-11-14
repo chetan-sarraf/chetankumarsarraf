@@ -12727,10 +12727,13 @@
       <h2>Er. Chetan Kumar Sarraf — Civil Engineering, Architecture &amp; Interior Design Directory (Birgunj, Nepal)</h2>
       <p>Residential &amp; Commercial Interiors, Architectural Drafting, BOQ Estimation, Vastu Shastra, and 3D Visualization in Birgunj, Parsa, Nepal. Direct WhatsApp: +977 9766188838 | Email: master.er.cks@outlook.com.</p>
       <ul>
-        <li><a href="projects.html">Architecture &amp; Interior Projects, Aalok Tulshyan Office Interior (Bypass Road), Trijuddha High School Office Renovation (Birta), Contemporary Master Bedroom with Custom Wardrobes &amp; 360° VR Tours</a></li>
-        <li><a href="articles.html">Design Journal: Modular Kitchen vs Carpenter Kitchen in Birgunj</a></li>
-        <li><a href="services.html">39 Engineering &amp; Design Tools (AI 2D/3D Floor Studio, Site CAD Planner, Room BOQ Estimator, NBC 205/105 Seismic, Vastu Panchanga), Terai Construction Rates &amp; FAQs</a></li>
-        <li><a href="about.html">Profile, Qualifications (Tri-juddha Secondary School, Scale and Spaces Pvt. Ltd.), Enscape/SketchUp/AutoCAD/Revit Skills, Team &amp; Birgunj Coordinates (27.010213, 84.893026)</a></li>
+        <li><a href="/projects/">Architecture &amp; Interior Projects, Handover Galleries &amp; 360° VR Tours</a></li>
+        <li><a href="/projects/contemporary-master-bedroom/">Contemporary Master Bedroom with Custom Wardrobes and Geometric Ceiling</a></li>
+        <li><a href="/projects/school-office-renovation/">School office Renovation — Trijuddha High School Birgunj</a></li>
+        <li><a href="/projects/aalok-tulshyan-office-interior/">Office Interior — Bypass Road (Client: Aalok Tulshyan)</a></li>
+        <li><a href="/articles/">Design Journal &amp; Guides</a> — <a href="/articles/modular-kitchen-vs-carpenter-kitchen-birgunj/">Modular Kitchen vs Carpenter Kitchen in Birgunj</a></li>
+        <li><a href="/services/">39 Engineering &amp; Design Tools (AI 2D/3D Floor Studio, Site CAD Planner, Room BOQ Estimator, NBC 205/105 Seismic, Vastu Panchanga), Terai Construction Rates &amp; FAQs</a></li>
+        <li><a href="/about/">Profile, Qualifications (Tri-juddha Secondary School, Scale and Spaces Pvt. Ltd.), Enscape/SketchUp/AutoCAD/Revit Skills, Team &amp; Birgunj Coordinates (27.010213, 84.893026)</a></li>
       </ul>
     </section>
   </noscript>
@@ -12760,11 +12763,11 @@
       </div>
 
       <nav aria-label="Studio Archive Index" style="display:flex; flex-wrap:wrap; gap:0.65rem 1.2rem; margin-top:1.4rem; padding-bottom:1.2rem; border-bottom:1px solid rgba(242, 106, 54, 0.14); font-family:'JetBrains Mono', monospace; font-size:0.74rem;">
-        <a href="projects.html" class="footer-legal-link">Projects Archive</a>
-        <a href="articles.html" class="footer-legal-link">Articles &amp; Guides</a>
-        <a href="services.html" class="footer-legal-link">Tools, Rates &amp; FAQs</a>
-        <a href="about.html" class="footer-legal-link">About, Team &amp; Map</a>
-        <a href="sitemap.xml" class="footer-legal-link">Sitemap</a>
+        <a href="/projects/" class="footer-legal-link">Projects Archive</a>
+        <a href="/articles/" class="footer-legal-link">Articles &amp; Guides</a>
+        <a href="/services/" class="footer-legal-link">Tools, Rates &amp; FAQs</a>
+        <a href="/about/" class="footer-legal-link">About, Team &amp; Map</a>
+        <a href="/sitemap.xml" class="footer-legal-link">Sitemap</a>
       </nav>
 
       <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: #d96b3e; flex-wrap: wrap; gap: 1rem;">
@@ -13556,6 +13559,14 @@
             }
 
             const catalogItems = [];
+            const resolveSlugUrl = (title, fallback) => {
+              const t = String(title || '').toLowerCase();
+              if (t.includes('contemporary master bedroom')) return 'https://chetankumarsarraf.com.np/projects/contemporary-master-bedroom/';
+              if (t.includes('school office renovation')) return 'https://chetankumarsarraf.com.np/projects/school-office-renovation/';
+              if (t.includes('aalok tulshyan') || t.includes('office interior')) return 'https://chetankumarsarraf.com.np/projects/aalok-tulshyan-office-interior/';
+              if (t.includes('modular kitchen vs carpenter kitchen')) return 'https://chetankumarsarraf.com.np/articles/modular-kitchen-vs-carpenter-kitchen-birgunj/';
+              return fallback;
+            };
             (state.projects || []).forEach(p => {
               if (!p || !p.title) return;
               catalogItems.push({
@@ -13563,7 +13574,7 @@
                 "name": p.title,
                 "description": p.description || p.category || "",
                 "image": p.imageUrl || undefined,
-                "url": `https://chetankumarsarraf.com.np/?section=works&q=${encodeURIComponent(p.title)}`
+                "url": resolveSlugUrl(p.title, `https://chetankumarsarraf.com.np/?section=works&q=${encodeURIComponent(p.title)}`)
               });
             });
             (state.articles || []).forEach(a => {
@@ -13573,7 +13584,7 @@
                 "headline": a.title,
                 "articleSection": a.category || "Design",
                 "description": a.excerpt || "",
-                "url": `https://chetankumarsarraf.com.np/?section=articles&q=${encodeURIComponent(a.title)}`
+                "url": resolveSlugUrl(a.title, `https://chetankumarsarraf.com.np/?section=articles&q=${encodeURIComponent(a.title)}`)
               });
             });
             (state.posts || []).forEach(p => {
@@ -13582,7 +13593,7 @@
                 "@type": "CreativeWork",
                 "name": p.clientName ? `${p.title} (${p.clientName})` : p.title,
                 "description": p.description || p.caption || "",
-                "url": `https://chetankumarsarraf.com.np/?section=reel&q=${encodeURIComponent(p.clientName || p.title)}`
+                "url": resolveSlugUrl(p.clientName || p.title, `https://chetankumarsarraf.com.np/?section=reel&q=${encodeURIComponent(p.clientName || p.title)}`)
               });
             });
             (state.showcase || []).forEach(s => {
@@ -20791,7 +20802,7 @@
           resultsBox.innerHTML = '';
         } else if (!matches.length) {
           resultsBox.style.display = 'block';
-          resultsBox.innerHTML = `<div style="padding:0.55rem 0.7rem; font-size:0.8rem; color:var(--text-muted);">No direct match in current cards for "<strong>${escapeHtml(q)}</strong>". Try <a href="services.html?q=${encodeURIComponent(q)}" style="color:var(--brand-gold);">full directory</a>.</div>`;
+          resultsBox.innerHTML = `<div style="padding:0.55rem 0.7rem; font-size:0.8rem; color:var(--text-muted);">No direct match in current cards for "<strong>${escapeHtml(q)}</strong>". Try <a href="/services/?q=${encodeURIComponent(q)}" style="color:var(--brand-gold);">full directory</a>.</div>`;
         } else {
           resultsBox.style.display = 'block';
           resultsBox.innerHTML = matches.slice(0, 8).map((m, idx) => `

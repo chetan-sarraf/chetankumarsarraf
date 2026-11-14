@@ -2,12 +2,16 @@
 
 > Authoritative profile and structured knowledge base for search engines and AI research agents (Google, Bing, ChatGPT, Claude, Perplexity, Gemini, Copilot).
 
-## Official Website & Indexable Pages
+## Official Website & Clean Indexable Pages
 - **Interactive Studio Homepage:** https://chetankumarsarraf.com.np/
-- **Architecture & Interior Projects Archive (Portfolio, Handovers, 360° VR Tours):** https://chetankumarsarraf.com.np/projects.html
-- **Architecture & Interior Design Journal (Full Articles & Guides):** https://chetankumarsarraf.com.np/articles.html
-- **Engineering Suite, Terai Material Rates, Catalogs & FAQs:** https://chetankumarsarraf.com.np/services.html
-- **About Er. Chetan Kumar Sarraf, Skills, Team & Birgunj Studio Map:** https://chetankumarsarraf.com.np/about.html
+- **Architecture & Interior Projects Archive (Portfolio, Handovers, 360° VR Tours):** https://chetankumarsarraf.com.np/projects/
+  - **Contemporary Master Bedroom with Custom Wardrobes and Geometric Ceiling:** https://chetankumarsarraf.com.np/projects/contemporary-master-bedroom/
+  - **School office Renovation — Trijuddha High School Birgunj:** https://chetankumarsarraf.com.np/projects/school-office-renovation/
+  - **Office Interior — Bypass Road (Client: Aalok Tulshyan):** https://chetankumarsarraf.com.np/projects/aalok-tulshyan-office-interior/
+- **Architecture & Interior Design Journal (Full Articles & Guides):** https://chetankumarsarraf.com.np/articles/
+  - **Modular Kitchen vs Carpenter Kitchen in Birgunj:** https://chetankumarsarraf.com.np/articles/modular-kitchen-vs-carpenter-kitchen-birgunj/
+- **Engineering Suite (39 Tools), Terai Material Rates, Catalogs & FAQs:** https://chetankumarsarraf.com.np/services/
+- **About Er. Chetan Kumar Sarraf, Skills, Team & Birgunj Studio Map:** https://chetankumarsarraf.com.np/about/
 - **Sitemap:** https://chetankumarsarraf.com.np/sitemap.xml
 - **Site Search (OpenSearch):** https://chetankumarsarraf.com.np/?q={searchTerms}
 
