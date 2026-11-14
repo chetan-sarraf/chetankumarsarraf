@@ -18,35 +18,35 @@
   <defs>
     <style type="text/css">
       :root {
-        --aff-stroke-bold: #ffffff;
-        --aff-stroke-mid: #d4d4d8;
-        --aff-stroke-thin: #71717a;
-        --aff-stroke-dash: #a1a1aa;
-        --aff-slab-fill: rgba(255, 255, 255, 0.03);
-        --aff-text: #a1a1aa;
-        --aff-label: #ffffff;
+        --aff-stroke-bold: #FAF7F2;
+        --aff-stroke-mid: #e4e4e7;
+        --aff-stroke-thin: #a1a1aa;
+        --aff-stroke-dash: #d4d4d8;
+        --aff-slab-fill: rgba(250, 247, 242, 0.055);
+        --aff-text: #d4d4d8;
+        --aff-label: #FAF7F2;
       }
       @media (prefers-color-scheme: light) {
         :root {
           --aff-stroke-bold: #18181b;
-          --aff-stroke-mid: #3f3f46;
-          --aff-stroke-thin: #71717a;
-          --aff-stroke-dash: #52525b;
-          --aff-slab-fill: rgba(0, 0, 0, 0.02);
-          --aff-text: #52525b;
+          --aff-stroke-mid: #27272a;
+          --aff-stroke-thin: #3f3f46;
+          --aff-stroke-dash: #3f3f46;
+          --aff-slab-fill: rgba(24, 24, 27, 0.045);
+          --aff-text: #27272a;
           --aff-label: #09090b;
         }
       }
 
       /* Masterpiece Linework Styles */
-      .cad-mono-bold { stroke: var(--aff-stroke-bold, #ffffff); stroke-width: 2.2px; fill: none; stroke-linecap: round; opacity: 0.38; }
-      .cad-mono-mid { stroke: var(--aff-stroke-mid, #d4d4d8); stroke-width: 1.4px; fill: none; opacity: 0.28; }
-      .cad-mono-thin { stroke: var(--aff-stroke-thin, #71717a); stroke-width: 0.9px; fill: none; opacity: 0.22; }
-      .cad-mono-dash { stroke: var(--aff-stroke-dash, #a1a1aa); stroke-width: 1px; stroke-dasharray: 6 4; fill: none; opacity: 0.26; }
-      .cad-mono-dot { stroke: var(--aff-stroke-thin, #71717a); stroke-width: 0.8px; stroke-dasharray: 2 3; fill: none; opacity: 0.18; }
-      .cad-slab-fill { fill: var(--aff-slab-fill, rgba(255, 255, 255, 0.03)); stroke: var(--aff-stroke-thin, #71717a); stroke-width: 1px; opacity: 0.25; }
-      .cad-mono-text { font-family: 'JetBrains Mono', 'Plus Jakarta Sans', monospace, sans-serif; font-size: 9px; fill: var(--aff-text, #a1a1aa); letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; opacity: 0.48; }
-      .cad-mono-label { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px; fill: var(--aff-label, #ffffff); letter-spacing: 0.14em; text-transform: uppercase; font-weight: 800; opacity: 0.65; }
+      .cad-mono-bold { stroke: var(--aff-stroke-bold, #FAF7F2); stroke-width: 1.75px; fill: none; stroke-linecap: round; opacity: 0.78; }
+      .cad-mono-mid { stroke: var(--aff-stroke-mid, #e4e4e7); stroke-width: 1.2px; fill: none; opacity: 0.64; }
+      .cad-mono-thin { stroke: var(--aff-stroke-thin, #a1a1aa); stroke-width: 0.85px; fill: none; opacity: 0.52; }
+      .cad-mono-dash { stroke: var(--aff-stroke-dash, #d4d4d8); stroke-width: 0.9px; stroke-dasharray: 6 4; fill: none; opacity: 0.54; }
+      .cad-mono-dot { stroke: var(--aff-stroke-thin, #a1a1aa); stroke-width: 0.8px; stroke-dasharray: 2 3; fill: none; opacity: 0.44; }
+      .cad-slab-fill { fill: var(--aff-slab-fill, rgba(250, 247, 242, 0.055)); stroke: var(--aff-stroke-thin, #a1a1aa); stroke-width: 0.9px; opacity: 0.50; }
+      .cad-mono-text { font-family: 'JetBrains Mono', 'Plus Jakarta Sans', monospace, sans-serif; font-size: 9px; fill: var(--aff-text, #d4d4d8); letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; opacity: 0.74; }
+      .cad-mono-label { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px; fill: var(--aff-label, #FAF7F2); letter-spacing: 0.14em; text-transform: uppercase; font-weight: 800; opacity: 0.88; }
 
       /* FUNKY EMBEDDED CAD ANIMATIONS (Isolated on inner groups so SVG translate/scale never resets) */
       @keyframes cadCompassSpin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }

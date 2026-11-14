@@ -1,51 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Primary Homepage & Canonical Root -->
+  <!-- Primary Interactive Studio & Canonical Homepage -->
   <url>
     <loc>https://chetankumarsarraf.com.np/</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  <!-- Civil Engineering & Architecture Portfolio -->
+  <!-- Projects, Client Handover Galleries & 360 VR Tours -->
   <url>
-    <loc>https://chetankumarsarraf.com.np/#portfolio</loc>
-    <lastmod>2026-11-11</lastmod>
+    <loc>https://chetankumarsarraf.com.np/projects.html</loc>
+    <lastmod>2026-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-  <!-- Architectural Articles & Design Journal -->
+  <!-- Architecture & Interior Design Journal -->
   <url>
-    <loc>https://chetankumarsarraf.com.np/#articles</loc>
-    <lastmod>2026-11-11</lastmod>
+    <loc>https://chetankumarsarraf.com.np/articles.html</loc>
+    <lastmod>2026-11-14</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
-  <!-- Verified Client & Visitor Reviews -->
+  <!-- Engineering Hub Tools, Terai Material Rates, Catalogs & FAQs -->
   <url>
-    <loc>https://chetankumarsarraf.com.np/#reviews</loc>
-    <lastmod>2026-11-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <loc>https://chetankumarsarraf.com.np/services.html</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
-  <!-- Direct Studio Consultation Desk -->
+  <!-- About Er. Chetan Kumar Sarraf, Skills, Team & Birgunj Studio Map -->
   <url>
-    <loc>https://chetankumarsarraf.com.np/#contact</loc>
-    <lastmod>2026-11-11</lastmod>
+    <loc>https://chetankumarsarraf.com.np/about.html</loc>
+    <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <!-- Legal & Privacy Policy -->
   <url>
     <loc>https://chetankumarsarraf.com.np/privacy.html</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <!-- Legal & Terms of Service -->
   <url>
     <loc>https://chetankumarsarraf.com.np/terms.html</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <!-- Legal & Cookies Policy -->
+  <url>
+    <loc>https://chetankumarsarraf.com.np/cookies.html</loc>
+    <lastmod>2026-11-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>

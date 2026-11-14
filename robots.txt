@@ -2,8 +2,38 @@
 # Er. Chetan Kumar Sarraf - Civil Engineer & Spatial Designer
 # Birgunj, Parsa, Nepal
 
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: msnbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
 User-agent: *
 Allow: /
 
-# Sitemap reference for Search Engines
+# Sitemap & Browser Search References
 Sitemap: https://chetankumarsarraf.com.np/sitemap.xml

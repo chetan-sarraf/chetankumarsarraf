@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <ShortName>Er. Chetan Sarraf</ShortName>
+  <Description>Search Architecture Projects, Interior Design, Engineering Tools, Material Rates &amp; Articles by Er. Chetan Kumar Sarraf in Birgunj, Nepal.</Description>
+  <Tags>architecture interior-design civil-engineering birgunj nepal scale-and-spaces</Tags>
+  <Contact>master.er.cks@outlook.com</Contact>
+  <Url type="text/html" method="get" template="https://chetankumarsarraf.com.np/?q={searchTerms}" />
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://chetankumarsarraf.com.np/opensearch.xml" />
+  <Image width="16" height="16" type="image/png">https://chetankumarsarraf.com.np/favicon.ico</Image>
+  <InputEncoding>UTF-8</InputEncoding>
+  <OutputEncoding>UTF-8</OutputEncoding>
+</OpenSearchDescription>
